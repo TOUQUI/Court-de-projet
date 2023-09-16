@@ -1,8 +1,8 @@
-TileMap
 StaticBody2D
-Area2D
-Node2D
-Sprite2D
 CollisionShape2D
+Area2D
+Sprite2D
+Node2D
+TileMap
 AnimationPlayer
 CharacterBody2D
