@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkww0d76ydwwq"
-path="res://.godot/imported/Plancher.png-e80f8d03852a0aff9cead2340a7e7b7b.ctex"
+uid="uid://idnl1hauh4uk"
+path="res://.godot/imported/Keyboard Letters and Symbols.png-0cf3fe06233efcceaebb45522311bd39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Carte/ElementDessinerJule/Plancher.png"
-dest_files=["res://.godot/imported/Plancher.png-e80f8d03852a0aff9cead2340a7e7b7b.ctex"]
+source_file="res://UI/Keyboard Letters and Symbols.png"
+dest_files=["res://.godot/imported/Keyboard Letters and Symbols.png-0cf3fe06233efcceaebb45522311bd39.ctex"]
 
 [params]
 

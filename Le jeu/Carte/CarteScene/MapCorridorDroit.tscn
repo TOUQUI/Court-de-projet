@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cd46q6imydlml"]
 
-[ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/ElementDessinerJule/tuile_ecole.tscn" id="1_sc0ys"]
+[ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/CarteScene/tuile_ecole.tscn" id="1_sc0ys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lk5kr"]
 size = Vector2(8.5, 90)

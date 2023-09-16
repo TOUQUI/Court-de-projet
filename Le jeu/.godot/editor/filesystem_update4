@@ -1,7 +1,10 @@
+res://Scene/SceneCorridorG.tscn
+res://Carte/porte_1.tscn
+res://Carte/Porte_bleu.tscn
+res://Carte/Porte_bleu.gd
+res://Carte/CarteScene/tuile_ecole.tscn
 res://Carte/CarteScene/MapCorridorMillieu.tscn
-res://Scene/SceneCorridorM.tscn
+res://Carte/CarteScene/MapCorridorGauche.tscn
 res://Carte/CarteScene/MapCorridorDroit.tscn
 res://Scene/SceneCorridorD.tscn
-res://Carte/CarteScene/MapCorridorGauche.tscn
-res://Scene/SceneCorridorG.tscn
-res://Carte/ElementDessinerJule/tuile_ecole.tscn
+res://Scene/SceneCorridorM.tscn

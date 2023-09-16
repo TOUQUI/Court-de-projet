@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1xsabyq3a7m1"
-path="res://.godot/imported/porte2.png-463e0d1bdc7e5d431fb61731c4dedb8c.ctex"
+uid="uid://bce50qi5o1p"
+path="res://.godot/imported/Keyboard Extras.png-ecad124b1b144a730a50309e7424c6b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Carte/ElementDessinerJule/porte2.png"
-dest_files=["res://.godot/imported/porte2.png-463e0d1bdc7e5d431fb61731c4dedb8c.ctex"]
+source_file="res://UI/Keyboard Extras.png"
+dest_files=["res://.godot/imported/Keyboard Extras.png-ecad124b1b144a730a50309e7424c6b0.ctex"]
 
 [params]
 
