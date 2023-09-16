@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgdonxn125jnw"]
+
+[ext_resource type="Texture2D" uid="uid://bkww0d76ydwwq" path="res://Carte/Plancher.png" id="1_flsch"]
+[ext_resource type="PackedScene" uid="uid://ch3dd00qsilg5" path="res://Carte/mur.tscn" id="2_s5fjn"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_6davb"]
+
+[node name="map_test" type="Node2D"]
+position = Vector2(642, 313)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_flsch")
+
+[node name="Mur" parent="." instance=ExtResource("2_s5fjn")]
+position = Vector2(1, 1)
+
+[node name="Joueur" parent="." instance=ExtResource("3_6davb")]
+position = Vector2(-140, -34)

@@ -1,0 +1,6 @@
+res://Joueur/joueur.tscn
+res://Carte/map_test.tscn
+res://Joueur/joueur.gd
+res://Carte/mur.tscn
+res://Carte/porte_1.tscn
+res://Carte/porte_2.tscn
