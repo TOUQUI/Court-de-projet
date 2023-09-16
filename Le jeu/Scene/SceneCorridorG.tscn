@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://craclmnlie7r2"]
+[gd_scene load_steps=7 format=3 uid="uid://craclmnlie7r2"]
 
 [ext_resource type="PackedScene" uid="uid://cbxdr0j5c4kp4" path="res://Carte/CarteScene/MapCorridorGauche.tscn" id="1_6uowg"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_3do27"]
 [ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/CarteScene/tuile_ecole.tscn" id="2_gyu4w"]
 [ext_resource type="PackedScene" uid="uid://d1w7whsgxptuv" path="res://Carte/Porte_bleu.tscn" id="4_3wy15"]
+[ext_resource type="Script" path="res://Scene/Script/CGversCM.gd" id="5_1y6uc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k46su"]
+size = Vector2(20, 33.5)
 
 [node name="StaticBody2D" instance=ExtResource("1_6uowg")]
 position = Vector2(570, 417)
@@ -15,5 +19,14 @@ layer_0/tile_data = PackedInt32Array(-327674, 65537, 2, -262138, 65537, 3, -3276
 position = Vector2(8.5, -125)
 
 [node name="Joueur" parent="." index="10" instance=ExtResource("2_3do27")]
-position = Vector2(-12.5, -29)
+position = Vector2(206, -35)
 scale = Vector2(1, 1)
+
+[node name="CGversCM" type="Area2D" parent="." index="11"]
+script = ExtResource("5_1y6uc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CGversCM" index="0"]
+position = Vector2(246, -17.25)
+shape = SubResource("RectangleShape2D_k46su")
+
+[connection signal="body_entered" from="CGversCM" to="CGversCM" method="_on_body_entered"]

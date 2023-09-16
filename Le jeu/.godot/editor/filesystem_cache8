@@ -1,31 +1,40 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694893299
-icon.svg::CompressedTexture2D::280129450150855157::1694716159::1694891208::1::::<><>::
-joueur.gd::GDScript::-1::1694793342::0::1::::<>CharacterBody2D<>::
-up_idle_1.png::CompressedTexture2D::6294229727248106446::1694885251::1694885251::1::::<><>::
-::res://Carte/::1694893119
-Porte_bleu.gd::GDScript::-1::1694893119::0::1::::<>Area2D<>::
-Porte_bleu.tscn::PackedScene::9031570923265785777::1694892944::0::1::::<><>::res://Carte/Porte_bleu.gd<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png
-::res://Carte/CarteScene/::1694892804
-MapCorridorDroit.tscn::PackedScene::5045187293805989479::1694892804::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-MapCorridorGauche.tscn::PackedScene::4890724737196172619::1694892804::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-MapCorridorMillieu.tscn::PackedScene::6862977712233833424::1694892804::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-tuile_ecole.tscn::PackedScene::3673696222198766493::1694892804::0::1::::<><>::uid://crxljhdgcu83l::::res://Carte/Modern+ Study Time (32x32)/Tile 1.png<>uid://c1ejyhve20cer::::res://Carte/Modern+ Study Time (32x32)/Tile 2.png<>uid://c0peb6hun45jc::::res://Carte/Modern+ Study Time (32x32)/Tile 3.png<>uid://bh2spcw6nchhp::::res://Carte/Modern+ Study Time (32x32)/Tile 4.png<>uid://xs0isdm7qcnx::::res://Carte/Modern+ Study Time (32x32)/Tile A5.png<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://cjppd2svodpw3::::res://Carte/Modern+ Study Time (32x32)/Walls.png
-::res://Carte/Modern+ Study Time (32x32)/::1694886972
-doors_school.png::CompressedTexture2D::4355843985259587742::1694885147::1694885253::1::::<><>::
-Tile 1.png::CompressedTexture2D::6014216729215677319::1694885147::1694885253::1::::<><>::
-Tile 2.png::CompressedTexture2D::6606598525303050457::1694885147::1694885253::1::::<><>::
-Tile 3.png::CompressedTexture2D::6558774418377620132::1694885147::1694885253::1::::<><>::
-Tile 4.png::CompressedTexture2D::2934600621755666393::1694885147::1694885253::1::::<><>::
-Tile A5.png::CompressedTexture2D::1653035365061556889::1694885147::1694885253::1::::<><>::
-Walls.png::CompressedTexture2D::5436424185622523868::1694886972::1694886972::1::::<><>::
-::res://Joueur/::1694893299
-joueur.tscn::PackedScene::1354765783137222250::1694893299::0::1::::<><>::res://joueur.gd<>uid://n1nq7l1p7jr6::::res://Joueur/up_idle_1.png
-up_idle_1.png::CompressedTexture2D::966948381451105525::1694726883::1694885251::1::::<><>::
-::res://Scene/::1694892804
-SceneCorridorD.tscn::PackedScene::6162881670242975749::1694892804::0::1::::<><>::uid://cd46q6imydlml::::res://Carte/CarteScene/MapCorridorDroit.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn
-SceneCorridorG.tscn::PackedScene::5966193437824573725::1694892803::0::1::::<><>::uid://cbxdr0j5c4kp4::::res://Carte/CarteScene/MapCorridorGauche.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://d1w7whsgxptuv::::res://Carte/Porte_bleu.tscn
-SceneCorridorM.tscn::PackedScene::2814621361341071636::1694891176::0::1::::<><>::uid://c41qifx44ab2g
-::res://UI/::1694892273
-Keyboard Extras.png::CompressedTexture2D::2194569974680683::1694892061::1694892062::1::::<><>::
-Keyboard Letters and Symbols.png::CompressedTexture2D::568514223453127006::1694892273::1694892273::1::::<><>::
+::res://::1694896978
+icon.svg::CompressedTexture2D::280129450150855157::1694883285::1694893842::1::::<><>::
+MapLeQG.tscn::PackedScene::4447127648161069382::1694898859::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
+up_idle_1.png::CompressedTexture2D::6294229727248106446::1694883285::1694883285::1::::<><>::
+::res://Carte/::1694896983
+Porte_bleu.gd::GDScript::-1::1694893802::0::1::::<>Area2D<>::
+Porte_bleu.tscn::PackedScene::9031570923265785777::1694896983::0::1::::<><>::res://Carte/Porte_bleu.gd<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png
+::res://Carte/CarteScene/::1694896983
+MapCorridorDroit.tscn::PackedScene::5045187293805989479::1694893802::0::1::::<><>::uid://bsltifq07i8ur
+MapCorridorGauche.tscn::PackedScene::4890724737196172619::1694893802::0::1::::<><>::uid://bsltifq07i8ur
+MapCorridorMillieu.tscn::PackedScene::6862977712233833424::1694893802::0::1::::<><>::uid://bsltifq07i8ur
+tuile_ecole.tscn::PackedScene::3673696222198766493::1694896983::0::1::::<><>::uid://crxljhdgcu83l::::res://Carte/Modern+ Study Time (32x32)/Tile 1.png<>uid://c1ejyhve20cer::::res://Carte/Modern+ Study Time (32x32)/Tile 2.png<>uid://c0peb6hun45jc::::res://Carte/Modern+ Study Time (32x32)/Tile 3.png<>uid://bh2spcw6nchhp::::res://Carte/Modern+ Study Time (32x32)/Tile 4.png<>uid://xs0isdm7qcnx::::res://Carte/Modern+ Study Time (32x32)/Tile A5.png<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://cjppd2svodpw3::::res://Carte/Modern+ Study Time (32x32)/Walls.png
+::res://Carte/Modern+ Study Time (32x32)/::1694890002
+doors_school.png::CompressedTexture2D::4355843985259587742::1694881979::1694890002::1::::<><>::
+Tile 1.png::CompressedTexture2D::6014216729215677319::1694881979::1694890002::1::::<><>::
+Tile 2.png::CompressedTexture2D::6606598525303050457::1694881979::1694890002::1::::<><>::
+Tile 3.png::CompressedTexture2D::6558774418377620132::1694881979::1694890002::1::::<><>::
+Tile 4.png::CompressedTexture2D::2934600621755666393::1694881979::1694890002::1::::<><>::
+Tile A5.png::CompressedTexture2D::1653035365061556889::1694881979::1694890002::1::::<><>::
+Walls.png::CompressedTexture2D::5436424185622523868::1694888691::1694890002::1::::<><>::
+::res://Joueur/::1694896054
+joueur.gd::GDScript::-1::1694896054::0::1::::<>CharacterBody2D<>::
+joueur.tscn::PackedScene::1354765783137222250::1694889129::0::1::::<><>::res://Joueur/joueur.gd<>uid://n1nq7l1p7jr6
+up_idle_1.png::CompressedTexture2D::966948381451105525::1694883285::1694883285::1::::<><>::
+::res://Scene/::1694896983
+SceneCorridorD.tscn::PackedScene::6162881670242975749::1694896983::0::1::::<><>::uid://cd46q6imydlml::::res://Carte/CarteScene/MapCorridorDroit.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>res://Scene/Script/CDversCM.gd<>res://Scene/Script/CollisionShape2D5.gd
+SceneCorridorG.tscn::PackedScene::5966193437824573725::1694897307::0::1::::<><>::uid://cbxdr0j5c4kp4::::res://Carte/CarteScene/MapCorridorGauche.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://d1w7whsgxptuv::::res://Carte/Porte_bleu.tscn<>res://Scene/Script/CGversCM.gd
+SceneCorridorM.tscn::PackedScene::2814621361341071636::1694896983::0::1::::<><>::uid://c41qifx44ab2g::::res://Carte/CarteScene/MapCorridorMillieu.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>res://Scene/Script/CMversCG.gd<>res://Scene/Script/CMversCD.gd
+::res://Scene/Script/::1694896978
+AllerVersMillieu.gd::GDScript::-1::1694895229::0::1::::<>CollisionShape2D<>::
+Area2D.gd::GDScript::-1::1694895357::0::1::::<>Area2D<>::
+CDversCM.gd::GDScript::-1::1694896908::0::1::::<>Area2D<>::
+CGversCM.gd::GDScript::-1::1694896908::0::1::::<>Area2D<>::
+CMversCD.gd::GDScript::-1::1694896908::0::1::::<>Area2D<>::
+CMversCG.gd::GDScript::-1::1694896908::0::1::::<>Area2D<>::
+CollisionShape2D5.gd::GDScript::-1::1694896134::0::1::::<>CollisionShape2D<>::
+::res://UI/::1694893802
+Keyboard Extras.png::CompressedTexture2D::2194569974680683::1694893802::1694893802::1::::<><>::
+Keyboard Letters and Symbols.png::CompressedTexture2D::568514223453127006::1694893802::1694893802::1::::<><>::

@@ -46,3 +46,5 @@ func apliquer_friction(amount):
 func apliquer_mouvement(accel):
 	velocity += accel
 	velocity = velocity.limit_length(VITESSE_MAX)
+
+
