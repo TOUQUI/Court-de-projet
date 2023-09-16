@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct2l04mtvi3xx"]
+
+[ext_resource type="PackedScene" uid="uid://cd46q6imydlml" path="res://Carte/CarteScene/MapCorridorDroit.tscn" id="1_a1ec1"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_tp0pa"]
+
+[node name="StaticBody2D" instance=ExtResource("1_a1ec1")]
+position = Vector2(593, 410)
+
+[node name="Joueur" parent="." index="8" instance=ExtResource("2_tp0pa")]
+position = Vector2(-8.5, -28)
+scale = Vector2(1, 1)

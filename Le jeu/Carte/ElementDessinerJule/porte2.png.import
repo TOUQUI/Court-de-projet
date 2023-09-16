@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba6f7l8jw7dmr"
-path="res://.godot/imported/Mur.png-15b39a7dff035d6189624f879f4f26c6.ctex"
+uid="uid://c1xsabyq3a7m1"
+path="res://.godot/imported/porte2.png-463e0d1bdc7e5d431fb61731c4dedb8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Carte/Mur.png"
-dest_files=["res://.godot/imported/Mur.png-15b39a7dff035d6189624f879f4f26c6.ctex"]
+source_file="res://Carte/ElementDessinerJule/porte2.png"
+dest_files=["res://.godot/imported/porte2.png-463e0d1bdc7e5d431fb61731c4dedb8c.ctex"]
 
 [params]
 

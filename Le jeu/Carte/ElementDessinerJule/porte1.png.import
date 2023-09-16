@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1xsabyq3a7m1"
-path="res://.godot/imported/porte2.png-6df2d0bca95df6b1dec912942e1a41e8.ctex"
+uid="uid://dgvyccrrxqp3n"
+path="res://.godot/imported/porte1.png-30660e98eae5d3ffdbcaccc9e7c75e8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Carte/porte2.png"
-dest_files=["res://.godot/imported/porte2.png-6df2d0bca95df6b1dec912942e1a41e8.ctex"]
+source_file="res://Carte/ElementDessinerJule/porte1.png"
+dest_files=["res://.godot/imported/porte1.png-30660e98eae5d3ffdbcaccc9e7c75e8e.ctex"]
 
 [params]
 

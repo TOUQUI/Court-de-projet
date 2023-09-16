@@ -1,8 +1,7 @@
-res://Carte/tuile_ecole.tscn
-res://Carte/mur.tscn
-res://Carte/corridor_1.tscn
-res://Joueur/joueur.tscn
-res://Carte/porte_1.tscn
-res://Carte/porte_2.tscn
-res://Carte/map_test.tscn
-res://Carte/Corridor1.tscn
+res://Carte/CarteScene/MapCorridorMillieu.tscn
+res://Scene/SceneCorridorM.tscn
+res://Carte/CarteScene/MapCorridorDroit.tscn
+res://Scene/SceneCorridorD.tscn
+res://Carte/CarteScene/MapCorridorGauche.tscn
+res://Scene/SceneCorridorG.tscn
+res://Carte/ElementDessinerJule/tuile_ecole.tscn

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkww0d76ydwwq"
-path="res://.godot/imported/Plancher.png-82c63735ece0e554f92f528f02cf2377.ctex"
+path="res://.godot/imported/Plancher.png-e80f8d03852a0aff9cead2340a7e7b7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Carte/Plancher.png"
-dest_files=["res://.godot/imported/Plancher.png-82c63735ece0e554f92f528f02cf2377.ctex"]
+source_file="res://Carte/ElementDessinerJule/Plancher.png"
+dest_files=["res://.godot/imported/Plancher.png-e80f8d03852a0aff9cead2340a7e7b7b.ctex"]
 
 [params]
 
