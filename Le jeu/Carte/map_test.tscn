@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgdonxn125jnw"]
+[gd_scene load_steps=6 format=3 uid="uid://bgdonxn125jnw"]
 
 [ext_resource type="Texture2D" uid="uid://bkww0d76ydwwq" path="res://Carte/Plancher.png" id="1_flsch"]
 [ext_resource type="PackedScene" uid="uid://ch3dd00qsilg5" path="res://Carte/mur.tscn" id="2_s5fjn"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_6davb"]
+[ext_resource type="PackedScene" uid="uid://d1bdimm8ct37v" path="res://Carte/porte_1.tscn" id="4_qk7lk"]
+[ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/tuile_ecole.tscn" id="5_cfryy"]
 
 [node name="map_test" type="Node2D"]
 position = Vector2(642, 313)
@@ -17,3 +19,10 @@ position = Vector2(1, 1)
 
 [node name="Joueur" parent="." instance=ExtResource("3_6davb")]
 position = Vector2(-140, -34)
+
+[node name="porte1" parent="." instance=ExtResource("4_qk7lk")]
+position = Vector2(-464, -2)
+
+[node name="tuileEcole" parent="." instance=ExtResource("5_cfryy")]
+position = Vector2(-134, 620)
+scale = Vector2(2, 2)
