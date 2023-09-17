@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4mhspjuk24a1"]
+[gd_scene load_steps=10 format=3 uid="uid://b4mhspjuk24a1"]
 
 [ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/CarteScene/tuile_ecole.tscn" id="1_p1dbl"]
+[ext_resource type="PackedScene" uid="uid://cbjkhiyoqwe5y" path="res://Personne/vendeur_du_qg.tscn" id="2_xa2ft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_urnmj"]
 size = Vector2(20, 53)
@@ -24,6 +25,7 @@ size = Vector2(123, 7)
 size = Vector2(217, 5)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(525, 317)
 
 [node name="Plancher" parent="." instance=ExtResource("1_p1dbl")]
 layer_0/tile_data = PackedInt32Array(-196613, 196612, 2, -196612, 196612, 2, -196611, 196612, 2, -196610, 196612, 2, -196609, 196612, 2, -262144, 196612, 2, -262143, 196612, 2, -262142, 196612, 2, -262141, 196612, 2, -262140, 196612, 2, -262139, 196612, 2, -262138, 196612, 2, -196602, 196612, 2, -131066, 196612, 2, -196603, 196612, 2, -196604, 196612, 2, -196605, 196612, 2, -196606, 196612, 2, -196607, 196612, 2, -196608, 196612, 2, -131073, 196612, 2, -131074, 196612, 2, -131075, 196612, 2, -131076, 196612, 2, -131077, 196612, 2, 6, 196612, 2, -65530, 196612, 2, -131067, 196612, 2, -65531, 196612, 2, 5, 196612, 2, 4, 196612, 2, -65532, 196612, 2, -131068, 196612, 2, -131069, 196612, 2, -65533, 196612, 2, 3, 196612, 2, 2, 196612, 2, -65534, 196612, 2, -65535, 196612, 2, -131070, 196612, 2, -131071, 196612, 2, -131072, 196612, 2, -65536, 196612, 2, 1, 196612, 2, 0, 196612, 2, 65535, 196612, 2, -1, 196612, 2, -65537, 196612, 2, -65538, 196612, 2, -2, 196612, 2, -3, 196612, 2, 65533, 196612, 2, 65534, 196612, 2, -4, 196612, 2, -65540, 196612, 2, -65541, 196612, 2, 65531, 196612, 2, 65532, 196612, 2, -5, 196612, 2, -65539, 196612, 2, 131071, 196612, 2)
@@ -97,3 +99,6 @@ shape = SubResource("RectangleShape2D_bueip")
 [node name="CollisionMur3" type="CollisionShape2D" parent="."]
 position = Vector2(109.5, 29.5)
 shape = SubResource("RectangleShape2D_nqsfk")
+
+[node name="Vendeur_du_QG" parent="." instance=ExtResource("2_xa2ft")]
+position = Vector2(97, -107)

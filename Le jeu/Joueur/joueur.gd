@@ -6,6 +6,8 @@ extends CharacterBody2D
 
 @onready var axis =Vector2.ZERO
 
+static var derniere_emplacement = "vide"
+
 func _physics_process(delta):
 	bouger(delta)
 

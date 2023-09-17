@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw41b3q0k7nx0"]
+[gd_scene load_steps=3 format=3 uid="uid://dw41b3q0k7nx0"]
 
 [ext_resource type="PackedScene" uid="uid://b4mhspjuk24a1" path="res://Carte/CarteScene/MapLeQG.tscn" id="1_8t3ys"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_oyjer"]
-[ext_resource type="Script" path="res://Scene/QGversCG.gd" id="3_ba43h"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dws5"]
-size = Vector2(33, 20)
 
 [node name="StaticBody2D" instance=ExtResource("1_8t3ys")]
 position = Vector2(501, 462)
@@ -29,16 +25,6 @@ position = Vector2(33, -41.5)
 [node name="CollisionTable6" parent="." index="14"]
 position = Vector2(-95, -40.5)
 
-[node name="Joueur" parent="." index="20" instance=ExtResource("2_oyjer")]
+[node name="Joueur" parent="." index="21" instance=ExtResource("2_oyjer")]
 position = Vector2(-16, 1)
 scale = Vector2(1, 1)
-
-[node name="QGversCG" type="Area2D" parent="." index="21"]
-position = Vector2(32, -105.375)
-script = ExtResource("3_ba43h")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="QGversCG" index="0"]
-position = Vector2(-48.5, 158.375)
-shape = SubResource("RectangleShape2D_7dws5")
-
-[connection signal="body_entered" from="QGversCG" to="QGversCG" method="_on_body_entered"]
