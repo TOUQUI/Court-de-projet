@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://craclmnlie7r2"]
+
+[ext_resource type="PackedScene" uid="uid://cbxdr0j5c4kp4" path="res://Carte/CarteScene/MapCorridorGauche.tscn" id="1_6uowg"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_3do27"]
+[ext_resource type="Script" path="res://Scene/Script/SceneCorridorG.gd" id="2_4m6uy"]
+[ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/tuile_ecole.tscn" id="2_gyu4w"]
+[ext_resource type="PackedScene" uid="uid://d1w7whsgxptuv" path="res://Carte/Porte_bleu.tscn" id="4_3wy15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_601ba"]
+size = Vector2(26, 20)
+
+[node name="StaticBody2D" instance=ExtResource("1_6uowg")]
+position = Vector2(570, 417)
+script = ExtResource("2_4m6uy")
+
+[node name="Decoration" parent="." index="3" instance=ExtResource("2_gyu4w")]
+layer_0/tile_data = PackedInt32Array(-327674, 65537, 2, -262138, 65537, 3, -327675, 65537, 2, -262139, 65537, 3, -327676, 65537, 2, -262140, 65537, 3, -327677, 65537, 2, -262141, 65537, 3, -327678, 65537, 2, -262142, 65537, 3, -327685, 1, 7, -393211, 1, 2, -262151, 65537, 2, -196615, 65537, 3, -262150, 65537, 2, -196614, 65537, 3, -262149, 65537, 2, -196613, 65537, 3, -262148, 65537, 2, -196612, 65537, 3, -393215, 524289, 5, -262147, 262145, 8, -196611, 262145, 9, 131075, 589824, 15, 65540, 524288, 12, 131076, 524288, 13, 65541, 589824, 12, 131077, 589824, 13, -393212, 1, 3)
+
+[node name="Porte_bleu" parent="." index="9" instance=ExtResource("4_3wy15")]
+position = Vector2(8.5, -125)
+
+[node name="Joueur" parent="." index="10" instance=ExtResource("2_3do27")]
+position = Vector2(7, -134)
+scale = Vector2(1, 1)
+
+[node name="CGversCM" type="Area2D" parent="." index="11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CGversCM" index="0"]
+visible = false
+position = Vector2(253, -18)
+shape = SubResource("RectangleShape2D_601ba")
+
+[connection signal="body_entered" from="CGversCM" to="." method="_on_c_gvers_cm_body_entered"]

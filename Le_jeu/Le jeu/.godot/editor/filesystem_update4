@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+res://Carte/CarteScene/MapLeQG.tscn
+=======
+>>>>>>> ef45934f2b95555aa2dc89a1c74b2d048788be14
+res://Scene/SceneCorridorG.tscn
+res://Scene/SceneQG.gd
+res://Scene/SceneQG.tscn
+<<<<<<< HEAD
+res://Scene/Script/SceneCorridorG.gd
+res://Scene/Script/SceneCorridorM.gd
+=======
+>>>>>>> ef45934f2b95555aa2dc89a1c74b2d048788be14
+res://Scene/SceneCorridorM.tscn
+res://Personne/vendeur_du_qg.tscn
+res://Scene/c_gvers_cm.tscn
+res://Scene/SceneCorridorD.tscn
+<<<<<<< HEAD
+res://Carte/CarteScene/MapCorridorMillieu.tscn
+res://ShopQG.gd
+res://Personne/shop_qg.tscn
+res://Personne/ShopQG.gd
+=======
+res://Scene/Script/QGversCG.gd
+>>>>>>> ef45934f2b95555aa2dc89a1c74b2d048788be14
