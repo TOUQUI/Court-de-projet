@@ -20,7 +20,7 @@ layer_0/tile_data = PackedInt32Array(-327674, 65537, 2, -262138, 65537, 3, -3276
 position = Vector2(8.5, -125)
 
 [node name="Joueur" parent="." index="10" instance=ExtResource("2_3do27")]
-position = Vector2(214.5, -35.5)
+position = Vector2(8.5, -134)
 scale = Vector2(1, 1)
 
 [node name="CGversCM" type="Area2D" parent="." index="11"]

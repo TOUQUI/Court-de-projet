@@ -10,3 +10,4 @@ res://Scene/SceneCorridorD.gd
 res://Carte/CarteScene/MapCorridorMillieu.tscn
 res://Scene/Script/SceneCorridorM.gd
 res://Scene/Script/SceneCorridorG.gd
+res://Scene/SceneQG.gd
