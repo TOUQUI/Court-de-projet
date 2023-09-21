@@ -6,6 +6,8 @@ extends CharacterBody2D
 
 @onready var axis =Vector2.ZERO
 
+signal btn_QG
+
 static var derniere_emplacement = "vide"
 
 func _physics_process(delta):
@@ -50,3 +52,5 @@ func apliquer_mouvement(accel):
 	velocity = velocity.limit_length(VITESSE_MAX)
 
 
+func _on_vendeur_du_qg_travailler():
+	btn_QG.emit()

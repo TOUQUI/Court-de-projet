@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbjkhiyoqwe5y"]
+[gd_scene load_steps=6 format=3 uid="uid://cbjkhiyoqwe5y"]
 
 [ext_resource type="Texture2D" uid="uid://featneqnbsdw" path="res://Personne/Male 14-1.png" id="1_f0cda"]
 [ext_resource type="Script" path="res://Personne/vendeur_du_qg.gd" id="1_w6yec"]
 [ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="3_pjg6o"]
+[ext_resource type="PackedScene" uid="uid://v48oa4ik2p6d" path="res://UI/personnage_interface.tscn" id="4_tvmwa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iuu6r"]
 size = Vector2(35, 47)
@@ -34,5 +35,10 @@ hframes = 8
 vframes = 14
 frame = 21
 
+[node name="Personnage_interface" parent="." instance=ExtResource("4_tvmwa")]
+offset = Vector2(650, 200)
+transform = Transform2D(1, 0, 0, 1, 650, 200)
+
 [connection signal="body_entered" from="La_zone_de_vente" to="." method="_on_la_zone_de_vente_body_entered"]
 [connection signal="body_exited" from="La_zone_de_vente" to="." method="_on_la_zone_de_vente_body_exited"]
+[connection signal="btn_click" from="Personnage_interface" to="." method="_on_personnage_interface_btn_click"]

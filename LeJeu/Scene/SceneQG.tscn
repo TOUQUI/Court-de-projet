@@ -32,7 +32,7 @@ position = Vector2(33, -41.5)
 position = Vector2(-95, -40.5)
 
 [node name="Joueur" parent="." index="21" instance=ExtResource("2_oyjer")]
-position = Vector2(-16, 1)
+position = Vector2(-18.5, 3.5)
 scale = Vector2(1, 1)
 
 [node name="Area2D" type="Area2D" parent="." index="22"]
@@ -42,4 +42,5 @@ script = ExtResource("3_461v8")
 position = Vector2(-18.5, 48)
 shape = SubResource("RectangleShape2D_ctrqr")
 
+[connection signal="travailler" from="Vendeur_du_QG" to="Joueur" method="_on_vendeur_du_qg_travailler"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

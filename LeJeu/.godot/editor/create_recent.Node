@@ -1,11 +1,12 @@
-TextureProgressBar
+Button
 Node2D
+TileMap
+Sprite2D
 CanvasLayer
+TextureProgressBar
 CollisionShape2D
 StaticBody2D
 Area2D
-Sprite2D
 Timer
 AnimationPlayer
-TileMap
 CharacterBody2D

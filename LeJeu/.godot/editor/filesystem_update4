@@ -1,5 +1,14 @@
-res://joueur_interface.tscn
+res://Scene/SceneQG.tscn
+res://Scene/SceneQG.gd
 res://Scene/SceneCorridorG.tscn
 res://Carte/CarteScene/MapCorridorMillieu.tscn
 res://Carte/CarteScene/toilette.tscn
+res://UI/joueur_interface.tscn
 res://Joueur/joueur.tscn
+res://UI/personnage_interface.tscn
+res://UI/tuile_boite_de_texte.tscn
+res://Personne/vendeur_du_qg.tscn
+res://Personne/vendeur_du_qg.gd
+res://Joueur/joueur.gd
+res://UI/joueur_interface.gd
+res://UI/personnage_interface.gd
