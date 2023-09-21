@@ -11,3 +11,7 @@ func _ready():
 	elif provenance == "D":
 		$Joueur.position = Vector2(1005,331)
 
+
+
+func _on_c_mvers_cg_body_entered(body):
+	find_child("Joueur").derniere_emplacement = "M"

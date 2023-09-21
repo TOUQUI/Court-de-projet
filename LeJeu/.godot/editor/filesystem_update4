@@ -5,3 +5,8 @@ res://Scene/SceneCorridorM.tscn
 res://Scene/c_gvers_cm.tscn
 res://Scene/SceneCorridorD.tscn
 res://Carte/CarteScene/MapLeQG.tscn
+res://Scene/Script/QGversCG.gd
+res://Scene/SceneCorridorD.gd
+res://Carte/CarteScene/MapCorridorMillieu.tscn
+res://Scene/Script/SceneCorridorM.gd
+res://Scene/Script/SceneCorridorG.gd

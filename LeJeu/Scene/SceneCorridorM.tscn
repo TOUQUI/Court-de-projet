@@ -35,5 +35,6 @@ script = ExtResource("4_h17oq")
 position = Vector2(1054, 377.5)
 shape = SubResource("RectangleShape2D_74ttp")
 
+[connection signal="body_entered" from="CMversCG" to="." method="_on_c_mvers_cg_body_entered"]
 [connection signal="body_entered" from="CMversCG" to="CMversCG" method="_on_body_entered"]
 [connection signal="body_entered" from="CMversCD" to="CMversCD" method="_on_body_entered"]
