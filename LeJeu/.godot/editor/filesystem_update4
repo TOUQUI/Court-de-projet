@@ -1,14 +1,5 @@
-res://Personne/vendeur_du_qg.tscn
+res://joueur_interface.tscn
 res://Scene/SceneCorridorG.tscn
-res://Scene/SceneQG.tscn
-res://Scene/SceneCorridorM.tscn
-res://Scene/c_gvers_cm.tscn
-res://Scene/SceneCorridorD.tscn
-res://Carte/CarteScene/MapLeQG.tscn
-res://Scene/Script/QGversCG.gd
-res://Scene/SceneCorridorD.gd
 res://Carte/CarteScene/MapCorridorMillieu.tscn
-res://Scene/Script/SceneCorridorM.gd
-res://Scene/Script/SceneCorridorG.gd
-res://Scene/SceneQG.gd
 res://Carte/CarteScene/toilette.tscn
+res://Joueur/joueur.tscn

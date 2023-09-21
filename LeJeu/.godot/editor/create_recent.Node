@@ -1,9 +1,11 @@
+TextureProgressBar
+Node2D
+CanvasLayer
 CollisionShape2D
 StaticBody2D
 Area2D
 Sprite2D
 Timer
 AnimationPlayer
-Node2D
 TileMap
 CharacterBody2D

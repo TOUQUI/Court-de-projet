@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://tki2apulyx4e"]
+[gd_scene load_steps=12 format=3 uid="uid://tki2apulyx4e"]
 
 [ext_resource type="Script" path="res://Joueur/joueur.gd" id="1_uy1qb"]
 [ext_resource type="Texture2D" uid="uid://n1nq7l1p7jr6" path="res://Joueur/up_idle_1.png" id="2_wiuoe"]
+[ext_resource type="PackedScene" uid="uid://ogjuu37a8sao" path="res://joueur_interface.tscn" id="3_m87e3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ri8p"]
 radius = 9.0
@@ -174,3 +175,5 @@ shape = SubResource("CapsuleShape2D_0ri8p")
 libraries = {
 "": SubResource("AnimationLibrary_6v1en")
 }
+
+[node name="Joueur_interface" parent="." instance=ExtResource("3_m87e3")]
