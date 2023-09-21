@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgdonxn125jnw"]
+
+[ext_resource type="Script" path="res://Scene/Script/SceneCorridorM.gd" id="1_3b2jb"]
+[ext_resource type="PackedScene" uid="uid://c41qifx44ab2g" path="res://Carte/CarteScene/MapCorridorMillieu.tscn" id="1_eynko"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_stecf"]
+[ext_resource type="Script" path="res://Scene/Script/CMversCG.gd" id="3_dxuq2"]
+[ext_resource type="Script" path="res://Scene/Script/CMversCD.gd" id="4_h17oq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahvnn"]
+size = Vector2(40, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74ttp"]
+size = Vector2(38, 71)
+
+[node name="map_test" type="Node2D"]
+script = ExtResource("1_3b2jb")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_eynko")]
+position = Vector2(561, 409)
+
+[node name="Joueur" parent="." instance=ExtResource("2_stecf")]
+position = Vector2(1005, 331)
+
+[node name="CMversCG" type="Area2D" parent="."]
+script = ExtResource("3_dxuq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CMversCG"]
+position = Vector2(69, 372.5)
+shape = SubResource("RectangleShape2D_ahvnn")
+
+[node name="CMversCD" type="Area2D" parent="."]
+script = ExtResource("4_h17oq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CMversCD"]
+position = Vector2(1054, 377.5)
+shape = SubResource("RectangleShape2D_74ttp")
+
+[connection signal="body_entered" from="CMversCG" to="CMversCG" method="_on_body_entered"]
+[connection signal="body_entered" from="CMversCD" to="CMversCD" method="_on_body_entered"]
