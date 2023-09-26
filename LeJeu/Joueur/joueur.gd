@@ -22,8 +22,15 @@ func _input(event):
 		$AnimationPlayer.play("avancer_gauche")
 	elif Input.is_action_pressed("haut"):
 		$AnimationPlayer.play("avancer_haut")
+	elif Input.is_action_pressed("courir droite"):
+		$AnimationPlayer.play("avancer_droite")
 	else:
 		$AnimationPlayer.play("pas_bouger")
+	
+	if Input.is_action_pressed("courire"):
+		VITESSE_MAX = 450
+	else:
+		VITESSE_MAX = 300
 
 func attraper_la_touche():
 	axis.x = int(Input.is_action_pressed("droite")) - int(Input.is_action_pressed("gauche"))
