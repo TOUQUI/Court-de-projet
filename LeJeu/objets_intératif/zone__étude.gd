@@ -20,7 +20,7 @@ func _on_zone_body_exited(body):
 
 
 func _on_btn_étudier_pressed():
-	pass # Replace with function body.
+	joueur_étudie.emit()
 
 
 func _on_btn_quiter_pressed():

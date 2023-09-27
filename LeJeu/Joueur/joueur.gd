@@ -9,6 +9,9 @@ signal joueur_étudie
 
 static var derniere_emplacement = "vide"
 
+var parent_node
+var nodes
+
 func _ready():
 	if derniere_emplacement == "GP":
 		Connecter_bureaux()
@@ -69,4 +72,12 @@ func _on_vendeur_du_qg_travailler():
 	pass
 
 func Connecter_bureaux():
-	pass
+	parent_node = find_parent("Node2D")
+	nodes = parent_node.find_children("Étude")
+	nodes = nodes.get_children()
+	for child in nodes:
+		child.joueur_étudie.connect(EnleverTemps, 2)
+
+
+func EnleverTemps(temps):
+	joueur_étudie.emit()

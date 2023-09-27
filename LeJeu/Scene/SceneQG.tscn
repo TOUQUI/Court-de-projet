@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dw41b3q0k7nx0"]
+[gd_scene load_steps=6 format=3 uid="uid://dw41b3q0k7nx0"]
 
 [ext_resource type="PackedScene" uid="uid://b4mhspjuk24a1" path="res://Carte/CarteScene/MapLeQG.tscn" id="1_8t3ys"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_oyjer"]
 [ext_resource type="Script" path="res://Scene/SceneQG.gd" id="2_t4fra"]
 [ext_resource type="Script" path="res://Scene/Script/QGversCG.gd" id="3_461v8"]
-[ext_resource type="PackedScene" uid="uid://dac8hb5ycwgr5" path="res://objets_intératif/zone__étude.tscn" id="5_r0d8u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctrqr"]
 size = Vector2(37, 20)
@@ -42,24 +41,6 @@ script = ExtResource("3_461v8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(-18.5, 48)
 shape = SubResource("RectangleShape2D_ctrqr")
-
-[node name="Zone_ étude" parent="." index="23" instance=ExtResource("5_r0d8u")]
-position = Vector2(-96, -24)
-
-[node name="Zone_ étude2" parent="." index="24" instance=ExtResource("5_r0d8u")]
-position = Vector2(-96, -87)
-
-[node name="Zone_ étude3" parent="." index="25" instance=ExtResource("5_r0d8u")]
-position = Vector2(34.5, -88.5)
-
-[node name="Zone_ étude4" parent="." index="26" instance=ExtResource("5_r0d8u")]
-position = Vector2(32.5, -23.5)
-
-[node name="Zone_ étude5" parent="." index="27" instance=ExtResource("5_r0d8u")]
-position = Vector2(161.5, -86.5)
-
-[node name="Zone_ étude6" parent="." index="28" instance=ExtResource("5_r0d8u")]
-position = Vector2(162, -24)
 
 [connection signal="travailler" from="Vendeur_du_QG" to="Joueur" method="_on_vendeur_du_qg_travailler"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

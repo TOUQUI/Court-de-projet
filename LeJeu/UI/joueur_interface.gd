@@ -12,6 +12,6 @@ func _process(delta):
 	pass
 
 
-func _on_joueur_btn_qg():
-	temps = temps + 10
+func _on_joueur_joueur_étudie(heure):
+	temps =  temps + heure
 	$Node2D/TextureProgressBar.value = temps

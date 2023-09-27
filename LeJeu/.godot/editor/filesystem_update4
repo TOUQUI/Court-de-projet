@@ -7,4 +7,4 @@ res://Personne/vendeur_du_qg.tscn
 res://Scene/SceneQG.tscn
 res://objets_intératif/zone__étude.tscn
 res://Carte/CarteScene/MapCorridorGauche.tscn
-res://Joueur/joueur.gd
+res://node_SceneQG.tscn

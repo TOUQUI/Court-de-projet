@@ -40,7 +40,7 @@ open_scripts=["res://Scene/Script/CDversCM.gd", "res://Scene/Script/CGversCM.gd"
 open_help=[]
 script_split_offset=209
 list_split_offset=0
-selected_script="res://Scene/Script/SceneCorridorG.gd"
+selected_script="res://Joueur/joueur.gd"
 
 [ShaderEditor]
 
