@@ -14,7 +14,7 @@ size = Vector2(446, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inq7h"]
 size = Vector2(6.5, 219.5)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Corridor_G" type="StaticBody2D"]
 scale = Vector2(2, 2)
 
 [node name="tuileEcole" parent="." instance=ExtResource("1_l5brx")]

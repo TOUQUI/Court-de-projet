@@ -1,11 +1,10 @@
-res://objets_intératif/zone__étude.gd
-res://objets_intératif/zone__étude.tscn
-res://Scene/SceneQG.tscn
 res://Scene/SceneCorridorG.tscn
 res://Carte/CarteScene/MapCorridorMillieu.tscn
 res://Carte/CarteScene/toilette.tscn
 res://Joueur/joueur.tscn
 res://UI/personnage_interface.tscn
 res://Personne/vendeur_du_qg.tscn
-res://Personne/vendeur_du_qg.gd
+res://Scene/SceneQG.tscn
+res://objets_intératif/zone__étude.tscn
+res://Carte/CarteScene/MapCorridorGauche.tscn
 res://Joueur/joueur.gd

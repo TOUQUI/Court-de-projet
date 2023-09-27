@@ -10,7 +10,8 @@ signal joueur_étudie
 static var derniere_emplacement = "vide"
 
 func _ready():
-	pass
+	if derniere_emplacement == "GP":
+		Connecter_bureaux()
 
 func _physics_process(delta):
 	bouger(delta)
@@ -65,4 +66,7 @@ func apliquer_mouvement(accel):
 
 func _on_vendeur_du_qg_travailler():
 	#btn_QG.emit()
+	pass
+
+func Connecter_bureaux():
 	pass

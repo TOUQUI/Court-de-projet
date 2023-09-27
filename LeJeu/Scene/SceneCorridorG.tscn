@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_601ba"]
 size = Vector2(26, 20)
 
-[node name="StaticBody2D" instance=ExtResource("1_6uowg")]
+[node name="Corridor_G" instance=ExtResource("1_6uowg")]
 position = Vector2(570, 417)
 script = ExtResource("2_4m6uy")
 
