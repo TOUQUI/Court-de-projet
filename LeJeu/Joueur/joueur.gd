@@ -3,15 +3,18 @@ extends CharacterBody2D
 @export var VITESSE_MAX = 300
 @export var ACCELERATION = 1500
 @export var FRICTION = 500
-
 @onready var axis =Vector2.ZERO
 
-signal btn_QG
+signal joueur_étudie
 
 static var derniere_emplacement = "vide"
 
+func _ready():
+	pass
+
 func _physics_process(delta):
 	bouger(delta)
+
 
 func _input(event):
 	if Input.is_action_pressed("bas"):
@@ -22,8 +25,6 @@ func _input(event):
 		$AnimationPlayer.play("avancer_gauche")
 	elif Input.is_action_pressed("haut"):
 		$AnimationPlayer.play("avancer_haut")
-	elif Input.is_action_pressed("courir droite"):
-		$AnimationPlayer.play("avancer_droite")
 	else:
 		$AnimationPlayer.play("pas_bouger")
 	
@@ -32,10 +33,12 @@ func _input(event):
 	else:
 		VITESSE_MAX = 300
 
+
 func attraper_la_touche():
 	axis.x = int(Input.is_action_pressed("droite")) - int(Input.is_action_pressed("gauche"))
 	axis.y = int(Input.is_action_pressed("bas")) - int(Input.is_action_pressed("haut"))
 	return axis .normalized()
+
 
 func bouger(delta):
 	axis = attraper_la_touche()
@@ -45,6 +48,7 @@ func bouger(delta):
 	else:
 		apliquer_mouvement(axis * ACCELERATION * delta)
 	move_and_slide()
+
 
 func apliquer_friction(amount):
 	if velocity.length() > amount:
@@ -60,4 +64,5 @@ func apliquer_mouvement(accel):
 
 
 func _on_vendeur_du_qg_travailler():
-	btn_QG.emit()
+	#btn_QG.emit()
+	pass

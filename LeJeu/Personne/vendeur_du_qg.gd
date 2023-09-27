@@ -2,7 +2,7 @@ extends Sprite2D
 
 signal travailler()
 
-var jouer_dans_zone = false
+var joueur_dans_zone = false
 var parent
 var joueur_node
 
@@ -12,18 +12,18 @@ func _ready():
 
 
 func _on_la_zone_de_vente_body_entered(body):
-	jouer_dans_zone = true
+	joueur_dans_zone = true
 	$F.visible = true
 
 
 func _on_la_zone_de_vente_body_exited(body):
-	jouer_dans_zone = false
+	joueur_dans_zone = false
 	$Personnage_interface.visible = false
 	$F.visible = false
 
 
 func _input(event):
-	if event.is_action_pressed("interaction") && jouer_dans_zone:
+	if event.is_action_pressed("interaction") && joueur_dans_zone:
 		$Personnage_interface.visible = true
 
 func _on_personnage_interface_btn_click():
