@@ -1,12 +1,9 @@
 res://Scene/SceneCorridorG.tscn
 res://Carte/CarteScene/toilette.tscn
 res://Joueur/joueur.tscn
-res://UI/personnage_interface.tscn
 res://Personne/vendeur_du_qg.tscn
 res://Scene/SceneQG.tscn
 res://objets_intératif/zone__étude.tscn
 res://Carte/CarteScene/MapCorridorGauche.tscn
 res://node_SceneQG.tscn
-res://Personne/vendeur_du_qg.gd
 res://Joueur/joueur.gd
-res://Carte/CarteScene/MapLeQG.tscn

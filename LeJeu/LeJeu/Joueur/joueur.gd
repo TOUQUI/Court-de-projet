@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var VITESSE_MAX = 300
+@export var VITESSE_MAX = 200
 @export var ACCELERATION = 1500
 @export var FRICTION = 500
 @onready var axis =Vector2.ZERO
@@ -35,7 +35,7 @@ func _input(event):
 	if Input.is_action_pressed("courire"):
 		VITESSE_MAX = 450
 	else:
-		VITESSE_MAX = 300
+		VITESSE_MAX = 200
 
 
 func attraper_la_touche():
