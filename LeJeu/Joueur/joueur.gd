@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var FRICTION = 500
 @onready var axis =Vector2.ZERO
 
-signal joueur_étudie
+signal joueur_étudie(heure:int)
 
 static var derniere_emplacement = "vide"
 
@@ -72,12 +72,13 @@ func _on_vendeur_du_qg_travailler():
 	pass
 
 func Connecter_bureaux():
-	parent_node = find_parent("Node2D")
-	nodes = parent_node.find_children("Étude")
+	nodes = get_node("/root/NodeQG/Étude")
 	nodes = nodes.get_children()
 	for child in nodes:
-		child.joueur_étudie.connect(EnleverTemps, 2)
+		child.joueur_étudie.connect(EnleverTemps)
 
 
-func EnleverTemps(temps):
-	joueur_étudie.emit()
+func EnleverTemps(heure, expediteur):
+	nodes = get_node("/root/NodeQG/Étude/" + str(expediteur))
+	nodes.joueur_étudie.connect(EnleverTemps)
+	joueur_étudie.emit(20)

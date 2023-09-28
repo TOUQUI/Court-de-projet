@@ -21,7 +21,6 @@ func _on_détecteur_joueur_body_exited(body):
 func _input(event):
 	if event.is_action_pressed("interaction") && joueur_detecte:
 		$AnimationPlayer.play("Ouverture")
-		print(parent_node.name)
 		if parent_node.name == "Corridor_G":
 			parent_node.find_child("Joueur").derniere_emplacement = "GP"
 		$Timer.start()
