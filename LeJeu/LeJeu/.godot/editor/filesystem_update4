@@ -1,0 +1,16 @@
+res://UI/joueur_interface.gd
+res://UI/joueur_interface.tscn
+res://Scene/SceneCorridorG.tscn
+res://Carte/CarteScene/toilette.tscn
+res://Joueur/joueur.tscn
+res://Personne/vendeur_du_qg.tscn
+res://Scene/SceneQG.tscn
+res://objets_intératif/zone__étude.tscn
+res://Carte/CarteScene/MapCorridorGauche.tscn
+res://Scene/node_SceneQG.tscn
+res://Scene/SceneMaison.tscn
+res://Scene/SceneCaféteria.tscn
+res://Scene/SceneCorridorM.tscn
+res://UI/tuile_boite_de_texte.tscn
+res://Carte/Porte_bleu.tscn
+res://UI/slot.gd

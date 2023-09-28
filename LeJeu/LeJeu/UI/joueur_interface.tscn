@@ -1,0 +1,223 @@
+[gd_scene load_steps=20 format=3 uid="uid://ogjuu37a8sao"]
+
+[ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="1_rkjmk"]
+[ext_resource type="Script" path="res://UI/joueur_interface.gd" id="1_wrn2t"]
+[ext_resource type="Texture2D" uid="uid://cuaw8nsbh0ykc" path="res://UI/sprite_1.png" id="2_mj1fj"]
+[ext_resource type="Texture2D" uid="uid://bo13c5q6g36l8" path="res://UI/LivreMouvement.png" id="4_pny1w"]
+[ext_resource type="Texture2D" uid="uid://btpi4hknofog3" path="res://UI/LivreOuverture.png" id="5_ofh14"]
+[ext_resource type="Texture2D" uid="uid://b8quo22p6mjhn" path="res://UI/Tag.png" id="5_qgqti"]
+[ext_resource type="Texture2D" uid="uid://c1up1ff0x1j82" path="res://UI/IconeInventaire.png" id="6_405ym"]
+[ext_resource type="Texture2D" uid="uid://cp7w1jgvc71go" path="res://UI/IconeParametre.png" id="7_dmhpd"]
+[ext_resource type="Texture2D" uid="uid://dcpfkbbvn4c5f" path="res://UI/IconeSlot.png" id="8_xscvb"]
+[ext_resource type="Script" path="res://UI/slot.gd" id="9_tkedi"]
+
+[sub_resource type="Animation" id="Animation_5vpc1"]
+resource_name = "TournerPageVersDroite"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 5, 4, 7, 8, 10]
+}
+
+[sub_resource type="Animation" id="Animation_dbn76"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_kqqd4"]
+resource_name = "TournerPageVersGauche"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 5, 6, 9, 10]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3jj8"]
+_data = {
+"RESET": SubResource("Animation_dbn76"),
+"TournerPageVersDroite": SubResource("Animation_5vpc1"),
+"TournerPageVersGauche": SubResource("Animation_kqqd4")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_on2pf"]
+texture = ExtResource("8_xscvb")
+
+[sub_resource type="Animation" id="Animation_o8ne2"]
+resource_name = "Ouverture"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_b8rqa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qvgvb"]
+resource_name = "Fermeture"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x7ga8"]
+_data = {
+"Fermeture": SubResource("Animation_qvgvb"),
+"Ouverture": SubResource("Animation_o8ne2"),
+"RESET": SubResource("Animation_b8rqa")
+}
+
+[node name="Joueur_interface" type="CanvasLayer"]
+script = ExtResource("1_wrn2t")
+
+[node name="Horloge" type="Node2D" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Horloge"]
+texture_filter = 2
+offset_left = 726.0
+offset_right = 826.0
+offset_bottom = 100.0
+fill_mode = 4
+texture_under = ExtResource("1_rkjmk")
+texture_progress = ExtResource("2_mj1fj")
+
+[node name="Livre" type="Node2D" parent="."]
+
+[node name="SpriteLivre" type="Sprite2D" parent="Livre"]
+texture_filter = 1
+position = Vector2(575, 350)
+texture = ExtResource("4_pny1w")
+hframes = 3
+vframes = 4
+
+[node name="AnimationLivre" type="AnimationPlayer" parent="Livre/SpriteLivre"]
+libraries = {
+"": SubResource("AnimationLibrary_b3jj8")
+}
+
+[node name="btnParametre" type="Button" parent="Livre/SpriteLivre"]
+offset_left = 342.0
+offset_top = -164.0
+offset_right = 382.0
+offset_bottom = -124.0
+icon = ExtResource("5_qgqti")
+flat = true
+
+[node name="btnInventaire" type="Button" parent="Livre/SpriteLivre"]
+offset_left = 342.0
+offset_top = -136.0
+offset_right = 382.0
+offset_bottom = -96.0
+icon = ExtResource("5_qgqti")
+flat = true
+
+[node name="ImageInventaire" type="Sprite2D" parent="Livre/SpriteLivre"]
+position = Vector2(362, -116)
+texture = ExtResource("6_405ym")
+
+[node name="ImageParametre" type="Sprite2D" parent="Livre/SpriteLivre"]
+position = Vector2(362, -144)
+texture = ExtResource("7_dmhpd")
+
+[node name="Control" type="Control" parent="Livre/SpriteLivre"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SlotContainer" type="GridContainer" parent="Livre/SpriteLivre/Control"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 3.0
+offset_right = 290.0
+offset_bottom = 144.0
+columns = 5
+
+[node name="1" type="Panel" parent="Livre/SpriteLivre/Control/SlotContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_on2pf")
+script = ExtResource("9_tkedi")
+
+[node name="LivreOuvertureFermeture" type="Sprite2D" parent="Livre"]
+visible = false
+texture_filter = 1
+position = Vector2(600, 358)
+texture = ExtResource("5_ofh14")
+hframes = 2
+vframes = 4
+
+[node name="AnimationLiverFetO" type="AnimationPlayer" parent="Livre/LivreOuvertureFermeture"]
+libraries = {
+"": SubResource("AnimationLibrary_x7ga8")
+}
+
+[node name="Chrono0_7" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Chrono0_5" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[connection signal="pressed" from="Livre/SpriteLivre/btnParametre" to="." method="_on_btn_parametre_pressed"]
+[connection signal="pressed" from="Livre/SpriteLivre/btnInventaire" to="." method="_on_btn_inventaire_pressed"]
+[connection signal="gui_input" from="Livre/SpriteLivre/Control/SlotContainer/1" to="Livre/SpriteLivre/Control/SlotContainer/1" method="_on_gui_input"]
+[connection signal="timeout" from="Chrono0_7" to="." method="_on_chrono_0_7_timeout"]
+[connection signal="timeout" from="Chrono0_5" to="." method="_on_chrono_0_5_timeout"]
