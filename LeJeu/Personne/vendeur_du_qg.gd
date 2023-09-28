@@ -7,8 +7,9 @@ var parent
 var joueur_node
 
 func _ready():
-	$Personnage_interface.visible = false
 	$F.visible = false
+	$CanvasLayer/Menu.visible = false
+	$CanvasLayer/Magasin.visible = false
 
 
 func _on_la_zone_de_vente_body_entered(body):
@@ -18,13 +19,19 @@ func _on_la_zone_de_vente_body_entered(body):
 
 func _on_la_zone_de_vente_body_exited(body):
 	joueur_dans_zone = false
-	$Personnage_interface.visible = false
 	$F.visible = false
+	$CanvasLayer/Menu.visible = false
+	$CanvasLayer/Magasin.visible = false
 
 
 func _input(event):
 	if event.is_action_pressed("interaction") && joueur_dans_zone:
-		$Personnage_interface.visible = true
+		$CanvasLayer/Menu.visible = true
 
-func _on_personnage_interface_btn_click():
-	travailler.emit()
+func _on_magasin_pressed():
+	$CanvasLayer/Menu.visible = false
+	$CanvasLayer/Magasin.visible = true
+
+
+func _on_quiter_pressed():
+	$CanvasLayer/Menu.visible = false

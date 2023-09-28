@@ -1,9 +1,9 @@
+CanvasLayer
 Sprite2D
-Node2D
 Button
 Label
+Node2D
 TextEdit
-CanvasLayer
 CollisionShape2D
 Area2D
 TileMap

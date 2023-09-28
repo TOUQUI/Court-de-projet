@@ -66,19 +66,16 @@ func apliquer_mouvement(accel):
 	velocity += accel
 	velocity = velocity.limit_length(VITESSE_MAX)
 
-
-func _on_vendeur_du_qg_travailler():
-	#btn_QG.emit()
-	pass
-
 func Connecter_bureaux():
 	nodes = get_node("/root/NodeQG/Étude")
 	nodes = nodes.get_children()
 	for child in nodes:
-		child.joueur_étudie.connect(EnleverTemps)
+		if !child.joueur_étudie.is_connected(EnleverTemps):
+			child.joueur_étudie.connect(EnleverTemps)
 
 
 func EnleverTemps(heure, expediteur):
 	nodes = get_node("/root/NodeQG/Étude/" + str(expediteur))
-	nodes.joueur_étudie.connect(EnleverTemps)
+	if !nodes.joueur_étudie.is_connected(EnleverTemps):
+		nodes.joueur_étudie.connect(EnleverTemps)
 	joueur_étudie.emit(20)

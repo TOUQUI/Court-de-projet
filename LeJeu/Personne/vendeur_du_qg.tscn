@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbjkhiyoqwe5y"]
+[gd_scene load_steps=10 format=3 uid="uid://cbjkhiyoqwe5y"]
 
 [ext_resource type="Texture2D" uid="uid://featneqnbsdw" path="res://Personne/Male 14-1.png" id="1_f0cda"]
 [ext_resource type="Script" path="res://Personne/vendeur_du_qg.gd" id="1_w6yec"]
 [ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="3_pjg6o"]
-[ext_resource type="PackedScene" uid="uid://v48oa4ik2p6d" path="res://UI/personnage_interface.tscn" id="4_tvmwa"]
+[ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="4_kd3e0"]
+[ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="5_wdc02"]
+[ext_resource type="Texture2D" uid="uid://ml755n3paq8h" path="res://UI/Panier.png" id="6_m8y3i"]
+[ext_resource type="Texture2D" uid="uid://csa4mp6bh41h7" path="res://UI/Quiter.png" id="7_yoyqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iuu6r"]
 size = Vector2(35, 47)
+
+[sub_resource type="LabelSettings" id="LabelSettings_687lf"]
+font = ExtResource("5_wdc02")
+font_size = 10
 
 [node name="Vendeur_du_QG" type="Sprite2D"]
 script = ExtResource("1_w6yec")
@@ -22,6 +29,7 @@ vframes = 4
 [node name="La_zone_de_vente" type="Area2D" parent="."]
 
 [node name="Zone_de_vente" type="CollisionShape2D" parent="La_zone_de_vente"]
+visible = false
 position = Vector2(1, 11.5)
 shape = SubResource("RectangleShape2D_iuu6r")
 
@@ -35,10 +43,51 @@ hframes = 8
 vframes = 14
 frame = 21
 
-[node name="Personnage_interface" parent="." instance=ExtResource("4_tvmwa")]
-offset = Vector2(650, 200)
-transform = Transform2D(1, 0, 0, 1, 650, 200)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Magasin" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(600, 400)
+scale = Vector2(2, 2)
+
+[node name="Tuile_boite_de_texte" parent="CanvasLayer/Magasin" instance=ExtResource("4_kd3e0")]
+layer_0/tile_data = PackedInt32Array(-5, 0, 0, 65531, 0, 1, -4, 65536, 0, 65532, 393216, 0, 327675, 786432, 0, 393211, 786432, 1, 327676, 393216, 0, 393212, 851968, 1, 262147, 393216, 0, 327683, 0, 13, 262148, 65536, 12, 327684, 65536, 13, -65533, 524288, 0, 3, 393216, 0, -65532, 589824, 0, 4, 589824, 1, -3, 131072, 0, -2, 131072, 0, -1, 131072, 0, -65536, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, 131067, 786432, 0, 196603, 786432, 0, 262139, 786432, 0, 65540, 65536, 6, 131076, 65536, 6, 196612, 65536, 6, 393213, 851968, 1, 393214, 851968, 1, 393215, 851968, 1, 327680, 851968, 1, 327681, 851968, 1, 327682, 851968, 1, 327677, 393216, 0, 327678, 393216, 0, 327679, 393216, 0, 262144, 393216, 0, 262145, 393216, 0, 262146, 393216, 0, 196611, 393216, 0, 131075, 393216, 0, 65539, 393216, 0, 2, 393216, 0, 1, 393216, 0, 0, 393216, 0, 65535, 393216, 0, 65534, 393216, 0, 65533, 393216, 0, 131068, 393216, 0, 196604, 393216, 0, 262140, 393216, 0, 262141, 393216, 0, 262142, 393216, 0, 262143, 393216, 0, 196608, 393216, 0, 196609, 393216, 0, 196610, 393216, 0, 131074, 393216, 0, 65538, 393216, 0, 65537, 393216, 0, 65536, 393216, 0, 131071, 393216, 0, 131070, 393216, 0, 131069, 393216, 0, 196605, 393216, 0, 131073, 393216, 0, 131072, 393216, 0, 196607, 393216, 0, 196606, 393216, 0)
+
+[node name="Menu" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(600, 400)
+scale = Vector2(2, 2)
+
+[node name="Tuile_boite_de_texte" parent="CanvasLayer/Menu" instance=ExtResource("4_kd3e0")]
+layer_0/tile_data = PackedInt32Array(65531, 0, 0, 131067, 786432, 0, 65532, 65536, 0, 131068, 327680, 1, 3, 524288, 0, 65539, 327680, 1, 4, 589824, 0, 65540, 65536, 12, 65533, 131072, 0, 65534, 131072, 0, 65535, 131072, 0, 0, 131072, 0, 1, 131072, 0, 2, 131072, 0, 196603, 0, 1, 196604, 327680, 0, 131075, 327680, 0, 131076, 458752, 1, 196605, 327680, 0, 196606, 327680, 0, 196607, 327680, 0, 131072, 327680, 0, 131073, 327680, 0, 131074, 327680, 0, 131069, 327680, 1, 131070, 327680, 1, 131071, 327680, 1, 65536, 327680, 1, 65537, 327680, 1, 65538, 327680, 1, 262140, 327680, 0, 262141, 327680, 0, 262142, 327680, 0, 262143, 327680, 0, 196608, 327680, 0, 196609, 327680, 0, 196610, 327680, 0, 196611, 327680, 0, 262147, 327680, 0, 262146, 327680, 0, 262145, 327680, 0, 262144, 327680, 0, 327679, 327680, 0, 327678, 327680, 0, 327677, 327680, 0, 327676, 327680, 0, 327675, 786432, 0, 393211, 786432, 1, 393212, 851968, 1, 262139, 0, 1, 196612, 458752, 1, 262148, 65536, 12, 327683, 0, 13, 327684, 65536, 13, 393213, 720896, 1, 393214, 720896, 1, 393215, 720896, 1, 327680, 720896, 1, 327681, 720896, 1, 327682, 720896, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Menu"]
+texture_filter = 1
+offset_left = -73.0
+offset_top = 7.0
+offset_right = 45.0
+offset_bottom = 43.0
+text = "Salut! J'ai plein
+de chose à vendre.
+Tu veux quoi?"
+label_settings = SubResource("LabelSettings_687lf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Magasin" type="Button" parent="CanvasLayer/Menu"]
+offset_left = -50.0
+offset_top = 48.0
+offset_right = -17.0
+offset_bottom = 81.0
+icon = ExtResource("6_m8y3i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quiter" type="Button" parent="CanvasLayer/Menu"]
+offset_left = 19.0
+offset_top = 48.0
+offset_right = 52.0
+offset_bottom = 81.0
+icon = ExtResource("7_yoyqd")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="La_zone_de_vente" to="." method="_on_la_zone_de_vente_body_entered"]
 [connection signal="body_exited" from="La_zone_de_vente" to="." method="_on_la_zone_de_vente_body_exited"]
-[connection signal="btn_click" from="Personnage_interface" to="." method="_on_personnage_interface_btn_click"]
+[connection signal="pressed" from="CanvasLayer/Menu/Magasin" to="." method="_on_magasin_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Quiter" to="." method="_on_quiter_pressed"]
