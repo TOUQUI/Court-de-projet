@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ra5bia52greq"]
+
+[ext_resource type="Script" path="res://Scene/Script/scene_maison.gd" id="1_t2mek"]
+[ext_resource type="PackedScene" uid="uid://bsia5jmnqj48f" path="res://Carte/CarteScene/MapChambre.tscn" id="2_wuno2"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_yp4r7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjw3"]
+size = Vector2(91, 10)
+
+[node name="SceneMaison" type="Node2D"]
+script = ExtResource("1_t2mek")
+
+[node name="MapChambre" parent="." instance=ExtResource("2_wuno2")]
+position = Vector2(575, 220)
+scale = Vector2(2, 2)
+
+[node name="Joueur" parent="." instance=ExtResource("3_yp4r7")]
+position = Vector2(746, 480)
+
+[node name="Porte" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Porte"]
+position = Vector2(751, 569)
+shape = SubResource("RectangleShape2D_fxjw3")
+
+[connection signal="body_entered" from="Porte" to="." method="_on_porte_body_entered"]

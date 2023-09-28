@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dw41b3q0k7nx0"]
+[gd_scene load_steps=6 format=3 uid="uid://c0f5a110cjy4l"]
 
 [ext_resource type="PackedScene" uid="uid://b4mhspjuk24a1" path="res://Carte/CarteScene/MapLeQG.tscn" id="1_8t3ys"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_oyjer"]
-[ext_resource type="Script" path="res://Scene/SceneQG.gd" id="2_t4fra"]
+[ext_resource type="Script" path="res://Scene/Script/SceneQG.gd" id="2_sxefa"]
 [ext_resource type="Script" path="res://Scene/Script/QGversCG.gd" id="3_461v8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctrqr"]
@@ -11,7 +11,7 @@ size = Vector2(37, 20)
 [node name="StaticBody2D" instance=ExtResource("1_8t3ys")]
 position = Vector2(501, 462)
 scale = Vector2(2, 2)
-script = ExtResource("2_t4fra")
+script = ExtResource("2_sxefa")
 
 [node name="CollisionTable" parent="." index="9"]
 position = Vector2(-96, -104.625)
