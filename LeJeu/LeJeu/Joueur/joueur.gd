@@ -6,8 +6,10 @@ extends CharacterBody2D
 @onready var axis =Vector2.ZERO
 
 signal joueur_étudie(heure:int)
+signal ajouterItemAcheter(item:int)
 
 static var derniere_emplacement = "vide"
+static var argent = 100
 
 var parent_node
 var nodes
@@ -79,3 +81,9 @@ func EnleverTemps(heure, expediteur):
 	if !nodes.joueur_étudie.is_connected(EnleverTemps):
 		nodes.joueur_étudie.connect(EnleverTemps)
 	joueur_étudie.emit(20)
+
+
+func _on_vendeur_du_qg_acheter(item, prix):
+	if argent >= prix:
+		argent = argent - prix
+		ajouterItemAcheter.emit(item)

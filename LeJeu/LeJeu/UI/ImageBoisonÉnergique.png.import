@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcpfkbbvn4c5f"
-path="res://.godot/imported/IconeSlot.png-5791359dd160b7b511842619f1571c24.ctex"
+uid="uid://cev2wbbra633y"
+path="res://.godot/imported/ImageBoisonÉnergique.png-a1a6b988336124f254f567e1b87cdd94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/IconeSlot.png"
-dest_files=["res://.godot/imported/IconeSlot.png-5791359dd160b7b511842619f1571c24.ctex"]
+source_file="res://UI/ImageBoisonÉnergique.png"
+dest_files=["res://.godot/imported/ImageBoisonÉnergique.png-a1a6b988336124f254f567e1b87cdd94.ctex"]
 
 [params]
 

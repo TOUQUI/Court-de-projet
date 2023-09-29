@@ -1,4 +1,3 @@
-res://UI/joueur_interface.gd
 res://UI/joueur_interface.tscn
 res://Scene/SceneCorridorG.tscn
 res://Carte/CarteScene/toilette.tscn
@@ -13,4 +12,6 @@ res://Scene/SceneCaféteria.tscn
 res://Scene/SceneCorridorM.tscn
 res://UI/tuile_boite_de_texte.tscn
 res://Carte/Porte_bleu.tscn
-res://UI/slot.gd
+res://UI/joueur_interface.gd
+res://Joueur/joueur.gd
+res://Personne/vendeur_du_qg.gd

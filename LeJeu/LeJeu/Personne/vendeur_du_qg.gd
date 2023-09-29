@@ -1,6 +1,6 @@
 extends Sprite2D
 
-signal travailler()
+signal acheter(item:int, prix:int)
 
 var joueur_dans_zone = false
 var parent
@@ -35,3 +35,7 @@ func _on_magasin_pressed():
 
 func _on_quiter_pressed():
 	$CanvasLayer/Menu.visible = false
+
+
+func _on_btn_acheter_boison_pressed():
+	acheter.emit(1,5)
