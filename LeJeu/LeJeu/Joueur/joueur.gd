@@ -6,10 +6,10 @@ extends CharacterBody2D
 @onready var axis =Vector2.ZERO
 
 signal joueur_étudie(heure:int)
-signal ajouterItemAcheter(item:int)
+signal ajouterItemAcheter(item:int, prix:int)
+signal dormir()
 
 static var derniere_emplacement = "vide"
-static var argent = 100
 
 var parent_node
 var nodes
@@ -84,6 +84,8 @@ func EnleverTemps(heure, expediteur):
 
 
 func _on_vendeur_du_qg_acheter(item, prix):
-	if argent >= prix:
-		argent = argent - prix
-		ajouterItemAcheter.emit(item)
+	ajouterItemAcheter.emit(item, prix)
+
+
+func _on_scene_maison_dormire():
+	dormir.emit()

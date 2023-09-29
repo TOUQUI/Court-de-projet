@@ -1,11 +1,65 @@
-[gd_scene load_steps=5 format=3 uid="uid://ra5bia52greq"]
+[gd_scene load_steps=16 format=3 uid="uid://ra5bia52greq"]
 
 [ext_resource type="Script" path="res://Scene/Script/scene_maison.gd" id="1_t2mek"]
 [ext_resource type="PackedScene" uid="uid://bsia5jmnqj48f" path="res://Carte/CarteScene/MapChambre.tscn" id="2_wuno2"]
+[ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="3_pghkq"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_yp4r7"]
+[ext_resource type="Texture2D" uid="uid://c555jrgjye41k" path="res://UI/noir.png" id="5_rbsva"]
+[ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="6_ddkfj"]
+[ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="7_yp376"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjw3"]
 size = Vector2(91, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou1as"]
+size = Vector2(76.25, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1a6vf"]
+size = Vector2(11, 39)
+
+[sub_resource type="Animation" id="Animation_s1tox"]
+resource_name = "dormire"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c7ho0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4kw1"]
+_data = {
+"RESET": SubResource("Animation_c7ho0"),
+"dormire": SubResource("Animation_s1tox")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iet6s"]
+size = Vector2(57, 60)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s1rx1"]
+font = ExtResource("7_yp376")
+font_size = 14
 
 [node name="SceneMaison" type="Node2D"]
 script = ExtResource("1_t2mek")
@@ -14,13 +68,90 @@ script = ExtResource("1_t2mek")
 position = Vector2(575, 220)
 scale = Vector2(2, 2)
 
-[node name="Joueur" parent="." instance=ExtResource("3_yp4r7")]
-position = Vector2(746, 480)
-
 [node name="Porte" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porte"]
 position = Vector2(751, 569)
 shape = SubResource("RectangleShape2D_fxjw3")
 
+[node name="Lit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lit"]
+position = Vector2(796.125, 318)
+shape = SubResource("RectangleShape2D_ou1as")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lit"]
+position = Vector2(763, 292)
+shape = SubResource("RectangleShape2D_1a6vf")
+
+[node name="F" type="Sprite2D" parent="Lit"]
+visible = false
+texture_filter = 1
+position = Vector2(801, 171)
+scale = Vector2(2, 2)
+texture = ExtResource("3_pghkq")
+hframes = 8
+vframes = 14
+frame = 21
+
+[node name="Joueur" parent="." instance=ExtResource("3_yp4r7")]
+position = Vector2(751, 494)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Noir" type="Sprite2D" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(597.5, 366)
+scale = Vector2(2435, 1500)
+texture = ExtResource("5_rbsva")
+
+[node name="nuit" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../Noir")
+libraries = {
+"": SubResource("AnimationLibrary_e4kw1")
+}
+
+[node name="Chrono2_4" type="Timer" parent="."]
+wait_time = 2.4
+one_shot = true
+
+[node name="Frigidaire" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frigidaire"]
+position = Vector2(607.5, 507)
+shape = SubResource("RectangleShape2D_iet6s")
+
+[node name="F" type="Sprite2D" parent="Frigidaire"]
+visible = false
+texture_filter = 1
+position = Vector2(606, 349)
+scale = Vector2(2, 2)
+texture = ExtResource("3_pghkq")
+hframes = 8
+vframes = 14
+frame = 21
+
+[node name="FrigidaireTexte" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Tuile_boite_de_texte" parent="FrigidaireTexte" instance=ExtResource("6_ddkfj")]
+layer_0/tile_data = PackedInt32Array(1114143, 0, 0, 1179679, 0, 1, 1114144, 65536, 0, 1179680, 65536, 1, 1114145, 131072, 0, 1179681, 131072, 1, 1114146, 196608, 0, 1179682, 196608, 1, 1114147, 131072, 0, 1179683, 131072, 1, 1114148, 196608, 0, 1179684, 196608, 1, 1114149, 131072, 0, 1179685, 131072, 1, 1114150, 196608, 0, 1179686, 196608, 1, 1114151, 131072, 0, 1179687, 131072, 1, 1114152, 196608, 0, 1179688, 196608, 1, 1114153, 131072, 0, 1179689, 131072, 1, 1114154, 196608, 0, 1179690, 196608, 1, 1114155, 131072, 0, 1179691, 131072, 1, 1114156, 196608, 0, 1179692, 196608, 1, 1114157, 131072, 0, 1179693, 131072, 1, 1114158, 524288, 0, 1179694, 524288, 1, 1114159, 589824, 0, 1179695, 589824, 1, 1310751, 786432, 0, 1376287, 786432, 0, 1310752, 327680, 1, 1376288, 0, 12, 1245216, 327680, 0, 1245217, 393216, 0, 1310753, 393216, 1, 1245218, 327680, 0, 1310754, 327680, 1, 1245219, 393216, 0, 1310755, 393216, 1, 1245220, 327680, 0, 1310756, 327680, 1, 1245221, 393216, 0, 1310757, 393216, 1, 1245222, 327680, 0, 1310758, 327680, 1, 1245223, 393216, 0, 1310759, 393216, 1, 1245224, 327680, 0, 1310760, 327680, 1, 1245225, 393216, 0, 1310761, 393216, 1, 1245226, 327680, 0, 1310762, 327680, 1, 1245227, 393216, 0, 1310763, 393216, 1, 1245228, 327680, 0, 1310764, 327680, 1, 1245229, 393216, 0, 1310765, 393216, 1, 1245230, 327680, 0, 1310766, 0, 12, 1245231, 65536, 12, 1310767, 65536, 12, 1245215, 786432, 0, 1376302, 0, 12, 1376303, 65536, 12, 1376289, 0, 12, 1376290, 0, 12, 1376291, 0, 12, 1376292, 0, 12, 1376293, 0, 12, 1376294, 0, 12, 1376295, 0, 12, 1376296, 0, 12, 1376297, 0, 12, 1376298, 0, 12, 1376299, 0, 12, 1376300, 0, 12, 1376301, 0, 12, 1441824, 0, 13, 1441825, 0, 13, 1441826, 0, 13, 1441827, 0, 13, 1441828, 0, 13, 1441829, 0, 13, 1441830, 0, 13, 1441831, 0, 13, 1441832, 0, 13, 1441833, 0, 13, 1441834, 0, 13, 1441835, 0, 13, 1441836, 0, 13, 1441837, 0, 13, 1441838, 0, 13, 1441839, 65536, 13, 1441823, 786432, 1)
+
+[node name="Label" type="Label" parent="FrigidaireTexte"]
+offset_left = 509.0
+offset_top = 281.0
+offset_right = 727.0
+offset_bottom = 341.0
+text = "As-tu vu le prix de la bouffe.
+À la limite tu peux te 
+permettre des ramens.
+ 	     (au micro-ondes) 
+   (le frigidaire est vide)"
+label_settings = SubResource("LabelSettings_s1rx1")
+
 [connection signal="body_entered" from="Porte" to="." method="_on_porte_body_entered"]
+[connection signal="body_entered" from="Lit" to="." method="_on_lit_body_entered"]
+[connection signal="body_exited" from="Lit" to="." method="_on_lit_body_exited"]
+[connection signal="timeout" from="Chrono2_4" to="." method="_on_chrono_2_4_timeout"]
+[connection signal="body_entered" from="Frigidaire" to="." method="_on_frigidaire_body_entered"]
+[connection signal="body_exited" from="Frigidaire" to="." method="_on_frigidaire_body_exited"]

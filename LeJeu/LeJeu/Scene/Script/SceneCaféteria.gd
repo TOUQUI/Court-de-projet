@@ -1,11 +1,6 @@
 extends Node2D
 
 
-
-func _ready():
-	pass 
-
-
-
 func _on_porte_body_entered(body):
-	pass 
+	find_child("Joueur").derniere_emplacement = "Exterieur"
+	get_tree().change_scene_to_file("res://Scene/SceneCorridorM.tscn")

@@ -1,4 +1,3 @@
-res://UI/joueur_interface.tscn
 res://Scene/SceneCorridorG.tscn
 res://Carte/CarteScene/toilette.tscn
 res://Joueur/joueur.tscn
@@ -11,7 +10,14 @@ res://Scene/SceneMaison.tscn
 res://Scene/SceneCaféteria.tscn
 res://Scene/SceneCorridorM.tscn
 res://UI/tuile_boite_de_texte.tscn
+res://UI/joueur_interface.tscn
 res://Carte/Porte_bleu.tscn
-res://UI/joueur_interface.gd
 res://Joueur/joueur.gd
-res://Personne/vendeur_du_qg.gd
+res://UI/joueur_interface.gd
+res://Scene/Script/SceneCorridorM.gd
+res://Scene/Script/scene_maison.gd
+res://Scene/Script/SceneCorridorD.tscn
+res://Scene/Script/SceneCorridorD.gd
+res://Scene/SceneCorridorD.tscn
+res://Carte/CarteScene/MapCorridorDroit.tscn
+res://Scene/Script/SceneCaféteria.gd
