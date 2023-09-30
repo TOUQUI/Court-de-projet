@@ -8,6 +8,7 @@ extends CharacterBody2D
 signal joueur_étudie(heure:int)
 signal ajouterItemAcheter(item:int, prix:int)
 signal dormir()
+signal sauvegarder()
 
 static var derniere_emplacement = "vide"
 
@@ -89,3 +90,7 @@ func _on_vendeur_du_qg_acheter(item, prix):
 
 func _on_scene_maison_dormire():
 	dormir.emit()
+
+
+func _on_menu_pause_sauvegarder():
+	sauvegarder.emit()

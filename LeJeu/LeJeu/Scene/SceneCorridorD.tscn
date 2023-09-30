@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cni7yxupw65vm"]
+[gd_scene load_steps=6 format=3 uid="uid://cni7yxupw65vm"]
 
 [ext_resource type="Script" path="res://Scene/Script/SceneCorridorD.gd" id="1_4u1rk"]
 [ext_resource type="PackedScene" uid="uid://cd46q6imydlml" path="res://Carte/CarteScene/MapCorridorDroit.tscn" id="1_a1ec1"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_6k4ns"]
+[ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="4_iumqj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgyxe"]
 size = Vector2(28.5, 35)
@@ -22,4 +23,7 @@ position = Vector2(-424, -88)
 position = Vector2(-500, -39)
 shape = SubResource("RectangleShape2D_wgyxe")
 
+[node name="MenuPause" parent="." instance=ExtResource("4_iumqj")]
+
 [connection signal="body_entered" from="DversM" to="." method="_on_area_2d_body_entered"]
+[connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]

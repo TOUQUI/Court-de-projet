@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ra5bia52greq"]
+[gd_scene load_steps=17 format=3 uid="uid://ra5bia52greq"]
 
 [ext_resource type="Script" path="res://Scene/Script/scene_maison.gd" id="1_t2mek"]
 [ext_resource type="PackedScene" uid="uid://bsia5jmnqj48f" path="res://Carte/CarteScene/MapChambre.tscn" id="2_wuno2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c555jrgjye41k" path="res://UI/noir.png" id="5_rbsva"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="6_ddkfj"]
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="7_yp376"]
+[ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="8_6wxvl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxjw3"]
 size = Vector2(91, 10)
@@ -149,9 +150,12 @@ permettre des ramens.
    (le frigidaire est vide)"
 label_settings = SubResource("LabelSettings_s1rx1")
 
+[node name="MenuPause" parent="." instance=ExtResource("8_6wxvl")]
+
 [connection signal="body_entered" from="Porte" to="." method="_on_porte_body_entered"]
 [connection signal="body_entered" from="Lit" to="." method="_on_lit_body_entered"]
 [connection signal="body_exited" from="Lit" to="." method="_on_lit_body_exited"]
 [connection signal="timeout" from="Chrono2_4" to="." method="_on_chrono_2_4_timeout"]
 [connection signal="body_entered" from="Frigidaire" to="." method="_on_frigidaire_body_entered"]
 [connection signal="body_exited" from="Frigidaire" to="." method="_on_frigidaire_body_exited"]
+[connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]

@@ -2,9 +2,10 @@ extends CanvasLayer
 
 static var temps = 0
 static var jour = 0
-static var argent = 100
+static var argent = 0
 var inventaireOuvert = false
 var emplacementDansLivre = ""
+static var enJeu = false
 
 
 static var inventaire =[ 
@@ -22,9 +23,10 @@ static var inventaire =[
 func _ready():
 	$Livre/SpriteLivre.visible = false
 	$Livre/LivreOuvertureFermeture.visible = false
-	$Horloge/TextureProgressBar.value = temps
+	ChargerDonnees()
 	chargerQuantiéInventaire()
 	chargerJour()
+	chargerTemps()
 
 func _input(event):
 	if event.is_action_pressed("Inventaire"):
@@ -40,6 +42,25 @@ func _input(event):
 			$Livre/LivreOuvertureFermeture.visible = true
 			$Livre/SpriteLivre/Inventaire.visible = false
 			$Livre/LivreOuvertureFermeture/AnimationLiverFetO.play("Fermeture")
+
+func ChargerDonnees():
+	if !enJeu:
+		enJeu = true
+		inventaire[0].quantité = SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem1
+		inventaire[1].quantité = SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem2
+		inventaire[2].quantité = SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem3
+		jour = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbJour
+		argent = SingletonsDonnees.dictionaireDesDonnees["DataSession"].argent
+		temps = SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps
+
+func SauvegarderDonnees():
+	SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem1 = inventaire[0].quantité
+	SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem2 = inventaire[1].quantité
+	SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem3 = inventaire[2].quantité
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbJour = jour
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].argent = argent
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps = temps
+	SingletonsDonnees.SauvegarderJson()
 
 func _on_joueur_joueur_étudie(heure):
 	if temps <= 80:
@@ -110,6 +131,7 @@ func _on_joueur_dormir():
 	temps = 0
 	chargerJour()
 	chargerTemps()
+	SauvegarderDonnees()
 
 
 func _on_btn_consomer_item_1_pressed():
@@ -118,3 +140,7 @@ func _on_btn_consomer_item_1_pressed():
 		inventaire[0].quantité = inventaire[0].quantité - 1
 		chargerQuantiéInventaire()
 		chargerTemps()
+
+
+func _on_joueur_sauvegarder():
+	SauvegarderDonnees()
