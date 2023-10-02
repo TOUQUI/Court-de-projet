@@ -1,0 +1,66 @@
+{
+	"Inventaire":{
+		"qtItem1": 0,
+		"qtItem2": 0,
+		"qtItem3": 0
+	},
+	"Mission":{
+		"1": {
+			"Titre": "Mission 1",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "Terminé"
+		},
+		"2": {
+			"Titre": "Mission 2",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "Terminé"
+		},
+		"3": {
+			"Titre": "Mission 3",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "Actuel"
+		},
+		"4": {
+			"Titre": "Mission 4",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "AFaire"
+		},
+		"5": {
+			"Titre": "Mission 5",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "AFaire"
+		},
+		"6": {
+			"Titre": "Mission 6",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "AFaire"
+		},
+		"7": {
+			"Titre": "Mission 7",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "AFaire"
+		},
+		"8": {
+			"Titre": "Mission 8",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "AFaire"
+		},
+		"9": {
+			"Titre": "Mission 9",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "AFaire"
+		},
+		"10": {
+			"Titre": "Mission 10",
+			"Description": "Rendez vous au QG et parlez au png.",
+			"Etat": "AFaire"
+		},
+	},
+	"DataSession":{
+		"nbJour": 0,
+		"argent": 100,
+		"temps": 0,
+		"emplacementJoueur": "QG",
+		"queteActuel": 3
+	}
+}
