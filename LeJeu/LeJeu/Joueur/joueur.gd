@@ -24,6 +24,7 @@ func _physics_process(delta):
 
 
 func _input(event):
+	print(event)
 	if Input.is_action_pressed("bas"):
 		$AnimationPlayer.play("avancer_bas")
 	elif Input.is_action_pressed("droite"):
@@ -88,9 +89,9 @@ func _on_vendeur_du_qg_acheter(item, prix):
 	ajouterItemAcheter.emit(item, prix)
 
 
-func _on_scene_maison_dormire():
-	dormir.emit()
-
-
 func _on_menu_pause_sauvegarder():
 	sauvegarder.emit()
+
+
+func _on_scene_maison_dormir():
+	dormir.emit()
