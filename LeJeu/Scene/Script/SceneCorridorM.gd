@@ -55,3 +55,7 @@ func _on_btn_cafeteria_pressed():
 
 func _on_btn_retour_pressed():
 	$MenuDeplacement.visible = false
+
+
+func _on_btn_travail_pressed():
+	get_tree().change_scene_to_file("res://Scene/scene_travail.tscn")

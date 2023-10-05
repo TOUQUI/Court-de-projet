@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://i0y3uc5jfcuj"]
+[gd_scene load_steps=4 format=3 uid="uid://i0y3uc5jfcuj"]
 
 [ext_resource type="Script" path="res://UI/menu_pause.gd" id="1_fueqk"]
 [ext_resource type="Texture2D" uid="uid://c555jrgjye41k" path="res://UI/noir.png" id="1_jtk68"]
+[ext_resource type="Texture2D" uid="uid://dubqfk66ydc1j" path="res://UI/IconSauvegarder.png" id="3_b508y"]
 
 [node name="MenuPause" type="Node2D"]
 script = ExtResource("1_fueqk")
@@ -28,6 +29,18 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Menu
 "
+
+[node name="iconSauvegarde" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(500, 324)
+scale = Vector2(2.40624, 2.35938)
+texture = ExtResource("3_b508y")
+
+[node name="iconSauvegarde2" type="Sprite2D" parent="Menu"]
+texture_filter = 1
+position = Vector2(652, 324)
+scale = Vector2(2.40624, 2.35938)
+texture = ExtResource("3_b508y")
 
 [node name="btnSauvegarder" type="Button" parent="Menu"]
 offset_left = 473.0

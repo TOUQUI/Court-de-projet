@@ -23,6 +23,7 @@ func _ready():
 		Connecter_bureaux()
 
 func _physics_process(delta):
+	_input(input_event)
 	bouger(delta)
 
 
@@ -101,3 +102,4 @@ func _on_scene_maison_dormir():
 
 func _on_scene_travail_travailler(salaire):
 	joueur_travail.emit(salaire)
+

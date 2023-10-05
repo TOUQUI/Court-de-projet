@@ -140,10 +140,14 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_x7es5"]
 font = ExtResource("11_8f5ph")
 font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4f75e"]
 font = ExtResource("11_8f5ph")
 font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Joueur_interface" type="CanvasLayer"]
 script = ExtResource("1_wrn2t")

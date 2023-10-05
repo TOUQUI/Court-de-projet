@@ -30,9 +30,10 @@ func GererAffichagePEtD():
 		champPoste = "Patron"
 	else:
 		salaire = 100
-		champPoste = "PDG"
-	$txtDescription.text = "Travailler enlève 1 heure à votre journée et en échange 
-	vous recevez " + str(salaire) + "$."
+		champPoste = "PDG" 
+	$txtDescription.text = "     Travailler enlève 1 heure à votre journée
+	 et en échange vous recevez " + str(salaire) + "$."
+	$txtPoste.text = "Vous êtes : " + champPoste
 
 
 func GererAffichageNbHeure():
@@ -48,7 +49,6 @@ func _on_btn_maison_pressed():
 	get_tree().change_scene_to_file("res://Scene/SceneMaison.tscn")
 
 
-
 func _on_btn_promotion_pressed():
 	if tempsCarière >= 10 && tempsCarière <= 20:
 		poste = 1
@@ -58,7 +58,10 @@ func _on_btn_promotion_pressed():
 		poste = 3
 	elif tempsCarière >= 41 && tempsCarière <= 50:
 		poste = 4
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].posteMcdo = poste
+	GererAffichagePEtD()
 
 
 func _on_joueur_envoie_heure(temps):
 	tempsJourne = temps
+

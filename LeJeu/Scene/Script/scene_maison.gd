@@ -5,9 +5,6 @@ signal dormir()
 var joueurLit = false
 var joueurFrigidaire = false
 
-func _on_porte_body_entered(body):
-	find_child("Joueur").derniere_emplacement = "Exterieur"
-	get_tree().change_scene_to_file("res://Scene/SceneCorridorM.tscn")
 
 func _input(event):
 	if event.is_action_pressed("interaction") && joueurLit:
@@ -15,6 +12,15 @@ func _input(event):
 	elif event.is_action_pressed("interaction") && joueurFrigidaire:
 		$Frigidaire/F.visible = false
 		$FrigidaireTexte.visible = true
+
+
+func _on_porte_body_entered(body):
+	$MenuDeplacement.visible = true
+
+
+func _on_porte_body_exited(body):
+	$MenuDeplacement.visible = false
+
 
 func _on_lit_body_entered(body):
 	joueurLit = true
@@ -43,3 +49,16 @@ func _on_frigidaire_body_exited(body):
 	joueurFrigidaire = false
 	$Frigidaire/F.visible = false
 	$FrigidaireTexte.visible = false
+
+
+func _on_btn_travail_pressed():
+	get_tree().change_scene_to_file("res://Scene/scene_travail.tscn")
+
+
+func _on_btn_ecole_pressed():
+	find_child("Joueur").derniere_emplacement = "Exterieur"
+	get_tree().change_scene_to_file("res://Scene/SceneCorridorM.tscn")
+
+
+func _on_btn_retour_pressed():
+	$MenuDeplacement.visible = false

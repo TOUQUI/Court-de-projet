@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bsia5jmnqj48f"]
+[gd_scene load_steps=14 format=3 uid="uid://bsia5jmnqj48f"]
 
 [ext_resource type="PackedScene" uid="uid://cg75x4jsgkmda" path="res://Carte/CarteScene/tuile_maison.tscn" id="1_4o1qs"]
 [ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/CarteScene/tuile_ecole.tscn" id="2_txgva"]
@@ -30,6 +30,9 @@ size = Vector2(190, 12)
 size = Vector2(15, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8ssl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7g47"]
+size = Vector2(65, 13)
 
 [node name="MapChambre" type="Node2D"]
 
@@ -94,3 +97,7 @@ shape = SubResource("RectangleShape2D_x0i0i")
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-69, 37)
 shape = SubResource("RectangleShape2D_f8ssl")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(87, 185)
+shape = SubResource("RectangleShape2D_x7g47")

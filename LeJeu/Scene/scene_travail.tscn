@@ -10,9 +10,6 @@
 script = ExtResource("1_vnfsi")
 
 [node name="Joueur" parent="." instance=ExtResource("1_mxwg3")]
-VITESSE_MAX = 200
-ACCELERATION = 1500
-FRICTION = 500
 
 [node name="arriere_plan" type="Sprite2D" parent="."]
 position = Vector2(575, 324.5)
@@ -48,26 +45,27 @@ text = "Demander
 promotion"
 
 [node name="txtPoste" type="Label" parent="."]
-offset_left = 266.0
-offset_top = 197.0
-offset_right = 647.0
-offset_bottom = 237.0
+offset_left = 323.0
+offset_top = 249.0
+offset_right = 704.0
+offset_bottom = 289.0
 text = "Poste actuel: TODO GÉNÉRER POSTE"
 
 [node name="txtNbHeure" type="TextEdit" parent="."]
-offset_left = 265.0
-offset_top = 378.0
-offset_right = 482.0
-offset_bottom = 415.0
+offset_left = 574.0
+offset_top = 243.0
+offset_right = 791.0
+offset_bottom = 280.0
 text = "Nombre d'heure(s) : X"
 
 [node name="txtDescription" type="TextEdit" parent="."]
-offset_left = 265.0
-offset_top = 250.0
-offset_right = 734.0
-offset_bottom = 358.0
+offset_left = 322.0
+offset_top = 284.0
+offset_right = 791.0
+offset_bottom = 392.0
 
 [node name="MenuPause" parent="." instance=ExtResource("5_rl564")]
+position = Vector2(603, -190)
 
 [connection signal="travailler" from="." to="Joueur" method="_on_scene_travail_travailler"]
 [connection signal="envoieHeure" from="Joueur" to="." method="_on_joueur_envoie_heure"]

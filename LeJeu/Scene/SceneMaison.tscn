@@ -150,13 +150,53 @@ permettre des ramens.
    (le frigidaire est vide)"
 label_settings = SubResource("LabelSettings_s1rx1")
 
+[node name="MenuDeplacement" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Tuile_boite_de_texte" parent="MenuDeplacement" instance=ExtResource("6_ddkfj")]
+scale = Vector2(3, 3)
+layer_0/tile_data = PackedInt32Array(262153, 0, 0, 327689, 0, 1, 262154, 65536, 0, 327690, 327680, 0, 262157, 524288, 0, 327693, 393216, 0, 262158, 589824, 0, 327694, 589824, 1, 262156, 131072, 0, 262155, 131072, 0, 655369, 786432, 0, 720905, 786432, 1, 655370, 327680, 1, 720906, 851968, 1, 655373, 393216, 1, 720909, 0, 13, 655374, 65536, 12, 720910, 65536, 13, 458761, 131072, 13, 524297, 131072, 14, 589833, 131072, 14, 393225, 131072, 12, 458766, 458752, 1, 524302, 458752, 0, 589838, 458752, 1, 393230, 458752, 0, 720908, 720896, 1, 720907, 720896, 1, 393226, 327680, 1, 327691, 393216, 0, 393227, 393216, 1, 327692, 327680, 0, 393228, 327680, 1, 393229, 393216, 1, 458764, 327680, 0, 524300, 327680, 1, 458765, 393216, 0, 524301, 393216, 1, 589836, 327680, 0, 655372, 327680, 1, 589837, 393216, 0, 589834, 327680, 0, 589835, 393216, 0, 655371, 393216, 1, 458762, 327680, 0, 524298, 327680, 1, 458763, 393216, 0, 524299, 393216, 1)
+
+[node name="Label" type="Label" parent="MenuDeplacement"]
+offset_left = 516.0
+offset_top = 223.0
+offset_right = 648.0
+offset_bottom = 249.0
+text = "Ce déplacer vers:"
+
+[node name="btnTravail" type="Button" parent="MenuDeplacement"]
+offset_left = 498.0
+offset_top = 256.0
+offset_right = 667.0
+offset_bottom = 306.0
+text = "Travail"
+
+[node name="btnEcole" type="Button" parent="MenuDeplacement"]
+offset_left = 498.0
+offset_top = 321.0
+offset_right = 667.0
+offset_bottom = 371.0
+text = "École"
+
+[node name="btnRetour" type="Button" parent="MenuDeplacement"]
+offset_left = 538.0
+offset_top = 497.0
+offset_right = 635.0
+offset_bottom = 537.0
+text = "Retour
+"
+
 [node name="MenuPause" parent="." instance=ExtResource("8_6wxvl")]
 
 [connection signal="dormir" from="." to="Joueur" method="_on_scene_maison_dormir"]
 [connection signal="body_entered" from="Porte" to="." method="_on_porte_body_entered"]
+[connection signal="body_exited" from="Porte" to="." method="_on_porte_body_exited"]
 [connection signal="body_entered" from="Lit" to="." method="_on_lit_body_entered"]
 [connection signal="body_exited" from="Lit" to="." method="_on_lit_body_exited"]
 [connection signal="timeout" from="Chrono2_4" to="." method="_on_chrono_2_4_timeout"]
 [connection signal="body_entered" from="Frigidaire" to="." method="_on_frigidaire_body_entered"]
 [connection signal="body_exited" from="Frigidaire" to="." method="_on_frigidaire_body_exited"]
+[connection signal="pressed" from="MenuDeplacement/btnTravail" to="." method="_on_btn_travail_pressed"]
+[connection signal="pressed" from="MenuDeplacement/btnEcole" to="." method="_on_btn_ecole_pressed"]
+[connection signal="pressed" from="MenuDeplacement/btnRetour" to="." method="_on_btn_retour_pressed"]
 [connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]

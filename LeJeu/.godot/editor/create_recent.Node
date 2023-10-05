@@ -1,13 +1,13 @@
+Sprite2D
+CollisionShape2D
+Button
 Label
+CanvasLayer
 Node2D
 TextEdit
 Node
-Button
-Sprite2D
 GridContainer
 ItemList
-CanvasLayer
-CollisionShape2D
 Area2D
 Timer
 AnimationPlayer
