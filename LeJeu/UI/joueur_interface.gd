@@ -5,7 +5,9 @@ static var jour = 0
 static var argent = 0
 var inventaireOuvert = false
 var emplacementDansLivre = ""
+var joueurNode
 static var enJeu = false
+static var nbHeureTravail
 
 
 static var inventaire =[ 
@@ -27,6 +29,7 @@ func _ready():
 	chargerQuantiéInventaire()
 	chargerJour()
 	chargerTemps()
+	GererAffichageArgent()
 
 func _input(event):
 	if event.is_action_pressed("Inventaire"):
@@ -52,6 +55,7 @@ func ChargerDonnees():
 		jour = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbJour
 		argent = SingletonsDonnees.dictionaireDesDonnees["DataSession"].argent
 		temps = SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps
+		nbHeureTravail = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail
 
 func SauvegarderDonnees():
 	SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem1 = inventaire[0].quantité
@@ -64,7 +68,6 @@ func SauvegarderDonnees():
 
 func _on_joueur_joueur_étudie(heure):
 	if temps <= 80:
-		print("etudier")
 		temps =  temps + heure
 		chargerTemps()
 
@@ -119,6 +122,7 @@ func _on_joueur_ajouter_item_acheter(item, prix):
 			$Livre/SpriteLivre/Inventaire/Item2/qtItem2.text = str(inventaire[item - 1].quantité)
 		elif  item == 3:
 			$Livre/SpriteLivre/Inventaire/Item3/qtItem2.text = str(inventaire[item - 1].quantité)
+		GererAffichageArgent()
 
 func chargerJour():
 	$Jour/nbJour.text = "JOUR:" + str(jour)
@@ -144,3 +148,17 @@ func _on_btn_consomer_item_1_pressed():
 
 func _on_joueur_sauvegarder():
 	SauvegarderDonnees()
+
+
+func _on_joueur_joueur_travail(salaire):
+	if temps <= 90:
+		temps = temps + 10
+		argent = argent + salaire
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail + 1
+		GererAffichageArgent()
+		chargerTemps()
+
+
+func GererAffichageArgent():
+	$Argent/nbArgent.text = "ARGENT:" + str(argent) + "$"
+

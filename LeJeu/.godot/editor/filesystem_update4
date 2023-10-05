@@ -1,2 +1,7 @@
+res://Scene/Script/scene_travail.gd
 res://Scene/scene_travail.tscn
+res://Données/LesDonnées.json
 res://Joueur/joueur.tscn
+res://UI/joueur_interface.tscn
+res://Joueur/joueur.gd
+res://UI/joueur_interface.gd

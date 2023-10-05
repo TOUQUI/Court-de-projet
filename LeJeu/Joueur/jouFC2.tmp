@@ -157,6 +157,9 @@ _data = {
 [node name="Joueur" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_uy1qb")
+VITESSE_MAX = null
+ACCELERATION = null
+FRICTION = null
 
 [node name="SpriteJoueur" type="Sprite2D" parent="."]
 texture_filter = 1

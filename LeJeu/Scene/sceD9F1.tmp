@@ -10,9 +10,6 @@
 script = ExtResource("1_vnfsi")
 
 [node name="Joueur" parent="." instance=ExtResource("1_mxwg3")]
-VITESSE_MAX = 200
-ACCELERATION = 1500
-FRICTION = 500
 
 [node name="arriere_plan" type="Sprite2D" parent="."]
 position = Vector2(575, 324.5)

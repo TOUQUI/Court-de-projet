@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ogjuu37a8sao"]
+[gd_scene load_steps=26 format=3 uid="uid://ogjuu37a8sao"]
 
 [ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="1_rkjmk"]
 [ext_resource type="Script" path="res://UI/joueur_interface.gd" id="1_wrn2t"]
@@ -138,6 +138,10 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_x7es5"]
+font = ExtResource("11_8f5ph")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_4f75e"]
 font = ExtResource("11_8f5ph")
 font_size = 40
 
@@ -328,6 +332,16 @@ offset_right = 1017.0
 offset_bottom = 74.0
 text = "JOUR:0"
 label_settings = SubResource("LabelSettings_x7es5")
+
+[node name="Argent" type="Node2D" parent="."]
+
+[node name="nbArgent" type="Label" parent="Argent"]
+offset_left = 38.0
+offset_top = 34.0
+offset_right = 266.0
+offset_bottom = 74.0
+text = "ARGENT:0$"
+label_settings = SubResource("LabelSettings_4f75e")
 
 [connection signal="pressed" from="Livre/SpriteLivre/btnParametre" to="." method="_on_btn_parametre_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/btnInventaire" to="." method="_on_image_inventaire_pressed"]

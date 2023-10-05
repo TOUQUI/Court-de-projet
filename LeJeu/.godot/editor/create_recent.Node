@@ -1,12 +1,12 @@
-TextEdit
 Label
+Node2D
+TextEdit
 Node
 Button
 Sprite2D
 GridContainer
 ItemList
 CanvasLayer
-Node2D
 CollisionShape2D
 Area2D
 Timer

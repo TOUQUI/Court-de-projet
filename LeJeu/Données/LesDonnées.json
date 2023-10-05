@@ -61,6 +61,20 @@
 		"argent": 100,
 		"temps": 20,
 		"emplacementJoueur": "QG",
-		"queteActuel": 3
+		"queteActuel": 3,
+		"posteMcdo": 0,
+		"nbTempsTravail": 0,
+		"inteligence": 0,
+		"force": 0,
+	},
+	"Dialogues":{
+		"Jose":{
+			"1": "Bonjour!",
+			"2": "Quoi!",
+		},
+		"Martin":{
+			"1": "Bonjour!",
+			"2": "Quoi!"
+		}
 	}
 }
