@@ -11,3 +11,4 @@ res://UI/menu_pause.tscn
 res://Scene/SceneCorridorM.tscn
 res://Scene/Script/SceneCorridorM.gd
 res://Carte/CarteScene/MapChambre.tscn
+res://Scene/node_SceneQG.tscn

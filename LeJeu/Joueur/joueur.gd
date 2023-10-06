@@ -19,11 +19,11 @@ var parent_node
 var nodes
 
 func _ready():
+	_input(input_event)
 	if derniere_emplacement == "GP":
 		Connecter_bureaux()
 
 func _physics_process(delta):
-	_input(input_event)
 	bouger(delta)
 
 

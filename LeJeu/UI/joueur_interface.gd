@@ -3,11 +3,13 @@ extends CanvasLayer
 static var temps = 0
 static var jour = 0
 static var argent = 0
+static var enJeu = false
+static var nbHeureTravail
 var inventaireOuvert = false
 var emplacementDansLivre = ""
 var joueurNode
-static var enJeu = false
-static var nbHeureTravail
+var quetes
+var nodeTxtFini
 
 
 static var inventaire =[ 
@@ -46,6 +48,18 @@ func _input(event):
 			$Livre/SpriteLivre/Inventaire.visible = false
 			$Livre/LivreOuvertureFermeture/AnimationLiverFetO.play("Fermeture")
 
+
+func ChargerQuete():
+	quetes = SingletonsDonnees.dictionaireDesDonnees["Mission"]
+	for item in quetes:
+		if quetes[item].Etat == "Fini":
+			nodeTxtFini = get_node("Livre/SpriteLivre/Quête/Fini/" + str(item))
+			nodeTxtFini.text = quetes[item].Titre
+		elif quetes[item].Etat == "Actuel":
+			$"Livre/SpriteLivre/Quête/Actuel/Titre".text = quetes[item].Titre
+			$"Livre/SpriteLivre/Quête/Actuel/Description".text = quetes[item].Description
+
+
 func ChargerDonnees():
 	if !enJeu:
 		enJeu = true
@@ -56,6 +70,7 @@ func ChargerDonnees():
 		argent = SingletonsDonnees.dictionaireDesDonnees["DataSession"].argent
 		temps = SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps
 		nbHeureTravail = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail
+		ChargerQuete()
 
 func SauvegarderDonnees():
 	SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem1 = inventaire[0].quantité
@@ -68,7 +83,7 @@ func SauvegarderDonnees():
 
 func _on_joueur_joueur_étudie(heure):
 	if temps <= 80:
-		temps =  temps + heure
+		temps = temps + heure
 		chargerTemps()
 
 
@@ -76,7 +91,9 @@ func _on_chrono_0_5_timeout():
 	if emplacementDansLivre == "i":
 		$Livre/SpriteLivre/Inventaire.visible = true
 	elif emplacementDansLivre == "p":
-		pass
+		$Livre/SpriteLivre/Options.visible = true
+	elif emplacementDansLivre == "m":
+		$"Livre/SpriteLivre/Quête".visible = true
 
 
 func _on_chrono_0_7_timeout():
@@ -90,22 +107,30 @@ func _on_chrono_0_7_timeout():
 func rendreInvisible():
 	if $Livre/SpriteLivre/Inventaire.visible == true:
 		$Livre/SpriteLivre/Inventaire.visible = false
-	else:
-		pass
+	elif $Livre/SpriteLivre/Options.visible == true:
+		$Livre/SpriteLivre/Options.visible = false
+	elif $"Livre/SpriteLivre/Quête".visible  == true:
+		$"Livre/SpriteLivre/Quête".visible = false
 
 
 func _on_image_inventaire_pressed():
-	$Livre/SpriteLivre/AnimationLivre.play("TournerPageVersGauche")
-	rendreInvisible()
-	emplacementDansLivre = "i"
-	$Chrono0_5.start() 
+	ChangerDePage("i", "TournerPageVersGauche")
+
+
+func _on_btn_quete_pressed():
+	ChangerDePage("m", "TournerPageVersGauche")
 
 
 func _on_btn_parametre_pressed():
-	$Livre/SpriteLivre/AnimationLivre.play("TournerPageVersDroite")
+	ChangerDePage("p", "TournerPageVersDroite")
+
+
+func ChangerDePage(page, direction):
+	$Livre/SpriteLivre/AnimationLivre.play(direction)
 	rendreInvisible()
-	emplacementDansLivre = "p"
+	emplacementDansLivre = page
 	$Chrono0_5.start()
+
 
 func chargerQuantiéInventaire():
 	$Livre/SpriteLivre/Inventaire/Item1/qtItem1.text = str(inventaire[0].quantité)

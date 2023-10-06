@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ogjuu37a8sao"]
+[gd_scene load_steps=28 format=3 uid="uid://ogjuu37a8sao"]
 
 [ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="1_rkjmk"]
 [ext_resource type="Script" path="res://UI/joueur_interface.gd" id="1_wrn2t"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b8quo22p6mjhn" path="res://UI/Tag.png" id="5_qgqti"]
 [ext_resource type="Texture2D" uid="uid://c1up1ff0x1j82" path="res://UI/IconeInventaire.png" id="6_405ym"]
 [ext_resource type="Texture2D" uid="uid://cp7w1jgvc71go" path="res://UI/IconeParametre.png" id="7_dmhpd"]
+[ext_resource type="Texture2D" uid="uid://1hc7judil6wl" path="res://UI/iconQuete.png" id="8_4mq0k"]
 [ext_resource type="Texture2D" uid="uid://cev2wbbra633y" path="res://UI/ImageBoisonÉnergique.png" id="9_3721i"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="10_r4535"]
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="11_8f5ph"]
@@ -82,6 +83,12 @@ font_color = Color(0, 0, 0, 1)
 font = ExtResource("11_8f5ph")
 font_size = 10
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4obhm"]
+font = ExtResource("11_8f5ph")
+font_size = 25
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_qvgvb"]
 resource_name = "Fermeture"
@@ -187,6 +194,11 @@ position = Vector2(367, -103)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_qgqti")
 
+[node name="Tag3" type="Sprite2D" parent="Livre/SpriteLivre"]
+position = Vector2(367, -64)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_qgqti")
+
 [node name="btnParametre" type="Button" parent="Livre/SpriteLivre"]
 texture_filter = 1
 offset_left = 352.0
@@ -202,6 +214,15 @@ offset_top = -118.0
 offset_right = 382.0
 offset_bottom = -88.0
 icon = ExtResource("6_405ym")
+flat = true
+
+[node name="btnQuete" type="Button" parent="Livre/SpriteLivre"]
+offset_left = 352.0
+offset_top = -79.0
+offset_right = 412.0
+offset_bottom = -19.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("8_4mq0k")
 flat = true
 
 [node name="Inventaire" type="Node2D" parent="Livre/SpriteLivre"]
@@ -304,7 +325,120 @@ offset_right = 311.0
 offset_bottom = 167.0
 text = "Consomer"
 
+[node name="Options" type="Node2D" parent="Livre/SpriteLivre"]
+visible = false
+
+[node name="titreVolume" type="Label" parent="Livre/SpriteLivre/Options"]
+texture_filter = 1
+offset_left = 146.0
+offset_top = -171.0
+offset_right = 249.0
+offset_bottom = -145.0
+text = "Volume
+"
+label_settings = SubResource("LabelSettings_4obhm")
+
+[node name="gestionVolume" type="HSlider" parent="Livre/SpriteLivre/Options"]
+offset_left = 106.0
+offset_top = -142.0
+offset_right = 279.0
+offset_bottom = -126.0
+value = 50.0
+
 [node name="Quête" type="Node2D" parent="Livre/SpriteLivre"]
+
+[node name="titreTerminé" type="Label" parent="Livre/SpriteLivre/Quête"]
+texture_filter = 1
+offset_left = 116.0
+offset_top = -158.0
+offset_right = 275.0
+offset_bottom = -132.0
+text = "Quête(s) terminée(s)"
+
+[node name="titreQueteActuel" type="Label" parent="Livre/SpriteLivre/Quête"]
+texture_filter = 1
+offset_left = -204.0
+offset_top = -159.0
+offset_right = -105.0
+offset_bottom = -133.0
+text = "Quête actuel"
+
+[node name="Actuel" type="Node2D" parent="Livre/SpriteLivre/Quête"]
+
+[node name="Description" type="TextEdit" parent="Livre/SpriteLivre/Quête/Actuel"]
+offset_left = -258.0
+offset_top = -3.0
+offset_right = -35.0
+offset_bottom = 127.0
+wrap_mode = 1
+
+[node name="Titre" type="TextEdit" parent="Livre/SpriteLivre/Quête/Actuel"]
+offset_left = -231.0
+offset_top = -122.0
+offset_right = -76.0
+offset_bottom = -88.0
+
+[node name="Fini" type="Node2D" parent="Livre/SpriteLivre/Quête"]
+
+[node name="q1" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = -131.0
+offset_right = 334.0
+offset_bottom = -101.0
+
+[node name="q2" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = -101.0
+offset_right = 334.0
+offset_bottom = -71.0
+
+[node name="q3" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = -71.0
+offset_right = 334.0
+offset_bottom = -41.0
+
+[node name="q4" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = -41.0
+offset_right = 334.0
+offset_bottom = -11.0
+
+[node name="q5" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = -11.0
+offset_right = 334.0
+offset_bottom = 19.0
+
+[node name="q6" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = 19.0
+offset_right = 334.0
+offset_bottom = 49.0
+
+[node name="q7" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = 49.0
+offset_right = 334.0
+offset_bottom = 79.0
+
+[node name="q8" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = 79.0
+offset_right = 334.0
+offset_bottom = 109.0
+
+[node name="q9" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = 109.0
+offset_right = 334.0
+offset_bottom = 139.0
+
+[node name="q10" type="TextEdit" parent="Livre/SpriteLivre/Quête/Fini"]
+offset_left = 69.0
+offset_top = 139.0
+offset_right = 334.0
+offset_bottom = 169.0
 
 [node name="LivreOuvertureFermeture" type="Sprite2D" parent="Livre"]
 visible = false
@@ -349,6 +483,7 @@ label_settings = SubResource("LabelSettings_4f75e")
 
 [connection signal="pressed" from="Livre/SpriteLivre/btnParametre" to="." method="_on_btn_parametre_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/btnInventaire" to="." method="_on_image_inventaire_pressed"]
+[connection signal="pressed" from="Livre/SpriteLivre/btnQuete" to="." method="_on_btn_quete_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/Inventaire/Item1/btnConsomerItem1" to="." method="_on_btn_consomer_item_1_pressed"]
 [connection signal="timeout" from="Chrono0_7" to="." method="_on_chrono_0_7_timeout"]
 [connection signal="timeout" from="Chrono0_5" to="." method="_on_chrono_0_5_timeout"]

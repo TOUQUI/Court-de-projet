@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn7px63pwk85w"
-path="res://.godot/imported/IconQuete.png-310dc3ec477df88f9179b850dd81621d.ctex"
+uid="uid://1hc7judil6wl"
+path="res://.godot/imported/iconQuete.png-f8ed2e97ff396ae4e95f775b308841ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/IconQuete.png"
-dest_files=["res://.godot/imported/IconQuete.png-310dc3ec477df88f9179b850dd81621d.ctex"]
+source_file="res://UI/iconQuete.png"
+dest_files=["res://.godot/imported/iconQuete.png-f8ed2e97ff396ae4e95f775b308841ec.ctex"]
 
 [params]
 
