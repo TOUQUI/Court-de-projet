@@ -67,14 +67,4 @@
 		"inteligence": 0,
 		"force": 0,
 	},
-	"Dialogues":{
-		"Jose":{
-			"1": "Bonjour!",
-			"2": "Quoi!",
-		},
-		"Martin":{
-			"1": "Bonjour!",
-			"2": "Quoi!"
-		}
-	}
 }

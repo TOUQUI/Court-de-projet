@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://i0y3uc5jfcuj"]
 
 [ext_resource type="Script" path="res://UI/menu_pause.gd" id="1_fueqk"]
-[ext_resource type="Texture2D" uid="uid://c555jrgjye41k" path="res://UI/noir.png" id="1_jtk68"]
-[ext_resource type="Texture2D" uid="uid://dubqfk66ydc1j" path="res://UI/IconSauvegarder.png" id="3_b508y"]
+[ext_resource type="Texture2D" uid="uid://c555jrgjye41k" path="res://UI/image/noir.png" id="2_bm5ou"]
+[ext_resource type="Texture2D" uid="uid://dubqfk66ydc1j" path="res://UI/image/IconSauvegarder.png" id="3_oq8u6"]
 
 [node name="MenuPause" type="Node2D"]
 script = ExtResource("1_fueqk")
@@ -13,7 +13,7 @@ script = ExtResource("1_fueqk")
 self_modulate = Color(1, 1, 1, 0.286275)
 position = Vector2(553, 320)
 scale = Vector2(1414, 880)
-texture = ExtResource("1_jtk68")
+texture = ExtResource("2_bm5ou")
 
 [node name="btnMenu" type="Button" parent="Menu"]
 anchors_preset = 8
@@ -34,13 +34,13 @@ text = "Menu
 texture_filter = 1
 position = Vector2(500, 324)
 scale = Vector2(2.40624, 2.35938)
-texture = ExtResource("3_b508y")
+texture = ExtResource("3_oq8u6")
 
 [node name="iconSauvegarde2" type="Sprite2D" parent="Menu"]
 texture_filter = 1
 position = Vector2(652, 324)
 scale = Vector2(2.40624, 2.35938)
-texture = ExtResource("3_b508y")
+texture = ExtResource("3_oq8u6")
 
 [node name="btnSauvegarder" type="Button" parent="Menu"]
 offset_left = 473.0
