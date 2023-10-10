@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var FRICTION = 500
 @onready var axis =Vector2.ZERO
 
+signal joueur_étudie_en_classe(heure:int)
 signal joueur_travail(salaire:int)
 signal joueur_étudie(heure:int)
 signal ajouterItemAcheter(item:int, prix:int)
@@ -103,3 +104,7 @@ func _on_scene_maison_dormir():
 func _on_scene_travail_travailler(salaire):
 	joueur_travail.emit(salaire)
 
+
+
+func _on_scene_4823_joueurétudie_en_classe(heure):
+	

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/image/Keyboard Letters and Symbols.png" id="2_drl5n"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="3_lx4l5"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ckna"]
 size = Vector2(72, 11)
 

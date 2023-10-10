@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://6b73uj6fs7ty"]
+
+[ext_resource type="Script" path="res://objets_intératif/bureau_de_classe.gd" id="1_gdoev"]
+[ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/image/Keyboard Letters and Symbols.png" id="2_jdcnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q570j"]
+size = Vector2(88, 20)
+
+[node name="BureauDeClasse" type="Node2D"]
+script = ExtResource("1_gdoev")
+
+[node name="Zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zone"]
+position = Vector2(34, 0)
+shape = SubResource("RectangleShape2D_q570j")
+
+[node name="F" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(40, -43)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jdcnb")
+hframes = 8
+vframes = 14
+frame = 21
+
+[connection signal="body_entered" from="Zone" to="." method="_on_zone_body_entered"]
+[connection signal="body_exited" from="Zone" to="." method="_on_zone_body_exited"]

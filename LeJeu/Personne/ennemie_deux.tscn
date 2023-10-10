@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://wdrnntu75p7f"]
+
+[ext_resource type="Texture2D" uid="uid://dvuigeufki4yc" path="res://Personne/Ennemie2.png" id="1_tg3ap"]
+
+[sub_resource type="Animation" id="Animation_rr01v"]
+resource_name = "pasBouger"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_fe4iv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ca8ee"]
+resource_name = "attaqueNormal"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [80, 81, 82, 83, 84, 85, 86, 87, 88]
+}
+
+[sub_resource type="Animation" id="Animation_w65id"]
+resource_name = "grosseAttaque"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [90, 91, 92, 93, 94, 95, 96, 97, 98, 90]
+}
+
+[sub_resource type="Animation" id="Animation_o50nq"]
+resource_name = "mort"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [70, 71, 72, 73, 74, 75]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ehqat"]
+_data = {
+"RESET": SubResource("Animation_fe4iv"),
+"attaqueNormal": SubResource("Animation_ca8ee"),
+"grosseAttaque": SubResource("Animation_w65id"),
+"mort": SubResource("Animation_o50nq"),
+"pasBouger": SubResource("Animation_rr01v")
+}
+
+[node name="EnnemieDeux" type="Node2D"]
+
+[node name="Image" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_tg3ap")
+hframes = 10
+vframes = 15
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ehqat")
+}

@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://m5ndfybgxc2i"]
+
+[ext_resource type="PackedScene" uid="uid://c5qhi78bacaal" path="res://Carte/CarteScene/carte_4823.tscn" id="1_3o2ms"]
+[ext_resource type="Script" path="res://Scene/Script/scene_4823.gd" id="1_b67by"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_5hh1w"]
+[ext_resource type="PackedScene" uid="uid://6b73uj6fs7ty" path="res://objets_intératif/bureau_de_classe.tscn" id="4_gtbyt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1hea"]
+size = Vector2(11, 56)
+
+[node name="Scene4823" type="Node2D"]
+script = ExtResource("1_b67by")
+
+[node name="Carte4823" parent="." instance=ExtResource("1_3o2ms")]
+position = Vector2(-83, 121)
+scale = Vector2(1.5, 1.5)
+
+[node name="Joueur" parent="." instance=ExtResource("2_5hh1w")]
+position = Vector2(344, 204)
+scale = Vector2(1.5, 1.5)
+VITESSE_MAX = null
+ACCELERATION = null
+FRICTION = null
+
+[node name="Sortie" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sortie"]
+position = Vector2(312.5, 243)
+shape = SubResource("RectangleShape2D_o1hea")
+
+[node name="GroupeBureaux" type="Node2D" parent="."]
+
+[node name="BureauDeClasse" parent="GroupeBureaux" instance=ExtResource("4_gtbyt")]
+position = Vector2(453, 285)
+
+[node name="BureauDeClasse2" parent="GroupeBureaux" instance=ExtResource("4_gtbyt")]
+position = Vector2(645, 285)
+
+[node name="BureauDeClasse3" parent="GroupeBureaux" instance=ExtResource("4_gtbyt")]
+position = Vector2(453, 430)
+
+[node name="BureauDeClasse4" parent="GroupeBureaux" instance=ExtResource("4_gtbyt")]
+position = Vector2(645, 430)
+
+[node name="BureauDeClasse5" parent="GroupeBureaux" instance=ExtResource("4_gtbyt")]
+position = Vector2(645, 573)
+
+[node name="BureauDeClasse6" parent="GroupeBureaux" instance=ExtResource("4_gtbyt")]
+position = Vector2(453, 571)
+
+[connection signal="joueurÉtudieEnClasse" from="." to="Joueur" method="_on_scene_4823_joueurétudie_en_classe"]
+[connection signal="body_entered" from="Sortie" to="." method="_on_sortie_body_entered"]
