@@ -346,6 +346,7 @@ offset_bottom = -126.0
 value = 50.0
 
 [node name="Quête" type="Node2D" parent="Livre/SpriteLivre"]
+visible = false
 
 [node name="titreTerminé" type="Label" parent="Livre/SpriteLivre/Quête"]
 texture_filter = 1

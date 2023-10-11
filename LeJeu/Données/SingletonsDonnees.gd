@@ -1,5 +1,7 @@
 extends Node
 
+var dictionaireDesDialogues = {}
+var dialoguesChemain = "user://Dialogues.json"
 var dictionaireDesDonnees = {}
 var donneesChemain = "user://LesDonnées.json"
 var dossier
@@ -7,6 +9,7 @@ var convertion
 
 func _ready():
 	dictionaireDesDonnees = ChargerJson(donneesChemain)
+	dictionaireDesDialogues = ChargerJson(dialoguesChemain)
 
 func ChargerJson(chemain : String):
 	if FileAccess.file_exists(chemain):

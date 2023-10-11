@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cehtca5kf7xeh"]
+[gd_scene load_steps=11 format=3 uid="uid://cehtca5kf7xeh"]
 
 [ext_resource type="PackedScene" uid="uid://bsltifq07i8ur" path="res://Carte/CarteScene/tuile_ecole.tscn" id="1_57tyh"]
 [ext_resource type="PackedScene" uid="uid://cg75x4jsgkmda" path="res://Carte/CarteScene/tuile_maison.tscn" id="2_b7hra"]
@@ -8,6 +8,24 @@ size = Vector2(81, 146.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5soes"]
 size = Vector2(128, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbs7c"]
+size = Vector2(320, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sokim"]
+size = Vector2(5, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wi4va"]
+size = Vector2(126, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl7ob"]
+size = Vector2(155, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gybo8"]
+size = Vector2(384, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liv7e"]
+size = Vector2(4, 154)
 
 [node name="Node2D" type="Node2D"]
 
@@ -32,3 +50,27 @@ shape = SubResource("RectangleShape2D_dqos0")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(384, 49.5)
 shape = SubResource("RectangleShape2D_5soes")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(158, 59.5)
+shape = SubResource("RectangleShape2D_xbs7c")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, 191)
+shape = SubResource("RectangleShape2D_sokim")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(511, 122.5)
+shape = SubResource("RectangleShape2D_wi4va")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(82.5, 318.5)
+shape = SubResource("RectangleShape2D_sl7ob")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(384, 319)
+shape = SubResource("RectangleShape2D_gybo8")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(574, 238)
+shape = SubResource("RectangleShape2D_liv7e")

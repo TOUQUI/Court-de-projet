@@ -20,4 +20,5 @@ func GererBureaux(heure):
 
 
 func _on_sortie_body_entered(body):
-	pass 
+	find_child("Joueur").derniere_emplacement = "4923"
+	get_tree().change_scene_to_file("res://Scene/SceneCorridorD.tscn")

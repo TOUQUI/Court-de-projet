@@ -11,7 +11,7 @@
 size = Vector2(28.5, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ou3rk"]
-size = Vector2(64, 4)
+size = Vector2(64, 14)
 
 [sub_resource type="Animation" id="Animation_asxp4"]
 length = 0.001
@@ -59,9 +59,6 @@ position = Vector2(-131, -158)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_a1ec1")]
 
-[node name="Joueur" parent="." instance=ExtResource("3_6k4ns")]
-position = Vector2(-424, -88)
-
 [node name="DversM" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DversM"]
@@ -72,15 +69,15 @@ shape = SubResource("RectangleShape2D_wgyxe")
 
 [node name="Porte" type="Sprite2D" parent="Porte4823"]
 texture_filter = 1
-position = Vector2(-320, -307)
-scale = Vector2(2, 1.745)
+position = Vector2(-320, -325)
+scale = Vector2(2.21875, 2.2475)
 texture = ExtResource("5_hnol3")
 hframes = 12
 vframes = 8
 frame = 51
 
 [node name="Zone" type="CollisionShape2D" parent="Porte4823"]
-position = Vector2(-320, -253)
+position = Vector2(-320, -248)
 shape = SubResource("RectangleShape2D_ou3rk")
 
 [node name="AnimationPorte4823" type="AnimationPlayer" parent="Porte4823"]
@@ -91,8 +88,8 @@ libraries = {
 [node name="F" type="Sprite2D" parent="Porte4823"]
 visible = false
 texture_filter = 1
-position = Vector2(-319, -373)
-scale = Vector2(1.5, 1.5)
+position = Vector2(-318, -388)
+scale = Vector2(2, 2)
 texture = ExtResource("6_x8x2n")
 hframes = 8
 vframes = 14
@@ -101,6 +98,9 @@ frame = 21
 [node name="AttentePorte" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="Joueur" parent="." instance=ExtResource("3_6k4ns")]
+position = Vector2(-461, -87)
 
 [connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]
 [connection signal="body_entered" from="DversM" to="." method="_on_area_2d_body_entered"]

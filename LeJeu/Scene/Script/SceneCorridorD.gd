@@ -1,13 +1,22 @@
 extends Node2D
 
 var joueurDirection
+var provenance
+var joueur_node
 var joueurDansZone4823 = false
 
+
+func _ready():
+	joueur_node = get_node("Joueur")
+	provenance = joueur_node.derniere_emplacement
+	if provenance == "4923":
+		$Joueur.position = Vector2(-320,-278)
 
 
 func _input(event):
 	if event.is_action_pressed("interaction") && joueurDansZone4823:
 		joueurDirection = "res://Scene/scene_4823.tscn"
+		$Porte4823/AnimationPorte4823.play("ouverture")
 		$AttentePorte.start()
 
 
