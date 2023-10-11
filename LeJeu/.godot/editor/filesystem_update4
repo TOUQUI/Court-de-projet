@@ -4,12 +4,10 @@ res://UI/joueur_interface.tscn
 res://Scene/SceneMaison.tscn
 res://UI/menu_pause.tscn
 res://Scene/scene_4823.tscn
-res://Carte/CarteScene/carte_4823.tscn
-res://Scene/Script/scene_4823.gd
-res://objets_intératif/bureau_de_classe.tscn
-res://objets_intératif/bureau_de_classe.gd
 res://Scene/node_SceneQG.tscn
 res://objets_intératif/zone__étude.tscn
-res://Joueur/joueur.gd
-res://Scene/Script/SceneCorridorD.gd
+res://objets_intératif/bureau_de_classe.tscn
+res://Scene/SceneCorridorG.tscn
 res://Scene/SceneCorridorD.tscn
+res://Joueur/joueur.gd
+res://Carte/CarteScene/MapCorridorMillieu.tscn

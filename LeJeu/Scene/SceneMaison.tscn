@@ -97,9 +97,6 @@ frame = 21
 
 [node name="Joueur" parent="." instance=ExtResource("3_yp4r7")]
 position = Vector2(751, 494)
-VITESSE_MAX = null
-ACCELERATION = null
-FRICTION = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

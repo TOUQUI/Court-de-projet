@@ -107,4 +107,4 @@ func _on_scene_travail_travailler(salaire):
 
 
 func _on_scene_4823_joueurétudie_en_classe(heure):
-	
+	pass
