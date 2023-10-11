@@ -61,10 +61,73 @@
 		"argent": 100,
 		"temps": 0,
 		"emplacementJoueur": "QG",
-		"queteActuel": 3,
+		"queteActuel": 1,
 		"posteMcdo": 0,
 		"nbTempsTravail": 0,
 		"inteligence": 0,
 		"force": 0,
 	},
+	"Jose":{
+		"mission1_avant_combat" : {
+			"texte 1" :"Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs.",
+			"texte 2" :"Ce n'est pas ton affaire. Rentre dans ta salle de classe et oublie ce que tu as vu.",
+			"texte 3" :"Très bien, si tu veux tant le savoir, prouve-moi d'abord que tu es capable d'affronter l'adversité. Il y a un ennemi qui se dresse sur ton chemin et c'est moi. Bats-moi, et peut-être que je te dirai ce que tu veux savoir"
+		},
+		"mission1_apres_combat" : {
+			"texte 1" :"Tu as réussi à me battre, étudiant. Tu es plus déterminé que je ne le pensais.",
+			"texte 2" :"Très bien, tu as gagné le droit de savoir. Il y a un livre, un livre ancien qui renferme des réponses et des pouvoirs interdits. C'est ce dont nous avons besoin pour comprendre la menace qui pèse sur notre école.",
+			"texte 3" :"Cherche Stéphane, il en sait plus sur CELUI AU-DESSUS DE TOUT. Il se cache dans l'ombre, mais il peut t'apporter les réponses que tu cherches.",
+			"texte 4" :"Stéphane est un homme discret, mais il possède des connaissances anciennes et des secrets que peu de gens connaissent. Tu le trouveras ici-même quand tu seras prêt. C'est là que tu devrais commencer ta quête pour découvrir la vérité sur CELUI AU-DESSUS DE TOUT. Mais souviens-toi, ne parle de cette mission à personne d'autre. La discrétion est notre alliée.",
+			"texte 5" : "Bien, prends ce livre. Apprends à l'utiliser avec sagesse. Nous en aurons besoin pour affronter ce qui se cache dans l'ombre."
+		}
+	},
+	"Joueur":{
+		"mission1_avant_combat" : {
+		"texte 1" : "Excusez-moi, monsieur, mais je m'inquiète pour les élèves qui ont disparu. J'aimerais comprendre ce qui se passe.",
+		"texte 2" : "Je ne peux pas ignorer ce qui se passe. Si l'école est en danger, je veux aider."
+		},
+		"mission1_apres_combat" : {
+		"texte 1" : "J'ai fait ce que vous m'avez demandé. Maintenant, parlez-moi de ce qui se passe.",
+		"texte 2" : "Par où dois-je commencer pour obtenir des informations sur les élèves disparus ?",
+		"texte 3" : "Stéphane ? Qui est-ce ?"
+		},
+		"mission2_avant_combat" : {
+		"texte 1" : "Peu importe ce que tu penses, Stéphane. Je suis ici pour protéger notre école et découvrir la vérité sur les disparitions."
+		}, 
+		"mission2_apres_combat" : {
+		"texte 1" : "C'est terminé, Stéphane. Maintenant, tu vas me dire où trouver CELUI AU-DESSUS DE TOUT.",
+		"texte 2" : "J'entends bien tes avertissements, Stéphane, mais je ne peux pas reculer maintenant. Je dois au moins essayer de découvrir ce qui se cache derrière tout cela"
+		},
+		"mission3_avant_combat" : {
+		"texte 1" : "Que veux-tu dire, Martin ?"	
+		},
+		"mission3_apres_combat" : {
+		"texte 1" : "J'ai relevé ton défi, Martin. Maintenant, parle-moi de CELUI AU-DESSUS DE TOUT. Où puis-je le trouver ?"
+		}
+	},
+	"Martin":{
+		"mission3_avant_combat": {
+		"texte 1" : "Ah, te voilà enfin, joueur. Je suis Martin, le gardien de ce monde. Tu ne le sais peut-être pas, mais je suis bien plus que ce que tu crois.",
+		"texte 2" : "Tu es dans un jeu, mon ami. Un jeu que j'évalue, que je contrôle. Je peux mettre fin à ton aventure d'un simple claquement de doigts, comme un dieu.",
+		"texte 3" : "Mais aujourd'hui, je suis clément. Je vais te laisser une chance de continuer à observer cette histoire. Le joueur doit me prouver qu'il est digne de poursuivre cette quête."
+		},
+		"mission3_apres_combat": {
+		"texte 1" : "Tu es bien plus puissant que je ne l'imaginais. Tu as prouvé ta valeur, joueur. Mais sache que le véritable défi t'attend encore. Le coordonnateur, Philippe, est « celui au-dessus de tout ». Il détient le pouvoir ultime, et tu devras rassembler toutes tes forces pour le vaincre.",
+		"texte 2" : "Avant de partir, prends ceci. C'est la clé du bureau de Philippe. Tu y trouveras peut-être des informations cruciales pour ta quête. N'oublie pas, le destin de l'école repose sur tes épaules, joueur."
+		}
+	},
+	"Stephane":{
+		"mission2_avant_combat" : {
+			"texte 1" :"Alors, tu prétends être l'élu ? C'est difficile à croire. José a vraiment fait une erreur en te confiant le livre interdit. Tu n'es pas digne de ce pouvoir.",
+			"texte 2" :"Protéger l'école ? Tu n'es qu'un novice. Tu n'as aucune idée de ce qui t'attend."
+		},
+		"mission2_apres_combat" : {
+			"texte 1" :"Écoute, tu as montré une grande détermination en me battant, mais je dois te prévenir. CELUI AU-DESSUS DE TOUT est bien plus puissant que tu ne peux l'imaginer, et même avec le pouvoir que tu as acquis, tu ne seras pas en mesure de le vaincre.",
+			"texte 2" :"Tu as gagné. L'assistant de CELUI AU-DESSUS DE TOUT est Martin. Il se trouve dans la bibliothèque souterraine, cachée derrière un mur secret. C'est là que tu trouveras les réponses que tu cherches. Sois prudent, jeune élu."
+		}
+	},
+	"mission1": [
+		["Jose", "Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs."],
+		["Joueur", "Excusez-moi, monsieur, mais je m'inquiète pour les élèves qui ont disparu. J'aimerais comprendre ce qui se passe."]
+	]
 }

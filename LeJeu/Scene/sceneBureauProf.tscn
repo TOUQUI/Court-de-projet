@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhravofspuhu2"]
+[gd_scene load_steps=9 format=3 uid="uid://dhravofspuhu2"]
 
 [ext_resource type="Script" path="res://Scene/Script/sceneBureauProf.gd" id="1_5olos"]
 [ext_resource type="PackedScene" uid="uid://cehtca5kf7xeh" path="res://Carte/CarteScene/MapBureau_prof.tscn" id="1_mur6o"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_rmubi"]
 [ext_resource type="PackedScene" uid="uid://blychabk2ucx7" path="res://Personne/ennemie_un.tscn" id="4_ipa48"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="6_hrspr"]
+[ext_resource type="Texture2D" uid="uid://bce50qi5o1p" path="res://UI/image/Keyboard Extras.png" id="7_ugmgd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1tk1"]
 size = Vector2(8.33333, 3.16667)
@@ -51,9 +52,17 @@ offset_top = 451.0
 offset_right = 437.0
 offset_bottom = 474.0
 
-[node name="TextEdit" type="TextEdit" parent="BoiteDeTexte"]
+[node name="ChampTexte" type="TextEdit" parent="BoiteDeTexte"]
 offset_left = 305.0
 offset_top = 481.0
 offset_right = 885.0
 offset_bottom = 605.0
 wrap_mode = 1
+
+[node name="Entrez" type="Sprite2D" parent="BoiteDeTexte"]
+position = Vector2(978, 596)
+scale = Vector2(4, 4)
+texture = ExtResource("7_ugmgd")
+hframes = 4
+vframes = 8
+frame = 7
