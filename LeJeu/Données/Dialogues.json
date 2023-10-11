@@ -14,7 +14,28 @@
 		}
 	},
 	"Joueur":{
-		
+		"mission1_avant_combat" : {
+		"texte 1" : "Excusez-moi, monsieur, mais je m'inquiète pour les élèves qui ont disparu. J'aimerais comprendre ce qui se passe.",
+		"texte 2" : "Je ne peux pas ignorer ce qui se passe. Si l'école est en danger, je veux aider."
+		},
+		"mission1_apres_combat" : {
+		"texte 1" : "J'ai fait ce que vous m'avez demandé. Maintenant, parlez-moi de ce qui se passe.",
+		"texte 2" : "Par où dois-je commencer pour obtenir des informations sur les élèves disparus ?",
+		"texte 3" : "Stéphane ? Qui est-ce ?"
+		},
+		"mission2_avant_combat" : {
+		"texte 1" : "Peu importe ce que tu penses, Stéphane. Je suis ici pour protéger notre école et découvrir la vérité sur les disparitions."
+		}, 
+		"mission2_apres_combat" : {
+		"texte 1" : "C'est terminé, Stéphane. Maintenant, tu vas me dire où trouver CELUI AU-DESSUS DE TOUT.",
+		"texte 2" : "J'entends bien tes avertissements, Stéphane, mais je ne peux pas reculer maintenant. Je dois au moins essayer de découvrir ce qui se cache derrière tout cela"
+		},
+		"mission3_avant_combat" : {
+		"texte 1" : "Que veux-tu dire, Martin ?"	
+		},
+		"mission3_apres_combat" : {
+		"texte 1" : "J'ai relevé ton défi, Martin. Maintenant, parle-moi de CELUI AU-DESSUS DE TOUT. Où puis-je le trouver ?"
+		}
 	},
 	"Martin":{
 		"mission3_avant_combat": {
