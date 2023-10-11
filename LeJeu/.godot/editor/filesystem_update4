@@ -11,3 +11,14 @@ res://Scene/SceneCorridorG.tscn
 res://Scene/SceneCorridorD.tscn
 res://Joueur/joueur.gd
 res://Carte/CarteScene/MapCorridorMillieu.tscn
+res://Scene/SceneCorridorM.tscn
+res://Carte/CarteScene/MapCorridorDroit.tscn
+res://Carte/CarteScene/carte_4823.tscn
+res://Carte/CarteScene/bureau_prof.tscn
+res://Carte/CarteScene/tuile_ecole.tscn
+res://Scene/Script/scene_4823.gd
+res://Scene/sceneBureauProf.tscn
+res://Carte/CarteScene/MapBureau_prof.tscn
+res://Personne/ennemie_deux.tscn
+res://Personne/ennemie_un.tscn
+res://Données/Dialogues.json

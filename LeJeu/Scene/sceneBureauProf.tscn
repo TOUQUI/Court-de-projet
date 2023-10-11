@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhravofspuhu2"]
+
+[ext_resource type="PackedScene" uid="uid://cehtca5kf7xeh" path="res://Carte/CarteScene/MapBureau_prof.tscn" id="1_mur6o"]
+[ext_resource type="PackedScene" uid="uid://wdrnntu75p7f" path="res://Personne/ennemie_deux.tscn" id="2_4cdg0"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_rmubi"]
+[ext_resource type="PackedScene" uid="uid://blychabk2ucx7" path="res://Personne/ennemie_un.tscn" id="4_ipa48"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_mur6o")]
+position = Vector2(147, 63)
+scale = Vector2(1.5, 1.5)
+
+[node name="EnnemieDeux" parent="." instance=ExtResource("2_4cdg0")]
+position = Vector2(397, 237)
+scale = Vector2(5, 5)
+
+[node name="Joueur" parent="." instance=ExtResource("3_rmubi")]
+position = Vector2(409, 474)
+scale = Vector2(1.7, 1.7)
+
+[node name="EnnemieUn" parent="." instance=ExtResource("4_ipa48")]
+position = Vector2(477, 250)
+scale = Vector2(6, 6)

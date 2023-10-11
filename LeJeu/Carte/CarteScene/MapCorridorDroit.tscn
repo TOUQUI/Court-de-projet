@@ -29,6 +29,8 @@ layer_0/tile_data = PackedInt32Array(-327687, 131079, 0, -262151, 7, 4, -327686,
 [node name="tuileEcole3" parent="." instance=ExtResource("1_sc0ys")]
 layer_0/tile_data = PackedInt32Array(-8, 7, 2)
 
+[node name="tuileEcole4" parent="." instance=ExtResource("1_sc0ys")]
+
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2(-229.25, 45.5)
 shape = SubResource("RectangleShape2D_lk5kr")
