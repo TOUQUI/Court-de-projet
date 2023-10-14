@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_rmubi"]
 [ext_resource type="PackedScene" uid="uid://blychabk2ucx7" path="res://Personne/ennemie_un.tscn" id="4_ipa48"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="6_hrspr"]
-[ext_resource type="Texture2D" uid="uid://bce50qi5o1p" path="res://UI/image/Keyboard Extras.png" id="7_ugmgd"]
+[ext_resource type="Texture2D" uid="uid://bce50qi5o1p" path="res://UI/Keyboard Extras.png" id="7_ugmgd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1tk1"]
 size = Vector2(8.33333, 3.16667)

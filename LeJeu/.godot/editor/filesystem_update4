@@ -1,10 +1,2 @@
 res://Scene/sceneBureauProf.tscn
 res://Données/LesDonnées.json
-res://Données/SingletonsDonnees.gd
-res://Scene/SceneQG.tscn
-res://Scene/SceneCorridorD.tscn
-res://Scene/scene_travail.tscn
-res://Joueur/joueur.tscn
-res://UI/joueur_interface.tscn
-res://Scene/Script/sceneBureauProf.gd
-res://UI/menu_pause.tscn

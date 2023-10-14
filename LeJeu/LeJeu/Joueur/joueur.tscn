@@ -1,0 +1,183 @@
+[gd_scene load_steps=12 format=3 uid="uid://tki2apulyx4e"]
+
+[ext_resource type="Script" path="res://Joueur/joueur.gd" id="1_uy1qb"]
+[ext_resource type="Texture2D" uid="uid://n1nq7l1p7jr6" path="res://Joueur/up_idle_1.png" id="2_wiuoe"]
+[ext_resource type="PackedScene" uid="uid://ogjuu37a8sao" path="res://UI/joueur_interface.tscn" id="3_m87e3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ri8p"]
+radius = 9.0
+height = 19.0
+
+[sub_resource type="Animation" id="Animation_el663"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJoueur:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [28]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteJoueur:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_rrfvq"]
+resource_name = "avancer_bas"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJoueur:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_wn7ms"]
+resource_name = "avancer_droite"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJoueur:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [32, 33, 34, 35]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteJoueur:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_c25u0"]
+resource_name = "avancer_gauche"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJoueur:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [32, 33, 34, 35]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteJoueur:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+
+[sub_resource type="Animation" id="Animation_pw4en"]
+resource_name = "avancer_haut"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJoueur:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [48, 49, 50, 51]
+}
+
+[sub_resource type="Animation" id="Animation_3442v"]
+resource_name = "pas_bouger"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteJoueur:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6v1en"]
+_data = {
+"RESET": SubResource("Animation_el663"),
+"avancer_bas": SubResource("Animation_rrfvq"),
+"avancer_droite": SubResource("Animation_wn7ms"),
+"avancer_gauche": SubResource("Animation_c25u0"),
+"avancer_haut": SubResource("Animation_pw4en"),
+"pas_bouger": SubResource("Animation_3442v")
+}
+
+[node name="Joueur" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_uy1qb")
+
+[node name="SpriteJoueur" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_wiuoe")
+flip_h = true
+hframes = 8
+vframes = 8
+frame = 28
+
+[node name="BoiteDeColison" type="CollisionShape2D" parent="."]
+position = Vector2(0, 23.5)
+shape = SubResource("CapsuleShape2D_0ri8p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6v1en")
+}
+
+[node name="Joueur_interface" parent="." instance=ExtResource("3_m87e3")]
+
+[connection signal="ajouterItemAcheter" from="." to="Joueur_interface" method="_on_joueur_ajouter_item_acheter"]
+[connection signal="dormir" from="." to="Joueur_interface" method="_on_joueur_dormir"]
+[connection signal="joueur_étudie" from="." to="Joueur_interface" method="_on_joueur_joueur_étudie"]
