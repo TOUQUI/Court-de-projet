@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_6k4ns"]
 [ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="4_iumqj"]
 [ext_resource type="Texture2D" uid="uid://b3cad43imn7o1" path="res://Carte/Modern+ Study Time (32x32)/doors_school.png" id="5_hnol3"]
-[ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/image/Keyboard Letters and Symbols.png" id="6_x8x2n"]
+[ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="6_x8x2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgyxe"]
 size = Vector2(28.5, 35)

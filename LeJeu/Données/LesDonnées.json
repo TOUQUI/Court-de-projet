@@ -66,6 +66,7 @@
 		"nbTempsTravail": 0,
 		"inteligence": 0,
 		"force": 0,
+		"boisonConsome": 0
 	},
 	"mission1_bc": [
 		["Jose", "Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs."],

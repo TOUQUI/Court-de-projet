@@ -1,17 +1,17 @@
 [gd_scene load_steps=28 format=3 uid="uid://dc0je05dehtwa"]
 
 [ext_resource type="Script" path="res://UI/joueur_interface.gd" id="1_wrn2t"]
-[ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/image/horloge.png" id="2_tqtda"]
-[ext_resource type="Texture2D" uid="uid://cuaw8nsbh0ykc" path="res://UI/image/horlogePlain.png" id="3_8q4nj"]
-[ext_resource type="Texture2D" uid="uid://bo13c5q6g36l8" path="res://UI/image/LivreMouvement.png" id="4_1sx56"]
-[ext_resource type="Texture2D" uid="uid://b8quo22p6mjhn" path="res://UI/image/Tag.png" id="5_qr3b0"]
-[ext_resource type="Texture2D" uid="uid://cp7w1jgvc71go" path="res://UI/image/IconeParametre.png" id="6_pvj1h"]
-[ext_resource type="Texture2D" uid="uid://c1up1ff0x1j82" path="res://UI/image/IconeInventaire.png" id="7_kocie"]
+[ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="2_tqtda"]
+[ext_resource type="Texture2D" uid="uid://cuaw8nsbh0ykc" path="res://UI/sprite_1.png" id="3_8q4nj"]
+[ext_resource type="Texture2D" uid="uid://bo13c5q6g36l8" path="res://UI/LivreMouvement.png" id="4_1sx56"]
+[ext_resource type="Texture2D" uid="uid://b8quo22p6mjhn" path="res://UI/Tag.png" id="5_qr3b0"]
+[ext_resource type="Texture2D" uid="uid://cp7w1jgvc71go" path="res://UI/IconeParametre.png" id="6_pvj1h"]
+[ext_resource type="Texture2D" uid="uid://c1up1ff0x1j82" path="res://UI/IconeInventaire.png" id="7_kocie"]
 [ext_resource type="Texture2D" uid="uid://1hc7judil6wl" path="res://UI/image/iconQuete.png" id="8_yevli"]
-[ext_resource type="Texture2D" uid="uid://cev2wbbra633y" path="res://UI/image/ImageBoisonÉnergique.png" id="10_a71p6"]
+[ext_resource type="Texture2D" uid="uid://cev2wbbra633y" path="res://UI/ImageBoisonÉnergique.png" id="10_a71p6"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="10_r4535"]
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="11_8f5ph"]
-[ext_resource type="Texture2D" uid="uid://btpi4hknofog3" path="res://UI/image/LivreOuverture.png" id="12_dlxn3"]
+[ext_resource type="Texture2D" uid="uid://btpi4hknofog3" path="res://UI/LivreOuverture.png" id="12_dlxn3"]
 
 [sub_resource type="Animation" id="Animation_dbn76"]
 length = 0.001
@@ -482,9 +482,28 @@ offset_bottom = 74.0
 text = "ARGENT:0$"
 label_settings = SubResource("LabelSettings_4f75e")
 
+[node name="Message" type="TextEdit" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -74.5
+offset_right = 129.5
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+wrap_mode = 1
+
+[node name="MessageMinuterie" type="Timer" parent="Message"]
+wait_time = 5.0
+
 [connection signal="pressed" from="Livre/SpriteLivre/btnParametre" to="." method="_on_btn_parametre_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/btnInventaire" to="." method="_on_image_inventaire_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/btnQuete" to="." method="_on_btn_quete_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/Inventaire/Item1/btnConsomerItem1" to="." method="_on_btn_consomer_item_1_pressed"]
 [connection signal="timeout" from="Chrono0_7" to="." method="_on_chrono_0_7_timeout"]
 [connection signal="timeout" from="Chrono0_5" to="." method="_on_chrono_0_5_timeout"]
+[connection signal="timeout" from="Message/MessageMinuterie" to="." method="_on_message_minuterie_timeout"]
