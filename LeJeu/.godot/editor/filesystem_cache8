@@ -1,23 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697296638
+::res://::1697312028
 CGversCM.gd::GDScript::-1::1695037731::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::280129450150855157::1697028860::1697028860::1::::<><>::
 up_idle_1.png::CompressedTexture2D::6294229727248106446::1694883285::1694883285::1::::<><>::
 ::res://Carte/::1697028860
 Porte_bleu.gd::GDScript::-1::1697028860::0::1::::<>Area2D<>::
-Porte_bleu.tscn::PackedScene::9031570923265785777::1697028860::0::1::::<><>::res://Carte/Porte_bleu.gd<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png
+Porte_bleu.tscn::PackedScene::9031570923265785777::1697028860::0::1::::<><>::res://Carte/Porte_bleu.gd<>uid://b3cad43imn7o1
 ::res://Carte/CarteScene/::1697296611
-carte_4823.tscn::PackedScene::6911977757663998843::1697033464::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://cg75x4jsgkmda::::res://Carte/CarteScene/tuile_maison.tscn
-MapBureau_prof.tscn::PackedScene::5069204627473575547::1697296611::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://cg75x4jsgkmda::::res://Carte/CarteScene/tuile_maison.tscn
-MapCaféteria.tscn::PackedScene::4161442991018394577::1697028860::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-MapChambre.tscn::PackedScene::3666388956887543619::1697028860::0::1::::<><>::uid://cg75x4jsgkmda::::res://Carte/CarteScene/tuile_maison.tscn<>uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-MapCorridorDroit.tscn::PackedScene::5045187293805989479::1697030222::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-MapCorridorGauche.tscn::PackedScene::4890724737196172619::1697028860::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-MapCorridorMillieu.tscn::PackedScene::6862977712233833424::1697029687::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://dvo2wfkmt7sex::::res://image/ascenseur.png<>uid://bi1c0r1fr0uu::::res://image/sortiePanneau.png
-MapLeQG.tscn::PackedScene::4447127648161069382::1697028860::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://cbjkhiyoqwe5y::::res://Personne/vendeur_du_qg.tscn
-toilette.tscn::PackedScene::615094031593119450::1697028860::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn
-tuile_ecole.tscn::PackedScene::3673696222198766493::1697033465::0::1::::<><>::uid://crxljhdgcu83l::::res://Carte/Modern+ Study Time (32x32)/Tile 1.png<>uid://c1ejyhve20cer::::res://Carte/Modern+ Study Time (32x32)/Tile 2.png<>uid://c0peb6hun45jc::::res://Carte/Modern+ Study Time (32x32)/Tile 3.png<>uid://bh2spcw6nchhp::::res://Carte/Modern+ Study Time (32x32)/Tile 4.png<>uid://xs0isdm7qcnx::::res://Carte/Modern+ Study Time (32x32)/Tile A5.png<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://cjppd2svodpw3::::res://Carte/Modern+ Study Time (32x32)/Walls.png
-tuile_maison.tscn::PackedScene::5261898638293772358::1697028860::0::1::::<><>::uid://dgajleweivwfy::::res://Carte/Moder_Inner/A5 - Floor.png<>uid://cfiidhrne2d8::::res://Carte/Moder_Inner/Bathroom.png<>uid://d3c31vwdlcpb1::::res://Carte/Moder_Inner/Kitcheen.png<>uid://dx6gu8q34s11m::::res://Carte/Moder_Inner/Living Room.png<>uid://b8ubr1jvieosa::::res://Carte/Moder_Inner/Miscs.png<>uid://dctraclipyv73::::res://Carte/Moder_Inner/Wall1.png<>uid://tqq53tok5fll::::res://Carte/Moder_Inner/Room.png<>uid://drdnhv8aeq1pe::::res://Carte/Moder_Inner/Wall2.png
+carte_4823.tscn::PackedScene::6911977757663998843::1697033464::0::1::::<><>::uid://bsltifq07i8ur
+MapBureau_prof.tscn::PackedScene::5069204627473575547::1697296611::0::1::::<><>::uid://bsltifq07i8ur
+MapCaféteria.tscn::PackedScene::4161442991018394577::1697028860::0::1::::<><>::uid://bsltifq07i8ur
+MapChambre.tscn::PackedScene::3666388956887543619::1697028860::0::1::::<><>::uid://cg75x4jsgkmda
+MapCorridorDroit.tscn::PackedScene::5045187293805989479::1697030222::0::1::::<><>::uid://bsltifq07i8ur
+MapCorridorGauche.tscn::PackedScene::4890724737196172619::1697028860::0::1::::<><>::uid://bsltifq07i8ur
+MapCorridorMillieu.tscn::PackedScene::6862977712233833424::1697029687::0::1::::<><>::uid://bsltifq07i8ur
+MapLeQG.tscn::PackedScene::4447127648161069382::1697028860::0::1::::<><>::uid://bsltifq07i8ur
+toilette.tscn::PackedScene::615094031593119450::1697028860::0::1::::<><>::uid://bsltifq07i8ur
+tuile_ecole.tscn::PackedScene::3673696222198766493::1697033465::0::1::::<><>::uid://crxljhdgcu83l
+tuile_maison.tscn::PackedScene::5261898638293772358::1697028860::0::1::::<><>::uid://dgajleweivwfy
 ::res://Carte/Modern+ Study Time (32x32)/::1697028860
 doors_school.png::CompressedTexture2D::4355843985259587742::1697028860::1697028860::1::::<><>::
 Tile 1.png::CompressedTexture2D::6014216729215677319::1697028860::1697028860::1::::<><>::
@@ -41,8 +41,8 @@ Miscs.png::CompressedTexture2D::4744032534793867036::1697028860::1697028860::1::
 Room.png::CompressedTexture2D::1367644619544714533::1697028860::1697028860::1::::<><>::
 Wall1.png::CompressedTexture2D::7339895226983579552::1697028860::1697028860::1::::<><>::
 Wall2.png::CompressedTexture2D::8359468501626234858::1697028860::1697028860::1::::<><>::
-::res://Données/::1697296611
-LesDonnées.json::JSON::-1::1697296611::0::1::::<><>::
+::res://Données/::1697298410
+LesDonnées.json::JSON::-1::1697298410::0::1::::<><>::
 SingletonsDonnees.gd::GDScript::-1::1697296611::0::1::::<>Node<>::
 ::res://image/::1697028860
 ascenseur.png::CompressedTexture2D::8663807980942111383::1697028860::1697028860::1::::<><>::
@@ -50,36 +50,36 @@ background_mcdo.jpg::CompressedTexture2D::5621091984427989501::1697028860::16970
 sortiePanneau.png::CompressedTexture2D::88287419604377592::1697028860::1697028860::1::::<><>::
 ::res://Joueur/::1697030223
 joueur.gd::GDScript::-1::1697029040::0::1::::<>CharacterBody2D<>::
-joueur.tscn::PackedScene::1354765783137222250::1697030223::0::1::::<><>::res://Joueur/joueur.gd<>uid://n1nq7l1p7jr6::::res://Joueur/up_idle_1.png<>uid://dc0je05dehtwa::::res://UI/joueur_interface.tscn
+joueur.tscn::PackedScene::1354765783137222250::1697030223::0::1::::<><>::res://Joueur/joueur.gd<>uid://n1nq7l1p7jr6
 up_idle_1.png::CompressedTexture2D::966948381451105525::1697028860::1697028860::1::::<><>::
 ::res://objets_intératif/::1697029137
 bureau_de_classe.gd::GDScript::-1::1697028860::0::1::::<>Node2D<>::
-bureau_de_classe.tscn::PackedScene::2179912542317095198::1697029137::0::1::::<><>::res://objets_intératif/bureau_de_classe.gd<>uid://idnl1hauh4uk::::res://UI/image/Keyboard Letters and Symbols.png
+bureau_de_classe.tscn::PackedScene::2179912542317095198::1697029137::0::1::::<><>::res://objets_intératif/bureau_de_classe.gd<>uid://idnl1hauh4uk
 zone__étude.gd::GDScript::-1::1697028860::0::1::::<>Node2D<>::
-zone__étude.tscn::PackedScene::7165407067867528008::1697029137::0::1::::<><>::res://objets_intératif/zone__étude.gd<>uid://idnl1hauh4uk::::res://UI/image/Keyboard Letters and Symbols.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn
+zone__étude.tscn::PackedScene::7165407067867528008::1697029137::0::1::::<><>::res://objets_intératif/zone__étude.gd<>uid://idnl1hauh4uk
 ::res://Personne/::1697034116
 Ennemie1.png::CompressedTexture2D::4776442687526103618::1697028860::1697028860::1::::<><>::
 Ennemie2.png::CompressedTexture2D::8675012014495117990::1697028860::1697028860::1::::<><>::
-ennemie_deux.tscn::PackedScene::1551403810604189873::1697034116::0::1::::<><>::uid://dvuigeufki4yc::::res://Personne/Ennemie2.png
-ennemie_un.tscn::PackedScene::3208176966387788038::1697034116::0::1::::<><>::uid://cab0kwcwsrpio::::res://Personne/Ennemie1.png
+ennemie_deux.tscn::PackedScene::1551403810604189873::1697034116::0::1::::<><>::uid://dvuigeufki4yc
+ennemie_un.tscn::PackedScene::3208176966387788038::1697034116::0::1::::<><>::uid://cab0kwcwsrpio
 Male 13-1.png::CompressedTexture2D::7078966979650502144::1697028860::1697028860::1::::<><>::
 Male 14-1.png::CompressedTexture2D::359236349017762972::1697028860::1697028860::1::::<><>::
 vendeur_du_qg.gd::GDScript::-1::1697028860::0::1::::<>Sprite2D<>::
-vendeur_du_qg.tscn::PackedScene::4862229739216226196::1697028860::0::1::::<><>::uid://featneqnbsdw::::res://Personne/Male 14-1.png<>res://Personne/vendeur_du_qg.gd<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://cev2wbbra633y::::res://UI/ImageBoisonÉnergique.png<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://ml755n3paq8h::::res://UI/Panier.png<>uid://csa4mp6bh41h7::::res://UI/Quiter.png
-::res://Scene/::1697296611
+vendeur_du_qg.tscn::PackedScene::4862229739216226196::1697028860::0::1::::<><>::uid://featneqnbsdw
+::res://Scene/::1697298429
 c_gvers_cm.tscn::PackedScene::3252530636575976961::1697028860::0::1::::<><>::res://CGversCM.gd
-node_SceneQG.tscn::PackedScene::2725096438691041776::1697029137::0::1::::<><>::uid://c0f5a110cjy4l::::res://Scene/SceneQG.tscn<>uid://dac8hb5ycwgr5::::res://objets_intératif/zone__étude.tscn
-sceneBureauProf.tscn::PackedScene::7685716623926150511::1697296611::0::1::::<><>::res://Scene/Script/sceneBureauProf.gd<>uid://cehtca5kf7xeh::::res://Carte/CarteScene/MapBureau_prof.tscn<>uid://wdrnntu75p7f::::res://Personne/ennemie_deux.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://blychabk2ucx7::::res://Personne/ennemie_un.tscn<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://bce50qi5o1p::::res://UI/image/Keyboard Extras.png
-SceneCaféteria.tscn::PackedScene::4343158649835255544::1697028860::0::1::::<><>::res://Scene/Script/SceneCaféteria.gd<>uid://b0j3mf6qxgahd::::res://Carte/CarteScene/MapCaféteria.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn
+node_SceneQG.tscn::PackedScene::2725096438691041776::1697029137::0::1::::<><>::uid://c0f5a110cjy4l
+sceneBureauProf.tscn::PackedScene::7685716623926150511::1697298429::0::1::::<><>::res://Scene/Script/sceneBureauProf.gd<>uid://cehtca5kf7xeh::::res://Carte/CarteScene/MapBureau_prof.tscn<>uid://wdrnntu75p7f::::res://Personne/ennemie_deux.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://blychabk2ucx7::::res://Personne/ennemie_un.tscn<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://bce50qi5o1p::::res://UI/Keyboard Extras.png
+SceneCaféteria.tscn::PackedScene::4343158649835255544::1697028860::0::1::::<><>::res://Scene/Script/SceneCaféteria.gd<>uid://b0j3mf6qxgahd
 SceneCorridorD.gd::GDScript::-1::1695318341::0::1::::<>StaticBody2D<>::
-SceneCorridorD.tscn::PackedScene::5703798399180671878::1697296611::0::1::::<><>::res://Scene/Script/SceneCorridorD.gd<>uid://cd46q6imydlml::::res://Carte/CarteScene/MapCorridorDroit.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://idnl1hauh4uk::::res://UI/image/Keyboard Letters and Symbols.png
-SceneCorridorG.tscn::PackedScene::5966193437824573725::1697029137::0::1::::<><>::uid://cbxdr0j5c4kp4::::res://Carte/CarteScene/MapCorridorGauche.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>res://Scene/Script/SceneCorridorG.gd<>uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://d1w7whsgxptuv::::res://Carte/Porte_bleu.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn
-SceneCorridorM.tscn::PackedScene::2814621361341071636::1697030222::0::1::::<><>::res://Scene/Script/SceneCorridorM.gd<>uid://c41qifx44ab2g::::res://Carte/CarteScene/MapCorridorMillieu.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>res://Scene/Script/CMversCG.gd<>res://Scene/Script/CMversCD.gd<>uid://idnl1hauh4uk::::res://UI/image/Keyboard Letters and Symbols.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn
-SceneMaison.tscn::PackedScene::1195034059009649916::1697029137::0::1::::<><>::res://Scene/Script/scene_maison.gd<>uid://bsia5jmnqj48f::::res://Carte/CarteScene/MapChambre.tscn<>uid://idnl1hauh4uk::::res://UI/image/Keyboard Letters and Symbols.png<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://c555jrgjye41k::::res://UI/image/noir.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn
+SceneCorridorD.tscn::PackedScene::5703798399180671878::1697296611::0::1::::<><>::res://Scene/Script/SceneCorridorD.gd<>uid://cd46q6imydlml
+SceneCorridorG.tscn::PackedScene::5966193437824573725::1697029137::0::1::::<><>::uid://cbxdr0j5c4kp4
+SceneCorridorM.tscn::PackedScene::2814621361341071636::1697030222::0::1::::<><>::res://Scene/Script/SceneCorridorM.gd<>uid://c41qifx44ab2g
+SceneMaison.tscn::PackedScene::1195034059009649916::1697029137::0::1::::<><>::res://Scene/Script/scene_maison.gd<>uid://bsia5jmnqj48f
 SceneQG.gd::GDScript::-1::1695320414::0::1::::<>StaticBody2D<>::
-SceneQG.tscn::PackedScene::6539707263801263821::1697028860::0::1::::<><>::uid://b4mhspjuk24a1::::res://Carte/CarteScene/MapLeQG.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>res://Scene/Script/SceneQG.gd<>res://Scene/Script/QGversCG.gd<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn
-scene_4823.tscn::PackedScene::904992434312277982::1697034115::0::1::::<><>::uid://c5qhi78bacaal::::res://Carte/CarteScene/carte_4823.tscn<>res://Scene/Script/scene_4823.gd<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://6b73uj6fs7ty::::res://objets_intératif/bureau_de_classe.tscn
-scene_travail.tscn::PackedScene::2485425053232094879::1697029137::0::1::::<><>::uid://cmc5tfw58mjqj::::res://image/background_mcdo.jpg<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>res://Scene/Script/scene_travail.gd<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn
+SceneQG.tscn::PackedScene::6539707263801263821::1697028860::0::1::::<><>::uid://b4mhspjuk24a1
+scene_4823.tscn::PackedScene::904992434312277982::1697034115::0::1::::<><>::uid://c5qhi78bacaal
+scene_travail.tscn::PackedScene::2485425053232094879::1697029137::0::1::::<><>::uid://cmc5tfw58mjqj
 ::res://Scene/Script/::1697296611
 AllerVersMillieu.gd::GDScript::-1::1697028860::0::1::::<>CollisionShape2D<>::
 Area2D.gd::GDScript::-1::1697028860::0::1::::<>Area2D<>::
@@ -108,25 +108,25 @@ ImageBoisonÉnergique.png::CompressedTexture2D::5098627375885997720::1696519366:
 ImageInventaire.gd::GDScript::-1::1697028860::0::1::::<>Sprite2D<>::
 ImageParametre.gd::GDScript::-1::1697028860::0::1::::<>Sprite2D<>::
 joueur_interface.gd::GDScript::-1::1697028860::0::1::::<>CanvasLayer<>::
-joueur_interface.tscn::PackedScene::7351804137887215632::1697296611::0::1::::<><>::res://UI/joueur_interface.gd<>uid://dcq5j6taqvth8::::res://UI/image/horloge.png<>uid://cuaw8nsbh0ykc::::res://UI/image/horlogePlain.png<>uid://bo13c5q6g36l8::::res://UI/image/LivreMouvement.png<>uid://b8quo22p6mjhn::::res://UI/image/Tag.png<>uid://cp7w1jgvc71go::::res://UI/image/IconeParametre.png<>uid://c1up1ff0x1j82::::res://UI/image/IconeInventaire.png<>uid://1hc7judil6wl::::res://UI/image/iconQuete.png<>uid://cev2wbbra633y::::res://UI/image/ImageBoisonÉnergique.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://btpi4hknofog3::::res://UI/image/LivreOuverture.png
+joueur_interface.tscn::PackedScene::7351804137887215632::1697296611::0::1::::<><>::res://UI/joueur_interface.gd<>uid://dcq5j6taqvth8
 Keyboard Extras.png::CompressedTexture2D::2194569974680683::1696519366::1696519366::1::::<><>::
 Keyboard Letters and Symbols.png::CompressedTexture2D::568514223453127006::1696519366::1696519366::1::::<><>::
 Livre.png::CompressedTexture2D::2766406722953292738::1695933986::1695933986::1::::<><>::
 LivreMouvement.png::CompressedTexture2D::3424443565451407283::1696519366::1696519366::1::::<><>::
 LivreOuverture.png::CompressedTexture2D::3751512286813064008::1696519366::1696519366::1::::<><>::
 menu_pause.gd::GDScript::-1::1697028860::0::1::::<>Node2D<>::
-menu_pause.tscn::PackedScene::614628457943386673::1697029137::0::1::::<><>::res://UI/menu_pause.gd<>uid://c555jrgjye41k::::res://UI/image/noir.png<>uid://dubqfk66ydc1j::::res://UI/image/IconSauvegarder.png
+menu_pause.tscn::PackedScene::614628457943386673::1697029137::0::1::::<><>::res://UI/menu_pause.gd<>uid://c555jrgjye41k
 noir.png::CompressedTexture2D::6942276493684066354::1696519366::1696519366::1::::<><>::
 Panier.png::CompressedTexture2D::866972393611938137::1696519366::1696519366::1::::<><>::
 Papier_texte_box.png::CompressedTexture2D::5888314169217797811::1696519366::1696519366::1::::<><>::
-personnage_interface.tscn::PackedScene::2212681469800806035::1697028860::0::1::::<><>::uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn
+personnage_interface.tscn::PackedScene::2212681469800806035::1697028860::0::1::::<><>::uid://c81mpte26ou7w
 Quiter.png::CompressedTexture2D::6038023610983020206::1696519366::1696519366::1::::<><>::
 SFPixelate.ttf::FontFile::7924840204050659687::1697028860::1697028860::1::::<><>::
 sprite_0.png::CompressedTexture2D::7334509021945829699::1696519366::1696519366::1::::<><>::
 sprite_1.png::CompressedTexture2D::6178013655852405390::1696519366::1696519366::1::::<><>::
 Tag.png::CompressedTexture2D::4736923369346737167::1696519366::1696519366::1::::<><>::
 TagLong.png::CompressedTexture2D::1799632733350286535::1696519366::1696519366::1::::<><>::
-tuile_boite_de_texte.tscn::PackedScene::7143503425260223718::1697028860::0::1::::<><>::uid://ccvln3dkiyu8o::::res://UI/image/Boite_de_texte.png<>uid://cp5lw6h10tocp::::res://UI/Papier_texte_box.png
+tuile_boite_de_texte.tscn::PackedScene::7143503425260223718::1697028860::0::1::::<><>::uid://ccvln3dkiyu8o
 up_idle_1.png::CompressedTexture2D::6294229727248106446::1696519366::1696519366::1::::<><>::
 ::res://UI/image/::1697028860
 Boite_de_texte.png::CompressedTexture2D::4957263565492946688::1697028860::1697028860::1::::<><>::
