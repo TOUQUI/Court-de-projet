@@ -1,14 +1,15 @@
 Button
 Label
+CheckButton
+Node2D
+AnimationPlayer
 Sprite2D
 CanvasLayer
 CollisionShape2D
 Area2D
 Timer
 TextEdit
-Node2D
 StaticBody2D
-AnimationPlayer
 GridContainer
 HSlider
 LineEdit

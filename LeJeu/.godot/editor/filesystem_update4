@@ -1,3 +1,4 @@
+res://Scene/scene_combat.tscn
 res://Scene/sceneBureauProf.tscn
 res://Scene/SceneQG.tscn
 res://Scene/scene_travail.tscn
@@ -5,9 +6,5 @@ res://Joueur/joueur.tscn
 res://UI/joueur_interface.tscn
 res://UI/menu_pause.tscn
 res://UI/boite_de_textes.tscn
-res://Scene/SceneCaféteria.tscn
-res://Scene/node_SceneQG.tscn
-res://Scene/Script/SceneCaféteria.gd
-res://Joueur/joueur.gd
-res://UI/joueur_interface.gd
-res://Personne/vendeur_du_qg.tscn
+res://Personne/ennemie_un.tscn
+res://Personne/ennemie_deux.tscn

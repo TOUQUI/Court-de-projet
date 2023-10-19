@@ -92,15 +92,18 @@ _data = {
 }
 
 [node name="EnnemieUn" type="Node2D"]
+scale = Vector2(4, 4)
 
 [node name="image" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_ir2mu")
+flip_h = true
 hframes = 4
 vframes = 9
 frame = 32
 
-[node name="Animation" type="AnimationPlayer" parent="."]
+[node name="Animation" type="AnimationPlayer" parent="image"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_74g0k")
 }
