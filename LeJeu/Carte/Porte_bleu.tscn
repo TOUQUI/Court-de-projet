@@ -10,7 +10,6 @@ size = Vector2(20, 4)
 [sub_resource type="Animation" id="Animation_gkj5l"]
 resource_name = "Fermeture"
 length = 0.4
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -100,7 +99,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_x7yl3")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.4
 one_shot = true
 
 [connection signal="body_entered" from="Détecteur_joueur" to="." method="_on_détecteur_joueur_body_entered"]

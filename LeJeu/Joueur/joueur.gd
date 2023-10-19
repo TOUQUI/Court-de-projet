@@ -93,6 +93,10 @@ func _on_vendeur_du_qg_acheter(item, prix):
 	ajouterItemAcheter.emit(item, prix)
 
 
+func _on_scene_caféteria_acheter_café(item, prix):
+	ajouterItemAcheter.emit(item, prix)
+
+
 func _on_menu_pause_sauvegarder():
 	sauvegarder.emit()
 
@@ -108,3 +112,6 @@ func _on_scene_travail_travailler(salaire):
 
 func _on_scene_4823_joueurétudie_en_classe(heure):
 	pass
+
+
+

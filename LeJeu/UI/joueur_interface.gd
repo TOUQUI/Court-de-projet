@@ -1,12 +1,12 @@
 extends CanvasLayer
 
-const MAXBOISONPARJOUR = 5
+const MAXBOISSONPARJOUR = 5
 static var temps = 0
 static var jour = 0
 static var argent = 0
 static var enJeu = false
 static var nbHeureTravail
-static var boisonConsome = 0
+static var boissonConsome = 0
 var inventaireOuvert = false
 var emplacementDansLivre = ""
 var joueurNode
@@ -72,7 +72,7 @@ func ChargerDonnees():
 		argent = SingletonsDonnees.dictionaireDesDonnees["DataSession"].argent
 		temps = SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps
 		nbHeureTravail = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail
-		boisonConsome = SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome
+		boissonConsome = SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome
 		ChargerQuete()
 
 func SauvegarderDonnees():
@@ -82,7 +82,7 @@ func SauvegarderDonnees():
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbJour = jour
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].argent = argent
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps = temps
-	SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome = boisonConsome
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome = boissonConsome
 	SingletonsDonnees.SauvegarderJson()
 
 func _on_joueur_joueur_étudie(heure):
@@ -163,28 +163,35 @@ func chargerTemps():
 func _on_joueur_dormir():
 	jour = jour + 1
 	temps = 0
-	boisonConsome = 0
+	boissonConsome = 0
 	chargerJour()
 	chargerTemps()
 	SauvegarderDonnees()
 
 
 func _on_btn_consomer_item_1_pressed():
-	if  boisonConsome < MAXBOISONPARJOUR && inventaire[0].quantité >= 1 && temps >= 20:
-		boisonConsome = boisonConsome + 1
+	ConsommerBoissonQuiRetireTemps(0)
+
+
+func _on_btn_consomer_item_2_pressed():
+	ConsommerBoissonQuiRetireTemps(1)
+
+
+func ConsommerBoissonQuiRetireTemps(item):
+	if  boissonConsome < MAXBOISSONPARJOUR && inventaire[item].quantité >= 1 && temps >= 20:
+		boissonConsome = boissonConsome + 1
 		temps = temps - 20
-		inventaire[0].quantité = inventaire[0].quantité - 1
+		inventaire[item].quantité = inventaire[item].quantité - 1
 		chargerQuantiéInventaire()
 		chargerTemps()
 	elif temps == 0:
 			$Message.visible = true
 			$Message.text = "Le temps est à zero le gros."
 			$Message/MessageMinuterie.start()
-	elif boisonConsome >= MAXBOISONPARJOUR:
+	elif boissonConsome >= MAXBOISSONPARJOUR:
 		$Message.visible = true
 		$Message.text = "Je pense que mon cœur va exploser si j'en prends un autre aujourd'hui!"
 		$Message/MessageMinuterie.start()
-
 
 func _on_joueur_sauvegarder():
 	SauvegarderDonnees()
@@ -203,7 +210,8 @@ func GererAffichageArgent():
 	$Argent/nbArgent.text = "ARGENT:" + str(argent) + "$"
 
 
-
 func _on_message_minuterie_timeout():
 	$Message.visible = false
 	$Message.text = ""
+
+
