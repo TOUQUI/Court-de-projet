@@ -97,6 +97,7 @@ func _on_chrono_0_5_timeout():
 	elif emplacementDansLivre == "p":
 		$Livre/SpriteLivre/Options.visible = true
 	elif emplacementDansLivre == "m":
+		ChargerQuete()
 		$"Livre/SpriteLivre/Quête".visible = true
 
 

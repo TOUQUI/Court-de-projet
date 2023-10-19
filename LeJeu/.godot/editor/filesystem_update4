@@ -1,11 +1,8 @@
 res://Scene/sceneBureauProf.tscn
-res://Scene/Script/sceneBureauProf.gd
 res://Scene/SceneQG.tscn
 res://Scene/SceneCorridorD.tscn
 res://Scene/scene_travail.tscn
 res://Joueur/joueur.tscn
 res://UI/joueur_interface.tscn
 res://UI/menu_pause.tscn
-res://Données/LesDonnées.json
-res://UI/BoiteDeTextes.gd
 res://UI/boite_de_textes.tscn
