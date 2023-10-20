@@ -8,6 +8,7 @@ extends CharacterBody2D
 signal joueur_étudie_en_classe(heure:int)
 signal joueur_travail(salaire:int)
 signal joueur_étudie(heure:int)
+signal enleverVie(valeur:int)
 signal ajouterItemAcheter(item:int, prix:int)
 signal envoieHeure(temps:int)
 signal demanderHeure()
@@ -114,4 +115,5 @@ func _on_scene_4823_joueurétudie_en_classe(heure):
 	pass
 
 
-
+func _on_scene_combat_enlever_vie_joueur(valeur):
+	enleverVie.emit(valeur)

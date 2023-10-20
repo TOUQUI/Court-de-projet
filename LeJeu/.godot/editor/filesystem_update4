@@ -1,4 +1,3 @@
-res://Scene/scene_combat.tscn
 res://Scene/sceneBureauProf.tscn
 res://Scene/SceneQG.tscn
 res://Scene/scene_travail.tscn
@@ -6,5 +5,10 @@ res://Joueur/joueur.tscn
 res://UI/joueur_interface.tscn
 res://UI/menu_pause.tscn
 res://UI/boite_de_textes.tscn
-res://Personne/ennemie_un.tscn
+res://Scene/scene_combat.tscn
 res://Personne/ennemie_deux.tscn
+res://Personne/ennemie_un.tscn
+res://Scene/scene_combat.gd
+res://UI/joueur_interface.gd
+res://Données/LesDonnées.json
+res://Joueur/joueur.gd

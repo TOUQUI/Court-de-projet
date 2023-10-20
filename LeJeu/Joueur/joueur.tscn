@@ -180,6 +180,7 @@ libraries = {
 
 [connection signal="ajouterItemAcheter" from="." to="Joueur_interface" method="_on_joueur_ajouter_item_acheter"]
 [connection signal="dormir" from="." to="Joueur_interface" method="_on_joueur_dormir"]
+[connection signal="enleverVie" from="." to="Joueur_interface" method="_on_joueur_enlever_vie"]
 [connection signal="joueur_travail" from="." to="Joueur_interface" method="_on_joueur_joueur_travail"]
 [connection signal="joueur_étudie" from="." to="Joueur_interface" method="_on_joueur_joueur_étudie"]
 [connection signal="sauvegarder" from="." to="Joueur_interface" method="_on_joueur_sauvegarder"]

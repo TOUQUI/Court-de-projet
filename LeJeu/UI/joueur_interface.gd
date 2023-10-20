@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 const MAXBOISSONPARJOUR = 5
+static var vie = 0
 static var temps = 0
 static var jour = 0
 static var argent = 0
@@ -33,6 +34,7 @@ func _ready():
 	chargerQuantiéInventaire()
 	chargerJour()
 	chargerTemps()
+	ChargerVie()
 	GererAffichageArgent()
 
 func _input(event):
@@ -49,6 +51,10 @@ func _input(event):
 			$Livre/LivreOuvertureFermeture.visible = true
 			$Livre/SpriteLivre/Inventaire.visible = false
 			$Livre/LivreOuvertureFermeture/AnimationLiverFetO.play("Fermeture")
+
+
+func ChargerVie():
+	$Vie/BarDeVie.value = vie
 
 
 func ChargerQuete():
@@ -73,6 +79,7 @@ func ChargerDonnees():
 		temps = SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps
 		nbHeureTravail = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail
 		boissonConsome = SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome
+		vie = SingletonsDonnees.dictionaireDesDonnees["DataSession"].vie
 		ChargerQuete()
 
 func SauvegarderDonnees():
@@ -83,6 +90,7 @@ func SauvegarderDonnees():
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].argent = argent
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps = temps
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome = boissonConsome
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].vie = vie
 	SingletonsDonnees.SauvegarderJson()
 
 func _on_joueur_joueur_étudie(heure):
@@ -215,3 +223,14 @@ func _on_message_minuterie_timeout():
 	$Message.text = ""
 
 
+func EnleverVie(valeur):
+	vie = vie - valeur
+
+
+func AjouterVie(valeur):
+	vie = vie + valeur
+
+
+func _on_joueur_enlever_vie(valeur):
+	EnleverVie(valeur)
+	ChargerVie()

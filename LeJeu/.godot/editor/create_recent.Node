@@ -1,7 +1,9 @@
+TextureProgressBar
+ProgressBar
+Node2D
 Button
 Label
 CheckButton
-Node2D
 AnimationPlayer
 Sprite2D
 CanvasLayer
@@ -19,5 +21,4 @@ ItemList
 Panel
 TextureRect
 TileMap
-TextureProgressBar
 CharacterBody2D

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dc0je05dehtwa"]
+[gd_scene load_steps=32 format=3 uid="uid://dc0je05dehtwa"]
 
 [ext_resource type="Script" path="res://UI/joueur_interface.gd" id="1_wrn2t"]
 [ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="2_tqtda"]
@@ -13,6 +13,9 @@
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="11_8f5ph"]
 [ext_resource type="Texture2D" uid="uid://btpi4hknofog3" path="res://UI/LivreOuverture.png" id="12_dlxn3"]
 [ext_resource type="Texture2D" uid="uid://ksn4pov16pq" path="res://UI/image/café.png" id="12_e4167"]
+[ext_resource type="Texture2D" uid="uid://co6olckwlpe7e" path="res://UI/image/Health_01.png" id="14_fdlox"]
+[ext_resource type="Texture2D" uid="uid://cfjrnbkn5a288" path="res://UI/image/Health_01_Bar01.png" id="15_rrhdh"]
+[ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="16_x8l21"]
 
 [sub_resource type="Animation" id="Animation_dbn76"]
 length = 0.001
@@ -501,6 +504,24 @@ wrap_mode = 1
 
 [node name="MessageMinuterie" type="Timer" parent="Message"]
 wait_time = 5.0
+
+[node name="Vie" type="Node2D" parent="."]
+scale = Vector2(3, 3)
+
+[node name="BarDeVie" type="TextureProgressBar" parent="Vie"]
+texture_filter = 1
+offset_left = 137.667
+offset_top = 11.3333
+offset_right = 201.667
+offset_bottom = 27.3333
+value = 100.0
+texture_under = ExtResource("14_fdlox")
+texture_progress = ExtResource("15_rrhdh")
+
+[node name="heart" type="Sprite2D" parent="Vie/BarDeVie"]
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("16_x8l21")
 
 [connection signal="pressed" from="Livre/SpriteLivre/btnParametre" to="." method="_on_btn_parametre_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/btnInventaire" to="." method="_on_image_inventaire_pressed"]
