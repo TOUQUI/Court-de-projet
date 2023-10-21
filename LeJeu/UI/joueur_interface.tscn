@@ -13,8 +13,8 @@
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="11_8f5ph"]
 [ext_resource type="Texture2D" uid="uid://btpi4hknofog3" path="res://UI/LivreOuverture.png" id="12_dlxn3"]
 [ext_resource type="Texture2D" uid="uid://ksn4pov16pq" path="res://UI/image/café.png" id="12_e4167"]
-[ext_resource type="Texture2D" uid="uid://co6olckwlpe7e" path="res://UI/image/Health_01.png" id="14_fdlox"]
-[ext_resource type="Texture2D" uid="uid://cfjrnbkn5a288" path="res://UI/image/Health_01_Bar01.png" id="15_rrhdh"]
+[ext_resource type="Texture2D" uid="uid://co6olckwlpe7e" path="res://UI/image/BarDeVie1.png" id="14_wjxxj"]
+[ext_resource type="Texture2D" uid="uid://cfjrnbkn5a288" path="res://UI/image/Vie1.png" id="15_iae4i"]
 [ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="16_x8l21"]
 
 [sub_resource type="Animation" id="Animation_dbn76"]
@@ -515,8 +515,8 @@ offset_top = 11.3333
 offset_right = 201.667
 offset_bottom = 27.3333
 value = 100.0
-texture_under = ExtResource("14_fdlox")
-texture_progress = ExtResource("15_rrhdh")
+texture_under = ExtResource("14_wjxxj")
+texture_progress = ExtResource("15_iae4i")
 
 [node name="heart" type="Sprite2D" parent="Vie/BarDeVie"]
 texture_filter = 1

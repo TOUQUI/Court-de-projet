@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://x0rcm70wjd7o"]
+[gd_scene load_steps=19 format=3 uid="uid://x0rcm70wjd7o"]
 
 [ext_resource type="Script" path="res://Scene/scene_combat.gd" id="1_oklex"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="2_64qka"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://wdrnntu75p7f" path="res://Personne/ennemie_deux.tscn" id="4_hwg0o"]
 [ext_resource type="PackedScene" uid="uid://blychabk2ucx7" path="res://Personne/ennemie_un.tscn" id="5_mwdkm"]
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="6_pb0xx"]
+[ext_resource type="Texture2D" uid="uid://c1j5dby3h3v5c" path="res://UI/image/BarDeVie2.png" id="8_l0fjg"]
+[ext_resource type="Texture2D" uid="uid://byjv8g51urjwf" path="res://UI/image/Vie2.png" id="9_5g5qo"]
+[ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="10_0avih"]
 
 [sub_resource type="Animation" id="Animation_uohgo"]
 resource_name = "Bouger"
@@ -91,6 +94,7 @@ font = ExtResource("6_pb0xx")
 font_size = 10
 
 [node name="SceneCombat" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_oklex")
 
 [node name="Joueur" parent="." instance=ExtResource("2_yayrs")]
@@ -183,5 +187,25 @@ offset_left = 341.0
 offset_top = 199.0
 offset_right = 379.0
 offset_bottom = 215.0
+
+[node name="BossVie" type="Node2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="BossVie"]
+texture_filter = 1
+offset_left = 368.667
+offset_top = 34.6667
+offset_right = 384.667
+offset_bottom = 98.6667
+value = 100.0
+texture_under = ExtResource("8_l0fjg")
+texture_progress = ExtResource("9_5g5qo")
+
+[node name="HeartRed1" type="Sprite2D" parent="BossVie"]
+texture_filter = 1
+position = Vector2(377, 43)
+scale = Vector2(1, 1.04167)
+texture = ExtResource("10_0avih")
 
 [connection signal="EnleverVieJoueur" from="." to="Joueur" method="_on_scene_combat_enlever_vie_joueur"]
