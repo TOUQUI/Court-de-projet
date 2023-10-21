@@ -8,11 +8,14 @@ static var argent = 0
 static var enJeu = false
 static var nbHeureTravail
 static var boissonConsome = 0
+static var intelligence = 0
+static var niveauIntelligence = 0
 var inventaireOuvert = false
 var emplacementDansLivre = ""
 var joueurNode
 var quetes
 var nodeTxtFini
+var livreAEteFermer = false
 
 
 static var inventaire =[ 
@@ -27,20 +30,23 @@ static var inventaire =[
 	}
 ]
 
+
 func _ready():
 	$Livre/SpriteLivre.visible = false
 	$Livre/LivreOuvertureFermeture.visible = false
 	ChargerDonnees()
-	chargerQuantiéInventaire()
 	chargerJour()
 	chargerTemps()
 	ChargerVie()
 	GererAffichageArgent()
+	ChargerIntelligence()
+	ChargerQuantiéInventaire()
 
 func _input(event):
 	if event.is_action_pressed("Inventaire"):
 		if $Livre/SpriteLivre.visible == false:
 			inventaireOuvert = true
+			rendreInvisible()
 			$Chrono0_7.start()
 			$Livre/LivreOuvertureFermeture.visible = true
 			$Livre/LivreOuvertureFermeture/AnimationLiverFetO.play("Ouverture")
@@ -49,12 +55,21 @@ func _input(event):
 			$Livre/SpriteLivre.visible = false
 			$Chrono0_7.start()
 			$Livre/LivreOuvertureFermeture.visible = true
-			$Livre/SpriteLivre/Inventaire.visible = false
+			livreAEteFermer = true
+			rendreInvisible()
 			$Livre/LivreOuvertureFermeture/AnimationLiverFetO.play("Fermeture")
 
 
 func ChargerVie():
 	$Vie/BarDeVie.value = vie
+	$Vie/QtVie.text = str(vie)
+
+func ChargerIntelligence():
+	if intelligence == 100:
+		niveauIntelligence = niveauIntelligence + 1
+		intelligence = 0
+	$Livre/SpriteLivre/Accueil/StatIntelligence/Intelligence.text = "Niveau d'intelligence:" + str(niveauIntelligence)
+	$Livre/SpriteLivre/Accueil/StatIntelligence/barIntelligence.value = intelligence
 
 
 func ChargerQuete():
@@ -80,6 +95,8 @@ func ChargerDonnees():
 		nbHeureTravail = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail
 		boissonConsome = SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome
 		vie = SingletonsDonnees.dictionaireDesDonnees["DataSession"].vie
+		intelligence = SingletonsDonnees.dictionaireDesDonnees["DataSession"].intelligence
+		niveauIntelligence = SingletonsDonnees.dictionaireDesDonnees["DataSession"].niveauIntelligence
 		ChargerQuete()
 
 func SauvegarderDonnees():
@@ -91,28 +108,37 @@ func SauvegarderDonnees():
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].temps = temps
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].boisonConsome = boissonConsome
 	SingletonsDonnees.dictionaireDesDonnees["DataSession"].vie = vie
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].intelligence = intelligence
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].niveauIntelligence = niveauIntelligence
 	SingletonsDonnees.SauvegarderJson()
+
 
 func _on_joueur_joueur_étudie(heure):
 	if temps <= 80:
 		temps = temps + heure
+		intelligence = intelligence + 10
+		ChargerIntelligence()
 		chargerTemps()
 
 
 func _on_chrono_0_5_timeout():
-	if emplacementDansLivre == "i":
-		$Livre/SpriteLivre/Inventaire.visible = true
-	elif emplacementDansLivre == "p":
-		$Livre/SpriteLivre/Options.visible = true
-	elif emplacementDansLivre == "m":
-		ChargerQuete()
-		$"Livre/SpriteLivre/Quête".visible = true
+	if livreAEteFermer == false:
+		if emplacementDansLivre == "i":
+			$Livre/SpriteLivre/Inventaire.visible = true
+		elif emplacementDansLivre == "p":
+			$Livre/SpriteLivre/Options.visible = true
+		elif emplacementDansLivre == "m":
+			ChargerQuete()
+			$"Livre/SpriteLivre/Quête".visible = true
+	else:
+		livreAEteFermer = false
 
 
 func _on_chrono_0_7_timeout():
 	if inventaireOuvert == true:
 		$Livre/LivreOuvertureFermeture.visible = false
 		$Livre/SpriteLivre.visible = true
+		$Livre/SpriteLivre/Accueil.visible = true
 	else:
 		$Livre/LivreOuvertureFermeture.visible = false
 
@@ -124,17 +150,22 @@ func rendreInvisible():
 		$Livre/SpriteLivre/Options.visible = false
 	elif $"Livre/SpriteLivre/Quête".visible  == true:
 		$"Livre/SpriteLivre/Quête".visible = false
+	elif $Livre/SpriteLivre/Accueil.visible == true:
+		$Livre/SpriteLivre/Accueil.visible = false
 
 
 func _on_image_inventaire_pressed():
+	livreAEteFermer = false
 	ChangerDePage("i", "TournerPageVersGauche")
 
 
 func _on_btn_quete_pressed():
+	livreAEteFermer = false
 	ChangerDePage("m", "TournerPageVersGauche")
 
 
 func _on_btn_parametre_pressed():
+	livreAEteFermer = false
 	ChangerDePage("p", "TournerPageVersDroite")
 
 
@@ -145,7 +176,7 @@ func ChangerDePage(page, direction):
 	$Chrono0_5.start()
 
 
-func chargerQuantiéInventaire():
+func ChargerQuantiéInventaire():
 	$Livre/SpriteLivre/Inventaire/Item1/qtItem1.text = str(inventaire[0].quantité)
 	$Livre/SpriteLivre/Inventaire/Item2/qtItem2.text = str(inventaire[1].quantité)
 	$Livre/SpriteLivre/Inventaire/Item3/qtItem3.text = str(inventaire[2].quantité)
@@ -190,7 +221,7 @@ func ConsommerBoissonQuiRetireTemps(item):
 		boissonConsome = boissonConsome + 1
 		temps = temps - 20
 		inventaire[item].quantité = inventaire[item].quantité - 1
-		chargerQuantiéInventaire()
+		ChargerQuantiéInventaire()
 		chargerTemps()
 	elif temps == 0:
 			$Message.visible = true
@@ -233,4 +264,9 @@ func AjouterVie(valeur):
 
 func _on_joueur_enlever_vie(valeur):
 	EnleverVie(valeur)
+	ChargerVie()
+
+
+func _on_joueur_ajouter_vie(valeur):
+	AjouterVie(valeur)
 	ChargerVie()

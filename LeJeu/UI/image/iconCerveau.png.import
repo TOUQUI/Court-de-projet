@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtu7edp2ib1j8"
-path="res://.godot/imported/vie2.png-9967434fdd2d8432bbd1a2937b4e452e.ctex"
+uid="uid://ghodvn6lgtdd"
+path="res://.godot/imported/iconCerveau.png-1d5af8d287c41bdd0bbbca3d21e5dd1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/image/vie2.png"
-dest_files=["res://.godot/imported/vie2.png-9967434fdd2d8432bbd1a2937b4e452e.ctex"]
+source_file="res://UI/image/iconCerveau.png"
+dest_files=["res://.godot/imported/iconCerveau.png-1d5af8d287c41bdd0bbbca3d21e5dd1f.ctex"]
 
 [params]
 

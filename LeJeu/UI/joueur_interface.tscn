@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dc0je05dehtwa"]
+[gd_scene load_steps=38 format=3 uid="uid://dc0je05dehtwa"]
 
 [ext_resource type="Script" path="res://UI/joueur_interface.gd" id="1_wrn2t"]
 [ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="2_tqtda"]
@@ -13,8 +13,11 @@
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="11_8f5ph"]
 [ext_resource type="Texture2D" uid="uid://btpi4hknofog3" path="res://UI/LivreOuverture.png" id="12_dlxn3"]
 [ext_resource type="Texture2D" uid="uid://ksn4pov16pq" path="res://UI/image/café.png" id="12_e4167"]
-[ext_resource type="Texture2D" uid="uid://co6olckwlpe7e" path="res://UI/image/BarDeVie1.png" id="14_wjxxj"]
-[ext_resource type="Texture2D" uid="uid://cfjrnbkn5a288" path="res://UI/image/Vie1.png" id="15_iae4i"]
+[ext_resource type="Texture2D" uid="uid://ghodvn6lgtdd" path="res://UI/image/iconCerveau.png" id="13_8upq8"]
+[ext_resource type="Texture2D" uid="uid://bdobcsns1h63t" path="res://UI/image/barDeStatistique.png" id="13_ovr7k"]
+[ext_resource type="Texture2D" uid="uid://urjy060xv0yy" path="res://UI/image/barIntelligence.png" id="14_fpbut"]
+[ext_resource type="Texture2D" uid="uid://chjljp3ngkv1m" path="res://UI/image/barDeVie1.png" id="14_w2fnx"]
+[ext_resource type="Texture2D" uid="uid://chftr53vkwheh" path="res://UI/image/vie1.png" id="15_kemd8"]
 [ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="16_x8l21"]
 
 [sub_resource type="Animation" id="Animation_dbn76"]
@@ -94,6 +97,18 @@ font_size = 25
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_16xok"]
+font = ExtResource("11_8f5ph")
+font_size = 20
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nrvum"]
+font = ExtResource("11_8f5ph")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="Animation" id="Animation_qvgvb"]
 resource_name = "Fermeture"
 length = 0.7
@@ -158,6 +173,12 @@ outline_color = Color(0, 0, 0, 1)
 font = ExtResource("11_8f5ph")
 font_size = 40
 outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e3xkx"]
+font = ExtResource("11_8f5ph")
+font_size = 10
+outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Joueur_interface" type="CanvasLayer"]
@@ -446,6 +467,43 @@ offset_top = 139.0
 offset_right = 334.0
 offset_bottom = 169.0
 
+[node name="Accueil" type="Node2D" parent="Livre/SpriteLivre"]
+
+[node name="Label" type="Label" parent="Livre/SpriteLivre/Accueil"]
+offset_left = -223.0
+offset_top = -166.0
+offset_right = -83.0
+offset_bottom = -143.0
+text = "Statistiques"
+label_settings = SubResource("LabelSettings_16xok")
+
+[node name="StatIntelligence" type="Node2D" parent="Livre/SpriteLivre/Accueil"]
+scale = Vector2(2, 2)
+
+[node name="IconCerveau" type="Sprite2D" parent="Livre/SpriteLivre/Accueil/StatIntelligence"]
+texture_filter = 1
+position = Vector2(-125, -44)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_8upq8")
+
+[node name="barIntelligence" type="TextureProgressBar" parent="Livre/SpriteLivre/Accueil/StatIntelligence"]
+offset_left = -109.5
+offset_top = -50.5
+offset_right = -16.5
+offset_bottom = -34.5
+texture_under = ExtResource("13_ovr7k")
+texture_progress = ExtResource("14_fpbut")
+
+[node name="Intelligence" type="Label" parent="Livre/SpriteLivre/Accueil/StatIntelligence"]
+offset_left = -144.0
+offset_top = -63.5
+offset_right = 2.0
+offset_bottom = -51.5
+text = "Niveau d'intelligence:0
+"
+label_settings = SubResource("LabelSettings_nrvum")
+autowrap_mode = 2
+
 [node name="LivreOuvertureFermeture" type="Sprite2D" parent="Livre"]
 visible = false
 texture_filter = 1
@@ -480,9 +538,9 @@ label_settings = SubResource("LabelSettings_x7es5")
 [node name="Argent" type="Node2D" parent="."]
 
 [node name="nbArgent" type="Label" parent="Argent"]
-offset_left = 38.0
+offset_left = 237.0
 offset_top = 34.0
-offset_right = 266.0
+offset_right = 473.0
 offset_bottom = 74.0
 text = "ARGENT:0$"
 label_settings = SubResource("LabelSettings_4f75e")
@@ -510,18 +568,29 @@ scale = Vector2(3, 3)
 
 [node name="BarDeVie" type="TextureProgressBar" parent="Vie"]
 texture_filter = 1
-offset_left = 137.667
-offset_top = 11.3333
-offset_right = 201.667
-offset_bottom = 27.3333
+offset_left = 7.66667
+offset_top = 7.66667
+offset_right = 71.6667
+offset_bottom = 23.6667
 value = 100.0
-texture_under = ExtResource("14_wjxxj")
-texture_progress = ExtResource("15_iae4i")
+texture_under = ExtResource("14_w2fnx")
+texture_progress = ExtResource("15_kemd8")
 
 [node name="heart" type="Sprite2D" parent="Vie/BarDeVie"]
 texture_filter = 1
 position = Vector2(8, 8)
 texture = ExtResource("16_x8l21")
+
+[node name="QtVie" type="Label" parent="Vie"]
+texture_filter = 1
+offset_left = 37.3333
+offset_top = 13.3333
+offset_right = 80.3333
+offset_bottom = 64.3333
+text = "100
+
+"
+label_settings = SubResource("LabelSettings_e3xkx")
 
 [connection signal="pressed" from="Livre/SpriteLivre/btnParametre" to="." method="_on_btn_parametre_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/btnInventaire" to="." method="_on_image_inventaire_pressed"]

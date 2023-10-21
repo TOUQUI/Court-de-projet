@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1j5dby3h3v5c"
-path="res://.godot/imported/BarDeVie2.png-326b885e15df2653469f29f47b005fab.ctex"
+uid="uid://b1wkldekn2gkb"
+path="res://.godot/imported/barDeVie2.png-c35b701a25efb46c58f0529c6c7ca7f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/image/BarDeVie2.png"
-dest_files=["res://.godot/imported/BarDeVie2.png-326b885e15df2653469f29f47b005fab.ctex"]
+source_file="res://UI/image/barDeVie2.png"
+dest_files=["res://.godot/imported/barDeVie2.png-c35b701a25efb46c58f0529c6c7ca7f3.ctex"]
 
 [params]
 
