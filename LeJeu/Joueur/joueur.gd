@@ -10,6 +10,7 @@ signal joueur_travail(salaire:int)
 signal joueur_étudie(heure:int)
 signal enleverVie(valeur:int)
 signal ajouterItemAcheter(item:int, prix:int)
+signal ajouterVieRetirerArgent(vie:int, prix:int)
 signal envoieHeure(temps:int)
 signal demanderHeure()
 signal dormir()
@@ -117,3 +118,11 @@ func _on_scene_4823_joueurétudie_en_classe(heure):
 
 func _on_scene_combat_enlever_vie_joueur(valeur):
 	enleverVie.emit(valeur)
+
+
+func _on_scene_travail_joyeux_repas_sur_place(vie, prix):
+	ajouterVieRetirerArgent.emit(vie, prix)
+
+
+func _on_scene_travail_joyeux_repas_emporter(item, prix):
+	ajouterItemAcheter.emit(item, prix)

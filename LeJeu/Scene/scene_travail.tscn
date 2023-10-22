@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbn7t8ffr0i3p"]
+[gd_scene load_steps=7 format=3 uid="uid://bbn7t8ffr0i3p"]
 
 [ext_resource type="Texture2D" uid="uid://cmc5tfw58mjqj" path="res://image/background_mcdo.jpg" id="1_07we2"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="1_mxwg3"]
 [ext_resource type="Script" path="res://Scene/Script/scene_travail.gd" id="1_vnfsi"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="2_on321"]
 [ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="5_rl564"]
+[ext_resource type="Texture2D" uid="uid://dbm2uxw8dkr7h" path="res://UI/image/JoyeuxRepas.png" id="6_u5ns2"]
 
 [node name="scene_travail" type="Node2D"]
 script = ExtResource("1_vnfsi")
@@ -22,21 +23,17 @@ self_modulate = Color(1, 1, 0.988235, 1)
 scale = Vector2(4, 4)
 layer_0/tile_data = PackedInt32Array(131073, 0, 0, 196609, 0, 1, 262145, 0, 1, 327681, 0, 1, 393217, 0, 1, 458753, 0, 1, 131074, 65536, 0, 131075, 65536, 0, 131076, 65536, 0, 131077, 65536, 0, 131078, 65536, 0, 131079, 65536, 0, 131080, 65536, 0, 131081, 65536, 0, 131082, 65536, 0, 131083, 65536, 0, 131084, 65536, 0, 131085, 65536, 0, 131086, 65536, 0, 131087, 589824, 0, 196623, 589824, 1, 262159, 589824, 1, 327695, 589824, 1, 393231, 589824, 1, 458767, 589824, 1, 524289, 786432, 1, 524303, 65536, 13, 524302, 0, 13, 524301, 0, 13, 524300, 0, 13, 524299, 0, 13, 524298, 0, 13, 524297, 0, 13, 524296, 0, 13, 524295, 0, 13, 524294, 0, 13, 524293, 0, 13, 524292, 0, 13, 524291, 0, 13, 524290, 0, 13, 196610, 0, 12, 196611, 0, 12, 262147, 0, 12, 262148, 0, 12, 262149, 0, 12, 262150, 0, 12, 262151, 0, 12, 196614, 0, 12, 196613, 0, 12, 196612, 0, 12, 196615, 0, 12, 196616, 0, 12, 196617, 0, 12, 196618, 0, 12, 196619, 0, 12, 196620, 0, 12, 196621, 0, 12, 196622, 0, 12, 262158, 0, 12, 327694, 0, 12, 327693, 0, 12, 262157, 0, 12, 262156, 0, 12, 262155, 0, 12, 327690, 0, 12, 262154, 0, 12, 262153, 0, 12, 262152, 0, 12, 327691, 0, 12, 327692, 0, 12, 393229, 0, 12, 393230, 0, 12, 458766, 0, 12, 458765, 0, 12, 458764, 0, 12, 458763, 0, 12, 393227, 0, 12, 393228, 0, 12, 458762, 0, 12, 458761, 0, 12, 393226, 0, 12, 458760, 0, 12, 393224, 0, 12, 393225, 0, 12, 327689, 0, 12, 327688, 0, 12, 393223, 0, 12, 458759, 0, 12, 327687, 0, 12, 393222, 0, 12, 458758, 0, 12, 393221, 0, 12, 327685, 0, 12, 327686, 0, 12, 458757, 0, 12, 458756, 0, 12, 458755, 0, 12, 393220, 0, 12, 327684, 0, 12, 393219, 0, 12, 327683, 0, 12, 393218, 0, 12, 458754, 0, 12, 327682, 0, 12, 262146, 0, 12)
 
-[node name="btn_travailler" type="Button" parent="."]
+[node name="Travailler" type="Node2D" parent="."]
+visible = false
+
+[node name="btn_travailler" type="Button" parent="Travailler"]
 offset_left = 311.0
 offset_top = 430.0
 offset_right = 418.0
 offset_bottom = 485.0
 text = "Travailler"
 
-[node name="btn_maison" type="Button" parent="."]
-offset_left = 674.0
-offset_top = 429.0
-offset_right = 800.0
-offset_bottom = 486.0
-text = "Retour maison"
-
-[node name="btn_promotion" type="Button" parent="."]
+[node name="btn_promotion" type="Button" parent="Travailler"]
 offset_left = 484.0
 offset_top = 431.0
 offset_right = 614.0
@@ -44,21 +41,21 @@ offset_bottom = 488.0
 text = "Demander 
 promotion"
 
-[node name="txtPoste" type="Label" parent="."]
+[node name="txtPoste" type="Label" parent="Travailler"]
 offset_left = 323.0
 offset_top = 249.0
 offset_right = 704.0
 offset_bottom = 289.0
 text = "Poste actuel: TODO GÉNÉRER POSTE"
 
-[node name="txtNbHeure" type="TextEdit" parent="."]
+[node name="txtNbHeure" type="TextEdit" parent="Travailler"]
 offset_left = 574.0
 offset_top = 243.0
 offset_right = 791.0
 offset_bottom = 280.0
 text = "Nombre d'heure(s) : X"
 
-[node name="txtDescription" type="TextEdit" parent="."]
+[node name="txtDescription" type="TextEdit" parent="Travailler"]
 offset_left = 322.0
 offset_top = 284.0
 offset_right = 791.0
@@ -67,8 +64,92 @@ offset_bottom = 392.0
 [node name="MenuPause" parent="." instance=ExtResource("5_rl564")]
 position = Vector2(603, -190)
 
+[node name="Manger" type="Node2D" parent="."]
+visible = false
+
+[node name="IconJoyeuxRepas" type="Sprite2D" parent="Manger"]
+position = Vector2(327, 282)
+texture = ExtResource("6_u5ns2")
+
+[node name="AcheterSurPlace" type="Button" parent="Manger"]
+offset_left = 767.0
+offset_top = 236.0
+offset_right = 876.0
+offset_bottom = 267.0
+text = "Acheter : 10$"
+
+[node name="AcheterEmporter" type="Button" parent="Manger"]
+offset_left = 766.0
+offset_top = 301.0
+offset_right = 875.0
+offset_bottom = 332.0
+text = "Acheter : 10$
+"
+
+[node name="TitreSurPlace" type="Label" parent="Manger"]
+offset_left = 421.0
+offset_top = 237.0
+offset_right = 703.0
+offset_bottom = 263.0
+text = "Joyeux repas pour manger sur place.
+"
+
+[node name="TitreEmporter" type="Label" parent="Manger"]
+offset_left = 421.0
+offset_top = 305.0
+offset_right = 714.0
+offset_bottom = 331.0
+text = "Joyeux repas pour manger emporrter.
+"
+
+[node name="TextEdit" type="TextEdit" parent="Manger"]
+offset_left = 100.0
+offset_top = 244.0
+offset_right = 257.0
+offset_bottom = 341.0
+text = "Un joyeux repas ajoute 25 points de vie."
+wrap_mode = 1
+
+[node name="Menu" type="Node2D" parent="."]
+
+[node name="EntrerTravailler" type="Button" parent="Menu"]
+offset_left = 474.0
+offset_top = 238.0
+offset_right = 681.0
+offset_bottom = 288.0
+text = "Entrer travailler"
+
+[node name="EntrerManger" type="Button" parent="Menu"]
+offset_left = 473.0
+offset_top = 298.0
+offset_right = 680.0
+offset_bottom = 349.0
+text = "Entrer manger
+"
+
+[node name="btn_maison" type="Button" parent="."]
+offset_left = 674.0
+offset_top = 429.0
+offset_right = 800.0
+offset_bottom = 486.0
+text = "Retour maison"
+
+[node name="Changer" type="Button" parent="."]
+visible = false
+offset_left = 467.0
+offset_top = 497.0
+offset_right = 631.0
+offset_bottom = 553.0
+
+[connection signal="joyeuxRepasEmporter" from="." to="Joueur" method="_on_scene_travail_joyeux_repas_emporter"]
+[connection signal="joyeuxRepasSurPlace" from="." to="Joueur" method="_on_scene_travail_joyeux_repas_sur_place"]
 [connection signal="travailler" from="." to="Joueur" method="_on_scene_travail_travailler"]
 [connection signal="envoieHeure" from="Joueur" to="." method="_on_joueur_envoie_heure"]
-[connection signal="pressed" from="btn_travailler" to="." method="_on_btn_travailler_pressed"]
+[connection signal="pressed" from="Travailler/btn_travailler" to="." method="_on_btn_travailler_pressed"]
+[connection signal="pressed" from="Travailler/btn_promotion" to="." method="_on_btn_promotion_pressed"]
+[connection signal="pressed" from="Manger/AcheterSurPlace" to="." method="_on_acheter_sur_place_pressed"]
+[connection signal="pressed" from="Manger/AcheterEmporter" to="." method="_on_acheter_emporter_pressed"]
+[connection signal="pressed" from="Menu/EntrerTravailler" to="." method="_on_entrer_travailler_pressed"]
+[connection signal="pressed" from="Menu/EntrerManger" to="." method="_on_entrer_manger_pressed"]
 [connection signal="pressed" from="btn_maison" to="." method="_on_btn_maison_pressed"]
-[connection signal="pressed" from="btn_promotion" to="." method="_on_btn_promotion_pressed"]
+[connection signal="pressed" from="Changer" to="." method="_on_changer_pressed"]

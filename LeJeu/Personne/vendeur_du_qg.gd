@@ -39,3 +39,7 @@ func _on_quiter_pressed():
 
 func _on_btn_acheter_boison_pressed():
 	acheter.emit(1,5)
+
+
+func _on_button_pressed():
+	$CanvasLayer/Magasin.visible = false

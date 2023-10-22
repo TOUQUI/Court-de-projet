@@ -78,6 +78,13 @@ offset_right = 157.0
 offset_bottom = 24.5
 text = "Acheter : 5$"
 
+[node name="Button" type="Button" parent="CanvasLayer/Magasin"]
+offset_left = 101.5
+offset_top = 60.0
+offset_right = 170.5
+offset_bottom = 91.0
+text = "Retour"
+
 [node name="Menu" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(600, 400)
@@ -117,5 +124,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_entered" from="La_zone_de_vente" to="." method="_on_la_zone_de_vente_body_entered"]
 [connection signal="body_exited" from="La_zone_de_vente" to="." method="_on_la_zone_de_vente_body_exited"]
 [connection signal="pressed" from="CanvasLayer/Magasin/btnAcheterBoison" to="." method="_on_btn_acheter_boison_pressed"]
+[connection signal="pressed" from="CanvasLayer/Magasin/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Magasin" to="." method="_on_magasin_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Quiter" to="." method="_on_quiter_pressed"]

@@ -1,6 +1,8 @@
 extends Node2D
 
 signal travailler(salaire:int)
+signal joyeuxRepasSurPlace(vie:int, prix:int)
+signal joyeuxRepasEmporter(item:int, prix:int)
 
 var poste
 var champPoste
@@ -31,13 +33,13 @@ func GererAffichagePEtD():
 	else:
 		salaire = 100
 		champPoste = "PDG" 
-	$txtDescription.text = "     Travailler enlève 1 heure à votre journée
+	$Travailler/txtDescription.text = "     Travailler enlève 1 heure à votre journée
 	 et en échange vous recevez " + str(salaire) + "$."
-	$txtPoste.text = "Vous êtes : " + champPoste
+	$Travailler/txtPoste.text = "Vous êtes : " + champPoste
 
 
 func GererAffichageNbHeure():
-	$txtNbHeure.text = "Nombre d'heure(s) : " + str(tempsCarière)
+	$Travailler/txtNbHeure.text = "Nombre d'heure(s) : " + str(tempsCarière)
 
 func _on_btn_travailler_pressed():
 	travailler.emit(salaire)
@@ -65,3 +67,36 @@ func _on_btn_promotion_pressed():
 func _on_joueur_envoie_heure(temps):
 	tempsJourne = temps
 
+
+
+func _on_entrer_travailler_pressed():
+	$Menu.visible = false
+	$Travailler.visible = true
+	$Changer.visible = true
+	$Changer.text = "Manger"
+
+
+func _on_entrer_manger_pressed():
+	$Menu.visible = false
+	$Manger.visible = true
+	$Changer.visible = true
+	$Changer.text = "Travailler"
+
+
+func _on_acheter_sur_place_pressed():
+	joyeuxRepasSurPlace.emit(25,10)
+
+
+func _on_acheter_emporter_pressed():
+	joyeuxRepasEmporter.emit(3,10)
+
+
+func _on_changer_pressed():
+	if $Travailler.visible == true:
+		$Travailler.visible = false
+		$Manger.visible = true
+		$Changer.text = "Travailler"
+	else:
+		$Manger.visible = false
+		$Travailler.visible = true
+		$Changer.text = "Manger"

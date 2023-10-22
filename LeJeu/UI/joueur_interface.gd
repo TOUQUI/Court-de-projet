@@ -190,7 +190,7 @@ func _on_joueur_ajouter_item_acheter(item, prix):
 		elif  item == 2:
 			$Livre/SpriteLivre/Inventaire/Item2/qtItem2.text = str(inventaire[item - 1].quantité)
 		elif  item == 3:
-			$Livre/SpriteLivre/Inventaire/Item3/qtItem2.text = str(inventaire[item - 1].quantité)
+			$Livre/SpriteLivre/Inventaire/Item3/qtItem3.text = str(inventaire[item - 1].quantité)
 		GererAffichageArgent()
 
 func chargerJour():
@@ -214,6 +214,21 @@ func _on_btn_consomer_item_1_pressed():
 
 func _on_btn_consomer_item_2_pressed():
 	ConsommerBoissonQuiRetireTemps(1)
+
+
+func _on_btn_consomer_item_3_pressed():
+	if vie < 100 && retirerItem(3):
+		AjouterVie(25)
+
+
+
+func retirerItem(item):
+	if inventaire[item - 1].quantité > 0:
+		inventaire[item - 1].quantité = inventaire[item - 1].quantité - 1
+		ChargerQuantiéInventaire()
+		return true
+	else:
+		return false
 
 
 func ConsommerBoissonQuiRetireTemps(item):
@@ -256,10 +271,15 @@ func _on_message_minuterie_timeout():
 
 func EnleverVie(valeur):
 	vie = vie - valeur
+	ChargerVie()
 
 
 func AjouterVie(valeur):
-	vie = vie + valeur
+	if (vie + valeur) > 100:
+		vie = 100
+	else:
+		vie = vie + valeur
+	ChargerVie()
 
 
 func _on_joueur_enlever_vie(valeur):
@@ -270,3 +290,16 @@ func _on_joueur_enlever_vie(valeur):
 func _on_joueur_ajouter_vie(valeur):
 	AjouterVie(valeur)
 	ChargerVie()
+
+
+func _on_joueur_ajouter_vie_retirer_argent(pVie, prix):
+	if argent >= prix && vie <= 99:
+		argent = argent - prix
+		if (vie + pVie) > 100:
+			vie = 100
+		else:
+			vie = vie + pVie
+		ChargerVie()
+		GererAffichageArgent()
+
+
