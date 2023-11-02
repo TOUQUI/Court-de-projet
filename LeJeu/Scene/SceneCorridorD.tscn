@@ -1,11 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://cni7yxupw65vm"]
+[gd_scene load_steps=16 format=3 uid="uid://cni7yxupw65vm"]
 
 [ext_resource type="Script" path="res://Scene/Script/SceneCorridorD.gd" id="1_4u1rk"]
 [ext_resource type="PackedScene" uid="uid://cd46q6imydlml" path="res://Carte/CarteScene/MapCorridorDroit.tscn" id="1_a1ec1"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="3_6k4ns"]
 [ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="4_iumqj"]
 [ext_resource type="Texture2D" uid="uid://b3cad43imn7o1" path="res://Carte/Modern+ Study Time (32x32)/doors_school.png" id="5_hnol3"]
+[ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="6_4on1q"]
 [ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="6_x8x2n"]
+[ext_resource type="Texture2D" uid="uid://ghodvn6lgtdd" path="res://UI/image/iconCerveau.png" id="7_x3e3o"]
+[ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/image/horloge.png" id="8_bk6qr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgyxe"]
 size = Vector2(28.5, 35)
@@ -49,6 +52,9 @@ _data = {
 "RESET": SubResource("Animation_asxp4"),
 "ouverture": SubResource("Animation_wlxao")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x236"]
+size = Vector2(70, 9)
 
 [node name="SceneCorridorD" type="Node2D"]
 position = Vector2(600, 428)
@@ -99,11 +105,102 @@ frame = 21
 wait_time = 0.5
 one_shot = true
 
+[node name="PorteBossUn" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PorteBossUn"]
+position = Vector2(376, -253)
+shape = SubResource("RectangleShape2D_3x236")
+
+[node name="LaPorteBossUn" type="Sprite2D" parent="PorteBossUn"]
+texture_filter = 1
+position = Vector2(376, -325)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("5_hnol3")
+hframes = 12
+vframes = 8
+
+[node name="F" type="Sprite2D" parent="PorteBossUn"]
+visible = false
+texture_filter = 1
+position = Vector2(321, -344)
+scale = Vector2(2, 2)
+texture = ExtResource("6_x8x2n")
+hframes = 8
+vframes = 14
+frame = 21
+
+[node name="MessageBoss" type="Node2D" parent="."]
+visible = false
+
+[node name="Tuile_boite_de_texte" parent="MessageBoss" instance=ExtResource("6_4on1q")]
+scale = Vector2(2, 2)
+layer_0/tile_data = PackedInt32Array(-327684, 1179649, 1, -262148, 1179649, 1, -327683, 1245185, 1, -262147, 1245185, 1, -65540, 393217, 0, -4, 393217, 1, -65539, 458753, 0, -3, 458753, 1, -65538, 524289, 0, -2, 524289, 1, -65537, 589825, 0, -1, 589825, 1, -131072, 655361, 0, -65536, 655361, 1, -131071, 1638401, 1, -65535, 720897, 1, -327682, 1310721, 1, -262146, 1376257, 1, -327681, 1376257, 1, -262145, 1441793, 1, -393216, 1572865, 1, -327680, 1507329, 1, -393215, 1638401, 1, -327679, 1638401, 1, -262143, 1638401, 1, -196607, 1638401, 1, -131075, 524289, 0, -131074, 1376257, 1, -196611, 524289, 0, -196610, 1376257, 1, -196609, 1441793, 1, -262144, 1507329, 1, -131073, 1441793, 1, -196608, 1507329, 1, -131076, 393217, 0, -196612, 393217, 0, -393220, 1179649, 0, -393219, 1245185, 0, -393218, 1310721, 0, -393217, 1376257, 0, -458752, 1572865, 0, -458751, 1638401, 0)
+
+[node name="btnRetour" type="Button" parent="MessageBoss"]
+offset_left = -18.0
+offset_top = -52.0
+offset_right = 43.0
+offset_bottom = -21.0
+text = "Retour"
+
+[node name="btnCombat" type="Button" parent="MessageBoss"]
+offset_left = -107.0
+offset_top = -52.0
+offset_right = -22.0
+offset_bottom = -21.0
+disabled = true
+text = "Combatre"
+
+[node name="Prérequis" type="Label" parent="MessageBoss"]
+offset_left = -67.0
+offset_top = -194.0
+offset_right = 8.0
+offset_bottom = -168.0
+text = "Prérequis
+"
+
+[node name="IconCerveau" type="Sprite2D" parent="MessageBoss"]
+texture_filter = 1
+position = Vector2(-84, -151)
+texture = ExtResource("7_x3e3o")
+
+[node name="IconeHorloge" type="Sprite2D" parent="MessageBoss"]
+position = Vector2(-83.0001, -109)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_bk6qr")
+
+[node name="InteligenceRequis" type="TextEdit" parent="MessageBoss"]
+offset_left = -57.0
+offset_top = -167.0
+offset_right = 39.0
+offset_bottom = -132.0
+text = "Niveau 1+"
+editable = false
+
+[node name="NomBoss" type="Label" parent="MessageBoss"]
+offset_left = -69.0
+offset_top = -208.0
+offset_right = 10.0
+offset_bottom = -182.0
+text = "Boss : Bob"
+
+[node name="TempsRequis" type="TextEdit" parent="MessageBoss"]
+offset_left = -57.0
+offset_top = -129.0
+offset_right = 38.0
+offset_bottom = -92.0
+text = "Temps à 0"
+editable = false
+
 [node name="Joueur" parent="." instance=ExtResource("3_6k4ns")]
-position = Vector2(-461, -87)
+position = Vector2(-455, -87)
 
 [connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]
 [connection signal="body_entered" from="DversM" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Porte4823" to="." method="_on_porte_4823_body_entered"]
 [connection signal="body_exited" from="Porte4823" to="." method="_on_porte_4823_body_exited"]
 [connection signal="timeout" from="AttentePorte" to="." method="_on_attente_porte_timeout"]
+[connection signal="body_entered" from="PorteBossUn" to="." method="_on_porte_boss_un_body_entered"]
+[connection signal="body_exited" from="PorteBossUn" to="." method="_on_porte_boss_un_body_exited"]
+[connection signal="pressed" from="MessageBoss/btnRetour" to="." method="_on_btn_retour_pressed"]
+[connection signal="pressed" from="MessageBoss/btnCombat" to="." method="_on_btn_combat_pressed"]

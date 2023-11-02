@@ -1,12 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://x0rcm70wjd7o"]
+[gd_scene load_steps=28 format=3 uid="uid://ddkq6hegyrcye"]
 
-[ext_resource type="Script" path="res://Scene/scene_combat.gd" id="1_oklex"]
+[ext_resource type="Script" path="res://Scene/Script/scene_combat.gd" id="1_moikl"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="2_64qka"]
 [ext_resource type="Texture2D" uid="uid://n1nq7l1p7jr6" path="res://Joueur/up_idle_1.png" id="2_dx3sd"]
+[ext_resource type="Texture2D" uid="uid://c1sjjkgc8kmcj" path="res://image/pocadeau_empty_classroom_horror_in_pixel_art_50297af3-22fa-400b-93fc-744cf4f669b2.png" id="2_mxq14"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_yayrs"]
 [ext_resource type="PackedScene" uid="uid://wdrnntu75p7f" path="res://Personne/ennemie_deux.tscn" id="4_hwg0o"]
+[ext_resource type="PackedScene" uid="uid://pssn3cmtwxxo" path="res://Personne/enemie_trois.tscn" id="5_gmab1"]
 [ext_resource type="PackedScene" uid="uid://blychabk2ucx7" path="res://Personne/ennemie_un.tscn" id="5_mwdkm"]
+[ext_resource type="PackedScene" uid="uid://cof1ifb7mcc7j" path="res://Personne/jose.tscn" id="6_esgy4"]
+[ext_resource type="Texture2D" uid="uid://cjbnp6ofg77he" path="res://UI/image/CodeJoueurAttaque.png" id="6_kvrxu"]
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="6_pb0xx"]
+[ext_resource type="PackedScene" uid="uid://dpaydcc08g2tj" path="res://Personne/philipe.tscn" id="8_hl6ei"]
 [ext_resource type="Texture2D" uid="uid://b1wkldekn2gkb" path="res://UI/image/barDeVie2.png" id="8_vanl5"]
 [ext_resource type="Texture2D" uid="uid://dtu7edp2ib1j8" path="res://UI/image/vie2.png" id="9_ftsp3"]
 [ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="10_0avih"]
@@ -77,6 +82,43 @@ _data = {
 "RESET": SubResource("Animation_7lkpv")
 }
 
+[sub_resource type="Animation" id="Animation_0mn7k"]
+resource_name = "AttaquerBoss"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(316, 307), Vector2(960, 215)]
+}
+
+[sub_resource type="Animation" id="Animation_aqt4p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(316, 307)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ot3op"]
+_data = {
+"AttaquerBoss": SubResource("Animation_0mn7k"),
+"RESET": SubResource("Animation_aqt4p")
+}
+
 [sub_resource type="LabelSettings" id="LabelSettings_ba65b"]
 font = ExtResource("6_pb0xx")
 font_size = 10
@@ -101,20 +143,15 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="SceneCombat" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_oklex")
+script = ExtResource("1_moikl")
+
+[node name="ArièrePlan" type="Sprite2D" parent="."]
+position = Vector2(576, 229)
+scale = Vector2(1.1875, 0.761719)
+texture = ExtResource("2_mxq14")
 
 [node name="Joueur" parent="." instance=ExtResource("2_yayrs")]
 visible = false
-
-[node name="Ennemie" type="Node2D" parent="."]
-
-[node name="EnnemieDeux" parent="Ennemie" instance=ExtResource("4_hwg0o")]
-position = Vector2(1016, 196)
-scale = Vector2(8, 8)
-
-[node name="EnnemieUn" parent="Ennemie" instance=ExtResource("5_mwdkm")]
-position = Vector2(1016, 231)
-scale = Vector2(8, 8)
 
 [node name="Personnage" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -131,10 +168,76 @@ libraries = {
 "": SubResource("AnimationLibrary_g1w1u")
 }
 
+[node name="Ennemie" type="Node2D" parent="."]
+
+[node name="EnnemieDeux" parent="Ennemie" instance=ExtResource("4_hwg0o")]
+visible = false
+position = Vector2(1016, 196)
+scale = Vector2(8, 8)
+
+[node name="EnnemieUn" parent="Ennemie" instance=ExtResource("5_mwdkm")]
+position = Vector2(1023, 354)
+scale = Vector2(8, 8)
+
+[node name="enemie_trois" parent="Ennemie" instance=ExtResource("5_gmab1")]
+visible = false
+position = Vector2(1002, 219)
+scale = Vector2(8, 8)
+
+[node name="Jose" parent="Ennemie" instance=ExtResource("6_esgy4")]
+visible = false
+position = Vector2(1002, 205)
+scale = Vector2(4, 4)
+
+[node name="Philipe" parent="Ennemie" instance=ExtResource("8_hl6ei")]
+visible = false
+position = Vector2(990, 307)
+scale = Vector2(2, 2)
+
+[node name="ProjectileJoueur" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(316, 307)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvrxu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ProjectileJoueur"]
+libraries = {
+"": SubResource("AnimationLibrary_ot3op")
+}
+
+[node name="TimerProjectile" type="Timer" parent="ProjectileJoueur"]
+wait_time = 0.2
+one_shot = true
+
 [node name="Tuile_boite_de_texte" parent="." instance=ExtResource("2_64qka")]
 position = Vector2(0, -25)
 scale = Vector2(3, 3)
 layer_0/tile_data = PackedInt32Array(589825, 65536, 0, 655361, 65536, 1, 589826, 65536, 0, 655362, 0, 12, 589827, 131072, 0, 655363, 0, 12, 589828, 196608, 0, 655364, 0, 12, 655383, 589824, 1, 589829, 65536, 0, 655365, 0, 12, 589830, 131072, 0, 655366, 0, 12, 589831, 196608, 0, 655367, 0, 12, 589832, 65536, 0, 655368, 0, 12, 589833, 131072, 0, 655369, 0, 12, 589834, 196608, 0, 655370, 0, 12, 589835, 65536, 0, 655371, 0, 12, 589836, 131072, 0, 655372, 0, 12, 589837, 196608, 0, 655373, 0, 12, 589838, 65536, 0, 655374, 0, 12, 589839, 131072, 0, 655375, 0, 12, 589840, 196608, 0, 655376, 0, 12, 589841, 65536, 0, 655377, 0, 12, 589842, 131072, 0, 655378, 0, 12, 589843, 196608, 0, 655379, 0, 12, 589844, 65536, 0, 655380, 0, 12, 589845, 131072, 0, 655381, 0, 12, 589846, 196608, 0, 655382, 0, 12, 786433, 851968, 0, 851969, 851968, 1, 786434, 0, 12, 851970, 851968, 1, 786455, 65536, 12, 851991, 65536, 13, 851971, 0, 13, 851972, 0, 13, 851973, 0, 13, 851974, 0, 13, 851975, 0, 13, 851976, 0, 13, 851977, 0, 13, 851978, 0, 13, 851979, 0, 13, 851980, 0, 13, 851981, 0, 13, 851982, 0, 13, 851983, 0, 13, 851984, 0, 13, 851985, 0, 13, 851986, 0, 13, 851987, 0, 13, 851988, 0, 13, 851989, 0, 13, 851990, 0, 13, 786454, 0, 12, 786453, 0, 12, 786452, 0, 12, 786451, 0, 12, 786450, 0, 12, 786449, 0, 12, 786448, 0, 12, 786447, 0, 12, 786446, 0, 12, 786445, 0, 12, 786444, 0, 12, 786443, 0, 12, 786442, 0, 12, 786441, 0, 12, 786440, 0, 12, 786439, 0, 12, 786438, 0, 12, 786437, 0, 12, 786436, 0, 12, 786435, 0, 12, 720898, 0, 12, 720899, 0, 12, 720900, 0, 12, 720901, 0, 12, 720902, 0, 12, 720903, 0, 12, 720904, 0, 12, 720905, 0, 12, 720906, 0, 12, 720907, 0, 12, 720908, 0, 12, 720909, 0, 12, 720910, 0, 12, 720911, 0, 12, 720912, 0, 12, 720913, 0, 12, 720914, 0, 12, 720915, 0, 12, 720916, 0, 12, 720917, 0, 12, 720918, 0, 12, 720919, 589824, 1, 720897, 720896, 0, 589847, 589824, 0, 589824, 0, 0, 655360, 0, 1, 720896, 0, 1, 786432, 786432, 0, 851968, 786432, 1)
+
+[node name="btnPetiteAttaque" type="Button" parent="Tuile_boite_de_texte"]
+offset_left = 15.3333
+offset_top = 155.0
+offset_right = 124.333
+offset_bottom = 171.0
+
+[node name="btnAttaqueSpecial" type="Button" parent="Tuile_boite_de_texte"]
+offset_left = 15.3333
+offset_top = 198.667
+offset_right = 124.333
+offset_bottom = 214.667
+
+[node name="btnGrandeAttaque" type="Button" parent="Tuile_boite_de_texte"]
+offset_left = 15.3333
+offset_top = 177.0
+offset_right = 124.333
+offset_bottom = 193.0
+
+[node name="btnFuire" type="Button" parent="Tuile_boite_de_texte"]
+offset_left = 341.0
+offset_top = 199.0
+offset_right = 379.0
+offset_bottom = 215.0
 
 [node name="Fuire" type="Label" parent="Tuile_boite_de_texte"]
 offset_left = 345.0
@@ -170,41 +273,18 @@ offset_bottom = 214.667
 text = "Attaque spéciale"
 label_settings = SubResource("LabelSettings_ggg57")
 
-[node name="btnPetiteAttaque" type="Button" parent="Tuile_boite_de_texte"]
-offset_left = 15.3333
-offset_top = 155.0
-offset_right = 124.333
-offset_bottom = 171.0
-
-[node name="btnAttaqueSpecial" type="Button" parent="Tuile_boite_de_texte"]
-offset_left = 15.3333
-offset_top = 198.667
-offset_right = 124.333
-offset_bottom = 214.667
-
-[node name="btnGrandeAttaque" type="Button" parent="Tuile_boite_de_texte"]
-offset_left = 15.3333
-offset_top = 177.0
-offset_right = 124.333
-offset_bottom = 193.0
-
-[node name="btnFuire" type="Button" parent="Tuile_boite_de_texte"]
-offset_left = 341.0
-offset_top = 199.0
-offset_right = 379.0
-offset_bottom = 215.0
-
 [node name="BossVie" type="Node2D" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="BossVie"]
 texture_filter = 1
-offset_left = 361.333
-offset_top = 24.6667
-offset_right = 377.333
-offset_bottom = 88.6667
-value = 100.0
+offset_left = 361.0
+offset_top = 25.0
+offset_right = 377.0
+offset_bottom = 89.0
+value = 75.0
+fill_mode = 3
 texture_under = ExtResource("8_vanl5")
 texture_progress = ExtResource("9_ftsp3")
 
@@ -225,4 +305,15 @@ label_settings = SubResource("LabelSettings_2tlq4")
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="TempsBossAvantAttaque" type="Timer" parent="."]
+one_shot = true
+
+[node name="TempsDeLattaque" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="EnleverVieJoueur" from="." to="Joueur" method="_on_scene_combat_enlever_vie_joueur"]
+[connection signal="timeout" from="ProjectileJoueur/TimerProjectile" to="." method="_on_timer_projectile_timeout"]
+[connection signal="pressed" from="Tuile_boite_de_texte/btnPetiteAttaque" to="." method="_on_btn_petite_attaque_pressed"]
+[connection signal="pressed" from="Tuile_boite_de_texte/btnFuire" to="." method="_on_btn_fuire_pressed"]
+[connection signal="timeout" from="TempsBossAvantAttaque" to="." method="_on_temps_boss_avant_attaque_timeout"]
+[connection signal="timeout" from="TempsDeLattaque" to="." method="_on_temps_de_lattaque_timeout"]

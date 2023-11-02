@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ow0o7ub6tkqo"]
+
+[ext_resource type="PackedScene" uid="uid://ctrdalp6yygvm" path="res://Carte/CarteScene/carte_caféoxymel.tscn" id="1_i8dip"]
+[ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_pk3rt"]
+[ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="3_52d6d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_606l7"]
+size = Vector2(115, 20)
+
+[node name="SceneCaféOxymel" type="Node2D"]
+
+[node name="CarteCaféOxymel" parent="." instance=ExtResource("1_i8dip")]
+
+[node name="Joueur" parent="." instance=ExtResource("2_pk3rt")]
+position = Vector2(407, 558)
+scale = Vector2(1.4, 1.4)
+
+[node name="sortie" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sortie"]
+position = Vector2(416, 618)
+shape = SubResource("RectangleShape2D_606l7")
+
+[node name="MenuPause" parent="." instance=ExtResource("3_52d6d")]
+
+[connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]

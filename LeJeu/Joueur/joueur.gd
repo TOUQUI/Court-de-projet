@@ -18,6 +18,8 @@ signal sauvegarder()
 
 static var derniere_emplacement = "vide"
 
+var positionX
+var positionY
 var parent_node
 var nodes
 
@@ -109,7 +111,6 @@ func _on_scene_maison_dormir():
 
 func _on_scene_travail_travailler(salaire):
 	joueur_travail.emit(salaire)
-
 
 
 func _on_scene_4823_joueurétudie_en_classe(heure):

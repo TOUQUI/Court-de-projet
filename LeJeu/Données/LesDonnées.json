@@ -57,6 +57,7 @@
 		},
 	},
 	"DataSession":{
+		"nouvellePartie": true,
 		"nbJour": 0,
 		"argent": 100,
 		"temps": 0,

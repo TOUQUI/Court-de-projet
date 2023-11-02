@@ -221,7 +221,6 @@ func _on_btn_consomer_item_3_pressed():
 		AjouterVie(25)
 
 
-
 func retirerItem(item):
 	if inventaire[item - 1].quantité > 0:
 		inventaire[item - 1].quantité = inventaire[item - 1].quantité - 1
@@ -303,3 +302,5 @@ func _on_joueur_ajouter_vie_retirer_argent(pVie, prix):
 		GererAffichageArgent()
 
 
+func LancerQueteDuDebut():
+	pass
