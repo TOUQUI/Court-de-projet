@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmc5tfw58mjqj"
-path="res://.godot/imported/background_mcdo.jpg-405a87ddb58e80bf9cfac45a2a1ce089.ctex"
+uid="uid://ddhjrwq36hnug"
+path="res://.godot/imported/ArièrePlanBoss3.png-f683b566cfaadb90d214b5096e003a5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image/background_mcdo.jpg"
-dest_files=["res://.godot/imported/background_mcdo.jpg-405a87ddb58e80bf9cfac45a2a1ce089.ctex"]
+source_file="res://image/ArièrePlanBoss3.png"
+dest_files=["res://.godot/imported/ArièrePlanBoss3.png-f683b566cfaadb90d214b5096e003a5e.ctex"]
 
 [params]
 

@@ -62,14 +62,15 @@
 		"argent": 100,
 		"temps": 0,
 		"emplacementJoueur": "QG",
-		"queteActuel": "mission4_ac",
+		"queteActuel": "mission4_bc",
+		"joueurPretBoss": true,
 		"posteMcdo": 0,
 		"nbTempsTravail": 0,
 		"boisonConsome": 0,
-		"vie": 10,
+		"vie": 100,
 		"force": 0,
 		"intelligence": 0,
-		"niveauIntelligence": 0
+		"niveauIntelligence": 8
 	},
 	"mission1_bc": [
 		["Jose", "Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs."],
@@ -78,7 +79,6 @@
 		["Joueur", "Je ne peux pas ignorer ce qui se passe. Si l'école est en danger, je veux aider."],
 		["Scène", "José soupire, semblant hésitant."],
 		["Jose", "Très bien, si tu veux tant le savoir, prouve-moi d'abord que tu es capable d'affronter l'adversité. Il y a un ennemi qui se dresse sur ton chemin et c'est moi. Bats-moi, et peut-être que je te dirai ce que tu veux savoir"]
-		
 	],
 	"mission1_ac": [
 		["Jose", "Tu as réussi à me battre, étudiant. Tu es plus déterminé que je ne le pensais."],
@@ -96,7 +96,6 @@
 		["Stéphane", "Alors, tu prétends être l'élu ? C'est difficile à croire. José a vraiment fait une erreur en te confiant le livre interdit. Tu n'es pas digne de ce pouvoir."],
 		["Joueur", "Peu importe ce que tu penses, Stéphane. Je suis ici pour protéger notre école et découvrir la vérité sur les disparitions."],
 		["Stéphane", "Protéger l'école ? Tu n'es qu'un novice. Tu n'as aucune idée de ce qui t'attend."]
-		
 	],
 	"mission2_ac": [
 		["Joueur", "C'est terminé, Stéphane. Maintenant, tu vas me dire où trouver CELUI AU-DESSUS DE TOUT."],
@@ -107,7 +106,7 @@
 	],
 	"mission3_bc": [
 		["Martin", "Ah, te voilà enfin, joueur. Je suis Martin, le gardien de ce monde. Tu ne le sais peut-être pas, mais je suis bien plus que ce que tu crois."],
-		["Joueur", "Que veux-tu dire, Martin ?"],	
+		["Joueur", "Que veux-tu dire, Martin ?"],
 		["Martin", "Tu es dans un jeu, mon ami. Un jeu que j'évalue, que je contrôle. Je peux mettre fin à ton aventure d'un simple claquement de doigts, comme un dieu."],
 		["Scène", "Le joueur, troublé par les paroles de Martin, tente de comprendre la situation, mais Martin continue de parler directement au spectateur, créant un mystère palpable."],
 		["Martin", "Mais aujourd'hui, je suis clément. Je vais te laisser une chance de continuer à observer cette histoire. Le joueur doit me prouver qu'il est digne de poursuivre cette quête."]
@@ -117,7 +116,6 @@
 		["Martin", "Tu es bien plus puissant que je ne l'imaginais. Tu as prouvé ta valeur, joueur. Mais sache que le véritable défi t'attend encore. Le coordonnateur, Philippe, est « celui au-dessus de tout ». Il détient le pouvoir ultime, et tu devras rassembler toutes tes forces pour le vaincre."],
 		["Scène", "Martin, après avoir reconnu la détermination du joueur, sort une clé de sa poche et la tend au joueur avec un sourire mystérieux."],
 		["Martin", "Avant de partir, prends ceci. C'est la clé du bureau de Philippe. Tu y trouveras peut-être des informations cruciales pour ta quête. N'oublie pas, le destin de l'école repose sur tes épaules, joueur."]
-		
 	],
 	"mission4_bc": [
 		["Philippe", "Alors, te voilà enfin. Je t’attendais."],

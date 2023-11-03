@@ -1,48 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cof1ifb7mcc7j"]
+[gd_scene load_steps=9 format=3 uid="uid://cof1ifb7mcc7j"]
 
 [ext_resource type="Texture2D" uid="uid://b3w80l8eyffrw" path="res://Personne/jose.png" id="1_15xqe"]
 [ext_resource type="Texture2D" uid="uid://crk14tdafgt5b" path="res://Personne/UiDeBoss/FireHammerRedV1.png" id="2_b5msf"]
 [ext_resource type="Texture2D" uid="uid://dhlsle1tdig57" path="res://Personne/UiDeBoss/Dark hand attack-Sheet.png" id="3_cvndv"]
-
-[sub_resource type="Animation" id="Animation_0fq0w"]
-resource_name = "attaqueNormal"
-step = 0.0526316
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.157895, 0.315789, 0.473684, 0.631579, 0.789474),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 12, 13, 14, 15, 16]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../FireHammerRedV1:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0526316, 0.105263, 0.157895, 0.210526, 0.263158, 0.315789, 0.368421, 0.421053, 0.473684, 0.526316, 0.578947, 0.631579, 0.684211, 0.736842, 0.789474, 0.842105, 0.894737, 0.947368),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../FireHammerRedV1:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
 
 [sub_resource type="Animation" id="Animation_34osx"]
 length = 0.001
@@ -131,6 +91,46 @@ tracks/6/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_0fq0w"]
+resource_name = "attaqueNormal"
+step = 0.0526316
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.157895, 0.315789, 0.473684, 0.631579, 0.789474),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 12, 13, 14, 15, 16]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../FireHammerRedV1:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0526316, 0.105263, 0.157895, 0.210526, 0.263158, 0.315789, 0.368421, 0.421053, 0.473684, 0.526316, 0.578947, 0.631579, 0.684211, 0.736842, 0.789474, 0.842105, 0.894737, 0.947368),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../FireHammerRedV1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="Animation" id="Animation_vdbtb"]
 resource_name = "grosseAttaque"
 step = 0.05
@@ -195,38 +195,56 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_gnkql"]
+resource_name = "pasBouger"
+length = 0.90001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [18, 19, 20, 21]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4ukt4"]
 _data = {
 "RESET": SubResource("Animation_34osx"),
 "attaqueNormal": SubResource("Animation_0fq0w"),
-"grosseAttaque": SubResource("Animation_vdbtb")
+"grosseAttaque": SubResource("Animation_vdbtb"),
+"pasBouger": SubResource("Animation_gnkql")
 }
 
 [node name="Jose" type="Node2D"]
 
 [node name="FireHammerRedV1" type="Sprite2D" parent="."]
-visible = false
 texture_filter = 1
-position = Vector2(-179, 8)
+position = Vector2(-66, 1)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_b5msf")
 flip_h = true
 hframes = 19
 
-[node name="Boss" type="Sprite2D" parent="."]
+[node name="image" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_15xqe")
 flip_h = true
 hframes = 6
 vframes = 4
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Boss"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="image"]
 libraries = {
 "": SubResource("AnimationLibrary_4ukt4")
 }
 
 [node name="DarkHandAttack-sheet" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-183, 6)
+position = Vector2(-73, 13)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_cvndv")
 flip_h = true
 hframes = 18

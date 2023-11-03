@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1sjjkgc8kmcj"
-path="res://.godot/imported/pocadeau_empty_classroom_horror_in_pixel_art_50297af3-22fa-400b-93fc-744cf4f669b2.png-90a3cdfc3dea15ec6c31f3536920b71b.ctex"
+uid="uid://byob0jo6i4ksj"
+path="res://.godot/imported/ArièrePlanBoss1.png-a99be223e55413b52d55335117a8a58f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image/pocadeau_empty_classroom_horror_in_pixel_art_50297af3-22fa-400b-93fc-744cf4f669b2.png"
-dest_files=["res://.godot/imported/pocadeau_empty_classroom_horror_in_pixel_art_50297af3-22fa-400b-93fc-744cf4f669b2.png-90a3cdfc3dea15ec6c31f3536920b71b.ctex"]
+source_file="res://image/ArièrePlanBoss1.png"
+dest_files=["res://.godot/imported/ArièrePlanBoss1.png-a99be223e55413b52d55335117a8a58f.ctex"]
 
 [params]
 

@@ -127,3 +127,7 @@ func _on_scene_travail_joyeux_repas_sur_place(vie, prix):
 
 func _on_scene_travail_joyeux_repas_emporter(item, prix):
 	ajouterItemAcheter.emit(item, prix)
+
+
+func _on_scene_combat_ajouter_temps(valeur):
+	joueur_étudie.emit(valeur)

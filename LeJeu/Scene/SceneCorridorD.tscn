@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="6_4on1q"]
 [ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="6_x8x2n"]
 [ext_resource type="Texture2D" uid="uid://ghodvn6lgtdd" path="res://UI/image/iconCerveau.png" id="7_x3e3o"]
-[ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/image/horloge.png" id="8_bk6qr"]
+[ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="8_bk6qr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgyxe"]
 size = Vector2(28.5, 35)

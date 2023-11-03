@@ -1,11 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://ddkq6hegyrcye"]
+[gd_scene load_steps=30 format=3 uid="uid://ddkq6hegyrcye"]
 
 [ext_resource type="Script" path="res://Scene/Script/scene_combat.gd" id="1_moikl"]
+[ext_resource type="Texture2D" uid="uid://cjqeemq82daob" path="res://image/ArièrePlanBoss2.png" id="2_2gwms"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="2_64qka"]
 [ext_resource type="Texture2D" uid="uid://n1nq7l1p7jr6" path="res://Joueur/up_idle_1.png" id="2_dx3sd"]
-[ext_resource type="Texture2D" uid="uid://c1sjjkgc8kmcj" path="res://image/pocadeau_empty_classroom_horror_in_pixel_art_50297af3-22fa-400b-93fc-744cf4f669b2.png" id="2_mxq14"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_yayrs"]
-[ext_resource type="PackedScene" uid="uid://wdrnntu75p7f" path="res://Personne/ennemie_deux.tscn" id="4_hwg0o"]
 [ext_resource type="PackedScene" uid="uid://pssn3cmtwxxo" path="res://Personne/enemie_trois.tscn" id="5_gmab1"]
 [ext_resource type="PackedScene" uid="uid://blychabk2ucx7" path="res://Personne/ennemie_un.tscn" id="5_mwdkm"]
 [ext_resource type="PackedScene" uid="uid://cof1ifb7mcc7j" path="res://Personne/jose.tscn" id="6_esgy4"]
@@ -15,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b1wkldekn2gkb" path="res://UI/image/barDeVie2.png" id="8_vanl5"]
 [ext_resource type="Texture2D" uid="uid://dtu7edp2ib1j8" path="res://UI/image/vie2.png" id="9_ftsp3"]
 [ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="10_0avih"]
+[ext_resource type="Texture2D" uid="uid://ghodvn6lgtdd" path="res://UI/image/iconCerveau.png" id="15_rm1cg"]
 
 [sub_resource type="Animation" id="Animation_uohgo"]
 resource_name = "Bouger"
@@ -82,22 +82,6 @@ _data = {
 "RESET": SubResource("Animation_7lkpv")
 }
 
-[sub_resource type="Animation" id="Animation_0mn7k"]
-resource_name = "AttaquerBoss"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(316, 307), Vector2(960, 215)]
-}
-
 [sub_resource type="Animation" id="Animation_aqt4p"]
 length = 0.001
 tracks/0/type = "value"
@@ -112,10 +96,179 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(316, 307)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_0mn7k"]
+resource_name = "AttaqueNormal"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(316, 307), Vector2(960, 215)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.980392, 1, 1, 1), Color(0.980392, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_asig1"]
+resource_name = "GrosseAttaque"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(316, 307), Vector2(975, 229)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 1, 1), Color(0.980392, 0, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qw11s"]
+resource_name = "AttaqueSpecial"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(316, 307), Vector2(316, 71), Vector2(900, 219)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1), Vector2(2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.980392, 1, 1, 1), Color(0.980392, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ot3op"]
 _data = {
-"AttaquerBoss": SubResource("Animation_0mn7k"),
+"AttaqueNormal": SubResource("Animation_0mn7k"),
+"AttaqueSpecial": SubResource("Animation_qw11s"),
+"GrosseAttaque": SubResource("Animation_asig1"),
 "RESET": SubResource("Animation_aqt4p")
 }
 
@@ -148,7 +301,7 @@ script = ExtResource("1_moikl")
 [node name="ArièrePlan" type="Sprite2D" parent="."]
 position = Vector2(576, 229)
 scale = Vector2(1.1875, 0.761719)
-texture = ExtResource("2_mxq14")
+texture = ExtResource("2_2gwms")
 
 [node name="Joueur" parent="." instance=ExtResource("2_yayrs")]
 visible = false
@@ -170,32 +323,27 @@ libraries = {
 
 [node name="Ennemie" type="Node2D" parent="."]
 
-[node name="EnnemieDeux" parent="Ennemie" instance=ExtResource("4_hwg0o")]
-visible = false
-position = Vector2(1016, 196)
-scale = Vector2(8, 8)
-
 [node name="EnnemieUn" parent="Ennemie" instance=ExtResource("5_mwdkm")]
-position = Vector2(1023, 354)
+visible = false
+position = Vector2(900, 336)
 scale = Vector2(8, 8)
 
 [node name="enemie_trois" parent="Ennemie" instance=ExtResource("5_gmab1")]
 visible = false
-position = Vector2(1002, 219)
+position = Vector2(919, 282)
 scale = Vector2(8, 8)
 
 [node name="Jose" parent="Ennemie" instance=ExtResource("6_esgy4")]
 visible = false
-position = Vector2(1002, 205)
-scale = Vector2(4, 4)
+position = Vector2(839, 258)
+scale = Vector2(8, 8)
 
 [node name="Philipe" parent="Ennemie" instance=ExtResource("8_hl6ei")]
-visible = false
-position = Vector2(990, 307)
-scale = Vector2(2, 2)
+position = Vector2(900, 297)
+scale = Vector2(2.5, 2.5)
 
 [node name="ProjectileJoueur" type="Sprite2D" parent="."]
-visible = false
+self_modulate = Color(0, 0, 1, 1)
 texture_filter = 1
 position = Vector2(316, 307)
 scale = Vector2(0.5, 0.5)
@@ -206,8 +354,15 @@ libraries = {
 "": SubResource("AnimationLibrary_ot3op")
 }
 
-[node name="TimerProjectile" type="Timer" parent="ProjectileJoueur"]
+[node name="TimerProjectileNormal" type="Timer" parent="ProjectileJoueur"]
 wait_time = 0.2
+one_shot = true
+
+[node name="TimerProjectileGros" type="Timer" parent="ProjectileJoueur"]
+wait_time = 0.2
+one_shot = true
+
+[node name="TimerProjectileSpecial" type="Timer" parent="ProjectileJoueur"]
 one_shot = true
 
 [node name="Tuile_boite_de_texte" parent="." instance=ExtResource("2_64qka")]
@@ -226,12 +381,14 @@ offset_left = 15.3333
 offset_top = 198.667
 offset_right = 124.333
 offset_bottom = 214.667
+disabled = true
 
 [node name="btnGrandeAttaque" type="Button" parent="Tuile_boite_de_texte"]
 offset_left = 15.3333
 offset_top = 177.0
 offset_right = 124.333
 offset_bottom = 193.0
+disabled = true
 
 [node name="btnFuire" type="Button" parent="Tuile_boite_de_texte"]
 offset_left = 341.0
@@ -311,9 +468,91 @@ one_shot = true
 [node name="TempsDeLattaque" type="Timer" parent="."]
 one_shot = true
 
+[node name="TempsDeLaGrosseAttaqueDePhilipe" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="IconCerveau" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(404, 463)
+texture = ExtResource("15_rm1cg")
+
+[node name="IconCerveau2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(401, 531)
+texture = ExtResource("15_rm1cg")
+
+[node name="IconCerveau3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(404, 597)
+texture = ExtResource("15_rm1cg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 433.0
+offset_top = 452.0
+offset_right = 501.0
+offset_bottom = 478.0
+text = "Niveau 1"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 433.0
+offset_top = 523.0
+offset_right = 501.0
+offset_bottom = 549.0
+text = "Niveau 3"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 433.0
+offset_top = 583.0
+offset_right = 501.0
+offset_bottom = 609.0
+text = "Niveau 7"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 411.0
+offset_top = 416.0
+offset_right = 486.0
+offset_bottom = 442.0
+text = "Prérequis
+"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 775.0
+offset_top = 414.0
+offset_right = 872.0
+offset_bottom = 440.0
+text = "Descriptions"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 658.0
+offset_top = 447.0
+offset_right = 967.0
+offset_bottom = 473.0
+text = "Fais 10 de dégâts et consomme 1 heure."
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 658.0
+offset_top = 515.0
+offset_right = 974.0
+offset_bottom = 541.0
+text = "Fais 20 de dégâts et consomme 2 heures."
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 658.0
+offset_top = 581.0
+offset_right = 985.0
+offset_bottom = 607.0
+text = "Fais 100 de dégâts et consomme 1 heure."
+
+[connection signal="AjouterTemps" from="." to="Joueur" method="_on_scene_combat_ajouter_temps"]
 [connection signal="EnleverVieJoueur" from="." to="Joueur" method="_on_scene_combat_enlever_vie_joueur"]
-[connection signal="timeout" from="ProjectileJoueur/TimerProjectile" to="." method="_on_timer_projectile_timeout"]
+[connection signal="timeout" from="ProjectileJoueur/TimerProjectileNormal" to="." method="_on_timer_projectile_timeout"]
+[connection signal="timeout" from="ProjectileJoueur/TimerProjectileGros" to="." method="_on_timer_projectile_gros_timeout"]
+[connection signal="timeout" from="ProjectileJoueur/TimerProjectileSpecial" to="." method="_on_timer_projectile_special_timeout"]
 [connection signal="pressed" from="Tuile_boite_de_texte/btnPetiteAttaque" to="." method="_on_btn_petite_attaque_pressed"]
+[connection signal="pressed" from="Tuile_boite_de_texte/btnAttaqueSpecial" to="." method="_on_btn_attaque_special_pressed"]
+[connection signal="pressed" from="Tuile_boite_de_texte/btnGrandeAttaque" to="." method="_on_btn_grande_attaque_pressed"]
 [connection signal="pressed" from="Tuile_boite_de_texte/btnFuire" to="." method="_on_btn_fuire_pressed"]
 [connection signal="timeout" from="TempsBossAvantAttaque" to="." method="_on_temps_boss_avant_attaque_timeout"]
 [connection signal="timeout" from="TempsDeLattaque" to="." method="_on_temps_de_lattaque_timeout"]
+[connection signal="timeout" from="TempsDeLaGrosseAttaqueDePhilipe" to="." method="_on_temps_de_la_grosse_attaque_de_philipe_timeout"]

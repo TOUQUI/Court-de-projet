@@ -4,24 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://juusk3gh5ka7" path="res://Personne/UiDeBoss/ice knife-Sheet.png" id="2_oe7hf"]
 [ext_resource type="Texture2D" uid="uid://dgqwxrrmu3yt8" path="res://Personne/UiDeBoss/meteor shower-blue.png" id="3_ar8kk"]
 
-[sub_resource type="Animation" id="Animation_0j7sl"]
-resource_name = "idel"
-length = 1.15
-loop_mode = 1
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81]
-}
-
 [sub_resource type="Animation" id="Animation_1erwr"]
 length = 0.001
 tracks/0/type = "value"
@@ -99,7 +81,6 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_vokxm"]
 resource_name = "attaqueNormal"
-length = 1.0
 step = 0.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -190,17 +171,35 @@ tracks/3/keys = {
 "values": [false, true]
 }
 
+[sub_resource type="Animation" id="Animation_0j7sl"]
+resource_name = "idel"
+length = 1.15
+loop_mode = 1
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jqpu4"]
 _data = {
 "RESET": SubResource("Animation_1erwr"),
 "attaqueNormal": SubResource("Animation_vokxm"),
 "grosseAttaque": SubResource("Animation_6woqf"),
-"idel": SubResource("Animation_0j7sl")
+"pasBouger": SubResource("Animation_0j7sl")
 }
 
 [node name="Philipe" type="Node2D"]
 
-[node name="AngelAppear-sheet" type="Sprite2D" parent="."]
+[node name="image" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -44)
 texture = ExtResource("1_777vb")
@@ -208,7 +207,7 @@ hframes = 29
 vframes = 6
 frame = 58
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AngelAppear-sheet"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="image"]
 libraries = {
 "": SubResource("AnimationLibrary_jqpu4")
 }
@@ -216,14 +215,15 @@ libraries = {
 [node name="IceKnife-sheet" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(-383, -23)
+position = Vector2(-283, -23)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_oe7hf")
 hframes = 24
 
 [node name="MeteorShower-blue" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(-319, -44)
+position = Vector2(-247, -35)
 scale = Vector2(2.51976, 2.5625)
 texture = ExtResource("3_ar8kk")
 flip_h = true
