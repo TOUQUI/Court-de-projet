@@ -16,27 +16,33 @@ var nouvelle_texture
 var queteActuel 
 var joueurInteligence
 var joueurNode
+var joueur = preload("res://Joueur/joueur.gd")
+var boiteDeTexte
+var texte = preload("res://UI/boite_de_textes.tscn")
 
 
 func _ready():
 	queteActuel = SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel
 	joueurNode = get_node("Joueur")
 	joueurInteligence = joueurNode.find_child("Joueur_interface").niveauIntelligence
+	$AttaqueSpeciale1.visible = false
+	$AttaqueSpeciale2.visible = false
+	$ProjectileJoueur.visible = false
 	$Personnage/AnimationPlayer.play("Bouger")
 	if SingletonsDonnees.dictionaireDesDonnees["DataSession"].joueurPretBoss:
-		if queteActuel == "mission1_bc":
+		if queteActuel == "mission1_ac":
 			nouvelle_texture = load("res://image/ArièrePlanBoss1.png")
 			vieBoss = 100
 			vieBossDeBase = vieBoss
 			$Ennemie/Jose.visible = true
 			nomBoss = get_node("Ennemie/Jose/image/AnimationPlayer")
-		elif queteActuel == "mission2_bc":
+		elif queteActuel == "mission2_ac":
 			nouvelle_texture = load("res://image/ArièrePlanBoss2.png")
 			vieBoss = 150
 			vieBossDeBase = vieBoss
 			$Ennemie/enemie_trois.visible = true
 			nomBoss = get_node("Ennemie/enemie_trois/image/AnimationPlayer")
-		elif queteActuel == "mission3_bc":
+		elif queteActuel == "mission3_ac":
 			nouvelle_texture = load("res://image/ArièrePlanBoss3.png")
 			vieBoss = 200
 			vieBossDeBase = vieBoss
@@ -48,6 +54,8 @@ func _ready():
 			vieBoss = 250
 			vieBossDeBase = vieBoss
 			$Ennemie/Philipe.visible = true
+			$Boite.visible = false
+			$labelNode.visible = false
 			nomBoss = get_node("Ennemie/Philipe/image/AnimationPlayer")
 		$ArièrePlan.texture = nouvelle_texture
 		$BossVie/QtVie.text = str(vieBoss)
@@ -58,10 +66,23 @@ func _ready():
 func BossTouche(pPointDeViePerdue):
 	vieBoss = vieBoss - pPointDeViePerdue
 	if vieBoss <= 0:
-		nomBoss.play("mort")
-		nomBoss.play("mort")
 		$BossVie/TextureProgressBar.value = 0
 		$BossVie/QtVie.text = "0"
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].bossMort = true
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].joueurPretBoss = false
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = false
+		if nomBoss != get_node("Ennemie/Philipe/image/AnimationPlayer"):
+			$TimerAvantChangementScene.start()
+			$Noir/AnimationPlayer.play("finCombatNormal")
+			nomBoss.play("mort")
+		else:
+			$Boite.visible = false
+			$labelNode.visible = false
+			boiteDeTexte = self.find_child("BoiteDeTextes")
+			self.remove_child(boiteDeTexte)
+			texte = texte.instantiate()
+			SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel = "mission4_ac"
+			self.add_child(texte)
 	else:
 		$BossVie/TextureProgressBar.value = $BossVie/TextureProgressBar.value - ((75 * pPointDeViePerdue) / vieBossDeBase) 
 		$BossVie/QtVie.text = str(vieBoss)
@@ -85,30 +106,23 @@ func _on_temps_de_lattaque_timeout():
 
 
 func TourJoueur():
-	$Tuile_boite_de_texte/btnPetiteAttaque.disabled = false
+	$Boite/Tuile_boite_de_texte/btnPetiteAttaque.disabled = false
 	if joueurInteligence >= 3:
-		$Tuile_boite_de_texte/btnGrandeAttaque.disabled = false
+		$Boite/Tuile_boite_de_texte/btnGrandeAttaque.disabled = false
 	if joueurInteligence >= 7:
-		$Tuile_boite_de_texte/btnAttaqueSpecial.disabled = false
-		
+		$Boite/Tuile_boite_de_texte/btnAttaqueSpecial.disabled = false
+
 
 
 func TourBoss():
-	$Tuile_boite_de_texte/btnAttaqueSpecial.disabled = true
-	$Tuile_boite_de_texte/btnGrandeAttaque.disabled = true
-	$Tuile_boite_de_texte/btnPetiteAttaque.disabled = true
+	$Boite/Tuile_boite_de_texte/btnAttaqueSpecial.disabled = true
+	$Boite/Tuile_boite_de_texte/btnGrandeAttaque.disabled = true
+	$Boite/Tuile_boite_de_texte/btnPetiteAttaque.disabled = true
 
 
 func _on_btn_fuire_pressed():
+	AjouterTemps.emit(100)
 	get_tree().change_scene_to_file("res://Scene/SceneCorridorM.tscn")
-
-
-func _on_btn_petite_attaque_pressed():
-	TourBoss()
-	$ProjectileJoueur.visible = true;
-	AjouterTemps.emit(10)
-	$ProjectileJoueur/AnimationPlayer.play("AttaqueNormal")
-	$ProjectileJoueur/TimerProjectileNormal.start()
 
 
 func _on_timer_projectile_timeout():
@@ -130,14 +144,19 @@ func BossFin():
 
 
 func _on_timer_projectile_gros_timeout():
-	BossTouche(10)
-	BossTouche(10)
+	BossTouche(20)
 	$ProjectileJoueur.visible = false
+
+
+func _on_btn_petite_attaque_pressed():
+		TourBoss()
+		$ProjectileJoueur.visible = true;
+		$ProjectileJoueur/AnimationPlayer.play("AttaqueNormal")
+		$ProjectileJoueur/TimerProjectileNormal.start()
 
 
 func _on_btn_grande_attaque_pressed():
 	TourBoss()
-	AjouterTemps.emit(10)
 	$ProjectileJoueur.visible = true;
 	$ProjectileJoueur/AnimationPlayer.play("GrosseAttaque")
 	$ProjectileJoueur/TimerProjectileGros.start()
@@ -145,23 +164,33 @@ func _on_btn_grande_attaque_pressed():
 
 func _on_btn_attaque_special_pressed():
 	TourBoss()
-	AjouterTemps.emit(10)
-	$ProjectileJoueur.visible = true;
-	$ProjectileJoueur/AnimationPlayer.play("AttaqueSpecial")
-	$ProjectileJoueur/TimerProjectileSpecial.start()
+	$AttaqueSpeciale1/AnimationPlayer.play("Attaque")
+	$AttaqueSpeciale2/AnimationPlayer.play("Attaque")
+	$AttaqueSpeciale1/TimerProjectileSpecial.start()
 
 
 func _on_timer_projectile_special_timeout():
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
-	BossTouche(10)
+	BossTouche(100)
 	$ProjectileJoueur.visible = false
+
+
+func _on_timer_avant_changement_scene_timeout():
+	AjouterTemps.emit(100)
+	if nomBoss == get_node("Ennemie/Jose/image/AnimationPlayer"):
+		get_tree().change_scene_to_file("res://Scene/sceneBureauProf.tscn")
+	elif nomBoss == get_node("Ennemie/enemie_trois/image/AnimationPlayer"):
+		get_tree().change_scene_to_file("res://Scene/scene_4823.tscn")
+	elif nomBoss == get_node("Ennemie/EnnemieUn/image/AnimationPlayer"):
+		joueur.derniere_emplacement = "Blibli"
+		get_tree().change_scene_to_file("res://Scene/SceneCorridorD.tscn")
+
+
+func _on_timer_avant_retour_menue_timeout():
+	$fondueNoir.start()
+	$BoiteDeTextes.visible = false
+	$Noir/AnimationPlayer.play("fin")
+
+func _on_fondue_noir_timeout():
+	AjouterTemps.emit(100)
+	get_tree().change_scene_to_file("res://Scene/SceneMaison.tscn")
 

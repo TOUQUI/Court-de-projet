@@ -99,6 +99,7 @@ func ChargerDonnees():
 		niveauIntelligence = SingletonsDonnees.dictionaireDesDonnees["DataSession"].niveauIntelligence
 		ChargerQuete()
 
+
 func SauvegarderDonnees():
 	SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem1 = inventaire[0].quantité
 	SingletonsDonnees.dictionaireDesDonnees["Inventaire"].qtItem2 = inventaire[1].quantité
@@ -304,3 +305,9 @@ func _on_joueur_ajouter_vie_retirer_argent(pVie, prix):
 
 func LancerQueteDuDebut():
 	pass
+
+
+func _on_joueur_joueur_attaque(valeur):
+		if temps <= (100 - valeur):
+			temps = temps + valeur
+			chargerTemps()

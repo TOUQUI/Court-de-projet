@@ -6,6 +6,10 @@ var joueurLit = false
 var joueurFrigidaire = false
 
 
+func _ready():
+	find_child("Joueur").emplacementActuel = "res://Scene/SceneMaison.tscn"
+
+
 func _input(event):
 	if event.is_action_pressed("interaction") && joueurLit:
 		_dormire()

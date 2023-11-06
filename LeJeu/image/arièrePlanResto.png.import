@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0fcuqd0kiogh"
-path="res://.godot/imported/arièrePlanResto.png-0f1425980c9c4135eb170eab93115e4a.ctex"
+uid="uid://cakb8n8u360nq"
+path="res://.godot/imported/ArièrePlanResto.png-5b7d3c07b348ff09d8b87793645a7505.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image/arièrePlanResto.png"
-dest_files=["res://.godot/imported/arièrePlanResto.png-0f1425980c9c4135eb170eab93115e4a.ctex"]
+source_file="res://image/ArièrePlanResto.png"
+dest_files=["res://.godot/imported/ArièrePlanResto.png-5b7d3c07b348ff09d8b87793645a7505.ctex"]
 
 [params]
 

@@ -15,9 +15,11 @@ signal envoieHeure(temps:int)
 signal demanderHeure()
 signal dormir()
 signal sauvegarder()
+signal joueurAttaque(valeur:int)
 
 static var derniere_emplacement = "vide"
 
+var emplacementActuel = ""
 var positionX
 var positionY
 var parent_node
@@ -25,11 +27,21 @@ var nodes
 
 func _ready():
 	_input(input_event)
-	if derniere_emplacement == "GP":
+	if derniere_emplacement == "Menu":
+		derniere_emplacement == ""
+		gererEmplacement()
+	if derniere_emplacement == "GP" || emplacementActuel == "res://Scene/node_SceneQG.tscn":
 		Connecter_bureaux()
 
 func _physics_process(delta):
 	bouger(delta)
+
+
+func gererEmplacement():
+		positionX = SingletonsDonnees.dictionaireDesDonnees["DataSession"].x
+		positionY = SingletonsDonnees.dictionaireDesDonnees["DataSession"].y
+		if positionX != -69 || positionY != -69:
+			self.position = Vector2(positionX, positionY)
 
 
 func _input(event):
@@ -48,7 +60,6 @@ func _input(event):
 		VITESSE_MAX = 450
 	else:
 		VITESSE_MAX = 200
-
 
 func attraper_la_touche():
 	axis.x = int(Input.is_action_pressed("droite")) - int(Input.is_action_pressed("gauche"))
@@ -80,10 +91,11 @@ func apliquer_mouvement(accel):
 
 func Connecter_bureaux():
 	nodes = get_node("/root/NodeQG/Étude")
-	nodes = nodes.get_children()
-	for child in nodes:
-		if !child.joueur_étudie.is_connected(EnleverTemps):
-			child.joueur_étudie.connect(EnleverTemps)
+	if nodes != null:
+		nodes = nodes.get_children()
+		for child in nodes:
+			if !child.joueur_étudie.is_connected(EnleverTemps):
+				child.joueur_étudie.connect(EnleverTemps)
 
 
 func EnleverTemps(heure, expediteur):
@@ -102,10 +114,16 @@ func _on_scene_caféteria_acheter_café(item, prix):
 
 
 func _on_menu_pause_sauvegarder():
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].x = self.position.x
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].y = self.position.y
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].emplacementSauvegarde = emplacementActuel
 	sauvegarder.emit()
 
 
 func _on_scene_maison_dormir():
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].x = self.position.x
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].y = self.position.y
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].emplacementSauvegarde = emplacementActuel
 	dormir.emit()
 
 
@@ -130,4 +148,4 @@ func _on_scene_travail_joyeux_repas_emporter(item, prix):
 
 
 func _on_scene_combat_ajouter_temps(valeur):
-	joueur_étudie.emit(valeur)
+	joueurAttaque.emit(valeur)

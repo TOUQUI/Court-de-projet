@@ -6,6 +6,10 @@ var joeur_ascenseur = false
 var joueur_porte = false
 
 func _ready():
+	find_child("Joueur").emplacementActuel = "res://Scene/SceneCorridorM.tscn"
+	if SingletonsDonnees.dictionaireDesDonnees["DataSession"].nouvellePartie == true:
+		$MessageDebut.visible = true
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].nouvellePartie = false
 	joueur_node = get_node("Joueur")
 	provenance = joueur_node.derniere_emplacement
 	if provenance == "G":
@@ -14,10 +18,13 @@ func _ready():
 		$Joueur.position = Vector2(1005,331)
 	elif provenance == "Exterieur":
 		$Joueur.position = Vector2(560,130)
+	find_child("Joueur").derniere_emplacement = "M"
+
 
 func _input(event):
 	if event.is_action_pressed("interaction") && (joeur_ascenseur or joueur_porte):
 		$MenuDeplacement.visible = true
+
 
 func _on_c_mvers_cg_body_entered(body):
 	find_child("Joueur").derniere_emplacement = "M"
@@ -59,3 +66,7 @@ func _on_btn_retour_pressed():
 
 func _on_btn_travail_pressed():
 	get_tree().change_scene_to_file("res://Scene/scene_travail.tscn")
+
+
+func _on_button_pressed():
+	$MessageDebut.visible =false

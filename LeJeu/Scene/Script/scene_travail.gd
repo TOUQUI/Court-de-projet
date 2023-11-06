@@ -11,6 +11,7 @@ var tempsCarière
 var tempsJourne
 
 func _ready():
+	find_child("Joueur").emplacementActuel = "res://Scene/scene_travail.tscn"
 	poste = SingletonsDonnees.dictionaireDesDonnees["DataSession"].posteMcdo
 	tempsCarière = SingletonsDonnees.dictionaireDesDonnees["DataSession"].nbTempsTravail
 	GererAffichagePEtD()

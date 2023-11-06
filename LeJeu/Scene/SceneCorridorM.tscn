@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bgdonxn125jnw"]
+[gd_scene load_steps=16 format=3 uid="uid://bgdonxn125jnw"]
 
 [ext_resource type="Script" path="res://Scene/Script/SceneCorridorM.gd" id="1_3b2jb"]
 [ext_resource type="PackedScene" uid="uid://c41qifx44ab2g" path="res://Carte/CarteScene/MapCorridorMillieu.tscn" id="1_eynko"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="7_8cq34"]
 [ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="8_no73l"]
 [ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="9_awgta"]
+[ext_resource type="Texture2D" uid="uid://d17prr77h8jh1" path="res://UI/image/53.png" id="10_p6x0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahvnn"]
 size = Vector2(40, 69)
@@ -125,6 +126,40 @@ text = "Travail/Restaurant
 "
 
 [node name="MenuPause" parent="." instance=ExtResource("9_awgta")]
+position = Vector2(33, 0)
+
+[node name="MessageDebut" type="Node2D" parent="."]
+visible = false
+
+[node name="Tuile_boite_de_texte" parent="MessageDebut" instance=ExtResource("7_8cq34")]
+scale = Vector2(2, 2)
+layer_0/tile_data = PackedInt32Array(393229, 0, 0, 458765, 0, 1, 393230, 65536, 0, 458766, 0, 7, 393237, 524288, 0, 458773, 524288, 1, 393238, 589824, 0, 458774, 589824, 1, 393231, 65536, 0, 458767, 0, 7, 393232, 131072, 0, 458768, 0, 7, 393233, 196608, 0, 458769, 0, 7, 393234, 65536, 0, 458770, 65536, 1, 393235, 131072, 0, 458771, 131072, 1, 393236, 196608, 0, 458772, 196608, 1, 786445, 786432, 0, 851981, 786432, 1, 786446, 851968, 0, 851982, 851968, 1, 655373, 262144, 0, 720909, 262144, 1, 655374, 327680, 0, 720910, 327680, 1, 655375, 0, 7, 524301, 262144, 0, 589837, 262144, 1, 524302, 0, 7, 589838, 0, 7, 524303, 0, 7, 589839, 0, 7, 786453, 0, 12, 851989, 0, 13, 786454, 65536, 12, 851990, 65536, 13, 720918, 65536, 12, 655382, 65536, 12, 589846, 65536, 12, 524310, 65536, 12, 786452, 0, 7, 720915, 0, 7, 720914, 0, 7, 720913, 0, 7, 720912, 0, 7, 786447, 0, 7, 786448, 0, 7, 786450, 0, 7, 786451, 0, 7, 786449, 0, 7, 524304, 0, 7, 524306, 0, 7, 524307, 0, 7, 524308, 0, 7, 524309, 0, 7, 589845, 0, 7, 655381, 0, 7, 720917, 0, 7, 720916, 0, 7, 655379, 0, 7, 655378, 0, 7, 655377, 0, 7, 589840, 0, 7, 589841, 0, 7, 589842, 0, 7, 589843, 0, 7, 589844, 0, 7, 655380, 0, 7, 655376, 0, 7, 524305, 0, 7, 851988, 0, 5, 851987, 0, 5, 851986, 0, 5, 851984, 0, 5, 851983, 0, 5, 851985, 0, 5, 720911, 0, 7)
+
+[node name="Label" type="Label" parent="MessageDebut"]
+offset_left = 434.0
+offset_top = 214.0
+offset_right = 1241.0
+offset_bottom = 240.0
+text = "« Disparition des élèves de l’École 
+Cégep Garneau : une piste avec les
+professeurs semble envisageable » "
+
+[node name="Label2" type="Label" parent="MessageDebut"]
+offset_left = 435.0
+offset_top = 303.0
+offset_right = 1405.0
+offset_bottom = 329.0
+text = "Personnage du joueur : J’ai toujours
+rêvé de résoudre des affaires; c’est
+peut-être un signe, il faut que je 
+mène mon enquête… "
+
+[node name="Button" type="Button" parent="MessageDebut"]
+offset_left = 553.0
+offset_top = 455.0
+offset_right = 593.0
+offset_bottom = 495.0
+icon = ExtResource("10_p6x0l")
 
 [connection signal="body_entered" from="CMversCG" to="." method="_on_c_mvers_cg_body_entered"]
 [connection signal="body_entered" from="CMversCG" to="CMversCG" method="_on_body_entered"]
@@ -138,3 +173,4 @@ text = "Travail/Restaurant
 [connection signal="pressed" from="MenuDeplacement/btnRetour" to="." method="_on_btn_retour_pressed"]
 [connection signal="pressed" from="MenuDeplacement/btnTravail" to="." method="_on_btn_travail_pressed"]
 [connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]
+[connection signal="pressed" from="MessageDebut/Button" to="." method="_on_button_pressed"]

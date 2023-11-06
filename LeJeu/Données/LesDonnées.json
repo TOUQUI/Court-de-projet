@@ -61,16 +61,21 @@
 		"nbJour": 0,
 		"argent": 100,
 		"temps": 0,
+		"emplacementSauvegarde": "res://Scene/SceneCorridorM.tscn", 
 		"emplacementJoueur": "QG",
-		"queteActuel": "mission4_bc",
-		"joueurPretBoss": true,
+		"x": -69,
+		"y": -69,
+		"queteActuel": "mission1_bc",
+		"joueurPretBoss": false,
 		"posteMcdo": 0,
 		"nbTempsTravail": 0,
 		"boisonConsome": 0,
 		"vie": 100,
 		"force": 0,
 		"intelligence": 0,
-		"niveauIntelligence": 8
+		"bossMort": false,
+		"niveauIntelligence": 10,
+		"dialogueDeMissionDejaAffiche": false
 	},
 	"mission1_bc": [
 		["Jose", "Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs."],
@@ -80,7 +85,7 @@
 		["Scène", "José soupire, semblant hésitant."],
 		["Jose", "Très bien, si tu veux tant le savoir, prouve-moi d'abord que tu es capable d'affronter l'adversité. Il y a un ennemi qui se dresse sur ton chemin et c'est moi. Bats-moi, et peut-être que je te dirai ce que tu veux savoir"]
 	],
-	"mission1_ac": [
+		"mission1_ac": [
 		["Jose", "Tu as réussi à me battre, étudiant. Tu es plus déterminé que je ne le pensais."],
 		["Joueur", "J'ai fait ce que vous m'avez demandé. Maintenant, parlez-moi de ce qui se passe."],
 		["Jose", "Très bien, tu as gagné le droit de savoir. Il y a des manuscrits renfermant un savoir ancien qui renferme des réponses et des pouvoirs interdits. C'est ce dont nous avons besoin pour comprendre la menace qui pèse sur notre école."],
@@ -136,6 +141,5 @@
 		["Joueur", "Que dois-je faire pour arranger cela ?!"],
 		["Scène", "Le dernier souffle de Philippe s'échappe, son regard devient vide, et il ne peut plus répondre."],
 		["Joueur", "Merde Philippe, réveille-toi."]
-		
 	]
 }

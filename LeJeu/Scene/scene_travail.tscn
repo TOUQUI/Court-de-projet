@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="1_mxwg3"]
 [ext_resource type="Script" path="res://Scene/Script/scene_travail.gd" id="1_vnfsi"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="2_on321"]
-[ext_resource type="Texture2D" uid="uid://0fcuqd0kiogh" path="res://image/arièrePlanResto.png" id="3_qg55q"]
+[ext_resource type="Texture2D" uid="uid://cakb8n8u360nq" path="res://image/ArièrePlanResto.png" id="3_c0qli"]
 [ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="5_rl564"]
 [ext_resource type="Texture2D" uid="uid://dbm2uxw8dkr7h" path="res://UI/image/JoyeuxRepas.png" id="6_u5ns2"]
 
@@ -13,13 +13,14 @@ script = ExtResource("1_vnfsi")
 [node name="Joueur" parent="." instance=ExtResource("1_mxwg3")]
 
 [node name="arriere_plan" type="Sprite2D" parent="."]
-position = Vector2(583.5, 331)
-scale = Vector2(1.23145, 0.722656)
-texture = ExtResource("3_qg55q")
+position = Vector2(565, 325)
+scale = Vector2(1.16016, 0.714844)
+texture = ExtResource("3_c0qli")
 
 [node name="Tuile_boite_de_texte" parent="." instance=ExtResource("2_on321")]
 modulate = Color(1, 1, 1, 0.85098)
 self_modulate = Color(1, 1, 0.988235, 1)
+position = Vector2(30, 0)
 scale = Vector2(4, 4)
 layer_0/tile_data = PackedInt32Array(131073, 0, 0, 196609, 0, 1, 262145, 0, 1, 327681, 0, 1, 393217, 0, 1, 458753, 0, 1, 131074, 65536, 0, 131075, 65536, 0, 131076, 65536, 0, 131077, 65536, 0, 131078, 65536, 0, 131079, 65536, 0, 131080, 65536, 0, 131081, 65536, 0, 131082, 65536, 0, 131083, 65536, 0, 131084, 65536, 0, 131085, 65536, 0, 131086, 65536, 0, 131087, 589824, 0, 196623, 589824, 1, 262159, 589824, 1, 327695, 589824, 1, 393231, 589824, 1, 458767, 589824, 1, 524289, 786432, 1, 524303, 65536, 13, 524302, 0, 13, 524301, 0, 13, 524300, 0, 13, 524299, 0, 13, 524298, 0, 13, 524297, 0, 13, 524296, 0, 13, 524295, 0, 13, 524294, 0, 13, 524293, 0, 13, 524292, 0, 13, 524291, 0, 13, 524290, 0, 13, 196610, 0, 12, 196611, 0, 12, 262147, 0, 12, 262148, 0, 12, 262149, 0, 12, 262150, 0, 12, 262151, 0, 12, 196614, 0, 12, 196613, 0, 12, 196612, 0, 12, 196615, 0, 12, 196616, 0, 12, 196617, 0, 12, 196618, 0, 12, 196619, 0, 12, 196620, 0, 12, 196621, 0, 12, 196622, 0, 12, 262158, 0, 12, 327694, 0, 12, 327693, 0, 12, 262157, 0, 12, 262156, 0, 12, 262155, 0, 12, 327690, 0, 12, 262154, 0, 12, 262153, 0, 12, 262152, 0, 12, 327691, 0, 12, 327692, 0, 12, 393229, 0, 12, 393230, 0, 12, 458766, 0, 12, 458765, 0, 12, 458764, 0, 12, 458763, 0, 12, 393227, 0, 12, 393228, 0, 12, 458762, 0, 12, 458761, 0, 12, 393226, 0, 12, 458760, 0, 12, 393224, 0, 12, 393225, 0, 12, 327689, 0, 12, 327688, 0, 12, 393223, 0, 12, 458759, 0, 12, 327687, 0, 12, 393222, 0, 12, 458758, 0, 12, 393221, 0, 12, 327685, 0, 12, 327686, 0, 12, 458757, 0, 12, 458756, 0, 12, 458755, 0, 12, 393220, 0, 12, 327684, 0, 12, 393219, 0, 12, 327683, 0, 12, 393218, 0, 12, 458754, 0, 12, 327682, 0, 12, 262146, 0, 12)
 

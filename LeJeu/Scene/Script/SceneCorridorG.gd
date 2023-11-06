@@ -4,6 +4,7 @@ var joueur_node
 var provenance 
 
 func _ready():
+	find_child("Joueur").emplacementActuel = "res://Scene/SceneCorridorG.tscn"
 	joueur_node = get_node("Joueur")
 	provenance = joueur_node.derniere_emplacement
 	if provenance == "QG":

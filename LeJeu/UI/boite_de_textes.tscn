@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c50yeq1k8yita"]
+[gd_scene load_steps=6 format=3 uid="uid://c50yeq1k8yita"]
 
 [ext_resource type="Script" path="res://UI/BoiteDeTextes.gd" id="1_ltq2l"]
 [ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="2_ee8h3"]
 [ext_resource type="Texture2D" uid="uid://bce50qi5o1p" path="res://UI/Keyboard Extras.png" id="3_0s0ad"]
+[ext_resource type="FontFile" uid="uid://dk537wexvu7ax" path="res://UI/SFPixelate.ttf" id="4_qpl2x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mt1h4"]
+font = ExtResource("4_qpl2x")
+font_size = 60
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="BoiteDeTextes" type="Node2D"]
 visible = false
@@ -34,3 +41,21 @@ texture = ExtResource("3_0s0ad")
 hframes = 4
 vframes = 8
 frame = 7
+
+[node name="MissionReussi" type="Node2D" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="MissionReussi"]
+offset_left = 317.0
+offset_top = 518.0
+offset_right = 875.0
+offset_bottom = 576.0
+text = "Mission réussie
+"
+label_settings = SubResource("LabelSettings_mt1h4")
+
+[node name="Timer" type="Timer" parent="MissionReussi"]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="MissionReussi/Timer" to="." method="_on_timer_timeout"]

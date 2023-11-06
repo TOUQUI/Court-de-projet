@@ -1,12 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://m5ndfybgxc2i"]
+[gd_scene load_steps=19 format=3 uid="uid://m5ndfybgxc2i"]
 
 [ext_resource type="PackedScene" uid="uid://c5qhi78bacaal" path="res://Carte/CarteScene/carte_4823.tscn" id="1_3o2ms"]
 [ext_resource type="Script" path="res://Scene/Script/scene_4823.gd" id="1_b67by"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_5hh1w"]
+[ext_resource type="PackedScene" uid="uid://pssn3cmtwxxo" path="res://Personne/enemie_trois.tscn" id="3_n7u30"]
 [ext_resource type="PackedScene" uid="uid://6b73uj6fs7ty" path="res://objets_intératif/bureau_de_classe.tscn" id="4_gtbyt"]
+[ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="6_4rvrs"]
+[ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="7_v2yb7"]
+[ext_resource type="Texture2D" uid="uid://ghodvn6lgtdd" path="res://UI/image/iconCerveau.png" id="8_d1bh2"]
+[ext_resource type="Texture2D" uid="uid://dcq5j6taqvth8" path="res://UI/sprite_0.png" id="9_7vmrw"]
+[ext_resource type="PackedScene" uid="uid://c50yeq1k8yita" path="res://UI/boite_de_textes.tscn" id="10_tvpl3"]
+[ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="11_7etw5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1hea"]
 size = Vector2(11, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqktc"]
+size = Vector2(31, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2u76"]
+size = Vector2(41, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_228fn"]
+size = Vector2(31.5, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n33vi"]
+size = Vector2(1, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjy7o"]
+size = Vector2(14, 113)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur5ao"]
+size = Vector2(41, 64.5)
 
 [node name="Scene4823" type="Node2D"]
 script = ExtResource("1_b67by")
@@ -14,6 +39,11 @@ script = ExtResource("1_b67by")
 [node name="Carte4823" parent="." instance=ExtResource("1_3o2ms")]
 position = Vector2(-83, 121)
 scale = Vector2(1.5, 1.5)
+
+[node name="enemie_trois" parent="." instance=ExtResource("3_n7u30")]
+visible = false
+position = Vector2(620, 142)
+scale = Vector2(4, 4)
 
 [node name="Joueur" parent="." instance=ExtResource("2_5hh1w")]
 position = Vector2(344, 204)
@@ -45,5 +75,126 @@ position = Vector2(645, 573)
 [node name="BureauDeClasse6" parent="GroupeBureaux" instance=ExtResource("4_gtbyt")]
 position = Vector2(453, 571)
 
+[node name="zoneNoua" type="Node2D" parent="."]
+visible = false
+
+[node name="Area2D" type="Area2D" parent="zoneNoua"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zoneNoua/Area2D"]
+position = Vector2(575.5, 166.5)
+shape = SubResource("RectangleShape2D_yqktc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="zoneNoua/Area2D"]
+position = Vector2(612.5, 196)
+shape = SubResource("RectangleShape2D_v2u76")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="zoneNoua/Area2D"]
+position = Vector2(651, 167)
+shape = SubResource("RectangleShape2D_228fn")
+
+[node name="F" type="Sprite2D" parent="zoneNoua"]
+visible = false
+texture_filter = 1
+position = Vector2(617, 72)
+scale = Vector2(2, 2)
+texture = ExtResource("6_4rvrs")
+hframes = 8
+vframes = 14
+frame = 21
+
+[node name="menuCombat" type="Node2D" parent="."]
+visible = false
+
+[node name="Tuile_boite_de_texte" parent="menuCombat" instance=ExtResource("7_v2yb7")]
+scale = Vector2(2, 2)
+layer_0/tile_data = PackedInt32Array(720909, 786433, 22, 786445, 786433, 23, 720910, 851969, 22, 786446, 851969, 23, 720911, 917505, 22, 786447, 917505, 23, 720912, 983041, 22, 786448, 983041, 23, 720913, 1048577, 22, 786449, 1048577, 23, 720914, 1114113, 22, 786450, 1114113, 23, 720915, 589825, 22, 786451, 589825, 23, 720916, 655361, 22, 786452, 655361, 23, 720917, 720897, 22, 786453, 720897, 23, 655375, 327681, 22, 655376, 393217, 22, 655377, 458753, 22, 655378, 524289, 22, 655379, 589825, 22, 655380, 655361, 22, 589839, 327681, 22, 589840, 393217, 22, 589841, 458753, 22, 589842, 524289, 22, 589843, 589825, 22, 589844, 655361, 22, 655374, 327681, 22, 589838, 327681, 22, 524302, 327681, 22, 524303, 327681, 22, 524304, 393217, 22, 524305, 458753, 22, 524306, 524289, 22, 524307, 589825, 22, 458766, 327681, 22, 458767, 327681, 22, 458768, 393217, 22, 458769, 458753, 22, 458770, 524289, 22, 458771, 589825, 22, 393230, 327681, 22, 393231, 327681, 22, 393232, 393217, 22, 393233, 458753, 22, 393234, 524289, 22, 393235, 589825, 22, 327694, 65537, 27, 327695, 131073, 27, 327696, 196609, 27, 327697, 262145, 27, 327698, 524289, 22, 327699, 589825, 22, 524308, 655361, 22, 458772, 655361, 22, 393236, 655361, 22, 327700, 655361, 22, 262157, 1, 26, 327693, 1, 27, 262158, 65537, 26, 262159, 131073, 26, 262160, 196609, 26, 262161, 262145, 26, 655373, 1, 27, 589837, 1, 27, 524301, 1, 27, 458765, 1, 27, 393229, 1, 27, 262162, 131073, 26, 262163, 131073, 26, 262164, 131073, 26, 262165, 1769473, 24, 327701, 1769473, 25, 393237, 1769473, 25, 458773, 1769473, 25, 524309, 1769473, 25, 589845, 1769473, 25, 655381, 1769473, 25)
+
+[node name="Label" type="Label" parent="menuCombat"]
+offset_left = 521.0
+offset_top = 144.0
+offset_right = 612.0
+offset_bottom = 170.0
+text = "Boss : Noua
+"
+
+[node name="Label2" type="Label" parent="menuCombat"]
+offset_left = 530.0
+offset_top = 160.0
+offset_right = 605.0
+offset_bottom = 186.0
+text = "Prérequis
+"
+
+[node name="IconCerveau" type="Sprite2D" parent="menuCombat"]
+texture_filter = 1
+position = Vector2(470, 218)
+texture = ExtResource("8_d1bh2")
+
+[node name="Horloge" type="Sprite2D" parent="menuCombat"]
+position = Vector2(469, 273)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_7vmrw")
+
+[node name="TextEdit" type="TextEdit" parent="menuCombat"]
+offset_left = 516.0
+offset_top = 201.0
+offset_right = 617.0
+offset_bottom = 236.0
+text = "Niveau 3+"
+editable = false
+
+[node name="TextEdit2" type="TextEdit" parent="menuCombat"]
+offset_left = 514.0
+offset_top = 259.0
+offset_right = 618.0
+offset_bottom = 295.0
+text = "Temps à 0"
+editable = false
+
+[node name="btnCombattre" type="Button" parent="menuCombat"]
+offset_left = 457.0
+offset_top = 343.0
+offset_right = 549.0
+offset_bottom = 374.0
+disabled = true
+text = "Combattre
+"
+
+[node name="btnRetour" type="Button" parent="menuCombat"]
+offset_left = 603.0
+offset_top = 343.0
+offset_right = 664.0
+offset_bottom = 374.0
+text = "Retour
+"
+
+[node name="BoiteDeTextes" parent="." instance=ExtResource("10_tvpl3")]
+
+[node name="MenuPause" parent="." instance=ExtResource("11_7etw5")]
+
+[node name="BlockagePorte" type="StaticBody2D" parent="."]
+visible = false
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockagePorte"]
+position = Vector2(325.5, 243)
+shape = SubResource("RectangleShape2D_n33vi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BlockagePorte"]
+position = Vector2(369, 248.5)
+shape = SubResource("RectangleShape2D_xjy7o")
+
+[node name="BossCollision" type="StaticBody2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BossCollision"]
+position = Vector2(613, 154.25)
+shape = SubResource("RectangleShape2D_ur5ao")
+
 [connection signal="joueurÉtudieEnClasse" from="." to="Joueur" method="_on_scene_4823_joueurétudie_en_classe"]
 [connection signal="body_entered" from="Sortie" to="." method="_on_sortie_body_entered"]
+[connection signal="body_entered" from="zoneNoua/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="zoneNoua/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="menuCombat/btnCombattre" to="." method="_on_btn_combattre_pressed"]
+[connection signal="pressed" from="menuCombat/btnRetour" to="." method="_on_btn_retour_pressed"]
+[connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]
