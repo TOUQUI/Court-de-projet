@@ -99,6 +99,7 @@ func _input(event):
 			elif queteActuel == "mission3_bc":
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel = "mission3_ac"
 			elif queteActuel == "mission4_bc":
+				SingletonsDonnees.dictionaireDesDonnees["Mission"]["q4"].Etat = "Fini"
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel = "mission4_ac"
 				actionJoueur = sceneCombat.find_child("Boite")
 				actionJoueur.visible = true
@@ -107,17 +108,23 @@ func _input(event):
 			elif queteActuel == "mission1_ac":
 				self.visible = true
 				MissionRéussie()
+				SingletonsDonnees.dictionaireDesDonnees["Mission"]["q1"].Etat = "Fini"
+				SingletonsDonnees.dictionaireDesDonnees["Mission"]["q2"].Etat = "Actuel"
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel = "mission2_bc"
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].joueurPretBoss = true
 			elif queteActuel == "mission2_ac":
 				self.visible = true
 				MissionRéussie()
+				SingletonsDonnees.dictionaireDesDonnees["Mission"]["q2"].Etat = "Fini"
+				SingletonsDonnees.dictionaireDesDonnees["Mission"]["q3"].Etat = "Actuel"
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel = "mission3_bc"
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].joueurPretBoss = true
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = false
 			elif queteActuel == "mission3_ac":
 				self.visible = true
 				MissionRéussie()
+				SingletonsDonnees.dictionaireDesDonnees["Mission"]["q3"].Etat = "Fini"
+				SingletonsDonnees.dictionaireDesDonnees["Mission"]["q4"].Etat = "Actuel"
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel = "mission4_bc"
 				SingletonsDonnees.dictionaireDesDonnees["DataSession"].joueurPretBoss = true
 			if murNode != null:

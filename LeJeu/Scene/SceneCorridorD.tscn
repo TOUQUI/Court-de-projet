@@ -126,7 +126,7 @@ libraries = {
 [node name="F" type="Sprite2D" parent="Porte4823"]
 visible = false
 texture_filter = 1
-position = Vector2(-318, -388)
+position = Vector2(-378, -334)
 scale = Vector2(2, 2)
 texture = ExtResource("6_x8x2n")
 hframes = 8

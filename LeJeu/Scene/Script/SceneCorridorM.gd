@@ -70,3 +70,7 @@ func _on_btn_travail_pressed():
 
 func _on_button_pressed():
 	$MessageDebut.visible =false
+
+
+func _on_btn_oxymel_pressed():
+	get_tree().change_scene_to_file("res://Scene/scene_caféoxymel.tscn")

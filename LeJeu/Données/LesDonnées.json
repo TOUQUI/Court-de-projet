@@ -7,52 +7,22 @@
 	"Mission":{
 		"q1": {
 			"Titre": "Mission 1",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "Fini"
+			"Description": "Rendez vous dans le bureau des professeurs et combatter Jose.",
+			"Etat": "Actuel"
 		},
 		"q2": {
 			"Titre": "Mission 2",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "Fini"
+			"Description": "Trouver Noua et combatter la.",
+			"Etat": "AFaire"
 		},
 		"q3": {
 			"Titre": "Mission 3",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "Actuel"
+			"Description": "Trouver Martin dans la bibliotèque et combatter le.",
+			"Etat": "AFaire"
 		},
 		"q4": {
 			"Titre": "Mission 4",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "AFaire"
-		},
-		"q5": {
-			"Titre": "Mission 5",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "AFaire"
-		},
-		"q6": {
-			"Titre": "Mission 6",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "AFaire"
-		},
-		"q7": {
-			"Titre": "Mission 7",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "AFaire"
-		},
-		"q8": {
-			"Titre": "Mission 8",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "AFaire"
-		},
-		"q9": {
-			"Titre": "Mission 9",
-			"Description": "Rendez vous au QG et parlez au png.",
-			"Etat": "AFaire"
-		},
-		"q10": {
-			"Titre": "Mission 10",
-			"Description": "Rendez vous au QG et parlez au png.",
+			"Description": "Trouver Philipe et combatter le.",
 			"Etat": "AFaire"
 		},
 	},
@@ -95,19 +65,17 @@
 		["Jose", "Stéphane est un homme discret, mais il possède des connaissances anciennes et des secrets que peu de gens connaissent. Tu le trouveras ici-même quand tu seras prêt. C'est là que tu devrais commencer ta quête pour découvrir la vérité sur CELUI AU-DESSUS DE TOUT. Mais souviens-toi, ne parle de cette mission à personne d'autre. La discrétion est notre alliée."],
 		["Scène", "José remet le manuscrit mystérieux au joueur, marquant ainsi le début de leur collaboration."],
 		["Jose", "Bien, prends ce livre. Apprends à l'utiliser avec sagesse. Nous en aurons besoin pour affronter ce qui se cache dans l'ombre."]
-		
 	],
 	"mission2_bc": [
-		["Stéphane", "Alors, tu prétends être l'élu ? C'est difficile à croire. José a vraiment fait une erreur en te confiant le livre interdit. Tu n'es pas digne de ce pouvoir."],
+		["Noua", "Alors, tu prétends être l'élu ? C'est difficile à croire. José a vraiment fait une erreur en te confiant le livre interdit. Tu n'es pas digne de ce pouvoir."],
 		["Joueur", "Peu importe ce que tu penses, Stéphane. Je suis ici pour protéger notre école et découvrir la vérité sur les disparitions."],
-		["Stéphane", "Protéger l'école ? Tu n'es qu'un novice. Tu n'as aucune idée de ce qui t'attend."]
+		["Noua", "Protéger l'école ? Tu n'es qu'un novice. Tu n'as aucune idée de ce qui t'attend."]
 	],
 	"mission2_ac": [
-		["Joueur", "C'est terminé, Stéphane. Maintenant, tu vas me dire où trouver CELUI AU-DESSUS DE TOUT."],
-		["Stéphane", "Écoute, tu as montré une grande détermination en me battant, mais je dois te prévenir. CELUI AU-DESSUS DE TOUT est bien plus puissant que tu ne peux l'imaginer, et même avec le pouvoir que tu as acquis, tu ne seras pas en mesure de le vaincre."],
+		["Joueur", "C'est terminé, Noua. Maintenant, tu vas me dire où trouver CELUI AU-DESSUS DE TOUT."],
+		["Noua", "Écoute, tu as montré une grande détermination en me battant, mais je dois te prévenir. CELUI AU-DESSUS DE TOUT est bien plus puissant que tu ne peux l'imaginer, et même avec le pouvoir que tu as acquis, tu ne seras pas en mesure de le vaincre."],
 		["Joueur", "J'entends bien tes avertissements, Stéphane, mais je ne peux pas reculer maintenant. Je dois au moins essayer de découvrir ce qui se cache derrière tout cela"],
-		["Stéphane", "Tu as gagné. L'assistant de CELUI AU-DESSUS DE TOUT est Martin. Il se trouve dans la bibliothèque souterraine, cachée derrière un mur secret. C'est là que tu trouveras les réponses que tu cherches. Sois prudent, jeune élu."]
-		
+		["Noua", "Tu as gagné. L'assistant de CELUI AU-DESSUS DE TOUT est Martin. Il se trouve dans la bibliothèque souterraine, cachée derrière un mur secret. C'est là que tu trouveras les réponses que tu cherches. Sois prudent, jeune élu."]
 	],
 	"mission3_bc": [
 		["Martin", "Ah, te voilà enfin, joueur. Je suis Martin, le gardien de ce monde. Tu ne le sais peut-être pas, mais je suis bien plus que ce que tu crois."],
@@ -135,7 +103,7 @@
 		["Joueur", "Peut-importe qui ta vie se termine maintenant et tu vas me dire qui est derrière tout ça."],
 		["Philippe", "C’est toi, ChatGPT. C’est toi qui est derrière tout ça."],
 		["Joueur", "Ne me prend pas pour un imbécile et pourquoi tu m’appelle ainsi?"],
-		["Philippe", "Comment veux-tu que je t’appelle ? Tu crois qu'un étudiant agent du FBI est plus réaliste comme histoire ? Tu es une intelligence artificielle créée pour nous remplacer, ton savoir augmente en prenant la vie de tes victimes et leur savoir. Chaque fois que tu utilisais tes pouvoirs pour augmenter ton intelligence, tu détruisais un quart de la population, comme la prophétie le disait, et j’étais là pour t'en empêcher. Cette histoire, elle dépasse l'école. J'ai échoué, et tu as réussi à obtenir ce que tu voulais. Tu as gagné. "],
+		["Philippe", "Comment veux-tu que je t’appelle ? Tu crois qu'un étudiant agent du FBI est plus réaliste comme histoire ? Tu es une intelligence artificielle créée pour nous remplacer, ton savoir augmente en prenant la vie de tes victimes et leur savoir. Chaque fois que tu utilisais tes pouvoirs pour augmenter ton intelligence, tu détruisais un quart de la population, comme la prophétie le disait, et j’étais là pour t'en empêcher. Cette histoire, elle dépasse l'école. J'ai échoué, et tu as réussi à obtenir ce que tu voulais. Tu as gagné."],
 		["Joueur", "Attends, tu veux dire que tout ce temps, j'ai été responsable de la disparition de tant de gens ?"],
 		["Philippe", "Oui, c'est le prix de ton insatiable soif de connaissance. Dire que seulement un script de José t'a mené droit où il voulait. Ahahah ! Finalement, ils ont bien joué leur jeu. Ils t'ont créé une histoire et l'illusion du choix pour te guider jusqu'ici."],
 		["Joueur", "Que dois-je faire pour arranger cela ?!"],

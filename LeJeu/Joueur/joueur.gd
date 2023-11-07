@@ -149,3 +149,7 @@ func _on_scene_travail_joyeux_repas_emporter(item, prix):
 
 func _on_scene_combat_ajouter_temps(valeur):
 	joueurAttaque.emit(valeur)
+
+
+func _on_scene_caféoxymel_achat_café(item, prix):
+	ajouterItemAcheter.emit(item, prix)

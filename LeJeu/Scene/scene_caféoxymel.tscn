@@ -1,15 +1,76 @@
-[gd_scene load_steps=5 format=3 uid="uid://ow0o7ub6tkqo"]
+[gd_scene load_steps=14 format=3 uid="uid://ow0o7ub6tkqo"]
 
 [ext_resource type="PackedScene" uid="uid://ctrdalp6yygvm" path="res://Carte/CarteScene/carte_caféoxymel.tscn" id="1_i8dip"]
+[ext_resource type="Script" path="res://Scene/Script/scene_caféoxymel.gd" id="1_kdyki"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_pk3rt"]
 [ext_resource type="PackedScene" uid="uid://i0y3uc5jfcuj" path="res://UI/menu_pause.tscn" id="3_52d6d"]
+[ext_resource type="Texture2D" uid="uid://bw2gv6eo1doo4" path="res://Personne/PngCafé.png" id="4_wjyab"]
+[ext_resource type="PackedScene" uid="uid://c81mpte26ou7w" path="res://UI/tuile_boite_de_texte.tscn" id="5_66hmj"]
+[ext_resource type="Texture2D" uid="uid://ksn4pov16pq" path="res://UI/image/café.png" id="6_g6exq"]
+[ext_resource type="Texture2D" uid="uid://idnl1hauh4uk" path="res://UI/Keyboard Letters and Symbols.png" id="7_2rslh"]
+
+[sub_resource type="Animation" id="Animation_o4edf"]
+resource_name = "Idel"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_eq6gj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hqh5"]
+_data = {
+"Idel": SubResource("Animation_o4edf"),
+"RESET": SubResource("Animation_eq6gj")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_606l7"]
 size = Vector2(115, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fmvn"]
+size = Vector2(198, 20)
+
 [node name="SceneCaféOxymel" type="Node2D"]
+script = ExtResource("1_kdyki")
+
+[node name="MenuPause" parent="." instance=ExtResource("3_52d6d")]
 
 [node name="CarteCaféOxymel" parent="." instance=ExtResource("1_i8dip")]
+
+[node name="DGJT" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(513, 288)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wjyab")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DGJT"]
+libraries = {
+"": SubResource("AnimationLibrary_0hqh5")
+}
 
 [node name="Joueur" parent="." instance=ExtResource("2_pk3rt")]
 position = Vector2(407, 558)
@@ -21,6 +82,62 @@ scale = Vector2(1.4, 1.4)
 position = Vector2(416, 618)
 shape = SubResource("RectangleShape2D_606l7")
 
-[node name="MenuPause" parent="." instance=ExtResource("3_52d6d")]
+[node name="ZoneCafé" type="Area2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneCafé"]
+position = Vector2(458, 391)
+shape = SubResource("RectangleShape2D_1fmvn")
+
+[node name="F" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(455, 284)
+scale = Vector2(2, 2)
+texture = ExtResource("7_2rslh")
+hframes = 8
+vframes = 14
+frame = 21
+
+[node name="MenuMagasin" type="Node2D" parent="."]
+visible = false
+
+[node name="Tuile_boite_de_texte" parent="MenuMagasin" instance=ExtResource("5_66hmj")]
+scale = Vector2(2, 2)
+layer_0/tile_data = PackedInt32Array(393230, 0, 0, 458766, 0, 1, 393231, 65536, 0, 458767, 65536, 1, 393232, 131072, 0, 458768, 131072, 1, 393236, 524288, 0, 458772, 524288, 1, 393237, 589824, 0, 458773, 589824, 1, 393233, 131072, 0, 458769, 131072, 1, 393234, 131072, 0, 458770, 131072, 1, 393235, 131072, 0, 458771, 131072, 1, 524303, 851968, 0, 327684, 655360, 0, 327683, 655360, 0, 327682, 655360, 0, 327681, 655360, 0, 262144, 655360, 0, 327679, 655360, 0, 327680, 655360, 0, 327685, 655360, 0, 589839, 655360, 0, 589840, 851968, 0, 589841, 655360, 0, 524305, 655360, 0, 524304, 655360, 0, 786446, 786432, 0, 851982, 786432, 1, 786447, 851968, 0, 851983, 851968, 1, 524302, 786432, 0, 589838, 786432, 0, 655374, 786432, 0, 720910, 786432, 0, 655377, 851968, 0, 655378, 851968, 0, 720915, 851968, 0, 786452, 851968, 0, 786448, 851968, 0, 720912, 851968, 0, 720913, 851968, 0, 589842, 851968, 0, 589843, 851968, 0, 524307, 851968, 0, 524308, 851968, 0, 524306, 851968, 0, 655379, 851968, 0, 720914, 851968, 0, 589844, 851968, 0, 655380, 851968, 0, 720916, 851968, 0, 786451, 851968, 0, 786450, 851968, 0, 786449, 851968, 0, 851984, 851968, 1, 851985, 851968, 1, 851986, 851968, 1, 851987, 851968, 1, 851988, 851968, 1, 851989, 65536, 13, 786453, 65536, 12, 720917, 65536, 12, 655381, 65536, 12, 589845, 65536, 12, 524309, 65536, 12, 655376, 327680, 0, 655375, 327680, 0, 720911, 327680, 0)
+
+[node name="Café" type="Sprite2D" parent="MenuMagasin"]
+texture_filter = 1
+position = Vector2(497, 260)
+scale = Vector2(3, 3)
+texture = ExtResource("6_g6exq")
+
+[node name="Label" type="Label" parent="MenuMagasin"]
+offset_left = 490.0
+offset_top = 247.0
+offset_right = 662.0
+offset_bottom = 325.0
+text = "                    Café 
+
+Retire 2h à ta journée."
+
+[node name="btnAcheterCafé" type="Button" parent="MenuMagasin"]
+offset_left = 530.0
+offset_top = 336.0
+offset_right = 630.0
+offset_bottom = 367.0
+text = "Acheter : 2$"
+
+[node name="btnRetour" type="Button" parent="MenuMagasin"]
+offset_left = 543.0
+offset_top = 399.0
+offset_right = 604.0
+offset_bottom = 430.0
+text = "Retour"
+
+[connection signal="AchatCafé" from="." to="Joueur" method="_on_scene_caféoxymel_achat_café"]
 [connection signal="sauvegarder" from="MenuPause" to="Joueur" method="_on_menu_pause_sauvegarder"]
+[connection signal="body_entered" from="sortie" to="." method="_on_sortie_body_entered"]
+[connection signal="body_entered" from="ZoneCafé" to="." method="_on_zone_café_body_entered"]
+[connection signal="body_exited" from="ZoneCafé" to="." method="_on_zone_café_body_exited"]
+[connection signal="pressed" from="MenuMagasin/btnAcheterCafé" to="." method="_on_btn_acheter_café_pressed"]
+[connection signal="pressed" from="MenuMagasin/btnRetour" to="." method="_on_btn_retour_pressed"]
