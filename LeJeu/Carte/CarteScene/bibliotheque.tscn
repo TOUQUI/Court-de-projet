@@ -24,9 +24,12 @@ size = Vector2(28, 189)
 size = Vector2(12, 105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_elffl"]
-size = Vector2(32, 38)
+size = Vector2(32, 64.3333)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-4, 24)
+scale = Vector2(1.5, 1.5)
+metadata/_edit_group_ = true
 
 [node name="plancherMur" parent="." instance=ExtResource("1_aoarp")]
 layer_0/tile_data = PackedInt32Array(7, 655367, 3, 65543, 655367, 4, 8, 720903, 3, 65544, 720903, 4, 9, 655367, 3, 65545, 655367, 4, 10, 720903, 3, 65546, 720903, 4, 11, 655367, 3, 65547, 655367, 4, 12, 720903, 3, 65548, 720903, 4, 13, 655367, 3, 65549, 655367, 4, 14, 720903, 3, 65550, 720903, 4, 327695, 655367, 3, 393231, 655367, 4, 327696, 720903, 3, 393232, 720903, 4, 327697, 655367, 3, 393233, 655367, 4, 327698, 720903, 3, 393234, 720903, 4, 131086, 131076, 1, 196622, 131076, 1, 262158, 131076, 1, 327694, 131076, 1, 393230, 131076, 1, 393229, 131076, 1, 327693, 131076, 1, 262157, 131076, 1, 196621, 131076, 1, 131085, 131076, 1, 131084, 131076, 1, 196620, 131076, 1, 262156, 131076, 1, 327692, 131076, 1, 393228, 131076, 1, 131083, 131076, 1, 196619, 131076, 1, 262155, 131076, 1, 327691, 131076, 1, 393227, 131076, 1, 393226, 131076, 1, 327690, 131076, 1, 262154, 131076, 1, 196618, 131076, 1, 131082, 131076, 1, 131081, 131076, 1, 196617, 131076, 1, 262153, 131076, 1, 327689, 131076, 1, 393225, 131076, 1, 393224, 131076, 1, 327688, 131076, 1, 262152, 131076, 1, 196616, 131076, 1, 131080, 131076, 1, 131079, 131076, 1, 196615, 131076, 1, 262151, 131076, 1, 327687, 131076, 1, 393223, 131076, 1, 262150, 131076, 1, 458759, 131076, 1, 458760, 131076, 1, 458761, 131076, 1, 458762, 131076, 1, 458763, 131076, 1, 458764, 131076, 1, 458765, 131076, 1, 458766, 131076, 1, 458767, 131076, 1, 458768, 131076, 1, 458769, 131076, 1, 458770, 131076, 1, 458771, 655367, 4, 524307, 131076, 1, 524306, 131076, 1, 524305, 131076, 1, 524304, 131076, 1, 524303, 131076, 1, 524302, 131076, 1, 524301, 131076, 1, 524300, 131076, 1, 524299, 131076, 1, 524298, 131076, 1, 524297, 131076, 1, 524296, 131076, 1, 524295, 131076, 1, 655367, 131076, 1, 589831, 131076, 1, 589832, 131076, 1, 589833, 131076, 1, 589834, 131076, 1, 589835, 131076, 1, 589836, 131076, 1, 589837, 131076, 1, 589838, 131076, 1, 589839, 131076, 1, 589840, 131076, 1, 589841, 131076, 1, 589842, 131076, 1, 589843, 131076, 1, 720914, 131076, 1, 720913, 131076, 1, 720912, 131076, 1, 720911, 131076, 1, 720910, 131076, 1, 720909, 131076, 1, 720908, 131076, 1, 720907, 131076, 1, 720906, 131076, 1, 720905, 131076, 1, 720904, 131076, 1, 720903, 131076, 1, 655368, 131076, 1, 655369, 131076, 1, 655370, 131076, 1, 655371, 131076, 1, 655372, 131076, 1, 655373, 131076, 1, 655374, 131076, 1, 655375, 131076, 1, 655376, 131076, 1, 655377, 131076, 1, 655378, 131076, 1, 655379, 131076, 1, 393235, 655367, 3, 131078, 720903, 3, 196614, 720903, 4)
@@ -43,53 +46,38 @@ layer_0/tile_data = PackedInt32Array(65543, 131072, 2, 131079, 131072, 3, 65544,
 [node name="decoration" parent="." instance=ExtResource("1_aoarp")]
 layer_0/tile_data = PackedInt32Array(9, 1, 2, 10, 1, 6, 327697, 1, 6, 327696, 524290, 10)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(352, 58)
 rotation = -3.14159
 scale = Vector2(78.1222, -7.52288)
 shape = SubResource("RectangleShape2D_dtauy")
 
-[node name="Area2D2" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(354, 252.5)
 shape = SubResource("RectangleShape2D_1x53f")
 
-[node name="Area2D3" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(414, 372.5)
 shape = SubResource("RectangleShape2D_y642j")
 
-[node name="Area2D4" type="Area2D" parent="."]
-position = Vector2(414, 372.5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2(131.5, -123.5)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(545.5, 249)
 shape = SubResource("RectangleShape2D_mjm4q")
 
-[node name="Area2D5" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(625.5, 303.5)
 shape = SubResource("RectangleShape2D_y2dtr")
 
-[node name="Area2D6" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(233, 256.5)
 shape = SubResource("RectangleShape2D_kh0yp")
 
-[node name="Area2D7" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(483, 139.5)
 shape = SubResource("RectangleShape2D_2xmnr")
 
-[node name="Area2D8" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
-position = Vector2(206, 80)
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(206, 93.1667)
 shape = SubResource("RectangleShape2D_elffl")

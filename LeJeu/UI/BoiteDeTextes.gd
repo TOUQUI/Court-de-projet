@@ -39,7 +39,7 @@ func Charger():
 		elif queteActuel == "mission2_ac" && SingletonsDonnees.dictionaireDesDonnees["DataSession"].bossMort == true:
 			peuxEtreAffiche = true
 			SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = true
-		elif (queteActuel == "mission3_bc" || queteActuel == "mission3_ac") && (joueurProvenance == "4923" || joueurProvenance == "Blibli"):
+		elif (queteActuel == "mission3_bc" || queteActuel == "mission3_ac") && (joueurProvenance == "Bibli" || "D"):
 			peuxEtreAffiche = true
 			SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = true
 		elif (queteActuel == "mission4_bc" || queteActuel == "mission4_ac") && joueurProvenance == "Cafetreria":
@@ -62,7 +62,7 @@ func Charger():
 	if peuxEtreAffiche == true:
 		parent = self.find_parent("SceneBureauProf")
 		if parent == null:
-			parent = self.find_parent("SceneCorridorD")
+			parent = self.find_parent("SceneBibliotheque")
 			if parent == null:
 				parent = self.find_parent("Scene4823")
 		if parent != null:

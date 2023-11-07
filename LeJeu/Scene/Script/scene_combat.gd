@@ -182,7 +182,7 @@ func _on_timer_avant_changement_scene_timeout():
 		get_tree().change_scene_to_file("res://Scene/scene_4823.tscn")
 	elif nomBoss == get_node("Ennemie/EnnemieUn/image/AnimationPlayer"):
 		joueur.derniere_emplacement = "Blibli"
-		get_tree().change_scene_to_file("res://Scene/SceneCorridorD.tscn")
+		get_tree().change_scene_to_file("res://Scene/scene_bibliotheque.tscn")
 
 
 func _on_timer_avant_retour_menue_timeout():
