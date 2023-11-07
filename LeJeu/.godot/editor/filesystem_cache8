@@ -1,15 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699370522
+::res://::1699386562
 CGversCM.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::280129450150855157::1697310930::1697310930::1::::<><>::
 up_idle_1.png::CompressedTexture2D::6294229727248106446::1697310930::1697310930::1::::<><>::
 ::res://Carte/::1697726540
 Porte_bleu.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 Porte_bleu.tscn::PackedScene::9031570923265785777::1697726540::0::1::::<><>::res://Carte/Porte_bleu.gd<>uid://b3cad43imn7o1
-::res://Carte/CarteScene/::1699370453
+::res://Carte/CarteScene/::1699386515
 bibliotheque.tscn::PackedScene::2736310807159671702::1699368024::0::1::::<><>::uid://bsltifq07i8ur
 carte_4823.tscn::PackedScene::6911977757663998843::1697310929::0::1::::<><>::uid://bsltifq07i8ur
-carte_caféoxymel.tscn::PackedScene::6141706571676571982::1699370453::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://cg75x4jsgkmda::::res://Carte/CarteScene/tuile_maison.tscn
+carte_caféoxymel.tscn::PackedScene::6141706571676571982::1699386515::0::1::::<><>::uid://bsltifq07i8ur::::res://Carte/CarteScene/tuile_ecole.tscn<>uid://cg75x4jsgkmda::::res://Carte/CarteScene/tuile_maison.tscn
 MapBureau_prof.tscn::PackedScene::5069204627473575547::1697310929::0::1::::<><>::uid://bsltifq07i8ur
 MapCaféteria.tscn::PackedScene::4161442991018394577::1699038945::0::1::::<><>::uid://bsltifq07i8ur
 MapChambre.tscn::PackedScene::3666388956887543619::1697310929::0::1::::<><>::uid://cg75x4jsgkmda
@@ -55,9 +55,9 @@ ArièrePlanResto.png::CompressedTexture2D::4793605527847899174::1699018797::1699
 ascenseur.png::CompressedTexture2D::8663807980942111383::1697310930::1697310930::1::::<><>::
 pocadeau_white_computeur_front_view_in_a_dark_room_with_red_cab_a52e69c9-fc39-433a-8466-72ca625ab17b.jpg::CompressedTexture2D::7013643049786728350::1699020533::1699020535::1::::<><>::
 sortiePanneau.png::CompressedTexture2D::88287419604377592::1697310930::1697310930::1::::<><>::
-::res://Joueur/::1699370453
+::res://Joueur/::1699386515
 joueur.gd::GDScript::-1::1699368918::0::1::::<>CharacterBody2D<>::
-joueur.tscn::PackedScene::1354765783137222250::1699370453::0::1::::<><>::res://Joueur/joueur.gd<>uid://n1nq7l1p7jr6::::res://Joueur/up_idle_1.png<>uid://dc0je05dehtwa::::res://UI/joueur_interface.tscn
+joueur.tscn::PackedScene::1354765783137222250::1699386515::0::1::::<><>::res://Joueur/joueur.gd<>uid://n1nq7l1p7jr6::::res://Joueur/up_idle_1.png<>uid://dc0je05dehtwa::::res://UI/joueur_interface.tscn
 up_idle_1.png::CompressedTexture2D::966948381451105525::1697310930::1697310930::1::::<><>::
 ::res://objets_intératif/::1697310930
 bureau_de_classe.gd::GDScript::-1::1697310930::0::1::::<>Node2D<>::
@@ -85,26 +85,26 @@ Dark hand attack-Sheet.png::CompressedTexture2D::7674404912568857476::1698937604
 FireHammerRedV1.png::CompressedTexture2D::5988326919193526921::1698936738::1698936745::1::::<><>::
 ice knife-Sheet.png::CompressedTexture2D::674234200740287080::1698939679::1698939680::1::::<><>::
 meteor shower-blue.png::CompressedTexture2D::7614802923804836967::1698940240::1698940240::1::::<><>::
-::res://Scene/::1699370453
+::res://Scene/::1699386515
 c_gvers_cm.tscn::PackedScene::3252530636575976961::1697310930::0::1::::<><>::res://CGversCM.gd
 menu_principale.tscn::PackedScene::7361555967415130304::1699201358::0::1::::<><>::res://Scene/Script/MenuPrincipale.gd<>uid://tki2apulyx4e
 node_SceneQG.tscn::PackedScene::2725096438691041776::1699360796::0::1::::<><>::uid://c0f5a110cjy4l
 sceneBureauProf.tscn::PackedScene::7685716623926150511::1699201357::0::1::::<><>::res://Scene/Script/sceneBureauProf.gd<>uid://cehtca5kf7xeh
 SceneCaféteria.tscn::PackedScene::4343158649835255544::1699360797::0::1::::<><>::res://Scene/Script/SceneCaféteria.gd<>uid://b0j3mf6qxgahd
 SceneCorridorD.gd::GDScript::-1::1699047288::0::1::::<>StaticBody2D<>::
-SceneCorridorD.tscn::PackedScene::5703798399180671878::1699370453::0::1::::<><>::res://Scene/Script/SceneCorridorD.gd<>uid://cd46q6imydlml::::res://Carte/CarteScene/MapCorridorDroit.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png
+SceneCorridorD.tscn::PackedScene::5703798399180671878::1699386515::0::1::::<><>::res://Scene/Script/SceneCorridorD.gd<>uid://cd46q6imydlml::::res://Carte/CarteScene/MapCorridorDroit.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn<>uid://b3cad43imn7o1::::res://Carte/Modern+ Study Time (32x32)/doors_school.png<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png
 SceneCorridorG.tscn::PackedScene::5966193437824573725::1699201358::0::1::::<><>::uid://cbxdr0j5c4kp4
 SceneCorridorM.tscn::PackedScene::2814621361341071636::1699360796::0::1::::<><>::res://Scene/Script/SceneCorridorM.gd<>uid://c41qifx44ab2g
 SceneMaison.tscn::PackedScene::1195034059009649916::1699201358::0::1::::<><>::res://Scene/Script/scene_maison.gd<>uid://bsia5jmnqj48f
 SceneQG.gd::GDScript::-1::1697310930::0::1::::<>StaticBody2D<>::
 SceneQG.tscn::PackedScene::6539707263801263821::1699034748::0::1::::<><>::uid://b4mhspjuk24a1
-scene_4823.tscn::PackedScene::904992434312277982::1699360796::0::1::::<><>::uid://c5qhi78bacaal
-scene_bibliotheque.gd::GDScript::-1::1699370362::0::1::::<>Node2D<>::
-scene_bibliotheque.tscn::PackedScene::6726634651768607867::1699370453::0::1::::<><>::res://Scene/scene_bibliotheque.gd<>uid://be8qvy6ws6i0m::::res://Carte/CarteScene/bibliotheque.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://blychabk2ucx7::::res://Personne/ennemie_un.tscn<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png<>uid://ghodvn6lgtdd::::res://UI/image/iconCerveau.png<>uid://dcq5j6taqvth8::::res://UI/sprite_0.png<>uid://c50yeq1k8yita::::res://UI/boite_de_textes.tscn
+scene_4823.tscn::PackedScene::904992434312277982::1699386515::0::1::::<><>::uid://c5qhi78bacaal::::res://Carte/CarteScene/carte_4823.tscn<>res://Scene/Script/scene_4823.gd<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://pssn3cmtwxxo::::res://Personne/enemie_trois.tscn<>uid://6b73uj6fs7ty::::res://objets_intératif/bureau_de_classe.tscn<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://ghodvn6lgtdd::::res://UI/image/iconCerveau.png<>uid://dcq5j6taqvth8::::res://UI/sprite_0.png<>uid://c50yeq1k8yita::::res://UI/boite_de_textes.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn
+scene_bibliotheque.gd::GDScript::-1::1699371065::0::1::::<>Node2D<>::
+scene_bibliotheque.tscn::PackedScene::6726634651768607867::1699386515::0::1::::<><>::res://Scene/scene_bibliotheque.gd<>uid://be8qvy6ws6i0m::::res://Carte/CarteScene/bibliotheque.tscn<>uid://i0y3uc5jfcuj::::res://UI/menu_pause.tscn<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://blychabk2ucx7::::res://Personne/ennemie_un.tscn<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://idnl1hauh4uk::::res://UI/Keyboard Letters and Symbols.png<>uid://ghodvn6lgtdd::::res://UI/image/iconCerveau.png<>uid://dcq5j6taqvth8::::res://UI/sprite_0.png<>uid://c50yeq1k8yita::::res://UI/boite_de_textes.tscn
 scene_caféoxymel.tscn::PackedScene::1029604759186512254::1699360797::0::1::::<><>::uid://ctrdalp6yygvm
-scene_combat.tscn::PackedScene::7391499565177337860::1699365259::0::1::::<><>::res://Scene/Script/scene_combat.gd<>uid://cjqeemq82daob
+scene_combat.tscn::PackedScene::7391499565177337860::1699386515::0::1::::<><>::res://Scene/Script/scene_combat.gd<>uid://cjqeemq82daob::::res://image/ArièrePlanBoss2.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://n1nq7l1p7jr6::::res://Joueur/up_idle_1.png<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://pssn3cmtwxxo::::res://Personne/enemie_trois.tscn<>uid://blychabk2ucx7::::res://Personne/ennemie_un.tscn<>uid://cof1ifb7mcc7j::::res://Personne/jose.tscn<>uid://cjbnp6ofg77he::::res://UI/image/CodeJoueurAttaque.png<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://dpaydcc08g2tj::::res://Personne/philipe.tscn<>uid://b1wkldekn2gkb::::res://UI/image/barDeVie2.png<>uid://dtu7edp2ib1j8::::res://UI/image/vie2.png<>uid://tmwgpcjq8wkf::::res://UI/image/Heart_Red_1.png<>uid://crk14tdafgt5b::::res://Personne/UiDeBoss/FireHammerRedV1.png<>uid://dgqwxrrmu3yt8::::res://Personne/UiDeBoss/meteor shower-blue.png<>uid://ghodvn6lgtdd::::res://UI/image/iconCerveau.png<>uid://c50yeq1k8yita::::res://UI/boite_de_textes.tscn<>uid://c555jrgjye41k::::res://UI/noir.png
 scene_travail.tscn::PackedScene::2485425053232094879::1699201358::0::1::::<><>::uid://tki2apulyx4e
-::res://Scene/Script/::1699370329
+::res://Scene/Script/::1699371105
 AllerVersMillieu.gd::GDScript::-1::1697310930::0::1::::<>CollisionShape2D<>::
 Area2D.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 CDversCM.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
@@ -122,14 +122,14 @@ SceneCorridorM.gd::GDScript::-1::1699288614::0::1::::<>Node2D<>::
 SceneQG.gd::GDScript::-1::1699047235::0::1::::<>StaticBody2D<>::
 scene_4823.gd::GDScript::-1::1699281032::0::1::::<>Node2D<>::
 scene_caféoxymel.gd::GDScript::-1::1699317887::0::1::::<>Node2D<>::
-scene_combat.gd::GDScript::-1::1699202814::0::1::::<>Node2D<>::
+scene_combat.gd::GDScript::-1::1699371105::0::1::::<>Node2D<>::
 scene_maison.gd::GDScript::-1::1699047357::0::1::::<>Node2D<>::
 scene_travail.gd::GDScript::-1::1699047394::0::1::::<>Node2D<>::
-::res://UI/::1699370453
+::res://UI/::1699386515
 407.png::CompressedTexture2D::5823419486614020104::1699022202::1699022202::1::::<><>::
-BoiteDeTextes.gd::GDScript::-1::1699369835::0::1::::<>Node2D<>::
+BoiteDeTextes.gd::GDScript::-1::1699386232::0::1::::<>Node2D<>::
 Boite_de_texte.png::CompressedTexture2D::4957263565492946688::1697310930::1697310930::1::::<><>::
-boite_de_textes.tscn::PackedScene::6931581352418606390::1699370453::0::1::::<><>::res://UI/BoiteDeTextes.gd<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://bce50qi5o1p::::res://UI/Keyboard Extras.png<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf
+boite_de_textes.tscn::PackedScene::6931581352418606390::1699386515::0::1::::<><>::res://UI/BoiteDeTextes.gd<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://bce50qi5o1p::::res://UI/Keyboard Extras.png<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf
 IconeInventaire.png::CompressedTexture2D::6639996314097691457::1697310930::1697310930::1::::<><>::
 IconeParametre.png::CompressedTexture2D::5893116797506072578::1697310930::1697310930::1::::<><>::
 IconQuete.png::CompressedTexture2D::5752309923151586598::1697310930::1697310930::1::::<><>::
@@ -190,3 +190,56 @@ Tag.png::CompressedTexture2D::4736923369346737167::1697310930::1697310930::1::::
 up_idle_1.png::CompressedTexture2D::6294229727248106446::1697310930::1697310930::1::::<><>::
 vie1.png::CompressedTexture2D::5275670762905081883::1697906403::1699367766::1::::<><>::
 vie2.png::CompressedTexture2D::8536087904206893923::1697907405::1699367766::1::::<><>::
+::res://voix/::1699386562
+::res://voix/boss1A/::1699383403
+1.mp3::AudioStreamMP3::8415471832572564299::1699383402::1699383402::1::::<><>::
+2.WAV::AudioStreamWAV::6739463519496982344::1699383402::1699383403::1::::<><>::
+3.mp3::AudioStreamMP3::8294025123347290749::1699383402::1699383403::1::::<><>::
+4.WAV::AudioStreamWAV::1612185653735025552::1699383402::1699383403::1::::<><>::
+5.mp3::AudioStreamMP3::9178091967748561782::1699383402::1699383403::1::::<><>::
+::res://voix/boss1B/::1699383403
+1.mp3::AudioStreamMP3::3440862515038973553::1699383402::1699383403::1::::<><>::
+2.WAV::AudioStreamWAV::8535402570537904955::1699383402::1699383403::1::::<><>::
+3.mp3::AudioStreamMP3::3359887046987321342::1699383402::1699383403::1::::<><>::
+4.WAV::AudioStreamWAV::8701648767983981233::1699383402::1699383403::1::::<><>::
+5.mp3::AudioStreamMP3::8763708194493527906::1699383402::1699383403::1::::<><>::
+6.WAV::AudioStreamWAV::9165936273560763728::1699383402::1699383403::1::::<><>::
+7.mp3::AudioStreamMP3::3646660911406463141::1699383402::1699383402::1::::<><>::
+8.mp3::AudioStreamMP3::2816987937189310121::1699383402::1699383402::1::::<><>::
+9.mp3::AudioStreamMP3::5252238962368241762::1699383402::1699383402::1::::<><>::
+::res://voix/boss2A/::1699383403
+1.WAV::AudioStreamWAV::3835736690698665664::1699383402::1699386562::1::::<><>::
+2.WAV::AudioStreamWAV::6849572356435459189::1699383402::1699386562::1::::<><>::
+3.WAV::AudioStreamWAV::4646925122441656426::1699383402::1699386562::1::::<><>::
+::res://voix/boss2B/::1699383403
+1.WAV::AudioStreamWAV::7063001216645779025::1699383402::1699383403::1::::<><>::
+2.WAV::AudioStreamWAV::936760578414378661::1699383402::1699383403::1::::<><>::
+3.WAV::AudioStreamWAV::1488335652262882825::1699383402::1699383403::1::::<><>::
+4.WAV::AudioStreamWAV::4904179375963020658::1699383402::1699383403::1::::<><>::
+::res://voix/boss3A/::1699383403
+1.mp3::AudioStreamMP3::8041060393174682601::1699383402::1699383402::1::::<><>::
+2.WAV::AudioStreamWAV::2972179659461645179::1699383402::1699383403::1::::<><>::
+3.mp3::AudioStreamMP3::6913516883915563124::1699383402::1699383402::1::::<><>::
+4.mp3::AudioStreamMP3::7097699564146708518::1699383402::1699383402::1::::<><>::
+5.mp3::AudioStreamMP3::2461534076966603162::1699383402::1699383402::1::::<><>::
+::res://voix/boss3B/::1699383403
+1.WAV::AudioStreamWAV::1650876003570274740::1699383402::1699383403::1::::<><>::
+2.mp3::AudioStreamMP3::2367865267007606449::1699383402::1699383402::1::::<><>::
+3.mp3::AudioStreamMP3::4357487708511550816::1699383402::1699383402::1::::<><>::
+4.mp3::AudioStreamMP3::5288513698167021205::1699383402::1699383402::1::::<><>::
+::res://voix/boss4A/::1699383403
+1.mp3::AudioStreamMP3::7949856065896042424::1699383402::1699383402::1::::<><>::
+2.WAV::AudioStreamWAV::8321403180210406315::1699383402::1699383403::1::::<><>::
+3.mp3::AudioStreamMP3::3590558537912939910::1699383402::1699383402::1::::<><>::
+4.WAV::AudioStreamWAV::7688734737298114561::1699383402::1699383403::1::::<><>::
+5.mp3::AudioStreamMP3::1285157671675573356::1699383402::1699383402::1::::<><>::
+::res://voix/boss4B/::1699383403
+1.WAV::AudioStreamWAV::23756335432489060::1699383402::1699383403::1::::<><>::
+2.mp3::AudioStreamMP3::8570384604194844039::1699383402::1699383403::1::::<><>::
+3.WAV::AudioStreamWAV::4611924501882772035::1699383402::1699383403::1::::<><>::
+4.mp3::AudioStreamMP3::8446477052598638139::1699383402::1699383403::1::::<><>::
+5.WAV::AudioStreamWAV::2252191370693614585::1699383402::1699383403::1::::<><>::
+6.mp3::AudioStreamMP3::3451404063926667629::1699383402::1699383403::1::::<><>::
+7.WAV::AudioStreamWAV::8240975009222187380::1699383402::1699383403::1::::<><>::
+8.mp3::AudioStreamMP3::2180471457035892977::1699383402::1699383402::1::::<><>::
+9.WAV::AudioStreamWAV::148173715716643463::1699383402::1699383403::1::::<><>::

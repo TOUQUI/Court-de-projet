@@ -17,6 +17,9 @@ var boss
 var parent
 var murNode
 var optionNode
+var fichierAudioUnique 
+var fichierAudio 
+var audio
 
 func _ready():
 	joueurProvenance = joueur.derniere_emplacement
@@ -58,24 +61,26 @@ func Charger():
 			nbDialogues = dialoguesMission.size()
 			self.visible = true
 			jouerDialogue = true
+			TrouverLeFichierDesVoix()
 			GererDialogues()
-	if peuxEtreAffiche == true:
-		parent = self.find_parent("SceneBureauProf")
-		if parent == null:
-			parent = self.find_parent("SceneBibliotheque")
+			gererVoix()
+			parent = self.find_parent("SceneBureauProf")
 			if parent == null:
-				parent = self.find_parent("Scene4823")
-		if parent != null:
-			optionNode = parent.find_child("MenuPause")
-			optionNode.JoueurPeuxPause = false
-			murNode = parent.find_child("BlockagePorte")
-			murNode.collision_layer = true
+				parent = self.find_parent("SceneBibliotheque")
+				if parent == null:
+					parent = self.find_parent("Scene4823")
+			if parent != null:
+				optionNode = parent.find_child("MenuPause")
+				optionNode.JoueurPeuxPause = false
+				murNode = parent.find_child("BlockagePorte")
+				murNode.collision_layer = true
 
 
 func _input(event):
 	if event.is_action_pressed("ui_accept") && jouerDialogue:
 		if i < (nbDialogues - 1):
 			i = i + 1
+			gererVoix()
 			GererDialogues()
 		elif SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel == "mission4_ac":
 			$Nom.text = ""
@@ -148,3 +153,31 @@ func _on_timer_timeout():
 	$MissionReussi.visible = false
 	self.visible = false
 	jouerDialogue = true
+
+
+func TrouverLeFichierDesVoix():
+	if queteActuel == "mission1_bc":
+		fichierAudio = "res://voix/boss1A/"
+	elif queteActuel == "mission1_ac":
+		fichierAudio = "res://voix/boss1B/"
+	elif queteActuel == "mission2_bc":
+		fichierAudio = "res://voix/boss2A/"
+	elif queteActuel == "mission2_ac":
+		fichierAudio = "res://voix/boss2B/"
+	elif queteActuel == "mission3_bc":
+		fichierAudio = "res://voix/boss3A/"
+	elif queteActuel == "mission3_ac":
+		fichierAudio = "res://voix/boss3B/"
+	elif queteActuel == "mission4_bc":
+		fichierAudio = "res://voix/boss4A/"
+	elif queteActuel == "mission4_ac":
+		fichierAudio = "res://voix/boss4B/"
+
+
+func gererVoix():
+	if $JoueurDeVoix.playing:
+		$JoueurDeVoix.stop()
+	fichierAudioUnique = fichierAudio + str(i + 1) + ".WAV"
+	audio = load(fichierAudioUnique)
+	$JoueurDeVoix.stream = audio
+	$JoueurDeVoix.play()
