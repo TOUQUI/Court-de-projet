@@ -50,32 +50,31 @@
 	"mission1_bc": [
 		["Jose", "Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs."],
 		["Joueur", "Excusez-moi, monsieur, mais je m'inquiète pour les élèves qui ont disparu. J'aimerais comprendre ce qui se passe."],
-		["Jose", "Noooooon! Ce n'est pas de tes affaires. Rentre dans ta salle de classe et oublie ce que tu as vu."],
+		["Jose", " Ce ne sont pas de tes affaires. Rentre dans ta salle de classe et oublie ce que tu as vu ou entendu."],
 		["Joueur", "Je ne peux pas ignorer ce qui se passe. Si l'école est en danger, je veux aider."],
-		["Scène", "José soupire, semblant hésitant."],
-		["Jose", "Très bien, si tu veux tant le savoir, prouve-moi d'abord que tu es capable d'affronter l'adversité. Il y a un ennemi qui se dresse sur ton chemin et c'est moi. Bats-moi, et peut-être que je te dirai ce que tu veux savoir"]
+		["Jose", "Très bien, si tu veux tant le savoir, prouve-moi d'abord que tu es capable d'affronter l'adversité. Il y a un ennemi qui se dresse sur ton chemin et c'est moi. Bats-moi, et peut-être que je te dirai ce que tu veux savoir."]
 	],
 		"mission1_ac": [
 		["Jose", "Tu as réussi à me battre, étudiant. Tu es plus déterminé que je ne le pensais."],
 		["Joueur", "J'ai fait ce que vous m'avez demandé. Maintenant, parlez-moi de ce qui se passe."],
-		["Jose", "Très bien, tu as gagné le droit de savoir. Il y a des manuscrits renfermant un savoir ancien qui renferme des réponses et des pouvoirs interdits. C'est ce dont nous avons besoin pour comprendre la menace qui pèse sur notre école."],
+		["Jose", "Très bien, tu as gagné le droit de savoir. Je possède une clé qui renferme des réponses et des pouvoirs interdits. C'est ce dont nous avons besoin pour comprendre la menace qui pèse sur notre école."],
 		["Joueur", "Par où dois-je commencer pour obtenir des informations sur les élèves disparus ?"],
-		["Jose", "Cherche Stéphane, il en sait plus sur CELUI AU-DESSUS DE TOUT. Il se cache dans l'ombre, mais il peut t'apporter les réponses que tu cherches."],
-		["Joueur", "Stéphane ? Qui est-ce ?"],
-		["Jose", "Stéphane est un homme discret, mais il possède des connaissances anciennes et des secrets que peu de gens connaissent. Tu le trouveras ici-même quand tu seras prêt. C'est là que tu devrais commencer ta quête pour découvrir la vérité sur CELUI AU-DESSUS DE TOUT. Mais souviens-toi, ne parle de cette mission à personne d'autre. La discrétion est notre alliée."],
-		["Scène", "José remet le manuscrit mystérieux au joueur, marquant ainsi le début de leur collaboration."],
-		["Jose", "Bien, prends ce livre. Apprends à l'utiliser avec sagesse. Nous en aurons besoin pour affronter ce qui se cache dans l'ombre."]
+		["Jose", "Cherche Nouha, elle en sait plus sur CELUI AU-DESSUS DE TOUT. Elle se cache dans l'ombre, mais il peut t'apporter les réponses que tu cherches."],
+		["Joueur", "Nouha? Qui est-ce ?"],
+		["Jose", "Nouha est une femme discrète, mais elle possède des connaissances et des secrets que peu de gens connaissent. Tu la trouveras ici-même quand tu seras prêt. C'est là que tu devrais commencer ta quête pour découvrir la vérité sur CELUI AU-DESSUS DE TOUT. Mais souviens-toi, ne parle de cette mission à personne d'autre. La discrétion est notre alliée."],
+		["Scène", "José remet la mystérieuse clé USB au joueur, marquant ainsi le début de leur collaboration."],
+		["Jose", "Bien, prends cette clé. Apprends à l'utiliser avec sagesse. Nous en aurons besoin pour affronter ce qui se cache dans l'ombre."]
 	],
 	"mission2_bc": [
-		["Noua", "Alors, tu prétends être l'élu ? C'est difficile à croire. José a vraiment fait une erreur en te confiant le livre interdit. Tu n'es pas digne de ce pouvoir."],
-		["Joueur", "Peu importe ce que tu penses, Stéphane. Je suis ici pour protéger notre école et découvrir la vérité sur les disparitions."],
-		["Noua", "Protéger l'école ? Tu n'es qu'un novice. Tu n'as aucune idée de ce qui t'attend."]
+		["Nouha", "Alors, tu prétends être l'élu ? C'est difficile à croire. José a vraiment fait une erreur en te confiant le livre interdit. Tu n'es pas digne de ce pouvoir."],
+		["Joueur", "Peu importe ce que tu penses, Nouha. Je suis ici pour protéger notre école et découvrir la vérité sur les disparitions."],
+		["Nouha", "Protéger l'école ? Tu n'es qu'un novice. Tu n'as aucune idée de ce qui t'attend."]
 	],
 	"mission2_ac": [
-		["Joueur", "C'est terminé, Noua. Maintenant, tu vas me dire où trouver CELUI AU-DESSUS DE TOUT."],
-		["Noua", "Écoute, tu as montré une grande détermination en me battant, mais je dois te prévenir. CELUI AU-DESSUS DE TOUT est bien plus puissant que tu ne peux l'imaginer, et même avec le pouvoir que tu as acquis, tu ne seras pas en mesure de le vaincre."],
-		["Joueur", "J'entends bien tes avertissements, Stéphane, mais je ne peux pas reculer maintenant. Je dois au moins essayer de découvrir ce qui se cache derrière tout cela"],
-		["Noua", "Tu as gagné. L'assistant de CELUI AU-DESSUS DE TOUT est Martin. Il se trouve dans la bibliothèque souterraine, cachée derrière un mur secret. C'est là que tu trouveras les réponses que tu cherches. Sois prudent, jeune élu."]
+		["Joueur", "C'est terminé, Nouha. Maintenant, tu vas me dire où trouver  CELUI AU-DESSUS DE TOUT."],
+		["Nouha", "Écoute, tu as montré une grande détermination en me battant, mais je dois te prévenir. CELUI AU-DESSUS DE TOUT est bien plus puissant que tu ne peux l'imaginer, et même avec le pouvoir que tu as acquis, tu ne seras pas en mesure de le vaincre."],
+		["Joueur", "J'entends bien tes avertissements, Nouha, mais je ne peux pas reculer maintenant. Je dois au moins essayer de découvrir ce qui se cache derrière tout cela. Plus rien ne m’empêchera de découvrir la vérité."],
+		["Nouha", "Tu as gagné. L'assistant de CELUI AU-DESSUS DE TOUT est Martin.est le professeur Martin. Il se trouve dans la bibliothèque du deuxième étage. C'est là que tu trouveras les réponses que tu cherches. Sois prudent, jeune élu."]
 	],
 	"mission3_bc": [
 		["Martin", "Ah, te voilà enfin, joueur. Je suis Martin, le gardien de ce monde. Tu ne le sais peut-être pas, mais je suis bien plus que ce que tu crois."],
@@ -106,8 +105,6 @@
 		["Philippe", "Comment veux-tu que je t’appelle ? Tu crois qu'un étudiant agent du FBI est plus réaliste comme histoire ? Tu es une intelligence artificielle créée pour nous remplacer, ton savoir augmente en prenant la vie de tes victimes et leur savoir. Chaque fois que tu utilisais tes pouvoirs pour augmenter ton intelligence, tu détruisais un quart de la population, comme la prophétie le disait, et j’étais là pour t'en empêcher. Cette histoire, elle dépasse l'école. J'ai échoué, et tu as réussi à obtenir ce que tu voulais. Tu as gagné."],
 		["Joueur", "Attends, tu veux dire que tout ce temps, j'ai été responsable de la disparition de tant de gens ?"],
 		["Philippe", "Oui, c'est le prix de ton insatiable soif de connaissance. Dire que seulement un script de José t'a mené droit où il voulait. Ahahah ! Finalement, ils ont bien joué leur jeu. Ils t'ont créé une histoire et l'illusion du choix pour te guider jusqu'ici."],
-		["Joueur", "Que dois-je faire pour arranger cela ?!"],
-		["Scène", "Le dernier souffle de Philippe s'échappe, son regard devient vide, et il ne peut plus répondre."],
-		["Joueur", "Merde Philippe, réveille-toi."]
+		["Joueur", "Que dois-je faire pour arranger cela ?! Merde Philippe, réveille-toi."]
 	]
 }
