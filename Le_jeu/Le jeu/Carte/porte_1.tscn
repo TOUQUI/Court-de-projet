@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1bdimm8ct37v"]
+
+[ext_resource type="Texture2D" uid="uid://dgvyccrrxqp3n" path="res://Carte/porte1.png" id="1_tnuhk"]
+[ext_resource type="Script" path="res://Carte/porte_1.gd" id="1_vfhip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynduy"]
+size = Vector2(1, 57)
+
+[node name="porte1" type="Area2D"]
+script = ExtResource("1_vfhip")
+
+[node name="porte" type="Sprite2D" parent="."]
+texture = ExtResource("1_tnuhk")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(40, 1)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_ynduy")
