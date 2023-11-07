@@ -9,3 +9,5 @@ res://Scene/SceneCaféteria.tscn
 res://UI/boite_de_textes.tscn
 res://Scene/SceneCorridorD.tscn
 res://Données/LesDonnées.json
+res://Carte/CarteScene/bibliotheque.tscn
+res://Carte/CarteScene/carte_caféoxymel.tscn
