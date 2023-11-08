@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var VITESSE_MAX = 200
-@export var ACCELERATION = 300
-@export var FRICTION = 500
+@export var VITESSE_MAX = 100
+@export var ACCELERATION = 200
+@export var FRICTION = 600
 @onready var axis =Vector2.ZERO
 
 signal joueur_étudie_en_classe(heure:int)
