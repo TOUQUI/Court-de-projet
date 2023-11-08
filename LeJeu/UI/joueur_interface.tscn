@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://ghodvn6lgtdd" path="res://UI/image/iconCerveau.png" id="13_8upq8"]
 [ext_resource type="Texture2D" uid="uid://bdobcsns1h63t" path="res://UI/image/barDeStatistique.png" id="13_ovr7k"]
 [ext_resource type="Texture2D" uid="uid://urjy060xv0yy" path="res://UI/image/barIntelligence.png" id="14_fpbut"]
-[ext_resource type="Texture2D" uid="uid://chjljp3ngkv1m" path="res://UI/image/BarDeVie1.png" id="14_w2fnx"]
-[ext_resource type="Texture2D" uid="uid://chftr53vkwheh" path="res://UI/image/Vie1.png" id="15_kemd8"]
+[ext_resource type="Texture2D" uid="uid://chjljp3ngkv1m" path="res://UI/image/barDeVie1.png" id="14_w2fnx"]
+[ext_resource type="Texture2D" uid="uid://chftr53vkwheh" path="res://UI/image/vie1.png" id="15_kemd8"]
 [ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="16_x8l21"]
 
 [sub_resource type="Animation" id="Animation_dbn76"]
@@ -253,6 +253,7 @@ icon = ExtResource("8_yevli")
 flat = true
 
 [node name="Inventaire" type="Node2D" parent="Livre/SpriteLivre"]
+visible = false
 position = Vector2(-20, -10)
 scale = Vector2(1.1, 1.1)
 
@@ -356,7 +357,6 @@ offset_bottom = 167.0
 text = "Consomer"
 
 [node name="Options" type="Node2D" parent="Livre/SpriteLivre"]
-visible = false
 
 [node name="titreVolume" type="Label" parent="Livre/SpriteLivre/Options"]
 texture_filter = 1
@@ -369,11 +369,38 @@ text = "Volume
 label_settings = SubResource("LabelSettings_4obhm")
 
 [node name="gestionVolume" type="HSlider" parent="Livre/SpriteLivre/Options"]
-offset_left = 106.0
-offset_top = -142.0
-offset_right = 279.0
-offset_bottom = -126.0
-value = 50.0
+offset_left = 107.692
+offset_top = -93.0769
+offset_right = 280.692
+offset_bottom = -77.0769
+min_value = 50.0
+max_value = 90.0
+value = 80.0
+
+[node name="Label" type="Label" parent="Livre/SpriteLivre/Options"]
+offset_left = 163.846
+offset_top = -123.077
+offset_right = 230.846
+offset_bottom = -97.077
+text = "Musique
+"
+
+[node name="Label2" type="Label" parent="Livre/SpriteLivre/Options"]
+offset_left = 174.615
+offset_top = -49.2308
+offset_right = 214.615
+offset_bottom = -23.2308
+text = "Voix
+"
+
+[node name="HSlider" type="HSlider" parent="Livre/SpriteLivre/Options"]
+offset_left = 108.461
+offset_top = -23.0769
+offset_right = 283.461
+offset_bottom = -7.07692
+min_value = 50.0
+max_value = 90.0
+value = 80.0
 
 [node name="Quête" type="Node2D" parent="Livre/SpriteLivre"]
 visible = false
@@ -602,6 +629,7 @@ label_settings = SubResource("LabelSettings_e3xkx")
 [connection signal="pressed" from="Livre/SpriteLivre/Inventaire/Item1/btnConsomerItem1" to="." method="_on_btn_consomer_item_1_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/Inventaire/Item2/btnConsomerItem2" to="." method="_on_btn_consomer_item_2_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/Inventaire/Item3/btnConsomerItem3" to="." method="_on_btn_consomer_item_3_pressed"]
+[connection signal="value_changed" from="Livre/SpriteLivre/Options/gestionVolume" to="." method="_on_gestion_volume_value_changed"]
 [connection signal="timeout" from="Chrono0_7" to="." method="_on_chrono_0_7_timeout"]
 [connection signal="timeout" from="Chrono0_5" to="." method="_on_chrono_0_5_timeout"]
 [connection signal="timeout" from="Message/MessageMinuterie" to="." method="_on_message_minuterie_timeout"]

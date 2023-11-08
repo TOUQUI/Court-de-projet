@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvv7ryahn3vbn"]
+
+[ext_resource type="Script" path="res://musique/music_manager.gd" id="1_1afmg"]
+
+[node name="musicManager" type="Node2D"]
+script = ExtResource("1_1afmg")
+
+[node name="Musique" type="AudioStreamPlayer" parent="."]
+volume_db = 4.0

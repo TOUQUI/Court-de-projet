@@ -10,12 +10,14 @@ static var nbHeureTravail
 static var boissonConsome = 0
 static var intelligence = 0
 static var niveauIntelligence = 0
+static var volumeDesVois = 80
 var inventaireOuvert = false
 var emplacementDansLivre = ""
 var joueurNode
 var quetes
 var nodeTxtFini
 var livreAEteFermer = false
+var musique
 
 
 static var inventaire =[ 
@@ -311,3 +313,20 @@ func _on_joueur_joueur_attaque(valeur):
 		if temps <= (100 - valeur):
 			temps = temps + valeur
 			chargerTemps()
+
+
+func _on_gestion_volume_drag_ended(value_changed):
+	musique = MusicManager.find_child("Musique")
+	musique.volume_db = value_changed
+	print(musique.volume_db)
+
+
+func _on_gestion_volume_value_changed(value):
+	musique = MusicManager.find_child("Musique")
+	if value == 50:
+		musique.volume_db = -80
+	elif value > 50 && value <= 80:
+		musique.volume_db = -80 + value
+	elif value > 80:
+		musique.volume_db = value - 80
+

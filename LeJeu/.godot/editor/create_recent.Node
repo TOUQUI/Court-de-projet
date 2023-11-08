@@ -1,9 +1,10 @@
+HSlider
+Label
 AudioStreamPlayer
 Node2D
 Sprite2D
 TextEdit
 TextureRect
-Label
 Button
 CollisionShape2D
 Area2D
@@ -15,7 +16,6 @@ TextureProgressBar
 CheckButton
 CanvasLayer
 GridContainer
-HSlider
 LineEdit
 Control
 Node

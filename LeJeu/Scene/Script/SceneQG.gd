@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 
+
 func _ready():
 	find_child("Joueur").derniere_emplacement = "QG"
 	find_child("Joueur").emplacementActuel = "res://Scene/node_SceneQG.tscn"
