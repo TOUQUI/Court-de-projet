@@ -3,4 +3,4 @@ res://UI/joueur_interface.tscn
 res://UI/boite_de_textes.tscn
 res://Joueur/joueur.tscn
 res://Scene/menu_principale.tscn
-res://Joueur/joueur.gd
+res://Données/LesDonnées.json
