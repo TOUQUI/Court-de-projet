@@ -13,3 +13,4 @@ res://UI/joueur_interface.tscn
 res://UI/gestionVolume.gd
 res://UI/boite_de_textes.tscn
 res://UI/BoiteDeTextes.gd
+res://Joueur/joueur.tscn

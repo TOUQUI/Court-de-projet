@@ -20,14 +20,6 @@ func _ready():
 		$Musique.play()
 
 
-func _on_finished():
-	if musiqueTitre == "massobeats":
-		ChargerChillpeach()
-	else:
-		ChargerMassobeats()
-	$Musique.stream = musique
-
-
 func ChargerMassobeats():
 	musique = load("res://musique/massobeats.mp3")
 	musiqueTitre = "massobeats"
@@ -37,3 +29,12 @@ func ChargerChillpeach():
 	musiqueTitre = "Chillpeach"
 
 
+
+
+func _on_musique_finished():
+	if musiqueTitre == "massobeats":
+		ChargerChillpeach()
+	else:
+		ChargerMassobeats()
+	$Musique.stream = musique
+	$Musique.play()

@@ -7,3 +7,5 @@ script = ExtResource("1_1afmg")
 
 [node name="Musique" type="AudioStreamPlayer" parent="."]
 volume_db = 4.0
+
+[connection signal="finished" from="Musique" to="." method="_on_musique_finished"]
