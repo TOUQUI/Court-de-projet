@@ -81,6 +81,7 @@ func Charger():
 
 func _input(event):
 	if event.is_action_pressed("ui_accept") && jouerDialogue:
+		$JoueurDeVoix.volume_db = SingletonsDonnees.dictionaireDesDonnees["DataSession"].volumeVoix
 		if i < (nbDialogues - 1):
 			i = i + 1
 			gererVoix()

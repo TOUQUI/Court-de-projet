@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 SingletonsDonnees="*res://Données/SingletonsDonnees.gd"
 MusicManager="*res://musique/music_manager.tscn"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="viewport"
+
 [input]
 
 droite={

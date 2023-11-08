@@ -73,7 +73,7 @@ offset_bottom = 618.0
 icon = ExtResource("4_ms8mv")
 flat = true
 
-[node name="Paramètres" type="Button" parent="."]
+[node name="Credis" type="Button" parent="."]
 texture_filter = 1
 offset_left = 817.0
 offset_top = 510.0
@@ -96,7 +96,7 @@ offset_left = 858.0
 offset_top = 532.0
 offset_right = 987.0
 offset_bottom = 562.0
-text = "Options
+text = "Credits
 "
 label_settings = SubResource("LabelSettings_astsn")
 
@@ -122,4 +122,4 @@ offset_bottom = 290.0
 text = "Chargementen cours."
 
 [connection signal="pressed" from="Jouer" to="." method="_on_jouer_pressed"]
-[connection signal="pressed" from="Paramètres" to="." method="_on_paramètres_pressed"]
+[connection signal="pressed" from="Credis" to="." method="_on_paramètres_pressed"]
