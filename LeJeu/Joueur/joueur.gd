@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var VITESSE_MAX = 200
-@export var ACCELERATION = 1500
+@export var ACCELERATION = 300
 @export var FRICTION = 500
 @onready var axis =Vector2.ZERO
 
