@@ -315,12 +315,6 @@ func _on_joueur_joueur_attaque(valeur):
 			chargerTemps()
 
 
-func _on_gestion_volume_drag_ended(value_changed):
-	musique = MusicManager.find_child("Musique")
-	musique.volume_db = value_changed
-	print(musique.volume_db)
-
-
 func _on_gestion_volume_value_changed(value):
 	musique = MusicManager.find_child("Musique")
 	if value == 50:
@@ -329,4 +323,13 @@ func _on_gestion_volume_value_changed(value):
 		musique.volume_db = -80 + value
 	elif value > 80:
 		musique.volume_db = value - 80
+	SingletonsDonnees.dictionaireDesDonnees["DataSession"].volumeMusique = musique.volume_db
 
+
+func _on_h_slider_value_changed(value):
+	if value == 50:
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].volumeVoix = -80
+	elif value > 50 && value <= 80:
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].volumeVoix = -80 + value
+	elif value > 80:
+		SingletonsDonnees.dictionaireDesDonnees["DataSession"].volumeVoix = value - 80 

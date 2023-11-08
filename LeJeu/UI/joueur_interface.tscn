@@ -630,6 +630,7 @@ label_settings = SubResource("LabelSettings_e3xkx")
 [connection signal="pressed" from="Livre/SpriteLivre/Inventaire/Item2/btnConsomerItem2" to="." method="_on_btn_consomer_item_2_pressed"]
 [connection signal="pressed" from="Livre/SpriteLivre/Inventaire/Item3/btnConsomerItem3" to="." method="_on_btn_consomer_item_3_pressed"]
 [connection signal="value_changed" from="Livre/SpriteLivre/Options/gestionVolume" to="." method="_on_gestion_volume_value_changed"]
+[connection signal="value_changed" from="Livre/SpriteLivre/Options/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="timeout" from="Chrono0_7" to="." method="_on_chrono_0_7_timeout"]
 [connection signal="timeout" from="Chrono0_5" to="." method="_on_chrono_0_5_timeout"]
 [connection signal="timeout" from="Message/MessageMinuterie" to="." method="_on_message_minuterie_timeout"]

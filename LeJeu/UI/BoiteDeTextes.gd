@@ -76,15 +76,7 @@ func Charger():
 				optionNode.JoueurPeuxPause = false
 				murNode = parent.find_child("BlockagePorte")
 				murNode.collision_layer = true
-				interface = parent.find_child("Joueur")
-				interface = interface.find_child("Joueur_interface")
-				volumeVoix = interface.volumeDesVois
-				if volumeVoix == 50:
-					$JoueurDeVoix.volume_db = -80
-				elif volumeVoix > 50 && volumeVoix <= 80:
-					$JoueurDeVoix.volume_db = -80 + volumeVoix
-				elif volumeVoix > 80:
-					$JoueurDeVoix.volume_db = volumeVoix - 80
+				$JoueurDeVoix.volume_db = SingletonsDonnees.dictionaireDesDonnees["DataSession"].volumeVoix
 
 
 func _input(event):

@@ -14,3 +14,5 @@ res://UI/gestionVolume.gd
 res://UI/boite_de_textes.tscn
 res://UI/BoiteDeTextes.gd
 res://Joueur/joueur.tscn
+res://Données/LesDonnées.json
+res://Scene/menu_principale.tscn

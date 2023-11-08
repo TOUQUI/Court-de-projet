@@ -45,7 +45,9 @@
 		"intelligence": 0,
 		"bossMort": false,
 		"niveauIntelligence": 10,
-		"dialogueDeMissionDejaAffiche": false
+		"dialogueDeMissionDejaAffiche": false,
+		"volumeMusique": 0,
+		"volumeVoix": 0
 	},
 	"mission1_bc": [
 		["Jose", "Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs."],

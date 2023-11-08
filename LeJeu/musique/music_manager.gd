@@ -8,6 +8,7 @@ var tempsDeLaMusique
 
 
 func _ready():
+	$Musique.volume_db = SingletonsDonnees.dictionaireDesDonnees["DataSession"].volumeMusique
 	if $Musique.stream == null:
 		rng = rng.randf_range(0, 1)
 		if rng == 0:
@@ -27,8 +28,6 @@ func ChargerMassobeats():
 func ChargerChillpeach():
 	musique = load("res://musique/Chillpeach.mp3")
 	musiqueTitre = "Chillpeach"
-
-
 
 
 func _on_musique_finished():
