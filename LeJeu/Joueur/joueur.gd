@@ -80,7 +80,6 @@ func bouger(delta):
 func apliquer_friction(amount):
 	if velocity.length() > amount:
 		velocity -= velocity.normalized() * amount 
-		
 	else:
 		velocity = Vector2.ZERO
 

@@ -56,6 +56,15 @@ offset_right = 680.0
 offset_bottom = 409.0
 text = "Retour"
 
+[node name="btnQuiter" type="Button" parent="Menu"]
+offset_left = 473.0
+offset_top = 419.0
+offset_right = 680.0
+offset_bottom = 469.0
+theme_override_colors/font_color = Color(1, 0.00784314, 0.00784314, 1)
+text = "Quiter vers le bureau"
+
 [connection signal="pressed" from="Menu/btnMenu" to="." method="_on_btn_menu_pressed"]
 [connection signal="button_down" from="Menu/btnSauvegarder" to="." method="_on_btn_sauvegarder_button_down"]
 [connection signal="button_down" from="Menu/btnRetour" to="." method="_on_btn_retour_button_down"]
+[connection signal="pressed" from="Menu/btnQuiter" to="." method="_on_btn_quiter_pressed"]

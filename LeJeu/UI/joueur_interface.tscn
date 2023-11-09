@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://ghodvn6lgtdd" path="res://UI/image/iconCerveau.png" id="13_8upq8"]
 [ext_resource type="Texture2D" uid="uid://bdobcsns1h63t" path="res://UI/image/barDeStatistique.png" id="13_ovr7k"]
 [ext_resource type="Texture2D" uid="uid://urjy060xv0yy" path="res://UI/image/barIntelligence.png" id="14_fpbut"]
-[ext_resource type="Texture2D" uid="uid://chjljp3ngkv1m" path="res://UI/image/BarDeVie1.png" id="14_w2fnx"]
-[ext_resource type="Texture2D" uid="uid://chftr53vkwheh" path="res://UI/image/Vie1.png" id="15_kemd8"]
+[ext_resource type="Texture2D" uid="uid://chjljp3ngkv1m" path="res://UI/image/barDeVie1.png" id="14_w2fnx"]
+[ext_resource type="Texture2D" uid="uid://chftr53vkwheh" path="res://UI/image/vie1.png" id="15_kemd8"]
 [ext_resource type="Texture2D" uid="uid://tmwgpcjq8wkf" path="res://UI/image/Heart_Red_1.png" id="16_x8l21"]
 
 [sub_resource type="Animation" id="Animation_dbn76"]

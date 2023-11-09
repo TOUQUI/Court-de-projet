@@ -3,4 +3,7 @@ res://UI/joueur_interface.tscn
 res://UI/boite_de_textes.tscn
 res://Joueur/joueur.tscn
 res://Scene/menu_principale.tscn
+res://UI/menu_pause.tscn
 res://Données/LesDonnées.json
+res://musique/music_manager.gd
+res://Joueur/joueur.gd

@@ -3,7 +3,6 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 var musique
 var musiqueTitre
-var scene_tree = get_tree()
 var tempsDeLaMusique 
 
 

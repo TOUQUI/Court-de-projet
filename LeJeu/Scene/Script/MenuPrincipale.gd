@@ -19,3 +19,7 @@ func _on_jouer_pressed():
 
 func _on_paramètres_pressed():
 	pass # Replace with function body.
+
+
+func _on_button_pressed():
+	get_tree().quit()

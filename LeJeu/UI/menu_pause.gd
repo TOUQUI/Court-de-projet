@@ -25,3 +25,6 @@ func _on_btn_sauvegarder_button_down():
 func _on_btn_retour_button_down():
 	$Menu.visible = false
 
+
+func _on_btn_quiter_pressed():
+	get_tree().quit()
