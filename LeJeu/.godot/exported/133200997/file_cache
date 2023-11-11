@@ -12,8 +12,8 @@ res://Carte/CarteScene/toilette.tscn::b805f45c1e7397936adfa95c7dbc1cbc::16973109
 res://Carte/CarteScene/tuile_ecole.tscn::de957f3ef44aee7b3ee25e93703adc5c::1697310929::res://.godot/exported/133200997/export-c40050d96bc4bee723b0b1757a4d0d9f-tuile_ecole.scn
 res://Carte/CarteScene/tuile_maison.tscn::6af2c9fe3f79cfd13c6e13381c32faac::1697310929::res://.godot/exported/133200997/export-dd9c8fc0ee2c75d746d08fd9c0db3017-tuile_maison.scn
 res://Carte/Porte_bleu.tscn::de0f89b15214684a687e0bbfb8f283ec::1697726540::res://.godot/exported/133200997/export-8e1b25ae91147dafe926ddd17cfa33f1-Porte_bleu.scn
-res://Joueur/joueur.tscn::887c478f7540b309a16bb66547dcea6f::1699540801::res://.godot/exported/133200997/export-631b9f896edac0a83e69a6dea1f79796-joueur.scn
-res://musique/music_manager.tscn::771dd2b761a3dac2273d9f92ab241790::1699540800::res://.godot/exported/133200997/export-b184d86dd82e8f3d34994a92c01817e6-music_manager.scn
+res://Joueur/joueur.tscn::887c478f7540b309a16bb66547dcea6f::1699549394::res://.godot/exported/133200997/export-631b9f896edac0a83e69a6dea1f79796-joueur.scn
+res://musique/music_manager.tscn::771dd2b761a3dac2273d9f92ab241790::1699549394::res://.godot/exported/133200997/export-b184d86dd82e8f3d34994a92c01817e6-music_manager.scn
 res://objets_intératif/bureau_de_classe.tscn::7aa3ae5f601f2345af4f6cc451c387ea::1697310930::res://.godot/exported/133200997/export-ec1506e6618337028c1231535d4cf211-bureau_de_classe.scn
 res://objets_intératif/zone__étude.tscn::108d262284a815e0c3c0c8ca4f12044c::1697310930::res://.godot/exported/133200997/export-fe534277a95ea87639a2f7a35ad4123e-zone__étude.scn
 res://Personne/enemie_trois.tscn::a18f647dac025b6b5bfcf8ee27ab6543::1699201358::res://.godot/exported/133200997/export-6ce6fc26645f4b7fa415c52f6ae9ac70-enemie_trois.scn
@@ -23,7 +23,7 @@ res://Personne/jose.tscn::180f36bc0c2493f5ddcd220ea01608e9::1699035246::res://.g
 res://Personne/philipe.tscn::fd6c20da70fe872376756227287c4ea1::1699123336::res://.godot/exported/133200997/export-f69dfcc65316509a601bca5975c67d5b-philipe.scn
 res://Personne/vendeur_du_qg.tscn::75e7e91542d51ac3778d57b33bdad986::1697926649::res://.godot/exported/133200997/export-e7646eed055a98a3b19597ce1350fdae-vendeur_du_qg.scn
 res://Scene/c_gvers_cm.tscn::9721ca0ab51fac234e09d1ad5fade798::1697310930::res://.godot/exported/133200997/export-5d823608f355d47138608d6e50db82bc-c_gvers_cm.scn
-res://Scene/menu_principale.tscn::ab11ac0500d563d00801ddb6ec995fa1::1699540801::res://.godot/exported/133200997/export-6f0116c01470faa54ed4304206d72acf-menu_principale.scn
+res://Scene/menu_principale.tscn::ab11ac0500d563d00801ddb6ec995fa1::1699549394::res://.godot/exported/133200997/export-6f0116c01470faa54ed4304206d72acf-menu_principale.scn
 res://Scene/node_SceneQG.tscn::2fcfb5f026ee13da8240263aeb9c7192::1699360796::res://.godot/exported/133200997/export-24a8bd8652b826b2eb8fa1cc4d98e1ef-node_SceneQG.scn
 res://Scene/sceneBureauProf.tscn::e3808a763c6b5639365922c7e548a442::1699201357::res://.godot/exported/133200997/export-3656b37ab7ce3020befbe08d2358182b-sceneBureauProf.scn
 res://Scene/SceneCaféteria.tscn::29248a03691924610f1ee84315ec5673::1699360797::res://.godot/exported/133200997/export-44130f6564155cba826100d6859f38a9-SceneCaféteria.scn
@@ -37,8 +37,8 @@ res://Scene/scene_bibliotheque.tscn::d20eec8ca2b43f010f274bcf13bf1d05::169938696
 res://Scene/scene_caféoxymel.tscn::a9f47c75c6901fa8b75f3f4afcfb440f::1699360797::res://.godot/exported/133200997/export-ef51ac8cc52efeec7afac91c9f24f328-scene_caféoxymel.scn
 res://Scene/scene_combat.tscn::90d82a0716c34611b2a2687ab6a156d3::1699386961::res://.godot/exported/133200997/export-537913b87788659a017da5536a8dc575-scene_combat.scn
 res://Scene/scene_travail.tscn::7bf3f9b6c5890aceee3be74a03aacb23::1699389725::res://.godot/exported/133200997/export-7496595e2bb1d23869deafbd25996f57-scene_travail.scn
-res://UI/boite_de_textes.tscn::76da3f2f0e9e993611028da42a8e4670::1699540800::res://.godot/exported/133200997/export-89dcf29fc49c53dc5ea5ecc1e30f78bc-boite_de_textes.scn
-res://UI/joueur_interface.tscn::e9c4c78f52670d60730369ece62e8a4b::1699541799::res://.godot/exported/133200997/export-2ecdbfac7ac2eb05ebacc799d44cd8cc-joueur_interface.scn
-res://UI/menu_pause.tscn::734b4f7f7e2b008a8ce1fb4b632884a7::1699540801::res://.godot/exported/133200997/export-c61ede3123275ebd5053ecac36361003-menu_pause.scn
+res://UI/boite_de_textes.tscn::76da3f2f0e9e993611028da42a8e4670::1699549394::res://.godot/exported/133200997/export-89dcf29fc49c53dc5ea5ecc1e30f78bc-boite_de_textes.scn
+res://UI/joueur_interface.tscn::e9c4c78f52670d60730369ece62e8a4b::1699549394::res://.godot/exported/133200997/export-2ecdbfac7ac2eb05ebacc799d44cd8cc-joueur_interface.scn
+res://UI/menu_pause.tscn::734b4f7f7e2b008a8ce1fb4b632884a7::1699549394::res://.godot/exported/133200997/export-c61ede3123275ebd5053ecac36361003-menu_pause.scn
 res://UI/personnage_interface.tscn::c993192be43f7cd17706b104e734cbf5::1697310930::res://.godot/exported/133200997/export-921592f2cfae0ceb63e97ed9609e50a5-personnage_interface.scn
 res://UI/tuile_boite_de_texte.tscn::4dd99c0a01a9044c08815a84e8b7efe2::1699201358::res://.godot/exported/133200997/export-dc0d9fc53de6096db1fc52e7b916a760-tuile_boite_de_texte.scn

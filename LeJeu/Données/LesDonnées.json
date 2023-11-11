@@ -44,9 +44,9 @@
 		"force": 0,
 		"intelligence": 0,
 		"bossMort": false,
-		"niveauIntelligence": 0,
+		"niveauIntelligence": 10,
 		"dialogueDeMissionDejaAffiche": false,
-		"volumeMusique": 0,
+		"volumeMusique": -15,
 		"volumeVoix": 0
 	},
 	"mission1_bc": [

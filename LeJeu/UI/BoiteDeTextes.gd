@@ -44,7 +44,7 @@ func Charger():
 		elif queteActuel == "mission2_ac" && SingletonsDonnees.dictionaireDesDonnees["DataSession"].bossMort == true:
 			peuxEtreAffiche = true
 			SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = true
-		elif (queteActuel == "mission3_bc" || queteActuel == "mission3_ac") && (joueurProvenance == "Bibli" || "D"):
+		elif (queteActuel == "mission3_bc" || queteActuel == "mission3_ac") && (joueurProvenance == "Bibli" || joueurProvenance == "D"):
 			peuxEtreAffiche = true
 			SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = true
 		elif (queteActuel == "mission4_bc" || queteActuel == "mission4_ac") && joueurProvenance == "Cafetreria":
