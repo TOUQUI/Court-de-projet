@@ -14,6 +14,7 @@ func _input(event):
 		else:
 			$Menu.visible = false
 
+
 func _on_btn_menu_pressed():
 	get_tree().change_scene_to_file("res://Scene/menu_principale.tscn")
 

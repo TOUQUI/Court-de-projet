@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var VITESSE_MAX = 100
+@export var VITESSE_MAX = 65
 @export var ACCELERATION = 200
 @export var FRICTION = 600
 @onready var axis =Vector2.ZERO
@@ -52,7 +52,7 @@ func _input(event):
 	elif Input.is_action_just_pressed("haut"):
 		velocity = Vector2.ZERO
 		ACCELERATION = 1500
-	elif Input.is_action_just_pressed("droit"):
+	elif Input.is_action_just_pressed("droite"):
 		velocity = Vector2.ZERO
 		ACCELERATION = 1500
 	elif Input.is_action_just_pressed("gauche"):
@@ -71,9 +71,9 @@ func _input(event):
 		$AnimationPlayer.play("pas_bouger")
 	
 	if Input.is_action_pressed("courire"):
-		VITESSE_MAX = 450
+		VITESSE_MAX = 250
 	else:
-		VITESSE_MAX = 200
+		VITESSE_MAX = 100
 
 func attraper_la_touche():
 	axis.x = int(Input.is_action_pressed("droite")) - int(Input.is_action_pressed("gauche"))
@@ -101,6 +101,7 @@ func apliquer_friction(amount):
 func apliquer_mouvement(accel):
 	velocity += accel
 	velocity = velocity.limit_length(VITESSE_MAX)
+
 
 func Connecter_bureaux():
 	nodes = get_node("/root/NodeQG/Étude")

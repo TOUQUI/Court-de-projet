@@ -178,6 +178,7 @@ libraries = {
 }
 
 [node name="Joueur_interface" parent="." instance=ExtResource("3_m87e3")]
+visible = false
 
 [connection signal="ajouterItemAcheter" from="." to="Joueur_interface" method="_on_joueur_ajouter_item_acheter"]
 [connection signal="ajouterVieRetirerArgent" from="." to="Joueur_interface" method="_on_joueur_ajouter_vie_retirer_argent"]

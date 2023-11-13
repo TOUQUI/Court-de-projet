@@ -1,9 +1,10 @@
-Timer
-Label
+Node2D
 Button
+Label
+Node
+Timer
 HSlider
 AudioStreamPlayer
-Node2D
 Sprite2D
 TextEdit
 TextureRect
@@ -18,7 +19,6 @@ CanvasLayer
 GridContainer
 LineEdit
 Control
-Node
 ItemList
 Panel
 TileMap

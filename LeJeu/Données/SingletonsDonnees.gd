@@ -17,13 +17,18 @@ func ChargerJson(chemain : String):
 			dossier.close()
 			return convertion
 	else:
-		dossier = FileAccess.open("res://Données/LesDonnées.json", FileAccess.READ)
-		convertion = JSON.parse_string(dossier.get_as_text())
-		dossier.close()
-		dossier = FileAccess.open(donneesChemain, FileAccess.WRITE)
-		dossier.store_string(str(convertion))
-		dossier.close()
-		return convertion
+		return RemplireDictionaire()
+
+
+func RemplireDictionaire():
+	dossier = FileAccess.open("res://Données/LesDonnées.json", FileAccess.READ)
+	convertion = JSON.parse_string(dossier.get_as_text())
+	dossier.close()
+	dossier = FileAccess.open(donneesChemain, FileAccess.WRITE)
+	dossier.store_string(str(convertion))
+	dossier.close()
+	return convertion
+
 
 func SauvegarderJson():
 	if FileAccess.file_exists(donneesChemain):

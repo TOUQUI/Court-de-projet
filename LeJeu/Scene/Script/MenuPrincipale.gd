@@ -23,3 +23,18 @@ func _on_paramètres_pressed():
 
 func _on_button_pressed():
 	get_tree().quit()
+
+
+func _on_btn_suprimer_sauvegarde_pressed():
+	$MenuSpprimerPartie.visible = true
+
+
+func _on_btn_retour_menu_supprimer_pressed():
+	$MenuSpprimerPartie.visible = false
+
+
+func _on_btn_supprimer_pressed():
+	SingletonsDonnees.dictionaireDesDonnees.clear()
+	SingletonsDonnees.SauvegarderJson()
+	SingletonsDonnees.dictionaireDesDonnees = SingletonsDonnees.RemplireDictionaire()
+	$MenuSpprimerPartie.visible = false

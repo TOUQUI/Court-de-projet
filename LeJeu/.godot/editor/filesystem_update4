@@ -1,9 +1,8 @@
+res://Scene/menu_principale.tscn
+res://Données/SingletonsDonnees.gd
 res://musique/music_manager.tscn
 res://UI/joueur_interface.tscn
 res://UI/boite_de_textes.tscn
 res://Joueur/joueur.tscn
-res://Scene/menu_principale.tscn
 res://UI/menu_pause.tscn
-res://Données/LesDonnées.json
-res://UI/BoiteDeTextes.gd
-res://Joueur/joueur.gd
+res://Scene/Script/MenuPrincipale.gd
