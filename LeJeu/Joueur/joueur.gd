@@ -45,6 +45,20 @@ func gererEmplacement():
 
 
 func _input(event):
+	
+	if Input.is_action_just_pressed("bas"):
+		velocity = Vector2.ZERO
+		ACCELERATION = 1500
+	elif Input.is_action_just_pressed("haut"):
+		velocity = Vector2.ZERO
+		ACCELERATION = 1500
+	elif Input.is_action_just_pressed("droit"):
+		velocity = Vector2.ZERO
+		ACCELERATION = 1500
+	elif Input.is_action_just_pressed("gauche"):
+		velocity = Vector2.ZERO
+		ACCELERATION = 1500
+	
 	if Input.is_action_pressed("bas"):
 		$AnimationPlayer.play("avancer_bas")
 	elif Input.is_action_pressed("droite"):

@@ -1,3 +1,4 @@
+Timer
 Label
 Button
 HSlider
@@ -10,7 +11,6 @@ CollisionShape2D
 Area2D
 StaticBody2D
 AnimationPlayer
-Timer
 ProgressBar
 TextureProgressBar
 CheckButton
