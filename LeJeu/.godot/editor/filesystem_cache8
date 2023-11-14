@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699917710
+::res://::1699936384
 CGversCM.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 export_presets.cfg::TextFile::-1::1699552692::0::1::::<><>::
 icon.svg::CompressedTexture2D::280129450150855157::1697310930::1697310930::1::::<><>::
@@ -44,9 +44,10 @@ Miscs.png::CompressedTexture2D::4744032534793867036::1697310929::1697310929::1::
 Room.png::CompressedTexture2D::1367644619544714533::1697310929::1697310929::1::::<><>::
 Wall1.png::CompressedTexture2D::7339895226983579552::1697310929::1697310929::1::::<><>::
 Wall2.png::CompressedTexture2D::8359468501626234858::1697310929::1697310929::1::::<><>::
-::res://Données/::1699917695
-LesDonnées.json::JSON::-1::1699558737::0::1::::<><>::
-SingletonsDonnees.gd::GDScript::-1::1699917695::0::1::::<>Node<>::
+::res://Données/::1699936366
+LesDonnées.json::JSON::-1::1699936366::0::1::::<><>::
+SingletonsDonnees.gd::GDScript::-1::1699918154::0::1::::<>Node<>::
+texte.json::JSON::-1::1699935437::0::1::::<><>::
 ::res://image/::1699552658
 ArièrePlanBoss1.png::CompressedTexture2D::6660846310174201178::1699018514::1699018537::1::::<><>::
 ArièrePlanBoss2.png::CompressedTexture2D::5437821671872776261::1698942082::1698960911::1::::<><>::
@@ -56,15 +57,15 @@ ArièrePlanResto.png::CompressedTexture2D::4793605527847899174::1699018797::1699
 ascenseur.png::CompressedTexture2D::8663807980942111383::1697310930::1697310930::1::::<><>::
 pocadeau_white_computeur_front_view_in_a_dark_room_with_red_cab_a52e69c9-fc39-433a-8466-72ca625ab17b.jpg::CompressedTexture2D::7013643049786728350::1699020533::1699020535::1::::<><>::
 sortiePanneau.png::CompressedTexture2D::88287419604377592::1697310930::1697310930::1::::<><>::
-::res://Joueur/::1699917310
+::res://Joueur/::1699936268
 joueur.gd::GDScript::-1::1699911184::0::1::::<>CharacterBody2D<>::
-joueur.tscn::PackedScene::1354765783137222250::1699917310::0::1::::<><>::res://Joueur/joueur.gd<>uid://n1nq7l1p7jr6::::res://Joueur/up_idle_1.png<>uid://dc0je05dehtwa::::res://UI/joueur_interface.tscn
+joueur.tscn::PackedScene::1354765783137222250::1699936268::0::1::::<><>::res://Joueur/joueur.gd<>uid://n1nq7l1p7jr6::::res://Joueur/up_idle_1.png<>uid://dc0je05dehtwa::::res://UI/joueur_interface.tscn
 up_idle_1.png::CompressedTexture2D::966948381451105525::1697310930::1697310930::1::::<><>::
-::res://musique/::1699917309
+::res://musique/::1699936268
 Chillpeach.mp3::AudioStreamMP3::6843505769383898248::1699388131::1699388897::1::::<><>::
 massobeats.mp3::AudioStreamMP3::5307812364821345220::1699389027::1699389130::1::::<><>::
 music_manager.gd::GDScript::-1::1699544551::0::1::::<>Node2D<>::
-music_manager.tscn::PackedScene::8678554263475097235::1699917309::0::1::::<><>::res://musique/music_manager.gd
+music_manager.tscn::PackedScene::8678554263475097235::1699936268::0::1::::<><>::res://musique/music_manager.gd
 ::res://objets_intératif/::1697310930
 bureau_de_classe.gd::GDScript::-1::1697310930::0::1::::<>Node2D<>::
 bureau_de_classe.tscn::PackedScene::2179912542317095198::1697310930::0::1::::<><>::res://objets_intératif/bureau_de_classe.gd<>uid://idnl1hauh4uk
@@ -91,9 +92,9 @@ Dark hand attack-Sheet.png::CompressedTexture2D::7674404912568857476::1698937604
 FireHammerRedV1.png::CompressedTexture2D::5988326919193526921::1698936738::1698936745::1::::<><>::
 ice knife-Sheet.png::CompressedTexture2D::674234200740287080::1698939679::1698939680::1::::<><>::
 meteor shower-blue.png::CompressedTexture2D::7614802923804836967::1698940240::1698940240::1::::<><>::
-::res://Scene/::1699917310
+::res://Scene/::1699936268
 c_gvers_cm.tscn::PackedScene::3252530636575976961::1697310930::0::1::::<><>::res://CGversCM.gd
-menu_principale.tscn::PackedScene::7361555967415130304::1699917310::0::1::::<><>::res://Scene/Script/MenuPrincipale.gd<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://c66pw83h81o6i::::res://image/pocadeau_white_computeur_front_view_in_a_dark_room_with_red_cab_a52e69c9-fc39-433a-8466-72ca625ab17b.jpg<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://c0xddrsitvptu::::res://UI/image/407.png<>uid://cp7w1jgvc71go::::res://UI/IconeParametre.png<>uid://bonhl5taweomq::::res://UI/image/homme.png<>uid://bv6chjkh8pa3g::::res://UI/image/37.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn
+menu_principale.tscn::PackedScene::7361555967415130304::1699936268::0::1::::<><>::res://Scene/Script/MenuPrincipale.gd<>uid://tki2apulyx4e::::res://Joueur/joueur.tscn<>uid://c66pw83h81o6i::::res://image/pocadeau_white_computeur_front_view_in_a_dark_room_with_red_cab_a52e69c9-fc39-433a-8466-72ca625ab17b.jpg<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://c0xddrsitvptu::::res://UI/image/407.png<>uid://cp7w1jgvc71go::::res://UI/IconeParametre.png<>uid://bonhl5taweomq::::res://UI/image/homme.png<>uid://bv6chjkh8pa3g::::res://UI/image/37.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn
 node_SceneQG.tscn::PackedScene::2725096438691041776::1699360796::0::1::::<><>::uid://c0f5a110cjy4l
 sceneBureauProf.tscn::PackedScene::7685716623926150511::1699201357::0::1::::<><>::res://Scene/Script/sceneBureauProf.gd<>uid://cehtca5kf7xeh
 SceneCaféteria.tscn::PackedScene::4343158649835255544::1699360797::0::1::::<><>::res://Scene/Script/SceneCaféteria.gd<>uid://b0j3mf6qxgahd
@@ -110,7 +111,7 @@ scene_bibliotheque.tscn::PackedScene::6726634651768607867::1699386960::0::1::::<
 scene_caféoxymel.tscn::PackedScene::1029604759186512254::1699360797::0::1::::<><>::uid://ctrdalp6yygvm
 scene_combat.tscn::PackedScene::7391499565177337860::1699386961::0::1::::<><>::res://Scene/Script/scene_combat.gd<>uid://cjqeemq82daob
 scene_travail.tscn::PackedScene::2485425053232094879::1699389725::0::1::::<><>::uid://tki2apulyx4e
-::res://Scene/Script/::1699916015
+::res://Scene/Script/::1699917890
 AllerVersMillieu.gd::GDScript::-1::1697310930::0::1::::<>CollisionShape2D<>::
 Area2D.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 CDversCM.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
@@ -118,7 +119,7 @@ CGversCM.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 CMversCD.gd::GDScript::-1::1699032796::0::1::::<>Area2D<>::
 CMversCG.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 CollisionShape2D5.gd::GDScript::-1::1697310930::0::1::::<>CollisionShape2D<>::
-MenuPrincipale.gd::GDScript::-1::1699916015::0::1::::<>Node2D<>::
+MenuPrincipale.gd::GDScript::-1::1699917890::0::1::::<>Node2D<>::
 QGversCG.gd::GDScript::-1::1697310930::0::1::::<>Area2D<>::
 sceneBureauProf.gd::GDScript::-1::1699062965::0::1::::<>Node2D<>::
 SceneCaféteria.gd::GDScript::-1::1699121334::0::1::::<>Node2D<>::
@@ -131,11 +132,11 @@ scene_caféoxymel.gd::GDScript::-1::1699317887::0::1::::<>Node2D<>::
 scene_combat.gd::GDScript::-1::1699371105::0::1::::<>Node2D<>::
 scene_maison.gd::GDScript::-1::1699047357::0::1::::<>Node2D<>::
 scene_travail.gd::GDScript::-1::1699047394::0::1::::<>Node2D<>::
-::res://UI/::1699917310
+::res://UI/::1699936366
 407.png::CompressedTexture2D::5823419486614020104::1699022202::1699022202::1::::<><>::
-BoiteDeTextes.gd::GDScript::-1::1699718395::0::1::::<>Node2D<>::
+BoiteDeTextes.gd::GDScript::-1::1699936117::0::1::::<>Node2D<>::
 Boite_de_texte.png::CompressedTexture2D::4957263565492946688::1697310930::1697310930::1::::<><>::
-boite_de_textes.tscn::PackedScene::6931581352418606390::1699917310::0::1::::<><>::res://UI/BoiteDeTextes.gd<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://bce50qi5o1p::::res://UI/Keyboard Extras.png<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf
+boite_de_textes.tscn::PackedScene::6931581352418606390::1699936268::0::1::::<><>::res://UI/BoiteDeTextes.gd<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://bce50qi5o1p::::res://UI/Keyboard Extras.png<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf
 gestionVolume.gd::GDScript::-1::1699404797::0::1::::<>HSlider<>::
 IconeInventaire.png::CompressedTexture2D::6639996314097691457::1697310930::1697310930::1::::<><>::
 IconeParametre.png::CompressedTexture2D::5893116797506072578::1697310930::1697310930::1::::<><>::
@@ -144,15 +145,15 @@ IconSauvegarder.png::CompressedTexture2D::8566084277010928189::1697310930::16973
 ImageBoisonÉnergique.png::CompressedTexture2D::5098627375885997720::1697310930::1697310930::1::::<><>::
 ImageInventaire.gd::GDScript::-1::1697310930::0::1::::<>Sprite2D<>::
 ImageParametre.gd::GDScript::-1::1697310930::0::1::::<>Sprite2D<>::
-joueur_interface.gd::GDScript::-1::1699445924::0::1::::<>CanvasLayer<>::
-joueur_interface.tscn::PackedScene::7351804137887215632::1699917309::0::1::::<><>::res://UI/joueur_interface.gd<>uid://dcq5j6taqvth8::::res://UI/sprite_0.png<>uid://cuaw8nsbh0ykc::::res://UI/sprite_1.png<>uid://bo13c5q6g36l8::::res://UI/LivreMouvement.png<>uid://b8quo22p6mjhn::::res://UI/Tag.png<>uid://cp7w1jgvc71go::::res://UI/IconeParametre.png<>uid://c1up1ff0x1j82::::res://UI/IconeInventaire.png<>uid://1hc7judil6wl::::res://UI/image/iconQuete.png<>uid://cev2wbbra633y::::res://UI/ImageBoisonÉnergique.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://btpi4hknofog3::::res://UI/LivreOuverture.png<>uid://ksn4pov16pq::::res://UI/image/café.png<>uid://dbm2uxw8dkr7h::::res://UI/image/JoyeuxRepas.png<>uid://ghodvn6lgtdd::::res://UI/image/iconCerveau.png<>uid://bdobcsns1h63t::::res://UI/image/barDeStatistique.png<>uid://urjy060xv0yy::::res://UI/image/barIntelligence.png<>uid://chjljp3ngkv1m::::res://UI/image/barDeVie1.png<>uid://chftr53vkwheh::::res://UI/image/vie1.png<>uid://tmwgpcjq8wkf::::res://UI/image/Heart_Red_1.png
+joueur_interface.gd::GDScript::-1::1699936268::0::1::::<>CanvasLayer<>::
+joueur_interface.tscn::PackedScene::7351804137887215632::1699936365::0::1::::<><>::res://UI/joueur_interface.gd<>uid://dcq5j6taqvth8::::res://UI/sprite_0.png<>uid://cuaw8nsbh0ykc::::res://UI/sprite_1.png<>uid://bo13c5q6g36l8::::res://UI/LivreMouvement.png<>uid://b8quo22p6mjhn::::res://UI/Tag.png<>uid://cp7w1jgvc71go::::res://UI/IconeParametre.png<>uid://c1up1ff0x1j82::::res://UI/IconeInventaire.png<>uid://1hc7judil6wl::::res://UI/image/iconQuete.png<>uid://cev2wbbra633y::::res://UI/ImageBoisonÉnergique.png<>uid://c81mpte26ou7w::::res://UI/tuile_boite_de_texte.tscn<>uid://dk537wexvu7ax::::res://UI/SFPixelate.ttf<>uid://btpi4hknofog3::::res://UI/LivreOuverture.png<>uid://ksn4pov16pq::::res://UI/image/café.png<>uid://dbm2uxw8dkr7h::::res://UI/image/JoyeuxRepas.png<>uid://ghodvn6lgtdd::::res://UI/image/iconCerveau.png<>uid://bdobcsns1h63t::::res://UI/image/barDeStatistique.png<>uid://urjy060xv0yy::::res://UI/image/barIntelligence.png<>uid://chjljp3ngkv1m::::res://UI/image/barDeVie1.png<>uid://chftr53vkwheh::::res://UI/image/vie1.png<>uid://tmwgpcjq8wkf::::res://UI/image/Heart_Red_1.png
 Keyboard Extras.png::CompressedTexture2D::2194569974680683::1697310930::1697310930::1::::<><>::
 Keyboard Letters and Symbols.png::CompressedTexture2D::568514223453127006::1697310930::1697310930::1::::<><>::
 Livre.png::CompressedTexture2D::2766406722953292738::1697310930::1697310930::1::::<><>::
 LivreMouvement.png::CompressedTexture2D::3424443565451407283::1697310930::1697310930::1::::<><>::
 LivreOuverture.png::CompressedTexture2D::3751512286813064008::1697310930::1697310930::1::::<><>::
 menu_pause.gd::GDScript::-1::1699911211::0::1::::<>Node2D<>::
-menu_pause.tscn::PackedScene::614628457943386673::1699917310::0::1::::<><>::res://UI/menu_pause.gd<>uid://c555jrgjye41k::::res://UI/noir.png<>uid://dubqfk66ydc1j::::res://UI/IconSauvegarder.png
+menu_pause.tscn::PackedScene::614628457943386673::1699936268::0::1::::<><>::res://UI/menu_pause.gd<>uid://c555jrgjye41k::::res://UI/noir.png<>uid://dubqfk66ydc1j::::res://UI/IconSauvegarder.png
 noir.png::CompressedTexture2D::6942276493684066354::1697310930::1697310930::1::::<><>::
 Panier.png::CompressedTexture2D::866972393611938137::1697310930::1697310930::1::::<><>::
 Papier_texte_box.png::CompressedTexture2D::5888314169217797811::1697310930::1697310930::1::::<><>::

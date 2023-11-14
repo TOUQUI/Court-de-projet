@@ -36,6 +36,7 @@ func SauvegarderJson():
 		dossier.store_string(str(dictionaireDesDonnees))
 		dossier.close()
 
+
 func Test(chemain : String):
 	if FileAccess.file_exists(chemain):
 		dossier = FileAccess.open(chemain, FileAccess.READ)

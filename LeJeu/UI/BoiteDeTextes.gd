@@ -22,14 +22,28 @@ var fichierAudio
 var audio
 var interface
 var volumeVoix
+var donneesChemain = "res://Données/texte.json"
+var texte = {}
+var dossier
+var convertion
 
 func _ready():
 	joueurProvenance = joueur.derniere_emplacement
 	Charger()
 
 
+func ChargerTexte():
+	if FileAccess.file_exists(donneesChemain):
+		dossier = FileAccess.open(donneesChemain, FileAccess.READ)
+		convertion = JSON.parse_string(dossier.get_as_text())
+		if convertion is Dictionary:
+			dossier.close()
+			texte = convertion
+
+
 func Charger():
 	if SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche == false:
+		ChargerTexte()
 		queteActuel = SingletonsDonnees.dictionaireDesDonnees["DataSession"].queteActuel
 		if queteActuel == "mission1_bc" && joueurProvenance == "BureauProf":
 			peuxEtreAffiche = true
@@ -44,7 +58,7 @@ func Charger():
 		elif queteActuel == "mission2_ac" && SingletonsDonnees.dictionaireDesDonnees["DataSession"].bossMort == true:
 			peuxEtreAffiche = true
 			SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = true
-		elif (queteActuel == "mission3_bc" || queteActuel == "mission3_ac") && (joueurProvenance == "Bibli" || joueurProvenance == "D"):
+		elif (queteActuel == "mission3_bc" || queteActuel == "mission3_ac") && (joueurProvenance == "Blibli" || joueurProvenance == "D"):
 			peuxEtreAffiche = true
 			SingletonsDonnees.dictionaireDesDonnees["DataSession"].dialogueDeMissionDejaAffiche = true
 		elif (queteActuel == "mission4_bc" || queteActuel == "mission4_ac") && joueurProvenance == "Cafetreria":
@@ -53,13 +67,13 @@ func Charger():
 				sceneCombat = find_parent("SceneCombat")
 				peuxEtreAffiche = true
 			elif queteActuel == "mission4_ac":
-				dialoguesMission = SingletonsDonnees.dictionaireDesDonnees[queteActuel]
+				dialoguesMission = texte[queteActuel]
 				nbDialogues = dialoguesMission.size()
 				peuxEtreAffiche = true
 				jouerDialogue = true
 				GererDialogues()
 		if peuxEtreAffiche:
-			dialoguesMission = SingletonsDonnees.dictionaireDesDonnees[queteActuel]
+			dialoguesMission = texte[queteActuel]
 			nbDialogues = dialoguesMission.size()
 			self.visible = true
 			jouerDialogue = true
@@ -96,6 +110,7 @@ func _input(event):
 			boss.play("mort")
 			sceneCombat = sceneCombat.find_child("TimerAvantRetourMenue")
 			sceneCombat.start()
+			jouerDialogue = false
 		else:
 			jouerDialogue = false
 			i = 0

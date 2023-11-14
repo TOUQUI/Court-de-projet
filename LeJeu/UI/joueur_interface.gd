@@ -18,6 +18,10 @@ var quetes
 var nodeTxtFini
 var livreAEteFermer = false
 var musique
+var donneesChemain = "res://Données/texte.json"
+var texte = {}
+var dossier
+var convertion
 
 
 static var inventaire =[ 
@@ -36,6 +40,7 @@ static var inventaire =[
 func _ready():
 	$Livre/SpriteLivre.visible = false
 	$Livre/LivreOuvertureFermeture.visible = false
+	ChargerTexte()
 	ChargerDonnees()
 	chargerJour()
 	chargerTemps()
@@ -74,13 +79,22 @@ func ChargerIntelligence():
 	$Livre/SpriteLivre/Accueil/StatIntelligence/barIntelligence.value = intelligence
 
 
+func ChargerTexte():
+	if FileAccess.file_exists(donneesChemain):
+		dossier = FileAccess.open(donneesChemain, FileAccess.READ)
+		convertion = JSON.parse_string(dossier.get_as_text())
+		if convertion is Dictionary:
+			dossier.close()
+			texte = convertion
+
+
 func ChargerQuete():
-	quetes = SingletonsDonnees.dictionaireDesDonnees["Mission"]
+	quetes = texte["Mission"]
 	for item in quetes:
-		if quetes[item].Etat == "Fini":
+		if SingletonsDonnees.dictionaireDesDonnees["Mission"][str(item)].Etat == "Fini":
 			nodeTxtFini = get_node("Livre/SpriteLivre/Quête/Fini/" + str(item))
 			nodeTxtFini.text = quetes[item].Titre
-		elif quetes[item].Etat == "Actuel":
+		elif SingletonsDonnees.dictionaireDesDonnees["Mission"][str(item)].Etat == "Actuel":
 			$"Livre/SpriteLivre/Quête/Actuel/Titre".text = quetes[item].Titre
 			$"Livre/SpriteLivre/Quête/Actuel/Description".text = quetes[item].Description
 

@@ -1,8 +1,10 @@
-res://Scene/menu_principale.tscn
-res://Données/SingletonsDonnees.gd
-res://musique/music_manager.tscn
 res://UI/joueur_interface.tscn
+res://Données/LesDonnées.json
+res://musique/music_manager.tscn
 res://UI/boite_de_textes.tscn
 res://Joueur/joueur.tscn
+res://Scene/menu_principale.tscn
 res://UI/menu_pause.tscn
-res://Scene/Script/MenuPrincipale.gd
+res://UI/joueur_interface.gd
+res://UI/BoiteDeTextes.gd
+res://Scene/scene_combat.tscn

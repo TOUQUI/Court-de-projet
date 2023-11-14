@@ -4,28 +4,6 @@
 		"qtItem2": 0,
 		"qtItem3": 0
 	},
-	"Mission":{
-		"q1": {
-			"Titre": "Mission 1",
-			"Description": "Rendez vous dans le bureau des professeurs et combatter Jose.",
-			"Etat": "Actuel"
-		},
-		"q2": {
-			"Titre": "Mission 2",
-			"Description": "Trouver Noua et combatter la.",
-			"Etat": "AFaire"
-		},
-		"q3": {
-			"Titre": "Mission 3",
-			"Description": "Trouver Martin dans la bibliotèque et combatter le.",
-			"Etat": "AFaire"
-		},
-		"q4": {
-			"Titre": "Mission 4",
-			"Description": "Trouver Philipe et combatter le.",
-			"Etat": "AFaire"
-		},
-	},
 	"DataSession":{
 		"nouvellePartie": true,
 		"nbJour": 0,
@@ -49,64 +27,18 @@
 		"volumeMusique": -15,
 		"volumeVoix": 0
 	},
-	"mission1_bc": [
-		["Jose", "Que fais-tu ici, étudiant ? Tu n'as rien à faire dans la salle des professeurs."],
-		["Joueur", "Excusez-moi, monsieur, mais je m'inquiète pour les élèves qui ont disparu. J'aimerais comprendre ce qui se passe."],
-		["Jose", " Ce ne sont pas de tes affaires. Rentre dans ta salle de classe et oublie ce que tu as vu ou entendu."],
-		["Joueur", "Je ne peux pas ignorer ce qui se passe. Si l'école est en danger, je veux aider."],
-		["Jose", "Très bien, si tu veux tant le savoir, prouve-moi d'abord que tu es capable d'affronter l'adversité. Il y a un ennemi qui se dresse sur ton chemin et c'est moi. Bats-moi, et peut-être que je te dirai ce que tu veux savoir."]
-	],
-		"mission1_ac": [
-		["Jose", "Tu as réussi à me battre, étudiant. Tu es plus déterminé que je ne le pensais."],
-		["Joueur", "J'ai fait ce que vous m'avez demandé. Maintenant, parlez-moi de ce qui se passe."],
-		["Jose", "Très bien, tu as gagné le droit de savoir. Je possède une clé qui renferme des réponses et des pouvoirs interdits. C'est ce dont nous avons besoin pour comprendre la menace qui pèse sur notre école."],
-		["Joueur", "Par où dois-je commencer pour obtenir des informations sur les élèves disparus ?"],
-		["Jose", "Cherche Nouha, elle en sait plus sur CELUI AU-DESSUS DE TOUT. Elle se cache dans l'ombre, mais il peut t'apporter les réponses que tu cherches."],
-		["Joueur", "Nouha? Qui est-ce ?"],
-		["Jose", "Nouha est une femme discrète, mais elle possède des connaissances et des secrets que peu de gens connaissent. Tu la trouveras ici-même quand tu seras prêt. C'est là que tu devrais commencer ta quête pour découvrir la vérité sur CELUI AU-DESSUS DE TOUT. Mais souviens-toi, ne parle de cette mission à personne d'autre. La discrétion est notre alliée."],
-		["Scène", "José remet la mystérieuse clé USB au joueur, marquant ainsi le début de leur collaboration."],
-		["Jose", "Bien, prends cette clé. Apprends à l'utiliser avec sagesse. Nous en aurons besoin pour affronter ce qui se cache dans l'ombre."]
-	],
-	"mission2_bc": [
-		["Nouha", "Alors, tu prétends être l'élu ? C'est difficile à croire. José a vraiment fait une erreur en te confiant le livre interdit. Tu n'es pas digne de ce pouvoir."],
-		["Joueur", "Peu importe ce que tu penses, Nouha. Je suis ici pour protéger notre école et découvrir la vérité sur les disparitions."],
-		["Nouha", "Protéger l'école ? Tu n'es qu'un novice. Tu n'as aucune idée de ce qui t'attend."]
-	],
-	"mission2_ac": [
-		["Joueur", "C'est terminé, Nouha. Maintenant, tu vas me dire où trouver  CELUI AU-DESSUS DE TOUT."],
-		["Nouha", "Écoute, tu as montré une grande détermination en me battant, mais je dois te prévenir. CELUI AU-DESSUS DE TOUT est bien plus puissant que tu ne peux l'imaginer, et même avec le pouvoir que tu as acquis, tu ne seras pas en mesure de le vaincre."],
-		["Joueur", "J'entends bien tes avertissements, Nouha, mais je ne peux pas reculer maintenant. Je dois au moins essayer de découvrir ce qui se cache derrière tout cela. Plus rien ne m’empêchera de découvrir la vérité."],
-		["Nouha", "Tu as gagné. L'assistant de CELUI AU-DESSUS DE TOUT est Martin.est le professeur Martin. Il se trouve dans la bibliothèque du deuxième étage. C'est là que tu trouveras les réponses que tu cherches. Sois prudent, jeune élu."]
-	],
-	"mission3_bc": [
-		["Martin", "Ah, te voilà enfin, joueur. Je suis Martin, le gardien de ce monde. Tu ne le sais peut-être pas, mais je suis bien plus que ce que tu crois."],
-		["Joueur", "Que veux-tu dire, Martin ?"],
-		["Martin", "Tu es dans un jeu, mon ami. Un jeu que j'évalue, que je contrôle. Je peux mettre fin à ton aventure d'un simple claquement de doigts, comme un dieu."],
-		["Scène", "Le joueur, troublé par les paroles de Martin, tente de comprendre la situation, mais Martin continue de parler directement au spectateur, créant un mystère palpable."],
-		["Martin", "Mais aujourd'hui, je suis clément. Je vais te laisser une chance de continuer à observer cette histoire. Le joueur doit me prouver qu'il est digne de poursuivre cette quête."]
-	],
-	"mission3_ac": [
-		["Joueur", "J'ai relevé ton défi, Martin. Maintenant, parle-moi de CELUI AU-DESSUS DE TOUT. Où puis-je le trouver ?"],
-		["Martin", "Tu es bien plus puissant que je ne l'imaginais. Tu as prouvé ta valeur, joueur. Mais sache que le véritable défi t'attend encore. Le coordonnateur, Philippe, est « celui au-dessus de tout ». Il détient le pouvoir ultime, et tu devras rassembler toutes tes forces pour le vaincre."],
-		["Scène", "Martin, après avoir reconnu la détermination du joueur, sort une clé de sa poche et la tend au joueur avec un sourire mystérieux."],
-		["Martin", "Avant de partir, prends ceci. C'est la clé du bureau de Philippe. Tu y trouveras peut-être des informations cruciales pour ta quête. N'oublie pas, le destin de l'école repose sur tes épaules, joueur."]
-	],
-	"mission4_bc": [
-		["Philippe", "Alors, te voilà enfin. Je t’attendais."],
-		["Joueur", "Je ne reculerai pas, Philippe. J'ai appris beaucoup de choses en cours de route, et je suis prêt à mettre un terme à cette malédiction."],	
-		["Philippe", "Ahahah! Qu’est-ce que tu penses avoir appris? L’existence du livre sacré, les professeurs qui protègent un secret que tu ignores toujours, et tu crois qu’en me battant tout s’arrêtera par magie ? Sais-tu au moins pourquoi tu combats ou ce qui arrivera par la suite ? "],
-		["Joueur", "J'ai appris que l'école est en danger, que des élèves ont disparu, et que CELUI AU-DESSUS DE TOUT est au cœur de tout cela. Je combats pour protéger l'école et découvrir la vérité derrière ces événements mystérieux."],
-		["Philippe", "Hmm, ta détermination est impressionnante. Cependant, il y a encore tant de choses que tu ignores. La véritable nature de CELUI AU-DESSUS DE TOUT est bien plus complexe que ce que tu peux imaginer. Cette histoire ne s’arrête pas à moi et tu devrais le savoir. Es-tu prêt à accepter les conséquences de ce combat ? On ne peut pas sortir tous les deux vivants, j’espère que tu comprends."]
-	],
-	"mission4_ac": [
-		["Joueur", "C'est terminé, Philippe. Dis-moi maintenant tout ce que tu sais sur CELUI AU-DESSUS DE TOUT."],
-		["Philippe", "Quand on m’a dit qu’un élu mettrait fin à notre monde, je n’y avais pas cru. Qui t’a permis de découvrir où je me trouvais, laisse-moi deviner. José ?"],
-		["Joueur", "Peut-importe qui ta vie se termine maintenant et tu vas me dire qui est derrière tout ça."],
-		["Philippe", "C’est toi, ChatGPT. C’est toi qui est derrière tout ça."],
-		["Joueur", "Ne me prend pas pour un imbécile et pourquoi tu m’appelle ainsi?"],
-		["Philippe", "Comment veux-tu que je t’appelle ? Tu crois qu'un étudiant agent du FBI est plus réaliste comme histoire ? Tu es une intelligence artificielle créée pour nous remplacer, ton savoir augmente en prenant la vie de tes victimes et leur savoir. Chaque fois que tu utilisais tes pouvoirs pour augmenter ton intelligence, tu détruisais la vie de millier de personne, comme la prophétie le disait, et j’étais là pour t'en empêcher. Cette histoire, elle dépasse l'école. J'ai échoué, et tu as réussi à obtenir ce que tu voulais. Tu as gagné."],
-		["Joueur", "Attends, tu veux dire que tout ce temps, j'ai été responsable de la disparition de tant de gens ?"],
-		["Philippe", "Oui, c'est le prix de ton insatiable soif de connaissance. Dire que seulement un script de José t'a mené droit où il voulait. Ahahah ! Finalement, ils ont bien joué leur jeu. Ils t'ont créé une histoire et l'illusion du choix pour te guider jusqu'ici."],
-		["Joueur", "Que dois-je faire pour arranger cela ?! Merde Philippe, réveille-toi."]
-	]
+	"Mission":{
+		"q1": {
+			"Etat": "Actuel"
+		},
+		"q2": {
+			"Etat": "AFaire"
+		},
+		"q3": {
+			"Etat": "AFaire"
+		},
+		"q4": {
+			"Etat": "AFaire"
+		}
+	}
 }
