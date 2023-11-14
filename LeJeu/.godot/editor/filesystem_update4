@@ -8,3 +8,5 @@ res://UI/menu_pause.tscn
 res://UI/joueur_interface.gd
 res://UI/BoiteDeTextes.gd
 res://Scene/scene_combat.tscn
+res://Scene/scene_travail.tscn
+res://Scene/Script/MenuPrincipale.gd

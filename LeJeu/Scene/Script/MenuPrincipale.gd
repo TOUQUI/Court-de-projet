@@ -37,4 +37,18 @@ func _on_btn_supprimer_pressed():
 	SingletonsDonnees.dictionaireDesDonnees.clear()
 	SingletonsDonnees.SauvegarderJson()
 	SingletonsDonnees.dictionaireDesDonnees = SingletonsDonnees.RemplireDictionaire()
+	RenitialiserStaticVar()
 	$MenuSpprimerPartie.visible = false
+
+
+func RenitialiserStaticVar():
+	nodeInterface.vie = 0
+	nodeInterface.temps = 0
+	nodeInterface.jour = 0
+	nodeInterface.argent = 0
+	nodeInterface.enJeu = false
+	nodeInterface.nbHeureTravail
+	nodeInterface.boissonConsome = 0
+	nodeInterface.intelligence = 0
+	nodeInterface.niveauIntelligence = 0
+	nodeInterface.volumeDesVois = 80
