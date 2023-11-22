@@ -18,7 +18,7 @@ func _on_jouer_pressed():
 
 
 func _on_paramètres_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scene/scene_credits.tscn")
 
 
 func _on_button_pressed():

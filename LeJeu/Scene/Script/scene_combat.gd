@@ -105,7 +105,16 @@ func _on_temps_de_lattaque_timeout():
 	BossFin()
 
 
+func joueurMort():
+	$Personnage/AnimationPlayer.play("mort")
+	$Boite.visible = false
+	$labelNode.visible = false
+	$TimerAvantRetourMenue.start()
+
+
 func TourJoueur():
+	if joueurNode.find_child("Joueur_interface").vie < 1:
+		joueurMort()
 	$Boite/Tuile_boite_de_texte/btnPetiteAttaque.disabled = false
 	if joueurInteligence >= 3:
 		$Boite/Tuile_boite_de_texte/btnGrandeAttaque.disabled = false

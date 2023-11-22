@@ -27,6 +27,7 @@ var texte = {}
 var dossier
 var convertion
 
+
 func _ready():
 	joueurProvenance = joueur.derniere_emplacement
 	Charger()

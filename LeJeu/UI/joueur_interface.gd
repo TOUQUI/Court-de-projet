@@ -68,6 +68,8 @@ func _input(event):
 
 
 func ChargerVie():
+	if vie < 0:
+		vie = 0
 	$Vie/BarDeVie.value = vie
 	$Vie/QtVie.text = str(vie)
 
