@@ -1,11 +1,9 @@
-res://UI/joueur_interface.tscn
-res://UI/joueur_interface.gd
-res://Scene/scene_combat.tscn
-res://Scene/Script/scene_combat.gd
 res://musique/music_manager.tscn
+res://Scene/scene_menu_aide.gd
+res://UI/joueur_interface.tscn
 res://UI/boite_de_textes.tscn
 res://Joueur/joueur.tscn
 res://Scene/menu_principale.tscn
 res://UI/menu_pause.tscn
-res://Scene/scene_travail.tscn
-res://Scene/scene_credits.tscn
+res://Scene/scene_combat.tscn
+res://Scene/Script/scene_menu_aide.tscn

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cw4ab03luop3e"
+path="res://.godot/imported/esc -converted.ogg-9da3df6e046b08dcce89e4f80a498b76.oggvorbisstr"
+
+[deps]
+
+source_file="res://vidéos/esc -converted.ogg"
+dest_files=["res://.godot/imported/esc -converted.ogg-9da3df6e046b08dcce89e4f80a498b76.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

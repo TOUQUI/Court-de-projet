@@ -335,7 +335,7 @@ texture = ExtResource("13_1e5sm")
 [node name="DescriptionItem3" type="Label" parent="Livre/SpriteLivre/Inventaire/Item3"]
 offset_left = 167.0
 offset_top = 94.0
-offset_right = 421.0
+offset_right = 308.0
 offset_bottom = 130.0
 text = "Un joyeux repas
 ajoute 25

@@ -109,6 +109,7 @@ func joueurMort():
 	$Personnage/AnimationPlayer.play("mort")
 	$Boite.visible = false
 	$labelNode.visible = false
+	$JoueurMort.start()
 	$TimerAvantRetourMenue.start()
 
 
@@ -199,7 +200,14 @@ func _on_timer_avant_retour_menue_timeout():
 	$BoiteDeTextes.visible = false
 	$Noir/AnimationPlayer.play("fin")
 
+
 func _on_fondue_noir_timeout():
 	AjouterTemps.emit(100)
 	get_tree().change_scene_to_file("res://Scene/SceneMaison.tscn")
 
+
+func _on_joueur_mort_timeout():
+	$Joueur/Joueur_interface.argent = 0;
+	$Joueur/Joueur_interface.GererAffichageArgent()
+	$Joueur/Joueur_interface.vie = 100;
+	$Joueur/Joueur_interface.ChargerVie()

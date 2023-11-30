@@ -52,3 +52,7 @@ func RenitialiserStaticVar():
 	nodeInterface.intelligence = 0
 	nodeInterface.niveauIntelligence = 0
 	nodeInterface.volumeDesVois = 80
+
+
+func _on_btn_vidéos_pressed():
+	get_tree().change_scene_to_file("res://Scene/Script/scene_menu_aide.tscn")

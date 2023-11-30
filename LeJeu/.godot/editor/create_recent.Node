@@ -1,8 +1,11 @@
-Label
+AspectRatioContainer
+VideoStreamPlayer
 Button
+GridContainer
 Node2D
-Node
+Label
 Timer
+Node
 HSlider
 AudioStreamPlayer
 Sprite2D
@@ -16,7 +19,6 @@ ProgressBar
 TextureProgressBar
 CheckButton
 CanvasLayer
-GridContainer
 LineEdit
 Control
 ItemList

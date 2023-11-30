@@ -867,6 +867,10 @@ libraries = {
 [node name="fondueNoir" type="Timer" parent="."]
 one_shot = true
 
+[node name="JoueurMort" type="Timer" parent="."]
+wait_time = 3.8
+one_shot = true
+
 [connection signal="AjouterTemps" from="." to="Joueur" method="_on_scene_combat_ajouter_temps"]
 [connection signal="EnleverVieJoueur" from="." to="Joueur" method="_on_scene_combat_enlever_vie_joueur"]
 [connection signal="timeout" from="AttaqueSpeciale1/TimerProjectileSpecial" to="." method="_on_timer_projectile_special_timeout"]
@@ -882,3 +886,4 @@ one_shot = true
 [connection signal="timeout" from="TimerAvantChangementScene" to="." method="_on_timer_avant_changement_scene_timeout"]
 [connection signal="timeout" from="TimerAvantRetourMenue" to="." method="_on_timer_avant_retour_menue_timeout"]
 [connection signal="timeout" from="fondueNoir" to="." method="_on_fondue_noir_timeout"]
+[connection signal="timeout" from="JoueurMort" to="." method="_on_joueur_mort_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dc480so82crme"]
+[gd_scene load_steps=16 format=3 uid="uid://dc480so82crme"]
 
 [ext_resource type="Script" path="res://Scene/Script/MenuPrincipale.gd" id="1_xw8yq"]
 [ext_resource type="PackedScene" uid="uid://tki2apulyx4e" path="res://Joueur/joueur.tscn" id="2_am34g"]
@@ -29,6 +29,9 @@ font_size = 30
 [sub_resource type="LabelSettings" id="LabelSettings_yg2ee"]
 font = ExtResource("3_mmos3")
 font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_kb2x7"]
+font_size = 20
 
 [node name="MenuPrincipale" type="Node2D"]
 script = ExtResource("1_xw8yq")
@@ -99,19 +102,13 @@ label_settings = SubResource("LabelSettings_mydqh")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 858.0
-offset_top = 532.0
-offset_right = 987.0
-offset_bottom = 562.0
+offset_left = 860.0
+offset_top = 551.0
+offset_right = 989.0
+offset_bottom = 581.0
 text = "Credits
 "
 label_settings = SubResource("LabelSettings_astsn")
-
-[node name="IconeParametre" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(920, 577)
-scale = Vector2(2, 2)
-texture = ExtResource("5_65a1a")
 
 [node name="ChargementIcon" type="Node2D" parent="."]
 visible = false
@@ -194,9 +191,32 @@ offset_right = 684.0
 offset_bottom = 312.0
 text = "Supprimer"
 
+[node name="btnVidéos" type="Button" parent="."]
+texture_filter = 1
+offset_left = 104.0
+offset_top = 510.0
+offset_right = 312.0
+offset_bottom = 618.0
+icon = ExtResource("4_ms8mv")
+
+[node name="IconeParametre" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(200, 581)
+scale = Vector2(2, 2)
+texture = ExtResource("5_65a1a")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 137.0
+offset_top = 538.0
+offset_right = 286.0
+offset_bottom = 575.0
+text = "Vidéos tutoriel"
+label_settings = SubResource("LabelSettings_kb2x7")
+
 [connection signal="pressed" from="Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="Credis" to="." method="_on_paramètres_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="btnSuprimerSauvegarde" to="." method="_on_btn_suprimer_sauvegarde_pressed"]
 [connection signal="pressed" from="MenuSpprimerPartie/btnRetourMenuSupprimer" to="." method="_on_btn_retour_menu_supprimer_pressed"]
 [connection signal="pressed" from="MenuSpprimerPartie/boutuonSupprimer/btnSupprimer" to="." method="_on_btn_supprimer_pressed"]
+[connection signal="pressed" from="btnVidéos" to="." method="_on_btn_vidéos_pressed"]

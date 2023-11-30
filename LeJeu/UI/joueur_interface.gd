@@ -212,11 +212,14 @@ func _on_joueur_ajouter_item_acheter(item, prix):
 			$Livre/SpriteLivre/Inventaire/Item3/qtItem3.text = str(inventaire[item - 1].quantité)
 		GererAffichageArgent()
 
+
 func chargerJour():
 	$Jour/nbJour.text = "JOUR:" + str(jour)
 
+
 func chargerTemps():
 	$Horloge/TextureProgressBar.value = temps
+
 
 func _on_joueur_dormir():
 	jour = jour + 1
@@ -264,6 +267,7 @@ func ConsommerBoissonQuiRetireTemps(item):
 		$Message.visible = true
 		$Message.text = "Je pense que mon cœur va exploser si j'en prends un autre aujourd'hui!"
 		$Message/MessageMinuterie.start()
+
 
 func _on_joueur_sauvegarder():
 	SauvegarderDonnees()
