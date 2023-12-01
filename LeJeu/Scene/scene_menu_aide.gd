@@ -11,6 +11,7 @@ func _on_retour_pressed():
 
 func _on_video_stream_player_finished():
 	videoLance = false
+	$stop.visible = false
 	$AspectRatioContainer.visible = false
 
 
@@ -21,6 +22,7 @@ func Charger(source):
 		videoNode = load(source)
 		$AspectRatioContainer/VideoStreamPlayer.set_stream(videoNode)
 		$AspectRatioContainer/VideoStreamPlayer.play()
+		$stop.visible = true
 
 
 func _on_déplacement_pressed():
@@ -57,3 +59,14 @@ func _on_étudier_pressed():
 
 func _on_gagner_vie_pressed():
 	Charger("res://vidéos/manger-converted.ogv")
+
+
+func _on_combats_pressed():
+	Charger("res://vidéos/combat.ogv")
+
+
+func _on_button_pressed():
+	$AspectRatioContainer/VideoStreamPlayer.stop()
+	videoLance = false
+	$AspectRatioContainer.visible = false
+	$stop.visible = false

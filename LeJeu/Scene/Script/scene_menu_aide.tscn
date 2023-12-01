@@ -15,22 +15,6 @@ position = Vector2(563, 322)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_njah4")
 
-[node name="Retour" type="Button" parent="."]
-offset_left = 925.0
-offset_top = 517.0
-offset_right = 1133.0
-offset_bottom = 625.0
-icon = ExtResource("3_4f6tg")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 978.0
-offset_top = 547.0
-offset_right = 1083.0
-offset_bottom = 595.0
-text = "Retour
-"
-label_settings = SubResource("LabelSettings_ecnup")
-
 [node name="Boutons" type="Node2D" parent="."]
 position = Vector2(250, 100)
 
@@ -81,6 +65,11 @@ text = "Étudier
 layout_mode = 2
 text = "Regénérer la vie"
 
+[node name="combats" type="Button" parent="Boutons/GridContainer"]
+layout_mode = 2
+text = "Combat
+"
+
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 visible = false
 offset_left = 168.0
@@ -94,7 +83,30 @@ custom_minimum_size = Vector2(300, 500)
 layout_mode = 2
 expand = true
 
-[connection signal="pressed" from="Retour" to="." method="_on_retour_pressed"]
+[node name="stop" type="Button" parent="."]
+visible = false
+offset_left = 514.0
+offset_top = 595.0
+offset_right = 624.0
+offset_bottom = 634.0
+text = "Stop"
+
+[node name="Retour" type="Button" parent="."]
+offset_left = 925.0
+offset_top = 517.0
+offset_right = 1133.0
+offset_bottom = 625.0
+icon = ExtResource("3_4f6tg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 978.0
+offset_top = 547.0
+offset_right = 1083.0
+offset_bottom = 595.0
+text = "Retour
+"
+label_settings = SubResource("LabelSettings_ecnup")
+
 [connection signal="pressed" from="Boutons/GridContainer/déplacement" to="." method="_on_déplacement_pressed"]
 [connection signal="pressed" from="Boutons/GridContainer/courir" to="." method="_on_courir_pressed"]
 [connection signal="pressed" from="Boutons/GridContainer/Inventaire" to="." method="_on_inventaire_pressed"]
@@ -104,4 +116,7 @@ expand = true
 [connection signal="pressed" from="Boutons/GridContainer/Dormir" to="." method="_on_dormir_pressed"]
 [connection signal="pressed" from="Boutons/GridContainer/Étudier" to="." method="_on_étudier_pressed"]
 [connection signal="pressed" from="Boutons/GridContainer/gagnerVie" to="." method="_on_gagner_vie_pressed"]
+[connection signal="pressed" from="Boutons/GridContainer/combats" to="." method="_on_combats_pressed"]
 [connection signal="finished" from="AspectRatioContainer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="stop" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Retour" to="." method="_on_retour_pressed"]
