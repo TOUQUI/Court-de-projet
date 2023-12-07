@@ -7,3 +7,6 @@ res://Scene/menu_principale.tscn
 res://UI/menu_pause.tscn
 res://Scene/scene_combat.tscn
 res://Scene/Script/scene_menu_aide.tscn
+res://Carte/CarteScene/MapCorridorDroit.tscn
+res://Scene/SceneCorridorD.tscn
+res://Carte/CarteScene/MapBureau_prof.tscn

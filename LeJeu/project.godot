@@ -13,7 +13,9 @@ config_version=5
 config/name="Technique de l'informatique RPG"
 run/main_scene="res://Scene/menu_principale.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
+config/windows_native_icon="res://tiIcone.ico"
 
 [autoload]
 

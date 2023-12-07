@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmlsx7jdlturh"]
 
-[ext_resource type="Script" path="res://CGversCM.gd" id="1_vjmb6"]
+[ext_resource type="Script" path="res://Carte/CGversCM.gd" id="1_vjmb6"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u27t6"]
 
