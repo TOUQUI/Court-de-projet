@@ -22,7 +22,7 @@
 		"force": 0,
 		"intelligence": 0,
 		"bossMort": false,
-		"niveauIntelligence": 10,
+		"niveauIntelligence": 0,
 		"dialogueDeMissionDejaAffiche": false,
 		"volumeMusique": -15,
 		"volumeVoix": 0
